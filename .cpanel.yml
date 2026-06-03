@@ -1,0 +1,28 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/hosterlo/public_html/
+    - /bin/cp -a .htaccess $DEPLOYPATH
+    - /bin/cp -a 2025 $DEPLOYPATH
+    - /bin/cp -a 2026 $DEPLOYPATH
+    - /bin/cp -a about-hosterlo $DEPLOYPATH
+    - /bin/cp -a ai-article-writer $DEPLOYPATH
+    - /bin/cp -a assets $DEPLOYPATH
+    - /bin/cp -a blog $DEPLOYPATH
+    - /bin/cp -a contact-us $DEPLOYPATH
+    - /bin/cp -a digioverse $DEPLOYPATH
+    - /bin/cp -a dmarc-record-lookup $DEPLOYPATH
+    - /bin/cp -a domains $DEPLOYPATH
+    - /bin/cp -a free-offer $DEPLOYPATH
+    - /bin/cp -a free-tools $DEPLOYPATH
+    - /bin/cp -a hosting $DEPLOYPATH
+    - /bin/cp -a infrastructure $DEPLOYPATH
+    - /bin/cp -a legal $DEPLOYPATH
+    - /bin/cp -a login $DEPLOYPATH
+    - /bin/cp -a privacy-policy $DEPLOYPATH
+    - /bin/cp -a refund-policy $DEPLOYPATH
+    - /bin/cp -a services $DEPLOYPATH
+    - /bin/cp -a spf-record-lookup $DEPLOYPATH
+    - /bin/cp -a support $DEPLOYPATH
+    - /bin/cp -a terms-conditions $DEPLOYPATH
+    - /bin/cp -a *.html *.png *.webp *.txt *.xml *.css $DEPLOYPATH

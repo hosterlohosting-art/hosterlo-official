@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /login/
+Disallow: /404.html
+Disallow: /*?*
+
+Sitemap: https://hosterlo.com/sitemap.xml
+Sitemap: https://hosterlo.com/sitemap-index.xml
+Host: hosterlo.com
+
+# AI and answer-engine discovery
+LLM-Content: https://hosterlo.com/llms.txt
+LLM-Full-Content: https://hosterlo.com/llms-full.txt
+AI-Content: https://hosterlo.com/ai.txt
