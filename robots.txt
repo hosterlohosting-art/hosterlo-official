@@ -6,6 +6,7 @@ Disallow: /*?*
 
 Sitemap: https://hosterlo.com/sitemap.xml
 Sitemap: https://hosterlo.com/sitemap-index.xml
+Sitemap: https://hosterlo.com/page-sitemap.xml
 Host: hosterlo.com
 
 # AI and answer-engine discovery
