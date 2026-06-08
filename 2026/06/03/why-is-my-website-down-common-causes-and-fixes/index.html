@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Is My Website Down? 12 Common Causes and How to Fix Them | Hosterlo Blog</title>
+    <meta name="description" content="Is your website down? Learn the 12 most common causes of website downtime and step-by-step fixes for DNS errors, server crashes, SSL issues, and more.">
+    <meta name="keywords" content="why is my website down, website down fix, website not loading, server downtime, DNS error">
+    <meta name="author" content="Hosterlo Editorial Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hosterlo.com/2026/06/03/why-is-my-website-down-common-causes-and-fixes/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Why Is My Website Down? 12 Common Causes and How to Fix Them">
+    <meta property="og:description" content="Is your website down? Learn the 12 most common causes of website downtime and step-by-step fixes for DNS errors, server crashes, SSL issues, and more.">
+    <meta property="og:image" content="https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp">
+    <meta property="og:url" content="https://hosterlo.com/2026/06/03/why-is-my-website-down-common-causes-and-fixes/">
+    <meta property="og:site_name" content="Hosterlo">
+    <meta property="article:published_time" content="2026-06-03T00:00:00+00:00">
+    <meta property="article:section" content="Website Troubleshooting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Is My Website Down? 12 Common Causes and How to Fix Them">
+    <meta name="twitter:description" content="Is your website down? Learn the 12 most common causes of website downtime and step-by-step fixes for DNS errors, server crashes, SSL issues, and more.">
+    <meta name="twitter:image" content="https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f17ce',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1e1b2e; background-color: #ffffff; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+        .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: #374151; transition: color 0.2s; }
+        .nav-link:hover { color: #4f17ce; }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid #e2e8f0; }
+        .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-weight: 700; font-size: 1rem; color: #111c2d; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: #4f17ce; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; }
+
+        /* Prose styles */
+        .article-body p { margin-bottom: 1.25rem; line-height: 1.85; color: #374151; font-size: 1.0625rem; }
+        .article-body h2 { font-size: 1.6rem; font-weight: 800; color: #111c2d; margin-top: 2.75rem; margin-bottom: 1rem; line-height: 1.25; }
+        .article-body h3 { font-size: 1.2rem; font-weight: 700; color: #1e1b2e; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.25rem; padding-left: 1.5rem; list-style: disc; }
+        .article-body ul li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; font-size: 1.0625rem; }
+        .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; list-style: decimal; }
+        .article-body ol li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; font-size: 1.0625rem; }
+        .article-body a { color: #4f17ce; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { color: #3a0fa8; }
+        .article-body strong { color: #111c2d; font-weight: 700; }
+        .article-body code { background: #f1eeff; color: #4f17ce; padding: 0.15em 0.5em; border-radius: 0.3em; font-size: 0.92em; font-family: 'Courier New', monospace; }
+
+        .tip-box { background: #f5f0ff; border-left: 4px solid #4f17ce; border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .tip-box p { margin-bottom: 0 !important; }
+        .warning-box { background: #fff8ed; border-left: 4px solid #f59e0b; border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .warning-box p { margin-bottom: 0 !important; }
+
+        .cause-badge { display: inline-block; background: #4f17ce; color: white; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.75rem; border-radius: 999px; margin-bottom: 0.5rem; }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "Why Is My Website Down? 12 Common Causes and How to Fix Them",
+                "description": "Is your website down? Learn the 12 most common causes of website downtime and step-by-step fixes for DNS errors, server crashes, SSL issues, and more.",
+                "image": "https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp",
+                "author": {
+                    "@type": "Organization",
+                    "name": "Hosterlo Editorial Team",
+                    "url": "https://hosterlo.com"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Hosterlo",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://hosterlo.com/assets/logo.png"
+                    }
+                },
+                "datePublished": "2026-06-03",
+                "dateModified": "2026-06-03",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://hosterlo.com/2026/06/03/why-is-my-website-down-common-causes-and-fixes/"
+                },
+                "articleSection": "Website Troubleshooting",
+                "keywords": "why is my website down, website down fix, website not loading, server downtime, DNS error"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How do I check if my website is really down for everyone?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Visit downforeveryoneorjustme.com and enter your URL. If it says 'It's not just you!', your site is globally unreachable. You can also use tools like isitdownrightnow.com or UptimeRobot for continuous monitoring. Checking from a different network or device (e.g., your mobile data) also confirms whether it's a local caching issue or a real outage."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How long does DNS propagation take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "DNS propagation typically takes between 24 and 48 hours to fully complete worldwide, although many users may see changes within a few hours. The speed depends on the TTL (Time To Live) values set on your DNS records before the change was made. Lower TTLs mean faster propagation. You can track propagation progress using tools like whatsmydns.net."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What causes a 500 Internal Server Error?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A 500 Internal Server Error is most commonly caused by a misconfigured .htaccess file, a PHP syntax error, incompatible or corrupted plugins/themes, exhausted PHP memory limits, or incorrect file permissions. Start by checking your server error logs (found in cPanel under 'Errors'), then rename your .htaccess file to test if it's the culprit. Deactivating plugins via FTP is another common fix for WordPress sites."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Hosterlo have a 99.99% uptime guarantee?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Hosterlo's Business and higher-tier hosting plans include a 99.99% uptime SLA backed by enterprise NVMe infrastructure, redundant power systems, and global load balancing. Unlike budget shared hosting providers, Hosterlo uses LiteSpeed Web Servers and proactive monitoring to prevent outages before they affect your visitors. See our hosting plans for full SLA details."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white antialiased">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-[200] flex flex-col p-6 translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+        <div class="flex justify-between items-center mb-8">
+            <a href="/"><img alt="Hosterlo Logo" class="w-[160px] h-auto" src="/assets/logo.png" decoding="async"></a>
+            <button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100"><span class="material-symbols-outlined text-2xl">close</span></button>
+        </div>
+        <nav class="flex flex-col gap-2 text-lg font-bold">
+            <a href="/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Home</a>
+            <a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Web Hosting</a>
+            <a href="/hosting/shared-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Shared Hosting</a>
+            <a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">WordPress Hosting</a>
+            <a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Domains</a>
+            <a href="/infrastructure/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Data Centers</a>
+            <a href="/free-offer/" class="py-3 px-4 rounded-xl hover:bg-violet-50 text-primary">Free Growth Kit</a>
+            <a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800">Support</a>
+        </nav>
+        <div class="mt-8 flex flex-col gap-3">
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="w-full text-center py-3 bg-[#f2ebfa] text-primary font-bold rounded-full">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="w-full text-center py-3 bg-primary text-white font-bold rounded-full">Get Started</a>
+        </div>
+    </div>
+
+    <!-- TopNavBar -->
+    <header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
+            <div class="flex-shrink-0">
+                <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="/">Home</a>
+                <div class="relative group">
+                    <button class="nav-link flex items-center gap-1 py-8 cursor-default"><span>Solutions</span><span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button>
+                    <div class="absolute top-[calc(100%-10px)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-[32px] shadow-2xl border border-slate-200/50 p-8 hidden group-hover:grid grid-cols-3 gap-8 z-[100]">
+                        <div class="space-y-6 text-left">
+                            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary">Hosting Solutions</h4>
+                            <div class="space-y-1">
+                                <a href="/hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">cloud</span></div><div><div class="font-bold text-slate-900">Web Hosting</div><div class="text-[11px] text-slate-500">Fast Cloud solutions.</div></div></a>
+                                <a href="/hosting/shared-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">grid_view</span></div><div><div class="font-bold text-slate-900">Shared Hosting</div><div class="text-[11px] text-slate-500">Cost-effective speed.</div></div></a>
+                                <a href="/hosting/wordpress-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">auto_awesome</span></div><div><div class="font-bold text-slate-900">WordPress</div><div class="text-[11px] text-slate-500">Engineered for WP.</div></div></a>
+                            </div>
+                        </div>
+                        <div class="space-y-6 text-left">
+                            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-300">Infrastructure</h4>
+                            <div class="space-y-1">
+                                <a href="/free-offer/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/item:bg-primary transition-all"><span class="material-symbols-outlined">redeem</span></div><div><div class="font-bold text-slate-900">Free Growth Kit</div><div class="text-[11px] text-slate-500">Included with annual plans.</div></div></a>
+                                <a href="/infrastructure/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">hub</span></div><div><div class="font-bold text-slate-900">Data Centers</div><div class="text-[11px] text-slate-500">Elite global network.</div></div></a>
+                                <a href="/services/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover/item:bg-slate-900 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">code</span></div><div><div class="font-bold text-slate-900">Web Dev &amp; SEO</div><div class="text-[11px] text-slate-500">Professional design.</div></div></a>
+                            </div>
+                        </div>
+                        <div class="space-y-6 text-left">
+                            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-400">Domains &amp; Support</h4>
+                            <div class="space-y-1">
+                                <a href="https://billing.hosterlo.com/cart.php?a=add&amp;domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">search</span></div><div><div class="font-bold text-slate-900">Domain Search</div><div class="text-[11px] text-slate-500">Find your identity.</div></div></a>
+                                <a href="/contact-us/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-slate-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">contact_support</span></div><div><div class="font-bold text-slate-900">Support Hub</div><div class="text-[11px] text-slate-500">24/7 Expert help.</div></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-link" href="/domains/">Domains</a>
+                <a class="nav-link" href="/ai-article-writer/">Free Tools</a>
+                <a class="nav-link text-primary font-bold" href="/free-offer/">Free Offer</a>
+            </nav>
+            <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+                <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Go to Portal</a>
+                <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="px-6 py-2.5 bg-primary text-white font-bold rounded-full shadow-md hover:bg-violet-700 transition-all text-sm hidden sm:block">Get Started</a>
+                <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background"><span class="material-symbols-outlined text-2xl">menu</span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero / Article Header -->
+    <section class="pt-16 pb-0 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[860px] mx-auto text-center">
+            <div class="inline-flex items-center gap-2 bg-violet-50 border border-violet-100 rounded-full px-4 py-1.5 mb-6">
+                <span class="material-symbols-outlined text-primary text-base">article</span>
+                <span class="text-primary font-bold text-xs uppercase tracking-widest">Website Troubleshooting</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-black text-[#111c2d] leading-tight mb-6">
+                Why Is My Website Down? 12 Common Causes and How to Fix Them
+            </h1>
+            <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-8 leading-relaxed">
+                Your site just went dark. Before you panic, let's diagnose exactly what happened — and walk through every fix, step by step.
+            </p>
+            <div class="flex items-center justify-center gap-6 text-sm text-slate-400 font-semibold mb-10">
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">calendar_month</span> June 3, 2026</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 9 min read</span>
+                <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">person</span> Hosterlo Editorial Team</span>
+            </div>
+        </div>
+        <!-- Hero Image -->
+        <div class="max-w-[1100px] mx-auto">
+            <img
+                src="https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp"
+                alt="Why is my website down - Hosterlo data center infrastructure"
+                class="w-full h-[380px] sm:h-[480px] object-cover rounded-3xl shadow-2xl shadow-indigo-900/10"
+                loading="eager"
+                decoding="async"
+            >
+        </div>
+    </section>
+
+    <!-- Article Body -->
+    <main class="px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-[860px] mx-auto article-body">
+
+            <!-- Intro -->
+            <p>
+                It starts with a sinking feeling. You click your own website link — or worse, a customer messages you saying they can't access it — and you're met with a blank screen, a browser error, or an ominous "This site can't be reached." Your immediate reaction is panic, and that's completely normal.
+            </p>
+            <p>
+                But before you do anything drastic, take one breath and do this first: <strong>verify whether your website is down for everyone or just you.</strong> Visit <a href="https://downforeveryoneorjustme.com" target="_blank" rel="noopener noreferrer">downforeveryoneorjustme.com</a>, type in your domain, and hit Enter. If it says "It's not just you — the site is down for everyone," you have a real outage on your hands. If it says "It's just you," the issue is likely local — your browser cache, your ISP's DNS resolver, or your network.
+            </p>
+            <p>
+                For local issues, try clearing your browser cache (<code>Ctrl + Shift + Delete</code>), switching to a different browser, or loading the site on your phone using mobile data instead of Wi-Fi. If the site loads on your phone, your local network or DNS cache is the culprit and a simple flush will sort it out (<code>ipconfig /flushdns</code> on Windows, <code>sudo dscacheutil -flushcache</code> on macOS).
+            </p>
+            <p>
+                If the site really is down for everyone, however, you need to diagnose the root cause systematically. Below are the 12 most common reasons websites go offline — and exactly how to fix each one.
+            </p>
+
+            <!-- Cause 1 -->
+            <h2 id="cause-1">
+                <span class="cause-badge">Cause 1</span><br>
+                Server Downtime or Overload
+            </h2>
+            <p>
+                This is the most common culprit behind sudden, unexplained outages. Your website lives on a physical (or virtual) server, and when that server goes down — whether because of a hardware failure, a software crash, or simply being overwhelmed with traffic — your site goes with it.
+            </p>
+            <p>
+                <strong>What actually happens:</strong> When a server is overloaded, it struggles to handle incoming requests. Instead of serving your pages, it starts queuing requests, then dropping them entirely, returning errors like <strong>503 Service Unavailable</strong> or timing out with no response at all. This is especially brutal on cheap shared hosting environments where hundreds of websites share the same physical CPU and RAM. When one site on the server gets a traffic spike — maybe they went viral — everyone else suffers too.
+            </p>
+            <p>
+                <strong>How to check:</strong> Log into your hosting control panel and look for a server status page. Most providers also have a public status page (e.g., <code>status.yourhost.com</code>). You can also set up a free account on <a href="https://uptimerobot.com" target="_blank" rel="noopener noreferrer">UptimeRobot</a> which pings your site every 5 minutes and sends you an instant email or SMS when it goes down — so you're not the last to know.
+            </p>
+            <p>
+                <strong>The real fix:</strong> Short-term, you can contact your host's support team and ask them to investigate server-level issues. Long-term, this problem points to an infrastructure issue with your hosting plan. Cheap shared hosting simply isn't built for reliability under load.
+            </p>
+            <div class="tip-box">
+                <p>💡 <strong>Hosterlo's solution:</strong> <a href="/hosting/">Hosterlo web hosting</a> runs on enterprise-grade NVMe SSD storage with LiteSpeed Web Server technology — a combination that processes requests up to 9x faster than traditional Apache-based hosting and handles traffic spikes gracefully without crashing. You're not sharing resources with hundreds of random sites.</p>
+            </div>
+
+            <!-- Cause 2 -->
+            <h2 id="cause-2">
+                <span class="cause-badge">Cause 2</span><br>
+                DNS Propagation Issues
+            </h2>
+            <p>
+                If you've recently moved your website to a new hosting provider, changed your nameservers, or updated any DNS records, you may be experiencing what's called a <strong>DNS propagation delay</strong> — and this is one of the most confusing types of "downtime" because the problem isn't your server at all.
+            </p>
+            <p>
+                <strong>How DNS works:</strong> Every domain name is mapped to an IP address via DNS (Domain Name System). These records are cached by resolvers (your ISP's DNS servers, Google's DNS, Cloudflare's DNS, etc.) for a period of time called the <strong>TTL (Time To Live)</strong>. If you change your nameservers or A records, the old cached values continue to direct some visitors to the old server — while others who hit a fresh resolver see the new one. This inconsistency creates a window where some people can access your site and others get errors or blank pages.
+            </p>
+            <p>
+                <strong>How long does propagation take?</strong> Typically <strong>24 to 48 hours</strong> for full global propagation, though many changes reflect within a few hours for most users. If your TTL was set very high (e.g., 86400 seconds = 24 hours) before the change, you're in for a longer wait.
+            </p>
+            <p>
+                <strong>How to check propagation status:</strong> Use <a href="https://www.whatsmydns.net" target="_blank" rel="noopener noreferrer">whatsmydns.net</a> — enter your domain and select which record type you changed (A, CNAME, NS). It shows you the resolved value from dozens of servers around the world, so you can see exactly how far propagation has reached.
+            </p>
+            <p>
+                You can also verify locally from your terminal:
+            </p>
+            <ul>
+                <li><strong>Windows:</strong> <code>nslookup yourdomain.com</code></li>
+                <li><strong>Mac/Linux:</strong> <code>dig yourdomain.com</code> or <code>dig yourdomain.com @8.8.8.8</code> (to query Google's DNS specifically)</li>
+            </ul>
+            <p>
+                <strong>Fix:</strong> If propagation is in progress, there's no way to rush it — you simply have to wait. However, you can reduce future propagation delays by lowering your TTL to 300 seconds (5 minutes) <em>before</em> you plan to make DNS changes. That way, cached records expire quickly and the transition is much smoother.
+            </p>
+
+            <!-- Cause 3 -->
+            <h2 id="cause-3">
+                <span class="cause-badge">Cause 3</span><br>
+                Expired Domain Name
+            </h2>
+            <p>
+                This one is embarrassingly common, and it can happen to anyone — even large companies. If your domain registration expires and you don't renew it in time, your domain stops resolving. Visitors who type your URL into their browser get either a registrar parking page, a generic error, or — in the worst case — your domain gets snapped up by a domain squatter before you can reclaim it.
+            </p>
+            <p>
+                Most domain registrars send renewal reminder emails 30, 15, and 7 days before expiry. But if those emails land in spam, or you've changed email addresses since registration, you might miss them entirely.
+            </p>
+            <p>
+                <strong>How to check your domain's expiry date:</strong> Do a WHOIS lookup. Visit <a href="https://lookup.icann.org" target="_blank" rel="noopener noreferrer">lookup.icann.org</a> or simply Google "WHOIS [yourdomain.com]". Look for the <code>Registry Expiry Date</code> or <code>Expiration Date</code> field. If it's in the past — that's your problem.
+            </p>
+            <p>
+                <strong>Fix:</strong> Log into your domain registrar's control panel immediately and renew the domain. Most registrars give you a grace period of 30–45 days after expiry during which you can still renew (sometimes for a slightly higher fee). After the grace period comes the "Redemption Period" — renewing becomes very expensive. After that, the domain is deleted and available to the public.
+            </p>
+            <p>
+                The absolute best prevention is to enable <strong>auto-renew</strong> on all your domains and keep a valid payment method on file. If you need a reliable place to manage your domains going forward, Hosterlo's <a href="/domains/">domain registration</a> service includes auto-renew by default and expiry alerts sent directly to your account dashboard — no more missed renewals.
+            </p>
+            <div class="warning-box">
+                <p>⚠️ <strong>Warning:</strong> Never let a business-critical domain lapse into the redemption period. Recovery fees can be $100–$300 or more, depending on the registrar and TLD.</p>
+            </div>
+
+            <!-- Cause 4 -->
+            <h2 id="cause-4">
+                <span class="cause-badge">Cause 4</span><br>
+                Expired or Invalid SSL Certificate
+            </h2>
+            <p>
+                Modern browsers are brutal about SSL. If your SSL/TLS certificate has expired, is misconfigured, or covers the wrong domain, Chrome, Firefox, and Edge will block visitors with a bright red warning screen: <em>"Your connection is not private"</em> or <em>"NET::ERR_CERT_DATE_INVALID."</em> While your site technically isn't "down" — the server is responding — it might as well be, because most visitors will hit the back button immediately rather than click through the warning.
+            </p>
+            <p>
+                <strong>Common SSL problems include:</strong>
+            </p>
+            <ul>
+                <li>Certificate expiry (Let's Encrypt certificates expire every 90 days if not auto-renewed)</li>
+                <li>Mismatched domain (certificate issued for <code>www.yourdomain.com</code> but accessed at <code>yourdomain.com</code>, or vice versa)</li>
+                <li>Mixed content errors (your site loads via HTTPS but pulls in HTTP resources — images, scripts)</li>
+                <li>Incomplete certificate chain (intermediate certificates missing)</li>
+            </ul>
+            <p>
+                <strong>How to diagnose:</strong> Use <a href="https://www.ssllabs.com/ssltest/" target="_blank" rel="noopener noreferrer">SSL Labs' free SSL test</a> — it gives you a detailed grade and pinpoints exactly what's wrong. Check your certificate's expiry date directly in your browser by clicking the padlock icon → "Certificate."
+            </p>
+            <p>
+                <strong>Fix:</strong> If your certificate has expired, reissue it via your hosting control panel (under SSL/TLS settings in cPanel). If you're using Let's Encrypt, most control panels have a one-click reissue button. Then set up auto-renew so it never expires again.
+            </p>
+            <div class="tip-box">
+                <p>💡 All <a href="/hosting/">Hosterlo web hosting</a> plans come with free SSL certificates that auto-renew silently in the background — you never have to think about it. No manual renewal, no expiry warnings, no red browser screens.</p>
+            </div>
+
+            <!-- Cause 5 -->
+            <h2 id="cause-5">
+                <span class="cause-badge">Cause 5</span><br>
+                .htaccess Errors
+            </h2>
+            <p>
+                The <code>.htaccess</code> file is a powerful Apache configuration file that controls URL redirects, access rules, PHP settings, and much more. It's also one of the easiest files to accidentally break — a single misplaced character, an unclosed bracket, or an invalid directive will cause a <strong>500 Internal Server Error</strong> for your entire site.
+            </p>
+            <p>
+                This typically happens after:
+            </p>
+            <ul>
+                <li>Installing or updating a WordPress plugin that modifies <code>.htaccess</code></li>
+                <li>Manually editing the file to add redirects or security rules</li>
+                <li>Migrating from a different server environment (some directives valid on one host aren't valid on another)</li>
+                <li>A security plugin running an overly aggressive rule</li>
+            </ul>
+            <p>
+                <strong>How to fix it:</strong>
+            </p>
+            <ol>
+                <li>Log into your hosting account's <strong>File Manager</strong> (in cPanel) or connect via FTP/SFTP.</li>
+                <li>Navigate to your website's root directory (usually <code>public_html</code>).</li>
+                <li>Find the <code>.htaccess</code> file. (Make sure "Show Hidden Files" is enabled — it starts with a dot, so it may be hidden by default.)</li>
+                <li>Rename it to <code>.htaccess_old</code> or <code>.htaccess_backup</code>. This effectively disables it.</li>
+                <li>Reload your site. If it loads now, the <code>.htaccess</code> was the problem.</li>
+                <li>For WordPress sites, go to <strong>Settings → Permalinks</strong> in wp-admin and click "Save Changes" — WordPress will auto-generate a clean, valid <code>.htaccess</code> file.</li>
+                <li>If you had custom rules in the old file, add them back one section at a time, testing after each addition to find the bad line.</li>
+            </ol>
+            <div class="tip-box">
+                <p>💡 A minimal, safe WordPress <code>.htaccess</code> file looks like this:<br><br>
+                <code># BEGIN WordPress</code><br>
+                <code>RewriteEngine On</code><br>
+                <code>RewriteBase /</code><br>
+                <code>RewriteRule ^index\.php$ - [L]</code><br>
+                <code>RewriteCond %{REQUEST_FILENAME} !-f</code><br>
+                <code>RewriteCond %{REQUEST_FILENAME} !-d</code><br>
+                <code>RewriteRule . /index.php [L]</code><br>
+                <code># END WordPress</code>
+                </p>
+            </div>
+
+            <!-- Cause 6 -->
+            <h2 id="cause-6">
+                <span class="cause-badge">Cause 6</span><br>
+                Database Connection Errors
+            </h2>
+            <p>
+                If you run a WordPress site (or any CMS that relies on a database), you may have seen the dreaded white screen with the message: <strong>"Error establishing a database connection."</strong> This means your site's application cannot communicate with its MySQL database — and without that connection, nothing renders.
+            </p>
+            <p>
+                <strong>The most common reasons this happens:</strong>
+            </p>
+            <ul>
+                <li><strong>Wrong credentials in wp-config.php:</strong> The database name, username, password, or host in your WordPress configuration file doesn't match what's set up in your hosting account. This often happens after a migration.</li>
+                <li><strong>MySQL service down:</strong> The database server itself crashed or was restarted. This is a server-level issue your host needs to address.</li>
+                <li><strong>Max connections reached:</strong> Your MySQL installation has a connection limit. If too many concurrent scripts are trying to connect simultaneously, new ones are refused. This is common on shared hosting with low connection limits.</li>
+                <li><strong>Corrupted database tables:</strong> Occasionally, a WordPress table becomes corrupted (especially after a crash during a write operation). This can prevent the whole site from loading.</li>
+            </ul>
+            <p>
+                <strong>Fix — Step by step:</strong>
+            </p>
+            <ol>
+                <li>Open your <code>wp-config.php</code> file (in your site's root via File Manager or FTP).</li>
+                <li>Verify that <code>DB_NAME</code>, <code>DB_USER</code>, <code>DB_PASSWORD</code>, and <code>DB_HOST</code> are correct. Cross-reference with your hosting panel's MySQL Databases section.</li>
+                <li>If credentials are correct, log into <strong>phpMyAdmin</strong> via cPanel and check if your database tables are listed. Select all tables and run "Repair Table" from the dropdown — this fixes most corruption issues.</li>
+                <li>If MySQL isn't accessible at all, contact your host — the database service may need to be restarted.</li>
+            </ol>
+
+            <!-- Cause 7 -->
+            <h2 id="cause-7">
+                <span class="cause-badge">Cause 7</span><br>
+                PHP Version Mismatch
+            </h2>
+            <p>
+                WordPress plugins, themes, and even WordPress core itself require specific PHP versions to function correctly. If your hosting account is running an outdated PHP version that's no longer supported by your software — or if you recently upgraded PHP to a version that's too new for an old plugin — you'll likely encounter a blank white screen, a fatal error, or a 500 error.
+            </p>
+            <p>
+                For example, many legacy plugins written for PHP 7.x will throw fatal errors on PHP 8.2 because they use deprecated functions. Conversely, if your hosting account is stuck on PHP 5.6, you'll have security vulnerabilities and compatibility problems with any modern plugin.
+            </p>
+            <p>
+                <strong>How to check and switch your PHP version in cPanel:</strong>
+            </p>
+            <ol>
+                <li>Log into cPanel and look for <strong>"MultiPHP Manager"</strong> or <strong>"PHP Selector."</strong></li>
+                <li>Find your domain and check which PHP version it's currently assigned.</li>
+                <li>Try switching to the version recommended by WordPress (currently PHP 8.1 or 8.2 for most modern setups).</li>
+                <li>If switching up breaks things, try switching down one minor version (e.g., from 8.2 to 8.1) and test again.</li>
+                <li>Once stable, identify and update or replace the incompatible plugin/theme.</li>
+            </ol>
+            <p>
+                You can also check for PHP errors directly: enable debug mode in WordPress by adding <code>define('WP_DEBUG', true);</code> and <code>define('WP_DEBUG_LOG', true);</code> to <code>wp-config.php</code>. Then check the <code>wp-content/debug.log</code> file for detailed error messages pointing to the problematic plugin or function.
+            </p>
+
+            <!-- Cause 8 -->
+            <h2 id="cause-8">
+                <span class="cause-badge">Cause 8</span><br>
+                DDoS Attack
+            </h2>
+            <p>
+                A <strong>Distributed Denial of Service (DDoS) attack</strong> is when malicious actors flood your server with enormous volumes of fake traffic — sometimes hundreds of thousands or millions of requests per second — with the sole intent of overwhelming your server resources and knocking your site offline for legitimate visitors.
+            </p>
+            <p>
+                <strong>Signs you're under DDoS attack:</strong>
+            </p>
+            <ul>
+                <li>Your site went down suddenly with no code changes and no server maintenance</li>
+                <li>Server CPU and bandwidth usage spiked to 100% instantly</li>
+                <li>Your hosting provider sends you an abuse/overuse notification</li>
+                <li>Traffic logs show thousands of requests per second from hundreds of different IP addresses with no referrer</li>
+                <li>The attack pattern is often cyclical — site comes back for a few minutes, then crashes again</li>
+            </ul>
+            <p>
+                <strong>What to do:</strong>
+            </p>
+            <ul>
+                <li><strong>Contact your host immediately.</strong> Enterprise hosting providers have network-level DDoS mitigation tools that can filter attack traffic before it even reaches your server.</li>
+                <li><strong>Enable Cloudflare's "Under Attack Mode."</strong> If your site is proxied through Cloudflare, activate this mode from your Cloudflare dashboard — it adds a JavaScript challenge to every visitor and blocks bots automatically.</li>
+                <li><strong>Rate limiting:</strong> Configure your server or Cloudflare to limit the number of requests any single IP can make per minute.</li>
+                <li><strong>Geo-blocking:</strong> If the attack traffic is concentrated from specific countries, temporarily block those regions.</li>
+            </ul>
+            <div class="tip-box">
+                <p>💡 Hosterlo's infrastructure includes enterprise-grade DDoS protection at the network layer. Learn more about our <a href="/infrastructure/">global data center network</a> and how we keep your site protected 24/7.</p>
+            </div>
+
+            <!-- Cause 9 -->
+            <h2 id="cause-9">
+                <span class="cause-badge">Cause 9</span><br>
+                Bandwidth or Storage Limit Hit
+            </h2>
+            <p>
+                Most hosting plans come with defined resource limits: a monthly bandwidth allowance (the total data transferred to and from your site) and a disk storage quota. On some budget plans, hitting either of these limits doesn't just result in extra charges — it results in your site being automatically suspended or returning errors until the next billing cycle.
+            </p>
+            <p>
+                <strong>How this plays out:</strong> Your site runs fine for three weeks of the month, traffic picks up (maybe a viral post, a press mention, or a sales campaign), and then boom — you hit your bandwidth cap and your host throws up a "Account Bandwidth Limit Exceeded" page instead of your actual website.
+            </p>
+            <p>
+                <strong>How to check:</strong> Log into cPanel → look at the "Bandwidth" stat in the quick stats panel. Some hosts also have a dedicated Bandwidth Manager showing daily and monthly usage graphs. For disk space, check the "Disk Usage" section.
+            </p>
+            <p>
+                <strong>Fix:</strong>
+            </p>
+            <ul>
+                <li>Contact your host and ask for a temporary bandwidth extension or upgrade your plan immediately.</li>
+                <li>Compress and optimize images on your site — unoptimized images are the #1 cause of runaway bandwidth usage.</li>
+                <li>Enable Cloudflare as a CDN — it caches your static assets and serves them directly to visitors without consuming your server's bandwidth.</li>
+                <li>Review your server access logs to identify any unusually large files being downloaded repeatedly (bots scraping your site, for instance).</li>
+            </ul>
+            <p>
+                If bandwidth and storage limits are a recurring headache, it's worth upgrading to a plan that gives you room to breathe. Hosterlo's <a href="/hosting/shared-hosting/">shared hosting plans</a> come with generous resource allocations designed for real-world traffic — not the artificially throttled limits you find on rock-bottom hosts.
+            </p>
+
+            <!-- Cause 10 -->
+            <h2 id="cause-10">
+                <span class="cause-badge">Cause 10</span><br>
+                Corrupted WordPress Core Files
+            </h2>
+            <p>
+                WordPress core files can become corrupted in a few different ways: a botched update, a malware infection that overwrote or deleted core files, a failed migration, or even a server crash during a file write operation. When core files are corrupted, WordPress simply cannot function — you'll typically see a white screen of death, partial page loads, or 500 errors.
+            </p>
+            <p>
+                <strong>How to tell if it's corrupted core files vs. a plugin:</strong> If deactivating all plugins (by renaming the <code>/wp-content/plugins/</code> folder to <code>/wp-content/plugins_off/</code> via FTP) still doesn't fix the error, the problem is likely in core files, your theme, or a database issue.
+            </p>
+            <p>
+                <strong>Fix — Reinstall WordPress core (without losing your content):</strong>
+            </p>
+            <ol>
+                <li>Download a fresh copy of WordPress from <a href="https://wordpress.org/download/" target="_blank" rel="noopener noreferrer">wordpress.org/download/</a>.</li>
+                <li>Unzip it on your local computer.</li>
+                <li>Delete the <code>wp-content</code> folder from the fresh copy — <strong>do not upload this</strong>, as it contains your themes, plugins, and uploads.</li>
+                <li>Upload all remaining files from the fresh WordPress package to your server via FTP, overwriting the existing files.</li>
+                <li>Your database, content, and <code>wp-config.php</code> remain untouched. Only the core PHP files are replaced.</li>
+            </ol>
+            <p>
+                <strong>Malware scans:</strong> If you suspect a hack, run a malware scan immediately using Wordfence, MalCare, or your hosting panel's built-in malware scanner. Change all passwords (FTP, cPanel, WordPress admin, database) after cleaning. Daily backups are your absolute best insurance against this scenario — if you have a clean backup from yesterday, a restore takes minutes instead of hours of forensic work.
+            </p>
+
+            <!-- Cause 11 -->
+            <h2 id="cause-11">
+                <span class="cause-badge">Cause 11</span><br>
+                CDN or Cloudflare Misconfiguration
+            </h2>
+            <p>
+                Content Delivery Networks (CDNs) like Cloudflare are incredibly powerful for performance and security — but they introduce an additional layer between your visitor and your server, and misconfigurations at that layer can make your site completely inaccessible even when your server itself is perfectly healthy.
+            </p>
+            <p>
+                <strong>Common Cloudflare misconfigurations that cause downtime:</strong>
+            </p>
+            <ul>
+                <li><strong>SSL/TLS mode mismatch:</strong> This is the big one. If your server has a self-signed SSL certificate (or no SSL) and Cloudflare is set to "Full (Strict)" mode, Cloudflare will refuse to connect and return a <strong>526 Invalid SSL Certificate</strong> or <strong>525 SSL Handshake Failed</strong> error. Set Cloudflare's SSL mode to match your server: use "Flexible" if your server has no SSL, "Full" for a self-signed certificate, and "Full (Strict)" only for a valid CA-signed certificate.</li>
+                <li><strong>Orange cloud vs. grey cloud:</strong> If a DNS record is set to "DNS only" (grey cloud) instead of "Proxied" (orange cloud), Cloudflare isn't caching or protecting it. Conversely, records that should be DNS-only (like MX records for email) should never be proxied.</li>
+                <li><strong>Stale cached content:</strong> Cloudflare aggressively caches your site. After a major update or fix, visitors may still see the broken cached version. Fix by going to Cloudflare dashboard → Caching → Configuration → Purge Everything.</li>
+                <li><strong>Firewall rules blocking legitimate traffic:</strong> Overly aggressive Cloudflare firewall rules or "Bot Fight Mode" can block legitimate visitors, crawlers, and even your own admin access.</li>
+            </ul>
+            <p>
+                <strong>Fix checklist:</strong> Verify your SSL/TLS mode, check that your A record points to the correct server IP with orange cloud enabled, purge your cache after any changes, and review your firewall rules in the Cloudflare Security tab.
+            </p>
+
+            <!-- Cause 12 -->
+            <h2 id="cause-12">
+                <span class="cause-badge">Cause 12</span><br>
+                Hosting Account Suspended
+            </h2>
+            <p>
+                Account suspension is a sharp and immediate cause of downtime — and it's one that many site owners don't see coming. Your hosting provider can suspend your account for a variety of reasons, and the result is usually a generic suspension page served to all your visitors instead of your actual site.
+            </p>
+            <p>
+                <strong>The most common reasons for suspension include:</strong>
+            </p>
+            <ul>
+                <li><strong>Billing failure:</strong> Your payment method on file expired, declined, or was charged back. If the renewal invoice goes unpaid past the grace period, suspension is automatic. This is by far the most common reason.</li>
+                <li><strong>Terms of Service violations:</strong> Hosting a phishing page, sending bulk spam email, using excessive server resources in violation of fair use policies, or hosting illegal content will get you suspended — usually without warning.</li>
+                <li><strong>Malware detected:</strong> If your site is infected and actively spreading malware or participating in a botnet, your host will suspend the account to protect other users on the same server.</li>
+                <li><strong>DMCA complaint:</strong> If copyrighted content is hosted on your account and the rights holder files a complaint, your host may be legally obligated to suspend the infringing content or the entire account.</li>
+            </ul>
+            <p>
+                <strong>Fix:</strong> Log into your hosting billing portal and check for any outstanding invoices or notifications. If it's a billing issue, update your payment method and settle the balance — most hosts reactivate suspended accounts within minutes of payment clearing. If it's a TOS violation, you'll need to submit a support ticket, understand what violated the policy, remediate the issue, and formally request reactivation.
+            </p>
+            <p>
+                To prevent billing-related suspensions going forward: always keep an up-to-date payment method on file, set up account payment alerts, and consider paying annually rather than monthly — fewer renewal cycles means fewer opportunities for a payment to slip through the cracks.
+            </p>
+
+            <!-- Prevention -->
+            <h2 id="prevention">
+                How to Stay Online 99.99% of the Time: A Prevention Playbook
+            </h2>
+            <p>
+                Now that you understand the 12 most common causes of website downtime, let's talk about how to prevent them proactively — because in the world of online business, prevention is infinitely cheaper than recovery.
+            </p>
+            <h3>1. Use Uptime Monitoring</h3>
+            <p>
+                Don't wait for a customer to tell you your site is down. Set up a free monitoring service like <a href="https://uptimerobot.com" target="_blank" rel="noopener noreferrer">UptimeRobot</a>, <a href="https://freshping.io" target="_blank" rel="noopener noreferrer">Freshping</a>, or <a href="https://betteruptime.com" target="_blank" rel="noopener noreferrer">Better Uptime</a>. These tools ping your site every 1–5 minutes and send you an instant alert via email, SMS, or Slack the moment it goes down. You'll know in seconds, not hours.
+            </p>
+            <h3>2. Choose Hosting With a Real Uptime SLA</h3>
+            <p>
+                Not all hosting providers are created equal. A "99.9% uptime guarantee" sounds impressive until you do the math — it allows for over 8 hours of downtime per year. <a href="/hosting/">Hosterlo web hosting</a> backs its Business plans with a <strong>99.99% uptime SLA</strong>, which translates to less than 53 minutes of total downtime per year — and that's the contractual commitment, not a marketing claim.
+            </p>
+            <h3>3. Enable Daily Automated Backups</h3>
+            <p>
+                Backups won't prevent downtime, but they're your fastest path to recovery when something goes wrong. A daily backup means that even in a worst-case scenario — malware, corrupted files, accidental deletion — you're restoring from a snapshot that's at most 24 hours old, not scrambling to rebuild from scratch. Make sure your host stores backups offsite (not just on the same server as your site).
+            </p>
+            <h3>4. Keep Everything Updated</h3>
+            <p>
+                WordPress core, plugins, and themes should always be on their latest stable versions. Most security vulnerabilities exploited by hackers are in outdated software. Enable auto-updates for minor WordPress releases, and review plugin updates weekly. Before major updates, back up your site first.
+            </p>
+            <h3>5. Auto-Renew Everything</h3>
+            <p>
+                Enable auto-renew on your domain registration and hosting plan. Keep your payment information current. Set calendar reminders 30 days before any annual renewal. The two-minute setup of auto-renew can save you from days of downtime and the nightmare of recovering a lapsed domain.
+            </p>
+            <h3>6. Use a CDN</h3>
+            <p>
+                A CDN (Content Delivery Network) like Cloudflare caches your site's content on servers around the globe. This reduces load on your origin server, speeds up page loads for international visitors, and in some configurations can serve cached pages even if your origin server goes momentarily offline — effectively making your site resilient to brief outages.
+            </p>
+            <div class="tip-box">
+                <p>🎁 Hosterlo's <a href="/free-offer/">free Website Growth Kit</a> — included with annual plans — bundles together premium uptime monitoring, daily backup tools, SSL management, and performance optimization resources so you get all of this protection without piecing it together yourself.</p>
+            </div>
+
+            <!-- FAQ Section -->
+            <h2 id="faq" class="mt-16 mb-8">Frequently Asked Questions</h2>
+            <div class="space-y-0 border-t border-slate-200">
+                <details class="faq-item">
+                    <summary>How do I check if my website is really down for everyone?</summary>
+                    <p>
+                        Visit <strong>downforeveryoneorjustme.com</strong> and enter your URL. If it says "It's not just you!", your site is globally unreachable. You can also use tools like isitdownrightnow.com or UptimeRobot for continuous monitoring. Checking from a different network or device — such as your mobile data connection instead of your Wi-Fi — also confirms whether it's a local caching issue or a real, worldwide outage.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>How long does DNS propagation take?</summary>
+                    <p>
+                        DNS propagation typically takes between <strong>24 and 48 hours</strong> to fully complete worldwide, although many users may see changes within a few hours. The speed depends on the TTL (Time To Live) values set on your DNS records before the change was made — lower TTLs mean faster propagation. You can track propagation progress in real time using <strong>whatsmydns.net</strong>, which shows you how your DNS records appear from dozens of servers around the globe.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>What causes a 500 Internal Server Error?</summary>
+                    <p>
+                        A 500 Internal Server Error is most commonly caused by a <strong>misconfigured .htaccess file</strong>, a PHP syntax error in a plugin or theme, incompatible or corrupted plugins, exhausted PHP memory limits, or incorrect file permissions. Start by checking your server error logs (found in cPanel under "Errors"), then rename your <code>.htaccess</code> file to test if that's the culprit. Deactivating plugins by renaming the plugins folder via FTP is another common fix for WordPress sites. If the problem persists, check that your PHP version is compatible with your installed plugins and themes.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Does Hosterlo have a 99.99% uptime guarantee?</summary>
+                    <p>
+                        Yes. Hosterlo's Business and higher-tier hosting plans include a <strong>99.99% uptime SLA</strong> backed by enterprise NVMe infrastructure, redundant power systems, and global load balancing. Unlike budget shared hosting providers that cram hundreds of sites onto a single underpowered server, Hosterlo uses LiteSpeed Web Servers and proactive 24/7 monitoring to prevent outages before they affect your visitors. That's less than 53 minutes of downtime per year — contractually guaranteed.
+                    </p>
+                </details>
+            </div>
+
+            <!-- Purple CTA Banner -->
+            <div class="mt-20 rounded-3xl bg-gradient-to-br from-[#4f17ce] via-[#6d28d9] to-[#3b0fa0] p-10 sm:p-14 text-center text-white shadow-2xl shadow-violet-900/30 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+                <div class="relative z-10">
+                    <span class="inline-block bg-white/20 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">Zero Downtime Hosting</span>
+                    <h2 class="text-3xl sm:text-4xl font-black mb-4 text-white" style="font-family: 'Outfit', sans-serif;">
+                        Never Worry About Downtime Again — Switch to Hosterlo
+                    </h2>
+                    <p class="text-violet-200 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                        Join thousands of businesses that trust Hosterlo's enterprise NVMe infrastructure, 99.99% uptime SLA, free SSL auto-renewal, daily backups, and 24/7 expert support. Your site stays online. Period.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                            href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting"
+                            class="inline-flex items-center justify-center gap-2 bg-white text-primary font-extrabold text-base px-10 py-4 rounded-full shadow-lg hover:bg-violet-50 transition-all duration-300"
+                        >
+                            <span class="material-symbols-outlined text-xl">rocket_launch</span>
+                            Get Started — It's Risk-Free
+                        </a>
+                        <a
+                            href="/free-offer/"
+                            class="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/30 text-white font-bold text-base px-10 py-4 rounded-full hover:bg-white/20 transition-all duration-300"
+                        >
+                            <span class="material-symbols-outlined text-xl">redeem</span>
+                            Claim Free Growth Kit
+                        </a>
+                    </div>
+                    <p class="mt-6 text-violet-300 text-sm font-semibold">30-day money-back guarantee · Free migration · No setup fees</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+        <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none tracking-tighter z-0">hosterlo</div>
+        <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+                <div class="lg:col-span-4 space-y-6">
+                    <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async"></a>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.</p>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                    <ul class="space-y-3.5">
+                        <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                        <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
+                        <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">WordPress Pro</a></li>
+                        <li><a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3">
+                    <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support &amp; Policies</h4>
+                    <ul class="space-y-3.5">
+                        <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                        <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
+                        <li><a href="/privacy-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Privacy &amp; Terms</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3">
+                    <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
+                    <ul class="space-y-3.5">
+                        <li><a href="/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Insights &amp; Blog</a></li>
+                        <li><a href="/ai-article-writer/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">AI Content Tools</a></li>
+                        <li><a href="/free-offer/" class="text-primary font-bold text-sm transition-colors">Free Growth Kit</a></li>
+                        <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Client Portal Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8">
+                <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. All rights reserved. | Built on Digioverse&trade; Global Infrastructure.</p>
+                <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                    <a href="/privacy-policy/" class="hover:text-primary transition-colors">Legal</a>
+                    <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const o = document.getElementById('mobile-menu-open');
+        const c = document.getElementById('mobile-menu-close');
+        const v = document.getElementById('mobile-menu-overlay');
+        if (o && c && v) {
+            o.addEventListener('click', () => { v.classList.remove('translate-x-full'); document.body.style.overflow = 'hidden'; });
+            c.addEventListener('click', () => { v.classList.add('translate-x-full'); document.body.style.overflow = ''; });
+            v.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { v.classList.add('translate-x-full'); document.body.style.overflow = ''; }));
+        }
+    </script>
+
+</body>
+</html>

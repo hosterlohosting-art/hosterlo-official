@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSL Certificates Explained: Complete Website Security Guide 2026 | Hosterlo Blog</title>
+    <meta name="description" content="Everything you need to know about SSL certificates in 2026 — what they do, types of SSL, how to install for free, and why HTTPS is critical for SEO and conversions.">
+    <meta name="keywords" content="SSL certificate guide, what is SSL, free SSL certificate, HTTPS website, website security 2026, install SSL">
+    <meta name="author" content="Hosterlo Editorial Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hosterlo.com/2026/06/03/ssl-certificate-guide-website-security-2026/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="SSL Certificates Explained: Complete Website Security Guide 2026">
+    <meta property="og:description" content="Everything you need to know about SSL certificates in 2026 — what they do, types of SSL, how to install for free, and why HTTPS is critical for SEO and conversions.">
+    <meta property="og:image" content="https://hosterlo.com/assets/secure-enterprise-hosting.webp">
+    <meta property="og:url" content="https://hosterlo.com/2026/06/03/ssl-certificate-guide-website-security-2026/">
+    <meta property="og:site_name" content="Hosterlo">
+    <meta property="article:published_time" content="2026-06-03T00:00:00+00:00">
+    <meta property="article:section" content="Website Security">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SSL Certificates Explained: Complete Website Security Guide 2026">
+    <meta name="twitter:description" content="Everything you need to know about SSL certificates in 2026 — what they do, types of SSL, how to install for free, and why HTTPS is critical for SEO and conversions.">
+    <meta name="twitter:image" content="https://hosterlo.com/assets/secure-enterprise-hosting.webp">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f17ce',
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e1b2e;
+            background-color: #ffffff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .nav-link {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #374151;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #4f17ce; }
+
+        /* Prose article styles */
+        .article-body h2 {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: #111c2d;
+            margin-top: 2.75rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .article-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e1b2e;
+            margin-top: 1.75rem;
+            margin-bottom: 0.6rem;
+        }
+        .article-body p {
+            color: #374151;
+            line-height: 1.85;
+            margin-bottom: 1.2rem;
+            font-size: 1.035rem;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.2rem;
+            padding-left: 1.5rem;
+        }
+        .article-body ul li, .article-body ol li {
+            color: #374151;
+            line-height: 1.8;
+            margin-bottom: 0.4rem;
+            font-size: 1.01rem;
+        }
+        .article-body ul { list-style-type: disc; }
+        .article-body ol { list-style-type: decimal; }
+        .article-body a {
+            color: #4f17ce;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .article-body a:hover { color: #3a0fa8; }
+        .article-body strong { color: #111c2d; font-weight: 700; }
+        .article-body code {
+            background: #f3f0fa;
+            color: #4f17ce;
+            border-radius: 5px;
+            padding: 0.15em 0.45em;
+            font-size: 0.93em;
+            font-family: 'Courier New', monospace;
+        }
+        .article-body pre {
+            background: #1e1b2e;
+            color: #e2e8f0;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            overflow-x: auto;
+            margin-bottom: 1.4rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .article-body pre code {
+            background: transparent;
+            color: #e2e8f0;
+            padding: 0;
+            font-size: 1em;
+        }
+        .article-body blockquote {
+            border-left: 4px solid #4f17ce;
+            background: #f8f6fc;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            color: #484455;
+            font-style: italic;
+        }
+
+        /* Info box */
+        .info-box {
+            background: linear-gradient(135deg, #f3f0fa 0%, #ede9fe 100%);
+            border: 1px solid #ddd6fe;
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .info-box p { margin-bottom: 0; color: #4c3a8a; }
+
+        /* Warning box */
+        .warning-box {
+            background: #fff8ed;
+            border: 1px solid #fed7aa;
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p { margin-bottom: 0; color: #92400e; }
+
+        /* Table */
+        .article-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .article-body table th {
+            background: #4f17ce;
+            color: #fff;
+            font-weight: 700;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        .article-body table td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #374151;
+        }
+        .article-body table tr:hover td { background: #f8f6fc; }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid #e2e8f0; }
+        .faq-item summary {
+            cursor: pointer;
+            padding: 1.25rem 0;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #111c2d;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Outfit', sans-serif;
+        }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: #4f17ce; transition: transform 0.3s; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; font-size: 0.985rem; }
+
+        /* Tag badge */
+        .tag-badge {
+            display: inline-block;
+            background: #f3f0fa;
+            color: #4f17ce;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.3em 0.9em;
+            border-radius: 999px;
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://hosterlo.com/2026/06/03/ssl-certificate-guide-website-security-2026/#article",
+          "headline": "SSL Certificates Explained: Complete Website Security Guide 2026",
+          "description": "Everything you need to know about SSL certificates in 2026 — what they do, types of SSL, how to install for free, and why HTTPS is critical for SEO and conversions.",
+          "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp",
+          "datePublished": "2026-06-03T00:00:00+00:00",
+          "dateModified": "2026-06-03T00:00:00+00:00",
+          "author": {
+            "@type": "Organization",
+            "name": "Hosterlo Editorial Team",
+            "url": "https://hosterlo.com/blog/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hosterlo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hosterlo.com/assets/logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://hosterlo.com/2026/06/03/ssl-certificate-guide-website-security-2026/"
+          },
+          "keywords": "SSL certificate guide, what is SSL, free SSL certificate, HTTPS website, website security 2026, install SSL",
+          "articleSection": "Website Security",
+          "wordCount": 3200
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does SSL affect website speed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Modern SSL/TLS has a negligible impact on speed. Thanks to HTTP/2 (which requires HTTPS), TLS 1.3, and session resumption, HTTPS sites are often faster than HTTP sites. Any overhead from the initial handshake is measured in milliseconds and is practically imperceptible to visitors."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How often does Let's Encrypt SSL need to be renewed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Let's Encrypt certificates expire every 90 days. However, most hosting providers including Hosterlo handle auto-renewal automatically via AutoSSL or a cron job, so you never need to manually renew. The short lifespan is actually a security feature — it limits exposure if a certificate is ever compromised."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What happens if my SSL certificate expires?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If your SSL certificate expires, browsers will immediately display a full-screen security warning to all visitors, blocking them from accessing your site until they manually bypass it. This destroys trust, tanks your bounce rate, and can result in a de-ranking by Google. Always ensure auto-renewal is enabled."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Hosterlo provide free SSL on all plans?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Every Hosterlo hosting plan — including shared hosting — includes free SSL certificates powered by AutoSSL, which renews automatically. You also get a free .com domain name with annual plans. There is nothing extra to configure; SSL is activated automatically for every domain and subdomain on your account."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-white antialiased">
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[200] bg-white translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-slate-100">
+        <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-9 w-auto"></a>
+        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 text-slate-600"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="px-6 py-8 space-y-1">
+        <a href="/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Home</a>
+        <a href="/hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Web Hosting</a>
+        <a href="/hosting/shared-hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Shared Hosting</a>
+        <a href="/hosting/wordpress-hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">WordPress Hosting</a>
+        <a href="/domains/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Domains</a>
+        <a href="/free-offer/" class="block py-3 px-4 rounded-xl font-bold text-primary hover:bg-purple-50">Free Offer</a>
+        <a href="/contact-us/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Contact</a>
+        <div class="pt-4 space-y-3">
+            <a href="https://billing.hosterlo.com/index.php?rp=/login" class="block text-center py-3 px-4 rounded-xl font-bold bg-[#f2ebfa] text-primary">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block text-center py-3 px-4 rounded-xl font-bold bg-primary text-white">Get Started</a>
+        </div>
+    </nav>
+</div>
+
+<!-- TopNavBar -->
+<header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
+        <div class="flex-shrink-0">
+            <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a class="nav-link" href="/">Home</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1 py-8 cursor-default"><span>Solutions</span><span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button>
+                <div class="absolute top-[calc(100%-10px)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-[32px] shadow-2xl border border-slate-200/50 p-8 hidden group-hover:grid grid-cols-3 gap-8 z-[100]">
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary">Hosting Solutions</h4>
+                        <div class="space-y-1">
+                            <a href="/hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">cloud</span></div><div><div class="font-bold text-slate-900">Web Hosting</div><div class="text-[11px] text-slate-500">Fast Cloud solutions.</div></div></a>
+                            <a href="/hosting/shared-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">grid_view</span></div><div><div class="font-bold text-slate-900">Shared Hosting</div><div class="text-[11px] text-slate-500">Cost-effective speed.</div></div></a>
+                            <a href="/hosting/wordpress-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">auto_awesome</span></div><div><div class="font-bold text-slate-900">WordPress</div><div class="text-[11px] text-slate-500">Engineered for WP.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-300">Infrastructure</h4>
+                        <div class="space-y-1">
+                            <a href="/free-offer/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/item:bg-primary transition-all"><span class="material-symbols-outlined">redeem</span></div><div><div class="font-bold text-slate-900">Free Growth Kit</div><div class="text-[11px] text-slate-500">Included with annual plans.</div></div></a>
+                            <a href="/infrastructure/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">hub</span></div><div><div class="font-bold text-slate-900">Data Centers</div><div class="text-[11px] text-slate-500">Elite global network.</div></div></a>
+                            <a href="/services/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover/item:bg-slate-900 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">code</span></div><div><div class="font-bold text-slate-900">Web Dev &amp; SEO</div><div class="text-[11px] text-slate-500">Professional design.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-400">Domains &amp; Support</h4>
+                        <div class="space-y-1">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">search</span></div><div><div class="font-bold text-slate-900">Domain Search</div><div class="text-[11px] text-slate-500">Find your identity.</div></div></a>
+                            <a href="/contact-us/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-slate-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">contact_support</span></div><div><div class="font-bold text-slate-900">Support Hub</div><div class="text-[11px] text-slate-500">24/7 Expert help.</div></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link" href="/domains/">Domains</a>
+            <a class="nav-link" href="/ai-article-writer/">Free Tools</a>
+            <a class="nav-link text-primary font-bold" href="/free-offer/">Free Offer</a>
+        </nav>
+        <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="px-6 py-2.5 bg-primary text-white font-bold rounded-full shadow-md hover:bg-violet-700 transition-all text-sm hidden sm:block">Get Started</a>
+            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="pt-16 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#f8f6fc] to-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <div class="flex items-center justify-center gap-3 mb-6">
+            <span class="tag-badge">Website Security</span>
+            <span class="text-slate-400 text-xs font-semibold">·</span>
+            <span class="text-slate-400 text-xs font-semibold">June 3, 2026</span>
+            <span class="text-slate-400 text-xs font-semibold">·</span>
+            <span class="text-slate-400 text-xs font-semibold">10 min read</span>
+        </div>
+        <h1 class="font-outfit text-4xl sm:text-5xl font-black text-[#111c2d] leading-tight mb-6">
+            SSL Certificates Explained: Complete Website Security Guide 2026
+        </h1>
+        <p class="text-lg text-slate-500 leading-relaxed max-w-2xl mx-auto">
+            Everything you need to know about SSL certificates in 2026 — what they do, types of SSL, how to install for free, and why HTTPS is now non-negotiable for SEO and conversions.
+        </p>
+    </div>
+</section>
+
+<!-- Hero Image -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+    <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200/50">
+        <img src="https://hosterlo.com/assets/secure-enterprise-hosting.webp" alt="SSL Certificate Website Security Guide 2026" class="w-full h-auto object-cover" loading="eager">
+    </div>
+</div>
+
+<!-- Article Body -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <article class="article-body">
+
+        <!-- Intro -->
+        <p>
+            In 2026, there is simply no acceptable reason to run a website without HTTPS. Whether you're running a personal blog, a local business site, an e-commerce store, or a SaaS application — the little padlock icon in your visitor's browser address bar is no longer optional. It's table stakes. And the technology behind that padlock is an <strong>SSL/TLS certificate</strong>.
+        </p>
+        <p>
+            This guide is designed to be your single most useful resource on SSL certificates. We're not going to skim the surface. By the time you finish reading, you'll understand exactly what an SSL certificate is, why it matters enormously for Google rankings and user trust, the difference between free and paid SSL, how to install and force HTTPS on your site, and how to diagnose common SSL errors — all in plain language.
+        </p>
+        <p>
+            We'll also cover WordPress-specific setup, HTTP Strict Transport Security (HSTS), email security's relationship with SSL, and explain exactly what you get with <a href="/hosting/">Hosterlo web hosting</a> when it comes to SSL out of the box.
+        </p>
+
+        <div class="info-box">
+            <p>💡 <strong>Quick answer if you're in a hurry:</strong> Every website needs HTTPS via SSL. For most sites, a free Let's Encrypt certificate is perfectly sufficient. At Hosterlo, SSL is included and auto-configured on every plan. Read on for the full picture.</p>
+        </div>
+
+        <!-- H2: What Is an SSL Certificate -->
+        <h2>What Is an SSL Certificate and How Does It Work?</h2>
+        <p>
+            SSL stands for <strong>Secure Sockets Layer</strong>. Strictly speaking, modern implementations use its successor protocol, <strong>TLS (Transport Layer Security)</strong> — currently TLS 1.3 — but the industry still uses "SSL" as the colloquial term. An SSL/TLS certificate is a small digital data file installed on your web server. Its job is to do two critical things:
+        </p>
+        <ul>
+            <li><strong>Authenticate your identity</strong> — prove to visitors that they are talking to the real, verified version of your website and not a malicious impersonator.</li>
+            <li><strong>Encrypt the connection</strong> — scramble all data transmitted between your server and your visitor's browser so that nobody in between can read or tamper with it.</li>
+        </ul>
+
+        <h3>The TLS Handshake Explained Simply</h3>
+        <p>
+            When a visitor types your URL into a browser, before any page content loads, a rapid negotiation process called the <strong>TLS handshake</strong> takes place. Here's what happens in roughly 50–200 milliseconds:
+        </p>
+        <ol>
+            <li><strong>Client Hello:</strong> The browser tells your server: "Here are the TLS versions and cipher suites I support."</li>
+            <li><strong>Server Hello:</strong> Your server responds, selecting a cipher suite, and sends its SSL certificate.</li>
+            <li><strong>Certificate Verification:</strong> The browser checks the certificate against a list of trusted Certificate Authorities (CAs). It verifies it hasn't expired, that it's issued to your domain, and that the chain of trust is intact.</li>
+            <li><strong>Key Exchange:</strong> Both sides agree on a session key using asymmetric cryptography (public/private key pair). All subsequent data is encrypted with this symmetric session key.</li>
+            <li><strong>Encrypted Connection Established:</strong> The padlock appears. Every byte of data — login credentials, payment info, personal details, API responses — is now encrypted end-to-end.</li>
+        </ol>
+        <p>
+            The <strong>certificate chain</strong> is worth understanding: your SSL certificate isn't trusted directly. It's signed by an intermediate CA, which is signed by a root CA (like DigiCert, Sectigo, or Let's Encrypt). Browsers come pre-installed with a list of trusted root CAs. If your certificate chain is broken — for example, if the intermediate certificate isn't installed correctly — browsers will display a security error.
+        </p>
+        <p>
+            What the padlock icon (or the <code>https://</code> prefix) means to your visitor: "This connection is private and the website's identity has been verified." That's a powerful trust signal — and its absence is an equally powerful red flag.
+        </p>
+
+        <!-- H2: Why SSL Matters for SEO -->
+        <h2>Why SSL Matters for SEO</h2>
+        <p>
+            If you care about organic search traffic — and you should — HTTPS is not optional. Let's look at the concrete ways SSL affects your search engine rankings.
+        </p>
+
+        <h3>Google's HTTPS Ranking Signal</h3>
+        <p>
+            Back in August 2014, Google officially announced that HTTPS would be used as a ranking signal. At the time they described it as a "lightweight" signal. By 2026, after years of doubling down on HTTPS preference across every product and policy, the weight of this signal is considerably more significant. Google's crawlers, Google Search Console, and Google's PageSpeed insights all treat HTTPS as a baseline expectation.
+        </p>
+        <p>
+            In competitive niches, two otherwise identical pages — one on HTTP, one on HTTPS — will have HTTPS rank higher. Full stop.
+        </p>
+
+        <h3>Chrome's "Not Secure" Warning and Bounce Rate</h3>
+        <p>
+            Google Chrome, which holds roughly 65% of global browser market share, actively warns users when they visit an HTTP site. The address bar displays a prominent <strong>"Not Secure"</strong> label in red. On any page that includes a login form, contact form, or payment field, Chrome shows a full-page interstitial warning before the user can proceed.
+        </p>
+        <p>
+            Studies across numerous industries have shown that the "Not Secure" warning can increase bounce rates by <strong>15–40%</strong>. If visitors are bouncing because your site looks unsafe, Google's RankBrain notices that user behaviour signal — more bounces, shorter dwell time — and it eventually hurts your ranking. The domino effect is real.
+        </p>
+
+        <h3>SSL and Core Web Vitals</h3>
+        <p>
+            HTTPS is a prerequisite for HTTP/2, which is a prerequisite for many performance optimizations that directly affect Core Web Vitals scores. HTTP/2 multiplexes requests over a single TCP connection (dramatically reducing latency), enables server push, and uses header compression. You simply cannot use HTTP/2 without HTTPS in modern browsers. Since Core Web Vitals — particularly LCP (Largest Contentful Paint) and FID (First Input Delay) — are official Google ranking factors, any site still running over HTTP is locked out of these performance gains.
+        </p>
+
+        <!-- H2: Types of SSL Certificates -->
+        <h2>Types of SSL Certificates</h2>
+        <p>
+            Not all SSL certificates are created equal. They differ primarily in the level of <strong>identity validation</strong> performed by the Certificate Authority before issuance. Here's a breakdown of every type you'll encounter.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Validation Level</th>
+                    <th>Issued In</th>
+                    <th>Best For</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>DV (Domain Validated)</strong></td>
+                    <td>Domain ownership only</td>
+                    <td>Minutes</td>
+                    <td>Blogs, small business sites, personal sites</td>
+                </tr>
+                <tr>
+                    <td><strong>OV (Organization Validated)</strong></td>
+                    <td>Domain + business identity</td>
+                    <td>1–3 days</td>
+                    <td>Established businesses, professional services</td>
+                </tr>
+                <tr>
+                    <td><strong>EV (Extended Validation)</strong></td>
+                    <td>Domain + rigorous legal entity check</td>
+                    <td>1–5 days</td>
+                    <td>Banks, healthcare, large e-commerce</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Domain Validated (DV) SSL</h3>
+        <p>
+            A DV certificate is the most common type. The CA only verifies that you control the domain — typically via email verification, DNS record, or an HTTP file upload. There's no vetting of your business identity. This is what Let's Encrypt issues and what most hosting providers (including Hosterlo via AutoSSL) install automatically. For the vast majority of websites, DV SSL is absolutely sufficient.
+        </p>
+
+        <h3>Organization Validated (OV) SSL</h3>
+        <p>
+            OV certificates require the CA to verify your organization's legal existence, physical address, and phone number in addition to domain ownership. The certificate contains your verified organization details, which visitors can inspect by clicking the padlock. OV certs add a layer of trust useful for professional businesses that want to demonstrate legitimacy.
+        </p>
+
+        <h3>Extended Validation (EV) SSL</h3>
+        <p>
+            EV SSL involves the most rigorous vetting process — legal existence, operational existence, physical address, authorized certificate requester. Historically, EV certificates showed a green company name bar in the browser, but modern browsers have largely deprecated that UI. Today, EV certificates still carry their verified info in the certificate details, and many enterprise organizations use them for compliance and trust reasons.
+        </p>
+
+        <h3>Wildcard SSL Certificates</h3>
+        <p>
+            A <strong>Wildcard SSL certificate</strong> covers a primary domain and all its first-level subdomains with a single certificate. For example, a wildcard for <code>*.yourdomain.com</code> covers <code>shop.yourdomain.com</code>, <code>blog.yourdomain.com</code>, <code>mail.yourdomain.com</code>, etc. These are highly cost-effective for sites with multiple subdomains and eliminate the need to manage individual certificates for each.
+        </p>
+
+        <h3>Multi-Domain (SAN/UCC) SSL Certificates</h3>
+        <p>
+            A <strong>Multi-Domain SSL</strong> (also called SAN — Subject Alternative Name, or UCC — Unified Communications Certificate) covers multiple distinct domains in a single certificate. Useful for agencies managing several client sites, or businesses with multiple brand domains. One certificate can cover <code>yourbrand.com</code>, <code>yourbrand.co.uk</code>, and <code>yourotherbrand.com</code>.
+        </p>
+
+        <!-- H2: Free SSL vs Paid SSL -->
+        <h2>Free SSL vs Paid SSL — What's the Difference?</h2>
+        <p>
+            The most common question we hear from site owners: <em>"Should I pay for an SSL certificate or use a free one?"</em> The honest answer is nuanced but leans strongly toward free for most use cases.
+        </p>
+
+        <h3>Let's Encrypt: The Free SSL Revolution</h3>
+        <p>
+            <strong>Let's Encrypt</strong> is a non-profit Certificate Authority launched in 2016 with one goal: make the web HTTPS by default by making SSL certificates free and fully automated. It issues DV certificates that are trusted by all major browsers and operating systems. By 2026, Let's Encrypt has issued billions of certificates and powers HTTPS on a significant portion of the entire internet.
+        </p>
+        <p>
+            The key characteristics of Let's Encrypt / free SSL:
+        </p>
+        <ul>
+            <li><strong>DV validation only</strong> — proves you own the domain, not your business identity.</li>
+            <li><strong>90-day validity</strong> — certificates expire every 90 days. This sounds short but is actually a security feature, and renewal is fully automated.</li>
+            <li><strong>Automated via ACME protocol</strong> — most hosting providers integrate this natively (cPanel's AutoSSL, Plesk's Let's Encrypt extension, etc.).</li>
+            <li><strong>Functionally identical encryption</strong> — a free DV certificate encrypts data with exactly the same strength as an expensive EV certificate. Encryption quality is not determined by price.</li>
+        </ul>
+
+        <h3>When Should You Pay for SSL?</h3>
+        <p>
+            Paid SSL certificates (from providers like DigiCert, Sectigo, or GlobalSign) are worth considering if:
+        </p>
+        <ul>
+            <li>You need <strong>OV or EV validation</strong> — to display verified organization information to users, or for regulatory compliance.</li>
+            <li>You need a <strong>Wildcard certificate for complex subdomain architectures</strong> not covered by your host's AutoSSL.</li>
+            <li>You need <strong>extended warranty / liability coverage</strong> — some paid certs include insurance in case of certificate-related fraud.</li>
+            <li>Your compliance requirements mandate a specific CA (rare).</li>
+        </ul>
+        <p>
+            For personal websites, blogs, business sites, and even most online stores, <strong>free SSL via Let's Encrypt is entirely adequate</strong>. The encryption is identical. The padlock looks the same. There is no user-visible difference. With <a href="/hosting/">Hosterlo web hosting</a>, every plan comes with free AutoSSL powered by Let's Encrypt — installed automatically on every domain and subdomain on your account, with zero manual configuration required.
+        </p>
+
+        <!-- H2: How to Check Your SSL Certificate -->
+        <h2>How to Check If Your SSL Certificate Is Valid</h2>
+        <p>
+            Before troubleshooting or after installation, you'll want to verify your SSL is working correctly. Here are the methods — from the quick-and-dirty browser check to a thorough technical audit.
+        </p>
+
+        <h3>1. The Browser Padlock Check</h3>
+        <p>
+            The fastest way: open your site in Chrome, Firefox, or Safari and look at the address bar. A padlock icon (🔒) means the connection is encrypted and the certificate is valid. Click the padlock for details — certificate issuer, expiry date, and the domain it's issued for.
+        </p>
+        <p>
+            If you see <strong>"Not Secure"</strong>, a broken padlock, or a red warning triangle, your SSL is either missing, expired, or misconfigured.
+        </p>
+
+        <h3>2. SSL Labs Full Server Test</h3>
+        <p>
+            For a deep technical audit, visit <strong>ssllabs.com/ssltest/</strong> and enter your domain. SSL Labs' free tool grades your SSL configuration from A+ to F and reports on:
+        </p>
+        <ul>
+            <li>Certificate validity, chain, and expiry.</li>
+            <li>Supported TLS versions (TLS 1.0/1.1 are deprecated — you should only support TLS 1.2 and 1.3).</li>
+            <li>Cipher suite strength and any weak ciphers.</li>
+            <li>HSTS implementation.</li>
+            <li>Vulnerability checks (POODLE, BEAST, Heartbleed, etc.).</li>
+        </ul>
+        <p>
+            Aim for an <strong>A or A+ grade</strong>. Most quality hosting providers — including Hosterlo — configure servers to achieve A or A+ by default.
+        </p>
+
+        <h3>3. Checking Expiry Date</h3>
+        <p>
+            In Chrome, click the padlock → "Connection is secure" → "Certificate is valid." The "Valid to" field shows the expiry date. On the command line, you can use:
+        </p>
+        <pre><code>openssl s_client -connect yourdomain.com:443 -servername yourdomain.com 2>/dev/null | openssl x509 -noout -dates</code></pre>
+
+        <h3>4. Mixed Content Warnings</h3>
+        <p>
+            After migrating to HTTPS, some sites suffer from <strong>mixed content</strong> — the page loads over HTTPS but some resources (images, scripts, stylesheets) are still referenced via HTTP URLs. Chrome's DevTools Console (F12) will flag these as "Mixed Content" warnings. Use a tool like <strong>Why No Padlock?</strong> (whynopadlock.com) to scan your site for mixed content issues.
+        </p>
+
+        <!-- H2: How to Install a Free SSL Certificate via cPanel -->
+        <h2>How to Install a Free SSL Certificate via cPanel</h2>
+        <p>
+            Most shared hosting accounts use cPanel, and cPanel makes SSL installation straightforward with its built-in AutoSSL feature. Here's exactly how to do it.
+        </p>
+
+        <h3>Step-by-Step: AutoSSL via cPanel</h3>
+        <ol>
+            <li>Log in to your <strong>cPanel dashboard</strong> (typically at <code>yourdomain.com/cpanel</code> or via your hosting portal).</li>
+            <li>Scroll to the <strong>Security</strong> section and click <strong>"SSL/TLS Status"</strong>.</li>
+            <li>You'll see a list of all domains and subdomains on your account. Any with a yellow or red icon don't have valid SSL yet.</li>
+            <li>Select the domains you want to secure (or click "Select All") and click <strong>"Run AutoSSL"</strong>.</li>
+            <li>cPanel will contact Let's Encrypt, complete the domain validation challenge, and install the certificate automatically. This typically takes 1–5 minutes.</li>
+            <li>Refresh the SSL/TLS Status page — you should now see green padlock icons next to your domains.</li>
+        </ol>
+        <p>
+            AutoSSL is also configured to <strong>auto-renew</strong> certificates before they expire. You don't need to do anything manually going forward. At Hosterlo, AutoSSL is pre-configured on every account and applies to all domains and subdomains automatically, including any new ones you add later. That's part of what makes <a href="/hosting/shared-hosting/">shared hosting plans</a> at Hosterlo genuinely worry-free.
+        </p>
+
+        <div class="info-box">
+            <p>🔁 <strong>Pro tip:</strong> If AutoSSL fails for a subdomain, the most common reason is that the subdomain's DNS hasn't fully propagated yet. Wait 24 hours after creating the DNS record, then run AutoSSL again.</p>
+        </div>
+
+        <!-- H2: How to Force HTTPS -->
+        <h2>How to Force HTTPS on Your Website</h2>
+        <p>
+            Having an SSL certificate installed is only half the job. You also need to ensure that all traffic is automatically redirected from HTTP to HTTPS — so that even if someone types <code>http://yourdomain.com</code>, they land on the secure version. Here are the main methods.
+        </p>
+
+        <h3>Method 1: .htaccess Redirect (Apache Servers)</h3>
+        <p>
+            For Apache-based hosting (the most common type), add the following rules to your <code>.htaccess</code> file in your public root directory:
+        </p>
+        <pre><code>RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre>
+        <p>
+            This issues a permanent 301 redirect from any HTTP request to the HTTPS equivalent, preserving the full URL path and query string. The <code>R=301</code> is important — it tells search engines this is a permanent move, passing link equity (PageRank) to the HTTPS URLs.
+        </p>
+
+        <h3>Method 2: WordPress Site URL Settings</h3>
+        <p>
+            In WordPress, go to <strong>Settings → General</strong> and update both the "WordPress Address (URL)" and "Site Address (URL)" fields from <code>http://</code> to <code>https://</code>. Save changes. This ensures WordPress generates all internal links using HTTPS.
+        </p>
+
+        <h3>Method 3: cPanel "Force HTTPS Redirect" Toggle</h3>
+        <p>
+            Modern cPanel versions include a convenient toggle. Go to <strong>Domains → "Domains"</strong> (the domain manager, not SSL/TLS), find your domain in the list, and flip the <strong>"Force HTTPS Redirect"</strong> switch to on. This is the same as an .htaccess redirect but managed through a GUI.
+        </p>
+
+        <h3>Method 4: Cloudflare HTTPS Settings</h3>
+        <p>
+            If your site is proxied through Cloudflare, you can enforce HTTPS from the Cloudflare dashboard. Go to <strong>SSL/TLS → Edge Certificates</strong> and enable:
+        </p>
+        <ul>
+            <li><strong>"Always Use HTTPS"</strong> — redirects all HTTP requests at Cloudflare's edge before they even reach your server.</li>
+            <li><strong>"Automatic HTTPS Rewrites"</strong> — converts HTTP resource URLs to HTTPS in your page HTML to fix mixed content.</li>
+        </ul>
+
+        <!-- H2: Common SSL Errors -->
+        <h2>Common SSL Errors and How to Fix Them</h2>
+        <p>
+            SSL errors can be confusing and alarming for visitors. Here are the most common ones and exactly what to do when you encounter them.
+        </p>
+
+        <h3>ERR_SSL_PROTOCOL_ERROR</h3>
+        <p>
+            <strong>Cause:</strong> A mismatch between the TLS versions supported by your server and your visitor's browser, or an SSL configuration error on the server side.<br>
+            <strong>Fix:</strong> Check that your server supports TLS 1.2 and TLS 1.3. Disable TLS 1.0 and 1.1. If the error is client-side only, ask the visitor to update their browser or OS. For server-side issues, contact your hosting provider.
+        </p>
+
+        <h3>Mixed Content Warning</h3>
+        <p>
+            <strong>Cause:</strong> The page is served over HTTPS but some resources (images, scripts, iframes) are loaded over HTTP.<br>
+            <strong>Fix:</strong> Update all internal links to use HTTPS. In WordPress, use a plugin like Really Simple SSL or do a database search-replace to convert all <code>http://yourdomain.com</code> instances to <code>https://yourdomain.com</code>.
+        </p>
+
+        <h3>Certificate Expired Error</h3>
+        <p>
+            <strong>Cause:</strong> Your SSL certificate has passed its validity period. Browsers refuse to trust expired certificates.<br>
+            <strong>Fix:</strong> Renew or re-issue the certificate immediately. If you're on a hosting provider with AutoSSL and it expired anyway, the auto-renewal likely failed due to a DNS propagation issue or a temporarily unreachable server — contact support.
+        </p>
+
+        <h3>SSL Certificate Name Mismatch (ERR_CERT_COMMON_NAME_INVALID)</h3>
+        <p>
+            <strong>Cause:</strong> The domain in the certificate doesn't match the domain you're visiting. For example, the cert is issued for <code>www.yourdomain.com</code> but you're visiting <code>yourdomain.com</code> (or vice versa), or the cert covers a different domain entirely.<br>
+            <strong>Fix:</strong> Re-issue the certificate to cover both the www and non-www versions of your domain. Most AutoSSL implementations handle this automatically.
+        </p>
+
+        <h3>Incomplete Certificate Chain (NET::ERR_CERT_AUTHORITY_INVALID)</h3>
+        <p>
+            <strong>Cause:</strong> The intermediate certificate(s) linking your cert to a trusted root CA weren't installed on the server.<br>
+            <strong>Fix:</strong> Re-install the certificate making sure to include the full chain (certificate + intermediate + root bundle). Most hosting control panels handle this automatically, but if you're installing manually via WHM, ensure you paste the CA Bundle.
+        </p>
+
+        <!-- H2: SSL for WordPress -->
+        <h2>SSL for WordPress Websites</h2>
+        <p>
+            WordPress has its own considerations when migrating to HTTPS that go beyond just installing a certificate and adding an .htaccess redirect. Here's the complete WordPress SSL setup process.
+        </p>
+
+        <h3>Step 1: Install and Activate AutoSSL (via Hosting)</h3>
+        <p>
+            Before touching WordPress, ensure your SSL certificate is installed at the hosting level via cPanel AutoSSL (as described above). Don't configure WordPress until the certificate is confirmed valid in your browser.
+        </p>
+
+        <h3>Step 2: Update WordPress and Site URL</h3>
+        <p>
+            In your WordPress admin, go to <strong>Settings → General</strong>. Update both URLs to use <code>https://</code>. This changes what WordPress considers its "home" address. Alternatively, add these lines to <code>wp-config.php</code> before the "That's all, stop editing!" comment:
+        </p>
+        <pre><code>define('WP_HOME', 'https://yourdomain.com');
+define('WP_SITEURL', 'https://yourdomain.com');</code></pre>
+
+        <h3>Step 3: Update the Database — Search-Replace HTTP to HTTPS</h3>
+        <p>
+            WordPress stores full URLs in its database for posts, pages, and media. After updating the site URL, old <code>http://</code> links still exist in post content, theme settings, and plugin data. The cleanest fix is a database search-replace using <strong>WP-CLI</strong>:
+        </p>
+        <pre><code>wp search-replace 'http://yourdomain.com' 'https://yourdomain.com' --skip-columns=guid</code></pre>
+        <p>
+            If you don't have WP-CLI access, the <strong>Better Search Replace</strong> plugin does the same thing from the WordPress admin interface. Always take a full database backup before running a search-replace.
+        </p>
+
+        <h3>Step 4: The Really Simple SSL Plugin</h3>
+        <p>
+            <strong>Really Simple SSL</strong> is a trusted WordPress plugin that handles the most tedious parts of HTTPS migration automatically: it detects your SSL certificate, updates your site URL, and fixes mixed content via a JavaScript fixer for any hard-coded HTTP resources it can't directly update. For straightforward WordPress sites, it's often the fastest and safest migration path. With <a href="/hosting/wordpress-hosting/">Hosterlo WordPress hosting</a>, SSL is pre-installed and you can often skip to step 4 entirely.
+        </p>
+
+        <h3>Step 5: Verify and Flush Caches</h3>
+        <p>
+            After migration, clear all caches — your hosting server cache, WordPress caching plugin cache (WP Rocket, W3 Total Cache, LiteSpeed Cache), browser cache, and CDN cache. Then verify your site loads correctly on HTTPS, check for mixed content in Chrome DevTools, and update your Google Search Console property to use the HTTPS version of your site.
+        </p>
+
+        <!-- H2: HSTS and Security Headers -->
+        <h2>HTTPS, HSTS, and Security Headers</h2>
+        <p>
+            HTTPS is foundational, but it's only the beginning of a comprehensive web security posture. Two additional layers that every site owner should understand are HSTS and security headers.
+        </p>
+
+        <h3>What Is HSTS?</h3>
+        <p>
+            <strong>HTTP Strict Transport Security (HSTS)</strong> is a web security policy mechanism that tells browsers: "This website should only ever be accessed over HTTPS, even if someone types HTTP." Once a browser receives an HSTS header, it will automatically convert any future HTTP requests to HTTPS for the specified duration — without even making an HTTP request to the server first.
+        </p>
+        <p>
+            This is critical because it eliminates a vulnerability: if a user is on a public Wi-Fi network and first visits your site via HTTP before the redirect kicks in, a man-in-the-middle attacker could intercept that initial HTTP request. HSTS prevents this by making the browser go straight to HTTPS.
+        </p>
+        <p>
+            Add HSTS via an HTTP response header (via .htaccess or Nginx config):
+        </p>
+        <pre><code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code></pre>
+        <p>
+            The <code>max-age=31536000</code> sets a one-year HSTS policy. <code>includeSubDomains</code> extends it to all subdomains. <code>preload</code> allows you to submit your domain to the browser HSTS preload list (hstspreload.org), meaning browsers will enforce HTTPS for your domain even on the very first visit, without ever needing to see an HSTS header.
+        </p>
+
+        <div class="warning-box">
+            <p>⚠️ <strong>Before enabling HSTS preloading:</strong> Make sure every single subdomain of your domain serves valid HTTPS. Once submitted to the preload list, it can take months to be removed. Broken HTTPS on any subdomain will make those subdomains completely inaccessible.</p>
+        </div>
+
+        <h3>Content Security Policy (CSP)</h3>
+        <p>
+            The <strong>Content-Security-Policy (CSP)</strong> header tells the browser which sources of content are trusted and allowed to load on your page. It's a powerful tool to prevent <strong>Cross-Site Scripting (XSS)</strong> attacks — where malicious scripts injected into your site attempt to run in visitors' browsers. A basic CSP header:
+        </p>
+        <pre><code>Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.tailwindcss.com; img-src 'self' data: https:;</code></pre>
+        <p>
+            CSP is complex to configure correctly (especially on sites with many third-party integrations), but even a basic policy adds significant protection. Start in "report-only" mode (<code>Content-Security-Policy-Report-Only</code>) to see what would be blocked without actually blocking anything, then tighten from there.
+        </p>
+
+        <h3>Other Important Security Headers</h3>
+        <ul>
+            <li><code>X-Frame-Options: SAMEORIGIN</code> — prevents your site from being embedded in iframes on other domains (clickjacking protection).</li>
+            <li><code>X-Content-Type-Options: nosniff</code> — prevents browsers from MIME-sniffing a response away from the declared content type.</li>
+            <li><code>Referrer-Policy: strict-origin-when-cross-origin</code> — controls how much referrer information is included with outgoing requests.</li>
+            <li><code>Permissions-Policy</code> — restricts which browser features and APIs your site can access (camera, microphone, geolocation, etc.).</li>
+        </ul>
+
+        <!-- H2: Email Security and SSL -->
+        <h2>Email Security and SSL</h2>
+        <p>
+            When business owners first learn about SSL certificates, they sometimes assume that having one means their email is also secure. SSL on your website (port 443 / HTTPS) is separate from email security protocols, but they're related and worth understanding together.
+        </p>
+
+        <h3>TLS for Email: STARTTLS and SSL/TLS on Mail Ports</h3>
+        <p>
+            Modern email servers transmit messages using TLS encryption — configured on ports 587 (SMTP with STARTTLS), 993 (IMAPS), and 995 (POP3S). When you set up email on your Hosterlo hosting account, these ports are already TLS-secured using your domain's SSL certificate. This encrypts email data in transit between servers.
+        </p>
+
+        <h3>SPF, DKIM, DMARC — Authentication vs Encryption</h3>
+        <p>
+            While SSL encrypts the connection, <strong>SPF</strong>, <strong>DKIM</strong>, and <strong>DMARC</strong> are DNS-based email authentication protocols that prevent email spoofing and phishing:
+        </p>
+        <ul>
+            <li><strong>SPF (Sender Policy Framework):</strong> A DNS TXT record that specifies which mail servers are authorized to send email on behalf of your domain. Prevents unauthorized servers from spoofing your "From" address.</li>
+            <li><strong>DKIM (DomainKeys Identified Mail):</strong> Adds a cryptographic signature to outgoing emails, verified using a public key published in your DNS. Proves the email hasn't been tampered with in transit.</li>
+            <li><strong>DMARC (Domain-based Message Authentication, Reporting &amp; Conformance):</strong> Ties SPF and DKIM together with a policy — it tells receiving mail servers what to do when an email fails authentication checks (quarantine, reject, or do nothing) and sends you aggregate reports.</li>
+        </ul>
+        <p>
+            Configuring all three is essential for email deliverability in 2026. Google and Microsoft both now require SPF and DKIM for high-volume senders, and a proper DMARC policy is rapidly becoming a baseline requirement. These records are set in your <a href="/domains/">domain registration</a> DNS zone — you can check and verify them quickly using free DMARC lookup and email security audit tools.
+        </p>
+
+        <!-- H2: Free Domain + SSL at Hosterlo -->
+        <h2>Does a Free Domain Come with Free SSL at Hosterlo?</h2>
+        <p>
+            Yes — and the answer is simple: every annual hosting plan at Hosterlo comes with both a <strong>free .com domain name</strong> and <strong>free SSL certificates</strong> on every domain and subdomain on your account. Here's what that means in practice:
+        </p>
+        <ul>
+            <li>When you sign up for an annual Hosterlo hosting plan, you register a .com domain free of charge for the first year.</li>
+            <li>AutoSSL is activated on your account automatically. Within minutes of your domain propagating, HTTPS is live.</li>
+            <li>SSL certificates auto-renew silently — you never get an expiry warning, never have to manually renew, never get hit with surprise fees.</li>
+            <li>Every subdomain you create (e.g., <code>shop.yourdomain.com</code>, <code>staging.yourdomain.com</code>) gets its own certificate automatically.</li>
+            <li>There is no upsell for "premium SSL" — the free SSL provided is cryptographically identical in encryption strength to expensive paid alternatives.</li>
+        </ul>
+        <p>
+            If you're building a new site or migrating an existing one, this is one less thing to worry about. Our free <a href="/free-offer/">free Website Growth Kit</a> — included with every annual plan — also includes additional tools to help you grow your online presence beyond just hosting.
+        </p>
+        <p>
+            Combined with Hosterlo's 99.99% uptime guarantee, global LightSpeed infrastructure, and 24/7 human support, there's no reason to delay getting your site onto a fast, secure platform. Explore <a href="/hosting/shared-hosting/">shared hosting plans</a> starting at a price that makes sense for any stage of business.
+        </p>
+
+        <!-- FAQ Section -->
+        <h2 id="faq">Frequently Asked Questions About SSL Certificates</h2>
+
+        <div class="mt-6 space-y-0 divide-y divide-slate-200">
+
+            <details class="faq-item">
+                <summary>Does SSL affect website speed?</summary>
+                <p>Modern SSL/TLS has a negligible impact on speed, and in most cases actually makes your website <em>faster</em>. Here's why: HTTPS is required to use HTTP/2, which multiplexes multiple requests over a single connection, dramatically reducing latency compared to the older HTTP/1.1 protocol. Add to that TLS 1.3's 1-RTT handshake (down from 2 in TLS 1.2) and session resumption for repeat visitors, and any overhead from encryption is more than offset by the performance gains. Google PageSpeed and Core Web Vitals scores consistently improve when sites migrate to HTTP/2 — which requires HTTPS.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How often does Let's Encrypt SSL need to be renewed?</summary>
+                <p>Let's Encrypt certificates expire every <strong>90 days</strong>. This sounds inconvenient, but the ACME protocol used by Let's Encrypt makes renewal fully automatic — good hosting providers configure auto-renewal via AutoSSL or a scheduled cron job that renews certificates roughly 30 days before expiry. At Hosterlo, auto-renewal is configured out of the box. The 90-day lifespan is intentionally short — it limits the damage if a certificate's private key is ever compromised, since the window of exposure is capped at three months rather than one or two years.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What happens if my SSL certificate expires?</summary>
+                <p>If your SSL certificate expires, browsers will immediately display a full-screen security error to every single visitor — something like "Your connection is not private" with a red warning. Most visitors will leave immediately rather than bypass the warning, which means your site effectively becomes inaccessible. On top of that, Google may de-index or drop-rank pages that return SSL errors. And if you're running any kind of business, the reputational damage from an "unsafe site" warning is severe. This is why auto-renewal via AutoSSL is so important — it removes human error from the equation entirely.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Does Hosterlo provide free SSL on all plans?</summary>
+                <p>Yes, absolutely. Every Hosterlo hosting plan — from entry-level <a href="/hosting/shared-hosting/">shared hosting</a> to premium business hosting — includes free SSL certificates powered by AutoSSL (Let's Encrypt). SSL is automatically installed on your primary domain and all subdomains. There are no premium SSL tiers to buy, no separate SSL fees, and no manual setup required. Annual plans also include a free .com domain and the <a href="/free-offer/">free Website Growth Kit</a>. SSL is just included — the way it should be in 2026.</p>
+            </details>
+
+        </div>
+
+        <!-- Purple CTA Banner -->
+        <div class="mt-16 rounded-3xl overflow-hidden" style="background: linear-gradient(135deg, #4f17ce 0%, #7c3aed 50%, #4f17ce 100%);">
+            <div class="px-8 py-12 sm:px-12 text-center relative overflow-hidden">
+                <!-- Background decoration -->
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px); background-size: 40px 40px;"></div>
+                <div class="relative z-10">
+                    <div class="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                        <span>🔒</span> Free SSL Included on Every Plan
+                    </div>
+                    <h2 class="font-outfit text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">
+                        Get Free SSL + Free Domain with Every Hosterlo Hosting Plan
+                    </h2>
+                    <p class="text-white/80 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
+                        Stop worrying about SSL configuration. Every Hosterlo plan includes automatic SSL on all domains, a free .com domain, and the free Website Growth Kit — all on blazing-fast LightSpeed infrastructure.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting"
+                           class="inline-block bg-white text-primary font-black text-base px-8 py-4 rounded-full shadow-xl hover:bg-purple-50 transition-all duration-300 transform hover:scale-105">
+                            Start with Free SSL Today →
+                        </a>
+                        <a href="/free-offer/"
+                           class="inline-block border-2 border-white/50 text-white font-bold text-base px-8 py-4 rounded-full hover:bg-white/10 transition-all duration-300">
+                            See What's Free
+                        </a>
+                    </div>
+                    <p class="text-white/50 text-xs mt-6">No credit card tricks. SSL included. Cancel anytime.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Author / Share Row -->
+        <div class="mt-12 pt-10 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-violet-500 flex items-center justify-center text-white font-black text-lg font-outfit">H</div>
+                <div>
+                    <div class="font-bold text-[#111c2d] text-sm font-outfit">Hosterlo Editorial Team</div>
+                    <div class="text-slate-400 text-xs">Published June 3, 2026 · Website Security</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="text-slate-400 text-sm font-semibold">More reading:</span>
+                <a href="/blog/" class="text-primary text-sm font-bold underline underline-offset-2 hover:text-violet-700">Hosterlo blog</a>
+            </div>
+        </div>
+
+    </article>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+    <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none tracking-tighter z-0">hosterlo</div>
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+            <div class="lg:col-span-4 space-y-6">
+                <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async"></a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.</p>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                    <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
+                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">WordPress Pro</a></li>
+                    <li><a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support &amp; Policies</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
+                    <li><a href="/privacy-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Insights &amp; Blog</a></li>
+                    <li><a href="/ai-article-writer/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">AI Content Tools</a></li>
+                    <li><a href="/free-offer/" class="text-primary font-bold text-sm transition-colors">Free Growth Kit</a></li>
+                    <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Client Portal Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. All rights reserved. | Built on Digioverse&trade; Global Infrastructure.</p>
+            <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                <a href="/privacy-policy/" class="hover:text-primary transition-colors">Legal</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>const o=document.getElementById('mobile-menu-open'),c=document.getElementById('mobile-menu-close'),v=document.getElementById('mobile-menu-overlay');if(o&&c&&v){o.addEventListener('click',()=>{v.classList.remove('translate-x-full');document.body.style.overflow='hidden'});c.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''});v.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''}))}</script>
+
+</body>
+</html>

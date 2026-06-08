@@ -182,4 +182,39 @@
     <priority>0.50</priority>
     <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/bluehost-vs-siteground-vs-hosterlo-2026/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image><image:loc>https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/why-is-my-website-down-common-causes-and-fixes/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image><image:loc>https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/how-to-migrate-website-to-new-host-without-downtime/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image><image:loc>https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/cpanel-tutorial-for-beginners-complete-guide/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/control-panel-interface.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/ssl-certificate-guide-website-security-2026/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
 </urlset>

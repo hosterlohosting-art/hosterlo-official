@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cPanel Tutorial for Beginners: The Complete 2026 Guide | Hosterlo</title>
+  <meta name="description" content="New to cPanel? This beginner's guide explains everything — from logging in and creating email accounts to installing WordPress and managing files in cPanel 2026." />
+  <meta name="keywords" content="cPanel tutorial, cPanel for beginners, what is cPanel, how to use cPanel, cPanel guide 2026" />
+  <link rel="canonical" href="https://hosterlo.com/2026/06/03/cpanel-tutorial-for-beginners-complete-guide/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="cPanel Tutorial for Beginners: The Complete 2026 Guide" />
+  <meta property="og:description" content="New to cPanel? This beginner's guide explains everything — from logging in and creating email accounts to installing WordPress and managing files in cPanel 2026." />
+  <meta property="og:image" content="https://hosterlo.com/assets/control-panel-interface.webp" />
+  <meta property="og:url" content="https://hosterlo.com/2026/06/03/cpanel-tutorial-for-beginners-complete-guide/" />
+  <meta property="og:site_name" content="Hosterlo" />
+  <meta property="article:published_time" content="2026-06-03T00:00:00Z" />
+  <meta property="article:author" content="Hosterlo Editorial Team" />
+  <meta property="article:section" content="Hosting Guides" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="cPanel Tutorial for Beginners: The Complete 2026 Guide" />
+  <meta name="twitter:description" content="New to cPanel? This beginner's guide explains everything — from logging in and creating email accounts to installing WordPress and managing files in cPanel 2026." />
+  <meta name="twitter:image" content="https://hosterlo.com/assets/control-panel-interface.webp" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f17ce',
+          },
+          fontFamily: {
+            outfit: ['Outfit', 'sans-serif'],
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: #1e1b2e; background: #fff; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+    .nav-link { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.95rem; color: #111c2d; transition: color 0.2s; }
+    .nav-link:hover { color: #4f17ce; }
+
+    /* FAQ Accordion */
+    .faq-item { border-bottom: 1px solid #e2e8f0; }
+    .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-weight: 700; font-size: 1rem; color: #111c2d; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.5rem; color: #4f17ce; transition: transform 0.3s; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; }
+
+    /* Step list */
+    .step-list { counter-reset: steps; list-style: none; padding: 0; }
+    .step-list li { counter-increment: steps; position: relative; padding-left: 3rem; margin-bottom: 1rem; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 0; top: 0; width: 2rem; height: 2rem; background: #4f17ce; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.875rem; font-family: 'Outfit', sans-serif; }
+
+    /* Code inline */
+    code { background: #f3f0fa; color: #4f17ce; padding: 0.15em 0.45em; border-radius: 0.35em; font-size: 0.9em; font-family: 'Courier New', monospace; }
+
+    /* Callout box */
+    .callout { background: #f5f0ff; border-left: 4px solid #4f17ce; border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+    .callout p { margin: 0; color: #3b0f99; font-weight: 600; font-size: 0.95rem; }
+
+    /* Comparison table */
+    .compare-table th { background: #4f17ce; color: #fff; font-family: 'Outfit', sans-serif; }
+    .compare-table td, .compare-table th { padding: 0.75rem 1rem; border: 1px solid #e2e8f0; vertical-align: top; }
+    .compare-table tr:nth-child(even) td { background: #f9f7ff; }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "cPanel Tutorial for Beginners: The Complete 2026 Guide",
+        "description": "New to cPanel? This beginner's guide explains everything — from logging in and creating email accounts to installing WordPress and managing files in cPanel 2026.",
+        "image": "https://hosterlo.com/assets/control-panel-interface.webp",
+        "datePublished": "2026-06-03T00:00:00Z",
+        "dateModified": "2026-06-03T00:00:00Z",
+        "author": {
+          "@type": "Organization",
+          "name": "Hosterlo Editorial Team",
+          "url": "https://hosterlo.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Hosterlo",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hosterlo.com/assets/logo.png"
+          }
+        },
+        "url": "https://hosterlo.com/2026/06/03/cpanel-tutorial-for-beginners-complete-guide/",
+        "mainEntityOfPage": "https://hosterlo.com/2026/06/03/cpanel-tutorial-for-beginners-complete-guide/",
+        "articleSection": "Hosting Guides",
+        "keywords": "cPanel tutorial, cPanel for beginners, what is cPanel, how to use cPanel, cPanel guide 2026"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between cPanel and WHM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "cPanel is the end-user control panel you use to manage your own hosting account — files, emails, databases, domains. WHM (Web Host Manager) sits one level above and is used by hosting companies or resellers to manage multiple cPanel accounts on a single server. As a regular website owner, you will only ever interact with cPanel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I reset my cPanel password?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The easiest way is through your hosting provider's client portal. Log in at billing.hosterlo.com, navigate to your hosting service, and look for 'Change cPanel Password'. Alternatively, if your host allows it, you can use the 'Forgot Password' link on the cPanel login page, which will send a reset link to the email address associated with your account."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is cPanel free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "cPanel itself is not free — it's a commercial software product that hosting companies license. However, as an end user, you don't pay for cPanel directly; the cost is bundled into your hosting plan. Some budget hosts charge extra for it, while premium hosts like Hosterlo include full cPanel access in every plan at no additional cost."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Hosterlo include cPanel with every hosting plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every Hosterlo hosting plan comes with full cPanel access included — no extra fees, no stripped-down version. You also get Softaculous for one-click installs, free AutoSSL, unlimited email accounts, and the Hosterlo Website Growth Kit at no additional charge."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-white z-[200] flex flex-col p-6 translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+  <div class="flex justify-between items-center mb-8">
+    <a href="/"><img alt="Hosterlo Logo" class="w-[160px] h-auto" src="/assets/logo.png" decoding="async"></a>
+    <button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100 text-slate-700"><span class="material-symbols-outlined text-2xl">close</span></button>
+  </div>
+  <nav class="flex flex-col gap-2">
+    <a href="/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Home</a>
+    <a href="/hosting/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Web Hosting</a>
+    <a href="/hosting/shared-hosting/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Shared Hosting</a>
+    <a href="/hosting/wordpress-hosting/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">WordPress Hosting</a>
+    <a href="/domains/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Domains</a>
+    <a href="/ai-article-writer/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Free Tools</a>
+    <a href="/free-offer/" class="px-4 py-3 rounded-xl font-bold text-primary hover:bg-primary/5">Free Offer</a>
+    <a href="/contact-us/" class="px-4 py-3 rounded-xl font-bold text-slate-800 hover:bg-slate-50">Contact</a>
+  </nav>
+  <div class="mt-8 flex flex-col gap-3">
+    <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="w-full text-center px-5 py-3 bg-[#f2ebfa] text-primary font-bold rounded-full">Go to Portal</a>
+    <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="w-full text-center px-5 py-3 bg-primary text-white font-bold rounded-full">Get Started</a>
+  </div>
+</div>
+
+<!-- TopNavBar -->
+<header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
+        <div class="flex-shrink-0">
+            <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a class="nav-link" href="/">Home</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1 py-8 cursor-default"><span>Solutions</span><span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button>
+                <div class="absolute top-[calc(100%-10px)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-[32px] shadow-2xl border border-slate-200/50 p-8 hidden group-hover:grid grid-cols-3 gap-8 z-[100]">
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary">Hosting Solutions</h4>
+                        <div class="space-y-1">
+                            <a href="/hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">cloud</span></div><div><div class="font-bold text-slate-900">Web Hosting</div><div class="text-[11px] text-slate-500">Fast Cloud solutions.</div></div></a>
+                            <a href="/hosting/shared-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">grid_view</span></div><div><div class="font-bold text-slate-900">Shared Hosting</div><div class="text-[11px] text-slate-500">Cost-effective speed.</div></div></a>
+                            <a href="/hosting/wordpress-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">auto_awesome</span></div><div><div class="font-bold text-slate-900">WordPress</div><div class="text-[11px] text-slate-500">Engineered for WP.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-300">Infrastructure</h4>
+                        <div class="space-y-1">
+                            <a href="/free-offer/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/item:bg-primary transition-all"><span class="material-symbols-outlined">redeem</span></div><div><div class="font-bold text-slate-900">Free Growth Kit</div><div class="text-[11px] text-slate-500">Included with annual plans.</div></div></a>
+                            <a href="/infrastructure/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">hub</span></div><div><div class="font-bold text-slate-900">Data Centers</div><div class="text-[11px] text-slate-500">Elite global network.</div></div></a>
+                            <a href="/services/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover/item:bg-slate-900 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">code</span></div><div><div class="font-bold text-slate-900">Web Dev &amp; SEO</div><div class="text-[11px] text-slate-500">Professional design.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-400">Domains &amp; Support</h4>
+                        <div class="space-y-1">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&amp;domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">search</span></div><div><div class="font-bold text-slate-900">Domain Search</div><div class="text-[11px] text-slate-500">Find your identity.</div></div></a>
+                            <a href="/contact-us/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-slate-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">contact_support</span></div><div><div class="font-bold text-slate-900">Support Hub</div><div class="text-[11px] text-slate-500">24/7 Expert help.</div></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link" href="/domains/">Domains</a>
+            <a class="nav-link" href="/ai-article-writer/">Free Tools</a>
+            <a class="nav-link text-primary font-bold" href="/free-offer/">Free Offer</a>
+        </nav>
+        <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="px-6 py-2.5 bg-primary text-white font-bold rounded-full shadow-md hover:bg-violet-700 transition-all text-sm hidden sm:block">Get Started</a>
+            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero / Article Header -->
+<div class="relative bg-gradient-to-br from-[#18043d] via-[#2c0975] to-[#4f17ce] pt-28 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, #a78bfa 0%, transparent 60%), radial-gradient(circle at 80% 20%, #818cf8 0%, transparent 50%);"></div>
+  <div class="max-w-4xl mx-auto relative z-10 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/80 text-xs font-bold px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
+      <span class="material-symbols-outlined text-sm">menu_book</span> Hosting Guides
+    </div>
+    <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-black text-white leading-tight mb-6">
+      cPanel Tutorial for Beginners:<br class="hidden sm:block" /> The Complete 2026 Guide
+    </h1>
+    <p class="text-white/75 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
+      New to web hosting and staring at a dashboard full of icons? Don't panic. This guide walks you through every cPanel feature you actually need — in plain English, step by step.
+    </p>
+    <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-white/60 text-sm font-medium">
+      <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">calendar_today</span> June 3, 2026</span>
+      <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">schedule</span> 12 min read</span>
+      <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">person</span> Hosterlo Editorial Team</span>
+    </div>
+  </div>
+</div>
+
+<!-- Featured Image -->
+<div class="max-w-4xl mx-auto px-4 sm:px-6 -mt-10 mb-6 relative z-10">
+  <div class="rounded-3xl overflow-hidden shadow-2xl shadow-indigo-900/20 border border-slate-200/50">
+    <img src="https://hosterlo.com/assets/control-panel-interface.webp" alt="cPanel control panel interface dashboard for beginners" class="w-full h-auto object-cover max-h-[440px]" loading="eager" decoding="async" />
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+  <!-- Table of Contents -->
+  <nav class="bg-[#f8f5ff] border border-[#ddd6fe] rounded-2xl p-6 mb-12" aria-label="Table of Contents">
+    <h2 class="text-sm font-black text-primary uppercase tracking-widest mb-4 flex items-center gap-2"><span class="material-symbols-outlined text-base">list</span> In This Guide</h2>
+    <ol class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1.5 text-sm font-semibold text-slate-700 list-decimal list-inside">
+      <li><a href="#what-is-cpanel" class="hover:text-primary transition-colors">What Is cPanel?</a></li>
+      <li><a href="#how-to-login" class="hover:text-primary transition-colors">How to Log Into cPanel</a></li>
+      <li><a href="#dashboard-explained" class="hover:text-primary transition-colors">The Dashboard Explained</a></li>
+      <li><a href="#create-email" class="hover:text-primary transition-colors">Create a Business Email</a></li>
+      <li><a href="#install-wordpress" class="hover:text-primary transition-colors">Install WordPress</a></li>
+      <li><a href="#upload-files" class="hover:text-primary transition-colors">Upload Your Website Files</a></li>
+      <li><a href="#manage-databases" class="hover:text-primary transition-colors">Create &amp; Manage Databases</a></li>
+      <li><a href="#subdomains" class="hover:text-primary transition-colors">Set Up Subdomains</a></li>
+      <li><a href="#ssl-certificates" class="hover:text-primary transition-colors">Manage SSL Certificates</a></li>
+      <li><a href="#redirects-htaccess" class="hover:text-primary transition-colors">Redirects &amp; .htaccess</a></li>
+      <li><a href="#backups" class="hover:text-primary transition-colors">Take a Full Backup</a></li>
+      <li><a href="#cpanel-vs-others" class="hover:text-primary transition-colors">cPanel vs Other Panels</a></li>
+      <li><a href="#common-problems" class="hover:text-primary transition-colors">Common Problems &amp; Fixes</a></li>
+      <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <!-- Article Body -->
+  <article class="prose-custom space-y-12 text-slate-700 leading-relaxed text-[1.05rem]">
+
+    <!-- Intro -->
+    <section id="what-is-cpanel">
+      <p class="text-xl leading-relaxed text-slate-800 font-medium">
+        When you sign up for a hosting account, you get access to something called <strong>cPanel</strong> — and if you've never seen it before, it can look overwhelming. Hundreds of icons, strange acronyms, cryptic categories. But here's the truth: you only need to use a handful of features to run a fully functional website. This guide covers all of them, from scratch.
+      </p>
+
+      <p class="mt-6">
+        <strong>cPanel</strong> (short for "Control Panel") is a web-based graphical interface that lets you manage every aspect of your web hosting account without needing to touch a command line. Think of it as the dashboard for your car — you don't need to understand the engine to drive. You just need to know where the controls are.
+      </p>
+
+      <p>
+        Through cPanel, you can create email addresses, install WordPress, upload files, manage databases, configure your domain, set up SSL security, take backups, and much more — all through a visual point-and-click interface that works in any web browser.
+      </p>
+
+      <p>
+        cPanel is the world's most popular web hosting control panel. It's used by hundreds of millions of websites globally, which means there are tutorials, support articles, and YouTube videos for almost every question you could ever have. Once you learn cPanel, those skills transfer to virtually any hosting provider you might use in the future.
+      </p>
+
+      <p>
+        With <a href="/hosting/" class="text-primary font-semibold hover:underline">Hosterlo web hosting</a>, every plan comes with full cPanel access included — no extra fees, no locked features, no stripped-down "lite" version. You get the real deal, ready to use the moment your account is provisioned.
+      </p>
+    </section>
+
+    <!-- Section 1: How to Log In -->
+    <section id="how-to-login">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">login</span></span>
+        How to Log Into cPanel
+      </h2>
+
+      <p>
+        There are two common ways to access your cPanel, and you don't need to memorize a complicated URL right away. Here's how each method works:
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Method 1: Direct URL</h3>
+      <p>
+        If you know your domain name, you can usually access cPanel directly by navigating to one of these addresses in your browser:
+      </p>
+      <ul class="list-none space-y-2 mt-3 mb-4">
+        <li class="flex items-center gap-3 bg-slate-50 rounded-xl px-4 py-3 text-sm font-mono font-bold text-primary"><span class="material-symbols-outlined text-slate-400 text-base">link</span> yourdomain.com:2083 <span class="text-slate-400 font-normal font-sans ml-2">(HTTPS — recommended)</span></li>
+        <li class="flex items-center gap-3 bg-slate-50 rounded-xl px-4 py-3 text-sm font-mono font-bold text-slate-700"><span class="material-symbols-outlined text-slate-400 text-base">link</span> yourdomain.com/cpanel</li>
+        <li class="flex items-center gap-3 bg-slate-50 rounded-xl px-4 py-3 text-sm font-mono font-bold text-slate-700"><span class="material-symbols-outlined text-slate-400 text-base">link</span> cpanel.yourdomain.com</li>
+      </ul>
+      <p>
+        Replace <code>yourdomain.com</code> with your actual registered domain. Port <code>2083</code> is the secure cPanel port. If your domain hasn't propagated yet (i.e., it's a brand-new domain), use the server IP address instead: <code>123.456.789.0:2083</code> — your hosting provider will have given you this IP in your welcome email.
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Method 2: Through Your Hosting Portal</h3>
+      <p>
+        The easiest way — especially for new users — is to log into your hosting account dashboard first and click through to cPanel from there. With Hosterlo, you log into <a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-primary font-semibold hover:underline">billing.hosterlo.com</a>, navigate to your active hosting service, and click "Login to cPanel." This logs you in automatically without needing a separate username and password.
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">What You'll See on First Login</h3>
+      <p>
+        Once you're in, you'll land on the main cPanel home screen. It's a grid of icons organized into sections. The layout may vary slightly depending on the theme your host uses (Jupiter is the most common modern theme), but the sections are always present:
+      </p>
+      <ul class="space-y-1.5 mt-3 pl-5 list-disc text-slate-700">
+        <li>A search bar at the top — incredibly useful; just type what you need</li>
+        <li>A stats sidebar showing your disk usage, email accounts, bandwidth</li>
+        <li>Grouped icon sections: Files, Databases, Email, Domains, Security, Software</li>
+      </ul>
+
+      <div class="callout">
+        <p>💡 <strong>Pro tip:</strong> Use the cPanel search bar. Instead of hunting for icons, just start typing — "email", "backup", "SSL" — and the matching tool appears instantly. This alone will save you a lot of time.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Dashboard Explained -->
+    <section id="dashboard-explained">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">dashboard</span></span>
+        The cPanel Dashboard Explained
+      </h2>
+
+      <p>
+        Let's break down the main sections of the cPanel dashboard so you know what each category is for. You won't use every tool here every day, but knowing what's available is half the battle.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
+        <div class="bg-[#f8f5ff] rounded-2xl p-5 border border-purple-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">folder</span></span>
+            <h3 class="font-black text-slate-900 text-base">Files</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Manage your website files via File Manager or FTP. You can also view disk usage, create backups, and access the Git Version Control tool here.</p>
+        </div>
+        <div class="bg-[#f0f7ff] rounded-2xl p-5 border border-blue-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">storage</span></span>
+            <h3 class="font-black text-slate-900 text-base">Databases</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Create and manage MySQL databases, create database users, and access phpMyAdmin — the visual tool for browsing and editing database tables directly.</p>
+        </div>
+        <div class="bg-[#f0fdf4] rounded-2xl p-5 border border-green-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-green-600 flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">mail</span></span>
+            <h3 class="font-black text-slate-900 text-base">Email</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Create professional email accounts (<code>you@yourdomain.com</code>), set up forwarders, autoresponders, spam filters, mailing lists, and access webmail.</p>
+        </div>
+        <div class="bg-[#fff7ed] rounded-2xl p-5 border border-orange-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-orange-500 flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">language</span></span>
+            <h3 class="font-black text-slate-900 text-base">Domains</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Add addon domains, create subdomains, set up redirects, manage DNS zone records, and configure parked domains from this section.</p>
+        </div>
+        <div class="bg-[#fdf2f8] rounded-2xl p-5 border border-pink-100">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-pink-600 flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">security</span></span>
+            <h3 class="font-black text-slate-900 text-base">Security</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">Install SSL certificates, manage SSH access keys, configure IP blockers, set up hotlink protection, and run the Imunify360 malware scanner.</p>
+        </div>
+        <div class="bg-[#f8fafc] rounded-2xl p-5 border border-slate-200">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="w-9 h-9 rounded-lg bg-slate-700 flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">apps</span></span>
+            <h3 class="font-black text-slate-900 text-base">Software</h3>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">This is where you'll find Softaculous — the one-click installer for WordPress, Joomla, Magento, and 400+ other scripts. Also includes PHP version selector and Cloudflare integration.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Create Email -->
+    <section id="create-email">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">email</span></span>
+        How to Create a Business Email Address in cPanel
+      </h2>
+
+      <p>
+        One of the first things most people want to do after setting up hosting is create a professional email address — something like <code>hello@yourdomain.com</code> or <code>sales@yourbusiness.com</code>. It instantly looks more credible than a Gmail address and is completely free to set up.
+      </p>
+
+      <p>Here's how to do it, step by step:</p>
+
+      <ol class="step-list mt-6 space-y-4 text-slate-700">
+        <li>
+          <strong>Go to the Email section</strong> in your cPanel dashboard and click <strong>Email Accounts</strong>.
+        </li>
+        <li>
+          Click the <strong>"+ Create"</strong> button in the top right corner of the Email Accounts page.
+        </li>
+        <li>
+          In the <strong>Username</strong> field, type the part of the email address before the @. For example, type <code>hello</code> to create <code>hello@yourdomain.com</code>. If you have multiple domains on your account, select the correct domain from the dropdown next to the field.
+        </li>
+        <li>
+          Set a <strong>strong password</strong>. cPanel includes a password generator — click the key icon to auto-generate a secure one. Make sure to save it somewhere safe.
+        </li>
+        <li>
+          Set a <strong>mailbox quota</strong>. This controls how much storage the email account can use. You can set it to a specific limit (e.g., 2048 MB = 2 GB) or choose "Unlimited" if your plan allows it.
+        </li>
+        <li>
+          Click <strong>Create</strong>. That's it — your professional email address is live and ready to receive mail.
+        </li>
+        <li>
+          To access your email, scroll down to the newly created account and click <strong>Check Email</strong> to open Webmail (Roundcube or Horde). To use it in Gmail, Outlook, or Apple Mail, click <strong>Connect Devices</strong> — cPanel will show you the exact IMAP/SMTP settings to enter.
+        </li>
+      </ol>
+
+      <div class="callout mt-6">
+        <p>📬 <strong>Hosterlo includes unlimited email accounts</strong> on all plans. Check out our <a href="/free-offer/" class="text-primary hover:underline font-bold">free Website Growth Kit</a> — it includes email setup assistance plus additional tools to grow your online presence from day one.</p>
+      </div>
+
+      <p class="mt-4">
+        You can also set up <strong>Email Forwarders</strong> (in the same Email section) to automatically forward messages from one address to another — great for redirecting <code>info@yourdomain.com</code> to your personal Gmail while you get started.
+      </p>
+    </section>
+
+    <!-- Section 4: Install WordPress -->
+    <section id="install-wordpress">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">auto_awesome</span></span>
+        How to Install WordPress in cPanel
+      </h2>
+
+      <p>
+        WordPress powers over 43% of all websites on the internet — and installing it through cPanel takes less than 3 minutes thanks to a tool called <strong>Softaculous</strong>. You don't need to upload files, create databases manually, or write any code. Here's how:
+      </p>
+
+      <ol class="step-list mt-6 space-y-4 text-slate-700">
+        <li>
+          In cPanel, scroll to the <strong>Software</strong> section and click <strong>Softaculous Apps Installer</strong>. Alternatively, click the Softaculous icon that often appears prominently on the main dashboard.
+        </li>
+        <li>
+          Inside Softaculous, find <strong>WordPress</strong> in the list (it's usually featured at the top). Click it, then click <strong>"Install Now"</strong>.
+        </li>
+        <li>
+          Choose your <strong>installation URL</strong>. Select your protocol (<code>https://</code> is recommended), pick your domain from the dropdown, and leave the "In Directory" field blank if you want WordPress at your root domain (<code>yourdomain.com</code>). Type a folder name like <code>blog</code> only if you want it at <code>yourdomain.com/blog</code>.
+        </li>
+        <li>
+          Fill in the <strong>Site Settings</strong>: your site name (e.g., "My Awesome Business") and a short description. You can change these later in WordPress itself.
+        </li>
+        <li>
+          Create your <strong>Admin Account</strong>: set a username, password, and admin email address. Do <em>not</em> use the default username "admin" — it's a common hacking target. Choose something unique.
+        </li>
+        <li>
+          Choose a <strong>language</strong> if needed. Leave the theme as default for now — you'll choose a proper theme inside WordPress after installation.
+        </li>
+        <li>
+          Click <strong>Install</strong>. Softaculous will spend about 30–60 seconds setting everything up, then display a success screen with your site URL and admin login link.
+        </li>
+      </ol>
+
+      <p class="mt-4">
+        That's all it takes. Visit <code>yourdomain.com/wp-admin</code> and log in with the credentials you just created. If you'd like a hosting environment fine-tuned for WordPress performance — with server-level caching, PHP 8.3, and staging environments — explore Hosterlo's dedicated <a href="/hosting/wordpress-hosting/" class="text-primary font-semibold hover:underline">WordPress hosting</a> plans.
+      </p>
+    </section>
+
+    <!-- Section 5: Upload Files -->
+    <section id="upload-files">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">upload_file</span></span>
+        How to Upload Your Website Files
+      </h2>
+
+      <p>
+        If you have a website built as HTML/CSS files (or a static site), you'll need to upload those files to your hosting account. cPanel gives you two ways to do this: the built-in <strong>File Manager</strong> (great for small uploads) and <strong>FTP</strong> (better for large projects).
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Using File Manager (Easiest Method)</h3>
+      <ol class="step-list space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Files</strong> section → click <strong>File Manager</strong>.
+        </li>
+        <li>
+          In the left-hand directory tree, navigate to <strong>public_html</strong>. This is your website's root folder — anything you put here is accessible via your domain name.
+        </li>
+        <li>
+          Click <strong>Upload</strong> in the top toolbar. A file upload panel opens. Drag and drop your files or click "Select File" to browse your computer.
+        </li>
+        <li>
+          If your site is packaged as a ZIP file, upload the ZIP, then select it in File Manager, click <strong>Extract</strong>, and make sure the files end up directly inside <code>public_html</code> — not in a nested subfolder.
+        </li>
+        <li>
+          Once uploaded, navigate to your domain in a browser to confirm the files are live.
+        </li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Using FTP with FileZilla (For Large Projects)</h3>
+      <p>
+        FTP (File Transfer Protocol) is a faster and more reliable method for transferring many files or very large projects. <a href="https://filezilla-project.org/" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold hover:underline">FileZilla</a> is the most popular free FTP client.
+      </p>
+      <ol class="step-list space-y-4 text-slate-700 mt-4">
+        <li>
+          In cPanel → <strong>Files</strong> section → click <strong>FTP Accounts</strong>. Create a new FTP account with a username and password. Note your FTP hostname (usually <code>ftp.yourdomain.com</code>) and port (<code>21</code>).
+        </li>
+        <li>
+          Open FileZilla. Go to <strong>File → Site Manager → New Site</strong>. Enter: Host = <code>ftp.yourdomain.com</code>, Port = <code>21</code>, Protocol = FTP, Logon Type = Normal, your FTP username, and password. Click Connect.
+        </li>
+        <li>
+          On the right panel (remote server), navigate to <code>public_html</code>. On the left panel (your computer), find your project files. Drag them from left to right to upload.
+        </li>
+      </ol>
+
+      <div class="callout">
+        <p>🔒 <strong>Tip:</strong> Use SFTP (SSH File Transfer Protocol) instead of plain FTP whenever possible. It encrypts the connection. In FileZilla, set Protocol to "SFTP – SSH File Transfer Protocol" and Port to <code>22</code>. You'll need SSH access enabled in cPanel → Security → SSH Access.</p>
+      </div>
+    </section>
+
+    <!-- Section 6: Databases -->
+    <section id="manage-databases">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">storage</span></span>
+        How to Create and Manage Databases
+      </h2>
+
+      <p>
+        Most web applications — WordPress, Joomla, WooCommerce, custom PHP apps — store their data in a <strong>MySQL database</strong>. cPanel makes it easy to create and manage these databases without needing to know SQL. (If you installed WordPress via Softaculous, this was done automatically for you — but it's helpful to understand how it works.)
+      </p>
+
+      <ol class="step-list mt-6 space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Databases</strong> section → click <strong>MySQL Databases</strong>.
+        </li>
+        <li>
+          Under "Create New Database," type a name for your database (e.g., <code>myapp_db</code>). Note: cPanel will prepend your cPanel username to the database name automatically, so it might become something like <code>username_myapp_db</code>. That's normal. Click <strong>Create Database</strong>.
+        </li>
+        <li>
+          Scroll down to <strong>MySQL Users</strong>. Create a new user with a strong password. This is the account your application will use to talk to the database.
+        </li>
+        <li>
+          Scroll to <strong>"Add User to Database."</strong> Select your new user and your new database from the dropdowns, then click <strong>Add</strong>.
+        </li>
+        <li>
+          On the privileges screen, click <strong>"All Privileges"</strong> (for a development or personal site) or choose specific permissions if you want to restrict access. Click <strong>Make Changes</strong>.
+        </li>
+        <li>
+          Now enter your database credentials into your application's configuration file (e.g., WordPress's <code>wp-config.php</code>): DB Name, DB Username, DB Password, and DB Host (usually <code>localhost</code>).
+        </li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Using phpMyAdmin</h3>
+      <p>
+        For a visual way to view, edit, or import/export database tables, go to cPanel → Databases → <strong>phpMyAdmin</strong>. Select your database from the left panel, and you'll see all your tables. You can run SQL queries, import a <code>.sql</code> file (great for migrating a site), or export your database as a backup. If you need to manually reset a WordPress admin password or fix a corrupted options table, phpMyAdmin is your tool.
+      </p>
+    </section>
+
+    <!-- Section 7: Subdomains -->
+    <section id="subdomains">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">subdirectory_arrow_right</span></span>
+        How to Set Up Subdomains
+      </h2>
+
+      <p>
+        A <strong>subdomain</strong> is a separate section of your website with its own prefix — like <code>blog.yourdomain.com</code>, <code>shop.yourdomain.com</code>, or <code>app.yourdomain.com</code>. Subdomains are great for running distinct parts of your business on the same hosting account without needing to register a new domain.
+      </p>
+
+      <ol class="step-list mt-6 space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Domains</strong> section → click <strong>Subdomains</strong>.
+        </li>
+        <li>
+          In the <strong>Subdomain</strong> field, type the prefix you want. For example, type <code>blog</code> to create <code>blog.yourdomain.com</code>.
+        </li>
+        <li>
+          Select your root domain from the dropdown. cPanel will automatically fill in the <strong>Document Root</strong> field — something like <code>public_html/blog</code>. This is the folder where the subdomain's files will live. You can change it if needed.
+        </li>
+        <li>
+          Click <strong>Create</strong>. The subdomain is now live (though it may take up to 10 minutes to become accessible).
+        </li>
+        <li>
+          Now upload your files to the document root folder, or install a separate WordPress instance in that subdomain using Softaculous.
+        </li>
+      </ol>
+
+      <p class="mt-4">
+        Subdomains are completely free to create — you can create as many as your hosting plan allows. On Hosterlo's <a href="/hosting/shared-hosting/" class="text-primary font-semibold hover:underline">shared hosting plans</a>, you can create unlimited subdomains. This is particularly useful for staging environments (e.g., <code>staging.yourdomain.com</code>) where you test changes before pushing them to your live site.
+      </p>
+    </section>
+
+    <!-- Section 8: SSL -->
+    <section id="ssl-certificates">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">verified_user</span></span>
+        How to Manage SSL Certificates
+      </h2>
+
+      <p>
+        An SSL certificate is what gives your website the padlock icon in the browser and the <code>https://</code> prefix in the URL. It encrypts the connection between your visitor's browser and your server — protecting form submissions, login data, and anything else transmitted. Google also uses HTTPS as a minor ranking signal, so it matters for SEO too.
+      </p>
+
+      <p>
+        The good news: most quality hosting providers (including Hosterlo) include <strong>free AutoSSL via Let's Encrypt</strong>, which automatically provisions and renews your certificates. Here's how to check the status and force a run if needed:
+      </p>
+
+      <ol class="step-list mt-6 space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Security</strong> section → click <strong>SSL/TLS Status</strong>. This shows you a list of all your domains and subdomains, and whether each one has a valid SSL certificate.
+        </li>
+        <li>
+          If any domains show "Not Secured" or a red warning, select them using the checkbox and click <strong>"Run AutoSSL"</strong> at the top of the page.
+        </li>
+        <li>
+          AutoSSL will request a certificate from Let's Encrypt on your behalf. The process usually takes 1–5 minutes. Refresh the page and the status should change to a green padlock.
+        </li>
+        <li>
+          Once your certificate is installed, visit your site and confirm the padlock appears. If you still see HTTP in the address bar, you may need to add an HTTPS redirect (see the next section).
+        </li>
+      </ol>
+
+      <div class="callout">
+        <p>🔐 <strong>Custom SSL Certificates:</strong> If you've purchased a premium SSL (e.g., an EV or OV certificate from a commercial CA), you can install it manually via cPanel → Security → <strong>SSL/TLS Manager</strong> → "Manage SSL sites." Paste your certificate, private key, and CA bundle into the respective fields and click Install.</p>
+      </div>
+    </section>
+
+    <!-- Section 9: Redirects & .htaccess -->
+    <section id="redirects-htaccess">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">swap_horiz</span></span>
+        How to Set Up Redirects and .htaccess
+      </h2>
+
+      <p>
+        Redirects tell browsers (and search engines) that a page has moved. If you rename a page, restructure your site, or switch from HTTP to HTTPS, you'll want to set up redirects so visitors and Google don't hit dead ends. cPanel offers two ways to manage this.
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Using cPanel's Redirects Tool</h3>
+      <ol class="step-list space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Domains</strong> section → click <strong>Redirects</strong>.
+        </li>
+        <li>
+          Choose the redirect type: <strong>301 (Permanent)</strong> if you've moved a page forever (best for SEO), or <strong>302 (Temporary)</strong> if you're redirecting temporarily.
+        </li>
+        <li>
+          In the "Redirects From" field, select your domain and type the path (e.g., <code>/old-page</code>). In the "Redirects To" field, enter the full destination URL (e.g., <code>https://yourdomain.com/new-page</code>).
+        </li>
+        <li>
+          Click <strong>Add</strong>. cPanel automatically writes the redirect rule to your <code>.htaccess</code> file.
+        </li>
+      </ol>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Editing .htaccess Directly</h3>
+      <p>
+        For more advanced rules — like forcing HTTPS across your whole site or blocking specific IP addresses — you'll edit the <code>.htaccess</code> file directly. Go to cPanel → File Manager → <code>public_html</code>. The <code>.htaccess</code> file may be hidden; click <strong>Settings</strong> in the top right and check "Show Hidden Files."
+      </p>
+      <p class="mt-3">Right-click <code>.htaccess</code> and select <strong>Edit</strong>. To force HTTPS sitewide, add these lines at the top of the file (after any existing rules from WordPress):</p>
+      <pre class="bg-slate-900 text-green-400 text-sm rounded-2xl p-5 overflow-x-auto mt-3 mb-4 leading-relaxed"><code style="background:none; color:inherit; padding:0; font-size:inherit;">RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre>
+      <p>Save the file and test your site. All HTTP requests will now permanently redirect to HTTPS.</p>
+    </section>
+
+    <!-- Section 10: Backups -->
+    <section id="backups">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">backup</span></span>
+        How to Take a Full cPanel Backup
+      </h2>
+
+      <p>
+        Backups are your insurance policy. Servers can fail, plugins can break your site, and mistakes happen. A recent backup means any disaster can be fixed in minutes. You should take backups regularly — and always before making any major change to your site.
+      </p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Using the Backup Wizard (Recommended for Beginners)</h3>
+      <ol class="step-list space-y-4 text-slate-700">
+        <li>
+          In cPanel → <strong>Files</strong> section → click <strong>Backup Wizard</strong>.
+        </li>
+        <li>
+          Click <strong>Back Up</strong>, then choose <strong>Full Backup</strong>. This creates a single compressed archive of your entire account: all files, databases, email accounts, DNS zones, and settings.
+        </li>
+        <li>
+          For the "Backup Destination," select <strong>Home Directory</strong>. This saves the backup file to your hosting account's home folder. You can also FTP to a remote server or enter email notification settings.
+        </li>
+        <li>
+          Click <strong>Generate Backup</strong>. For large sites, this can take a few minutes. You'll receive an email notification when it's done.
+        </li>
+        <li>
+          Once generated, go back to File Manager → home directory (one level above <code>public_html</code>) and download the backup file (<code>.tar.gz</code>) to your local computer. Store it somewhere safe — an external hard drive or cloud storage like Google Drive.
+        </li>
+      </ol>
+
+      <div class="callout">
+        <p>⚠️ <strong>Important:</strong> A backup stored on the same server doesn't fully protect you if the server itself has a hardware failure. Always download backups to an external location. Hosterlo also performs daily automated server-level backups — but your own local copy is always an extra layer of safety.</p>
+      </div>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-3">Partial Backups (Files or Databases Only)</h3>
+      <p>
+        In Backup Wizard, after clicking "Back Up," you can also choose to back up just your <strong>home directory</strong> (all files), a specific <strong>MySQL database</strong>, or your <strong>email forwarders and filters</strong>. These partial backups are faster and smaller — useful if you're only about to make database changes and don't need a full account archive.
+      </p>
+    </section>
+
+    <!-- Section 11: cPanel vs Others -->
+    <section id="cpanel-vs-others">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">compare</span></span>
+        cPanel vs Other Control Panels
+      </h2>
+
+      <p>
+        cPanel isn't the only hosting control panel out there, but it's by far the most widely used. Here's how it compares to the alternatives you might encounter:
+      </p>
+
+      <div class="overflow-x-auto mt-6 rounded-2xl border border-slate-200">
+        <table class="compare-table w-full text-sm">
+          <thead>
+            <tr>
+              <th class="text-left">Panel</th>
+              <th class="text-left">Best For</th>
+              <th class="text-left">Learning Curve</th>
+              <th class="text-left">Cost to Host</th>
+              <th class="text-left">Community Resources</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong class="text-primary">cPanel</strong></td>
+              <td>Everyone — beginners to pros</td>
+              <td>Low–Medium</td>
+              <td>Included with plan</td>
+              <td>⭐⭐⭐⭐⭐ Massive</td>
+            </tr>
+            <tr>
+              <td><strong>Plesk</strong></td>
+              <td>Windows servers, agencies</td>
+              <td>Medium</td>
+              <td>Often included</td>
+              <td>⭐⭐⭐⭐ Large</td>
+            </tr>
+            <tr>
+              <td><strong>DirectAdmin</strong></td>
+              <td>Lightweight hosting setups</td>
+              <td>Medium</td>
+              <td>Included with plan</td>
+              <td>⭐⭐⭐ Moderate</td>
+            </tr>
+            <tr>
+              <td><strong>HestiaCP</strong></td>
+              <td>Self-managed VPS servers</td>
+              <td>High</td>
+              <td>Free (self-hosted)</td>
+              <td>⭐⭐ Smaller</td>
+            </tr>
+            <tr>
+              <td><strong>Webmin</strong></td>
+              <td>Sysadmins, power users</td>
+              <td>Very High</td>
+              <td>Free (self-hosted)</td>
+              <td>⭐⭐⭐ Moderate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-6">
+        <strong>Why cPanel wins for beginners:</strong> It has the largest ecosystem of tutorials, YouTube guides, and official documentation. If you encounter a problem, someone else has almost certainly had the same problem and documented the solution. Plesk is a solid alternative (especially on Windows servers), but for Linux-based shared hosting — which is what most beginners use — cPanel is the clear industry standard.
+      </p>
+
+      <p>
+        The other practical advantage: if you ever need to move hosts, almost every mainstream hosting provider offers cPanel, meaning your knowledge transfers instantly. You won't need to relearn anything.
+      </p>
+    </section>
+
+    <!-- Section 12: Common Problems -->
+    <section id="common-problems">
+      <h2 class="text-3xl font-black text-slate-900 mb-5 flex items-center gap-3">
+        <span class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0"><span class="material-symbols-outlined">build</span></span>
+        Common cPanel Problems and How to Fix Them
+      </h2>
+
+      <p>
+        Even experienced users run into cPanel issues from time to time. Here are the most common problems beginners face and exactly how to resolve each one:
+      </p>
+
+      <div class="space-y-6 mt-6">
+
+        <div class="bg-red-50 border border-red-100 rounded-2xl p-6">
+          <h3 class="font-black text-slate-900 mb-2 flex items-center gap-2"><span class="text-red-500 material-symbols-outlined">lock</span> Can't Log Into cPanel</h3>
+          <p class="text-slate-700 text-sm leading-relaxed"><strong>Cause:</strong> Wrong password, typing the wrong URL, or your IP being temporarily blocked after multiple failed attempts.</p>
+          <p class="text-slate-700 text-sm leading-relaxed mt-2"><strong>Fix:</strong> Reset your password from your hosting portal (e.g., billing.hosterlo.com). If you're IP-blocked, wait 15–30 minutes or contact support to whitelist your IP. Make sure you're using <code>yourdomain.com:2083</code> or your server's IP — not the domain's front-end URL.</p>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-100 rounded-2xl p-6">
+          <h3 class="font-black text-slate-900 mb-2 flex items-center gap-2"><span class="text-amber-500 material-symbols-outlined">hard_drive</span> Disk Space Full</h3>
+          <p class="text-slate-700 text-sm leading-relaxed"><strong>Cause:</strong> Log files bloating up, accumulated email trash/spam, backups stored on the server, or your site genuinely outgrowing the plan.</p>
+          <p class="text-slate-700 text-sm leading-relaxed mt-2"><strong>Fix:</strong> In cPanel → Files → <strong>Disk Usage</strong>, find the largest directories. Common culprits: <code>public_html/wp-content/uploads</code>, <code>logs</code> folder, Trash in webmail. Delete old backups from the server once you've downloaded them locally. If you're consistently near your limit, upgrade your hosting plan.</p>
+        </div>
+
+        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+          <h3 class="font-black text-slate-900 mb-2 flex items-center gap-2"><span class="text-blue-500 material-symbols-outlined">mail_off</span> Can't Send Email (Emails Going to Spam)</h3>
+          <p class="text-slate-700 text-sm leading-relaxed"><strong>Cause:</strong> Missing or misconfigured SPF, DKIM, or DMARC DNS records, which tell receiving mail servers that your domain is authorized to send email.</p>
+          <p class="text-slate-700 text-sm leading-relaxed mt-2"><strong>Fix:</strong> In cPanel → Email → <strong>Email Deliverability</strong>. cPanel will automatically diagnose your domain's email authentication records and offer to repair them. Click "Repair" for each domain that shows issues. This will add the correct SPF and DKIM records to your DNS zone automatically.</p>
+        </div>
+
+        <div class="bg-purple-50 border border-purple-100 rounded-2xl p-6">
+          <h3 class="font-black text-slate-900 mb-2 flex items-center gap-2"><span class="text-purple-500 material-symbols-outlined">error</span> 500 Internal Server Error After Editing .htaccess</h3>
+          <p class="text-slate-700 text-sm leading-relaxed"><strong>Cause:</strong> A syntax error in your <code>.htaccess</code> file. Apache is very strict about formatting — even a single misplaced character causes a 500 error.</p>
+          <p class="text-slate-700 text-sm leading-relaxed mt-2"><strong>Fix:</strong> Go to File Manager → <code>public_html</code> → edit <code>.htaccess</code> and carefully review what you just added. Undo the recent change. If you can't access File Manager because the 500 error is blocking everything, connect via FTP and edit the file from there. Alternatively, temporarily rename <code>.htaccess</code> to <code>.htaccess.bak</code> so Apache ignores it, which will restore access.</p>
+        </div>
+
+        <div class="bg-green-50 border border-green-100 rounded-2xl p-6">
+          <h3 class="font-black text-slate-900 mb-2 flex items-center gap-2"><span class="text-green-600 material-symbols-outlined">key_off</span> Forgot cPanel Password</h3>
+          <p class="text-slate-700 text-sm leading-relaxed"><strong>Fix:</strong> Log into your hosting billing portal and look for a "Change cPanel Password" option in your hosting service management area. With Hosterlo, this is available at <code>billing.hosterlo.com</code> under your active service. Set a new password and use it to log in — no support ticket needed.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="mt-16">
+      <h2 class="text-3xl font-black text-slate-900 mb-2">Frequently Asked Questions</h2>
+      <p class="text-slate-500 mb-8">Still have questions about cPanel? Here are the most common ones answered.</p>
+
+      <div class="space-y-1">
+
+        <details class="faq-item">
+          <summary>What is the difference between cPanel and WHM?</summary>
+          <p>cPanel is the end-user control panel you use to manage your own hosting account — files, emails, databases, domains, SSL, and more. WHM (Web Host Manager) sits one level above and is used by hosting companies or resellers to create and manage multiple cPanel accounts on a single server. As a regular website owner, you will only ever interact with cPanel. WHM is the tool your hosting provider uses behind the scenes to manage infrastructure.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I reset my cPanel password?</summary>
+          <p>The easiest way is through your hosting provider's client portal. Log into <a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-primary font-semibold hover:underline">billing.hosterlo.com</a>, navigate to your active hosting service, and look for "Change cPanel Password." Enter a new password and save. Alternatively, if your host has enabled the option, you can click "Forgot Password" on the cPanel login screen and a reset link will be sent to your registered email. Avoid using the same password as your billing account — keep them separate for security.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is cPanel free?</summary>
+          <p>cPanel itself is not free software — it's a commercial product that hosting companies license and pay for on a per-account basis. However, as an end user, you don't pay for cPanel directly; the cost is absorbed into your monthly or annual hosting fee. Budget hosts sometimes charge extra for cPanel access or offer a limited alternative. Premium providers like Hosterlo include full, unrestricted cPanel access in every plan at no additional cost. Think of it like how a hotel includes Wi-Fi in the room rate — you're not paying a separate Wi-Fi fee, it's just part of the package.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Hosterlo include cPanel with every hosting plan?</summary>
+          <p>Yes — every <a href="/hosting/" class="text-primary font-semibold hover:underline">Hosterlo web hosting</a> plan comes with full cPanel access included, with no stripped-down features and no extra charges. You also get Softaculous for one-click installation of WordPress and 400+ other apps, free AutoSSL for all your domains, unlimited email accounts, and access to the <a href="/free-offer/" class="text-primary font-semibold hover:underline">Hosterlo Website Growth Kit</a> at no additional cost. If you ever have questions about using cPanel, our 24/7 support team is ready to help.</p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- Closing Summary -->
+    <section class="mt-12 bg-gradient-to-br from-slate-50 to-[#f5f0ff] border border-purple-100 rounded-3xl p-8">
+      <h2 class="text-2xl font-black text-slate-900 mb-4">You're Ready to Take Charge of Your Hosting</h2>
+      <p class="text-slate-700 leading-relaxed mb-4">
+        cPanel might look like a wall of icons on first glance, but as you've seen in this guide, it's logically organized and surprisingly intuitive once you know where to find things. Start with the basics — create your email, upload your files or install WordPress — and explore other sections as you need them. The search bar alone will save you 80% of the time you'd spend hunting for tools.
+      </p>
+      <p class="text-slate-700 leading-relaxed">
+        If you're still shopping for hosting or thinking about switching providers, check out the <a href="/hosting/" class="text-primary font-semibold hover:underline">Hosterlo web hosting</a> plans — full cPanel access, blazing-fast cloud infrastructure, and real 24/7 human support. For more guides like this one, visit the <a href="/blog/" class="text-primary font-semibold hover:underline">Hosterlo blog</a>.
+      </p>
+    </section>
+
+  </article>
+
+  <!-- CTA Banner -->
+  <div class="mt-16 rounded-3xl overflow-hidden relative bg-gradient-to-br from-[#3a0d9e] via-[#4f17ce] to-[#6d3ae6] px-8 py-14 text-center shadow-2xl shadow-indigo-900/30">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(ellipse at top left, #c4b5fd, transparent 60%), radial-gradient(ellipse at bottom right, #818cf8, transparent 60%);"></div>
+    <div class="relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-white/80 text-xs font-black px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
+        <span class="material-symbols-outlined text-sm">bolt</span> Hosting + cPanel Included
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-black text-white mb-4 leading-tight">
+        Get cPanel Hosting from Hosterlo<br class="hidden sm:block" />— $59/year, Everything Included
+      </h2>
+      <p class="text-white/75 max-w-xl mx-auto mb-8 text-base leading-relaxed">
+        Full cPanel access, Softaculous one-click installs, free AutoSSL, unlimited emails, daily backups, and our Website Growth Kit — all in one plan, no surprises at checkout.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-black rounded-full shadow-lg hover:shadow-xl hover:bg-[#f5f0ff] transition-all duration-300 text-base">
+          <span class="material-symbols-outlined">rocket_launch</span>
+          Start Hosting Now — $59/yr
+        </a>
+        <a href="/free-offer/" class="inline-flex items-center gap-2 px-8 py-4 bg-white/10 border border-white/30 text-white font-bold rounded-full hover:bg-white/20 transition-all duration-300 text-base">
+          <span class="material-symbols-outlined">redeem</span>
+          See the Free Growth Kit
+        </a>
+      </div>
+      <p class="text-white/50 text-xs mt-6 font-semibold">No contracts. 30-day money-back guarantee. Setup in under 5 minutes.</p>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+    <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none tracking-tighter z-0">hosterlo</div>
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+            <div class="lg:col-span-4 space-y-6">
+                <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async"></a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.</p>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                    <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
+                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">WordPress Pro</a></li>
+                    <li><a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support &amp; Policies</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
+                    <li><a href="/privacy-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Insights &amp; Blog</a></li>
+                    <li><a href="/ai-article-writer/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">AI Content Tools</a></li>
+                    <li><a href="/free-offer/" class="text-primary font-bold text-sm transition-colors">Free Growth Kit</a></li>
+                    <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Client Portal Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. All rights reserved. | Built on Digioverse&trade; Global Infrastructure.</p>
+            <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                <a href="/privacy-policy/" class="hover:text-primary transition-colors">Legal</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const o=document.getElementById('mobile-menu-open'),c=document.getElementById('mobile-menu-close'),v=document.getElementById('mobile-menu-overlay');
+  if(o&&c&&v){
+    o.addEventListener('click',()=>{v.classList.remove('translate-x-full');document.body.style.overflow='hidden'});
+    c.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''});
+    v.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''}))
+  }
+</script>
+
+</body>
+</html>

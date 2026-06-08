@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Migrate Your Website to a New Host Without Any Downtime | Hosterlo</title>
+    <meta name="description" content="Learn how to migrate your website to a new web host without any downtime. Step-by-step guide covering file backup, DNS switching, testing, and going live safely.">
+    <meta name="keywords" content="how to migrate website, move website to new host, website migration guide, transfer hosting, migrate WordPress">
+    <meta name="author" content="Hosterlo Editorial Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hosterlo.com/2026/06/03/how-to-migrate-website-to-new-host-without-downtime/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Migrate Your Website to a New Host Without Any Downtime">
+    <meta property="og:description" content="Learn how to migrate your website to a new web host without any downtime. Step-by-step guide covering file backup, DNS switching, testing, and going live safely.">
+    <meta property="og:image" content="https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp">
+    <meta property="og:url" content="https://hosterlo.com/2026/06/03/how-to-migrate-website-to-new-host-without-downtime/">
+    <meta property="og:site_name" content="Hosterlo">
+    <meta property="article:published_time" content="2026-06-03T00:00:00Z">
+    <meta property="article:section" content="Hosting Migration">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Migrate Your Website to a New Host Without Any Downtime">
+    <meta name="twitter:description" content="Learn how to migrate your website to a new web host without any downtime. Step-by-step guide covering file backup, DNS switching, testing, and going live safely.">
+    <meta name="twitter:image" content="https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f17ce',
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "How to Migrate Your Website to a New Host Without Any Downtime",
+          "description": "Learn how to migrate your website to a new web host without any downtime. Step-by-step guide covering file backup, DNS switching, testing, and going live safely.",
+          "image": "https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp",
+          "author": {
+            "@type": "Organization",
+            "name": "Hosterlo",
+            "url": "https://hosterlo.com"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Hosterlo",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hosterlo.com/assets/logo.png"
+            }
+          },
+          "datePublished": "2026-06-03",
+          "dateModified": "2026-06-03",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://hosterlo.com/2026/06/03/how-to-migrate-website-to-new-host-without-downtime/"
+          },
+          "articleSection": "Hosting Migration",
+          "keywords": "how to migrate website, move website to new host, website migration guide, transfer hosting, migrate WordPress"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How long does website migration take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A typical website migration takes anywhere from 1 to 6 hours for the actual transfer, depending on your site's size. However, DNS propagation can take 24–48 hours to complete globally. With proper TTL preparation, most visitors will see the new host within a few hours of switching."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will my email stop working during migration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If your email is hosted with your web host, there can be a brief period where email delivery is delayed during DNS propagation. To minimize this, set up your email accounts on the new host before switching, and lower your TTL 48 hours in advance. MX records typically propagate quickly but it's important to verify before fully decommissioning your old host."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need technical skills to migrate my site?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Basic technical familiarity is helpful — things like accessing cPanel, using FileZilla for FTP uploads, and logging into your domain registrar. However, WordPress users can use migration plugins like All-in-One WP Migration or Duplicator that make the process much more visual and straightforward. Hosterlo's support team is also available to guide you through each step."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Hosterlo provide free website migration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes — Hosterlo offers migration assistance to new customers switching from another host. Our support team can help guide the migration process, and our business hosting plans include priority support access. Reach out via the contact page and our team will assist you in moving your site over safely and without downtime."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1e1b2e;
+            background-color: #fff;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        .nav-link {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #4f17ce; }
+        .prose-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #111c2d;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .prose-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e1b2e;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .prose-content p {
+            color: #3d3a4e;
+            line-height: 1.85;
+            margin-bottom: 1.1rem;
+            font-size: 1.02rem;
+        }
+        .prose-content ul, .prose-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        .prose-content ul li {
+            list-style-type: disc;
+            color: #3d3a4e;
+            line-height: 1.8;
+            margin-bottom: 0.4rem;
+            font-size: 1.02rem;
+        }
+        .prose-content ol li {
+            list-style-type: decimal;
+            color: #3d3a4e;
+            line-height: 1.8;
+            margin-bottom: 0.4rem;
+            font-size: 1.02rem;
+        }
+        .prose-content a {
+            color: #4f17ce;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .prose-content a:hover { color: #6d28d9; }
+        .prose-content strong { color: #111c2d; font-weight: 700; }
+        .prose-content code {
+            background: #f3f0ff;
+            color: #4f17ce;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-family: 'Courier New', monospace;
+        }
+        .prose-content pre {
+            background: #1e1b2e;
+            color: #e2e8f0;
+            padding: 1.25rem 1.5rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1.25rem;
+        }
+        .prose-content pre code {
+            background: transparent;
+            color: #e2e8f0;
+            padding: 0;
+        }
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: #4f17ce;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1rem;
+            border-radius: 50%;
+            margin-right: 0.6rem;
+            flex-shrink: 0;
+        }
+        .tip-box {
+            background: #f3f0ff;
+            border-left: 4px solid #4f17ce;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .tip-box p { margin-bottom: 0; color: #3d2a8a; font-size: 0.97rem; }
+        .tip-box strong { color: #4f17ce; }
+        .warning-box {
+            background: #fff7ed;
+            border-left: 4px solid #f97316;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+        }
+        .warning-box p { margin-bottom: 0; color: #7c2d12; font-size: 0.97rem; }
+        .warning-box strong { color: #c2410c; }
+
+        /* FAQ Accordion */
+        .faq-item { border-bottom: 1px solid #e2e8f0; }
+        .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-weight: 700; font-size: 1rem; color: #111c2d; list-style: none; display: flex; justify-content: space-between; align-items: center; font-family: 'Outfit', sans-serif; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: #4f17ce; transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; font-size: 0.97rem; }
+    </style>
+</head>
+<body class="bg-white">
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[200] bg-white translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col">
+    <div class="flex items-center justify-between px-6 h-[80px] border-b border-slate-100 flex-shrink-0">
+        <a href="/"><img alt="Hosterlo Logo" class="w-[160px] h-auto" src="/assets/logo.png" decoding="async"></a>
+        <button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-slate-700">
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-8 space-y-2">
+        <a href="/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">Home</a>
+        <a href="/hosting/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">Web Hosting</a>
+        <a href="/hosting/shared-hosting/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">Shared Hosting</a>
+        <a href="/hosting/wordpress-hosting/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">WordPress Hosting</a>
+        <a href="/domains/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">Domains</a>
+        <a href="/free-offer/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-primary bg-primary/5 hover:bg-primary/10 transition-colors">Free Offer</a>
+        <a href="/contact-us/" class="flex items-center gap-3 px-4 py-3.5 rounded-2xl font-bold text-slate-800 hover:bg-slate-50 transition-colors">Contact / Support</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 flex-shrink-0">
+        <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full text-center px-6 py-3.5 bg-primary text-white font-bold rounded-2xl shadow-md hover:bg-violet-700 transition-all">Get Started Now</a>
+        <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full text-center px-6 py-3.5 bg-slate-100 text-primary font-bold rounded-2xl hover:bg-slate-200 transition-all">Go to Portal</a>
+    </div>
+</div>
+
+<!-- TopNavBar -->
+<header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
+        <div class="flex-shrink-0">
+            <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a class="nav-link" href="/">Home</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1 py-8 cursor-default"><span>Solutions</span><span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span></button>
+                <div class="absolute top-[calc(100%-10px)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-[32px] shadow-2xl border border-slate-200/50 p-8 hidden group-hover:grid grid-cols-3 gap-8 z-[100]">
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary">Hosting Solutions</h4>
+                        <div class="space-y-1">
+                            <a href="/hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">cloud</span></div><div><div class="font-bold text-slate-900">Web Hosting</div><div class="text-[11px] text-slate-500">Fast Cloud solutions.</div></div></a>
+                            <a href="/hosting/shared-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">grid_view</span></div><div><div class="font-bold text-slate-900">Shared Hosting</div><div class="text-[11px] text-slate-500">Cost-effective speed.</div></div></a>
+                            <a href="/hosting/wordpress-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">auto_awesome</span></div><div><div class="font-bold text-slate-900">WordPress</div><div class="text-[11px] text-slate-500">Engineered for WP.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-300">Infrastructure</h4>
+                        <div class="space-y-1">
+                            <a href="/free-offer/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/item:bg-primary transition-all"><span class="material-symbols-outlined">redeem</span></div><div><div class="font-bold text-slate-900">Free Growth Kit</div><div class="text-[11px] text-slate-500">Included with annual plans.</div></div></a>
+                            <a href="/infrastructure/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">hub</span></div><div><div class="font-bold text-slate-900">Data Centers</div><div class="text-[11px] text-slate-500">Elite global network.</div></div></a>
+                            <a href="/services/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover/item:bg-slate-900 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">code</span></div><div><div class="font-bold text-slate-900">Web Dev &amp; SEO</div><div class="text-[11px] text-slate-500">Professional design.</div></div></a>
+                        </div>
+                    </div>
+                    <div class="space-y-6 text-left">
+                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-400">Domains &amp; Support</h4>
+                        <div class="space-y-1">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-primary group-hover/item:text-white transition-all"><span class="material-symbols-outlined">search</span></div><div><div class="font-bold text-slate-900">Domain Search</div><div class="text-[11px] text-slate-500">Find your identity.</div></div></a>
+                            <a href="/contact-us/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item"><div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-slate-600 group-hover/item:text-white transition-all"><span class="material-symbols-outlined">contact_support</span></div><div><div class="font-bold text-slate-900">Support Hub</div><div class="text-[11px] text-slate-500">24/7 Expert help.</div></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link" href="/domains/">Domains</a>
+            <a class="nav-link" href="/ai-article-writer/">Free Tools</a>
+            <a class="nav-link text-primary font-bold" href="/free-offer/">Free Offer</a>
+        </nav>
+        <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="px-6 py-2.5 bg-primary text-white font-bold rounded-full shadow-md hover:bg-violet-700 transition-all text-sm hidden sm:block">Get Started</a>
+            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Banner -->
+<div class="relative overflow-hidden bg-gradient-to-br from-[#1e1b2e] via-[#2d1a6e] to-[#4f17ce] pt-20 pb-16 px-4 sm:px-8 mt-6">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, #a78bfa 0%, transparent 50%), radial-gradient(circle at 80% 20%, #818cf8 0%, transparent 50%);"></div>
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
+            <span class="material-symbols-outlined text-sm text-purple-300">swap_horiz</span>
+            <span class="text-purple-200 text-xs font-bold uppercase tracking-widest">Hosting Migration</span>
+            <span class="text-purple-400 text-xs mx-1">·</span>
+            <span class="text-purple-200 text-xs">10 min read</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6" style="font-family: 'Outfit', sans-serif;">
+            How to Migrate Your Website to a New Host Without Any Downtime
+        </h1>
+        <p class="text-purple-200 text-lg max-w-2xl mx-auto leading-relaxed">A complete, step-by-step guide — from backing up your files to flipping DNS — so your visitors never notice a thing.</p>
+        <div class="flex items-center justify-center gap-4 mt-8 text-sm text-purple-300 font-semibold">
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">calendar_today</span> June 3, 2026</span>
+            <span class="opacity-40">|</span>
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">person</span> Hosterlo Editorial Team</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <article class="prose-content">
+
+        <!-- Intro -->
+        <p>Switching web hosts is one of those tasks that sounds daunting but is actually very manageable when you have the right plan. Whether your current provider keeps going down, your site has grown out of its shared plan, or you're simply looking for better performance and support, the good news is this: <strong>you can migrate your website to a new host without your visitors experiencing a single second of downtime</strong>.</p>
+
+        <p>The key is sequencing. You fully set up and test your site on the new server <em>before</em> you tell the internet to redirect traffic there. DNS propagation takes time, and you can use that buffer to your advantage. By the end of this guide, you'll know exactly how to execute a clean, zero-downtime migration — from the first file backup all the way to verifying your SSL certificate on the new host.</p>
+
+        <p>Let's dig in.</p>
+
+        <!-- Section 1: Before You Start -->
+        <h2>Before You Start – What to Prepare</h2>
+
+        <p>A smooth migration starts before you touch a single file. Gather everything you'll need upfront so you're not scrambling mid-process. Here's your pre-migration checklist:</p>
+
+        <ul>
+            <li><strong>Access to your current cPanel (or control panel):</strong> You'll need login credentials to your existing hosting account to export files and databases.</li>
+            <li><strong>FTP/SFTP credentials for your current host:</strong> These allow you to download files directly using an FTP client like FileZilla.</li>
+            <li><strong>Domain registrar login:</strong> You'll need access to wherever your domain is registered (GoDaddy, Namecheap, Google Domains, etc.) to update your nameservers or DNS A records when you're ready to switch.</li>
+            <li><strong>A complete backup of your current website:</strong> Both files and database — never start a migration without a verified backup.</li>
+            <li><strong>A new hosting account set up and ready:</strong> If you haven't already, sign up for a new plan. Check out Hosterlo's <a href="/hosting/shared-hosting/">shared hosting plans</a> — they're fast, affordable, and include everything you need to get started immediately, including cPanel access, free SSL, and an easy onboarding experience.</li>
+            <li><strong>Approximately 2–4 hours of free time:</strong> The actual work takes 1–2 hours; DNS propagation does the rest on its own.</li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>Pro Tip:</strong> Do your migration during off-peak hours (late evening or early morning) when your site traffic is naturally lower. Even though you're aiming for zero downtime, this reduces any potential impact of edge cases.</p>
+        </div>
+
+        <!-- Section 2: Step 1 – Back Up -->
+        <h2>Step 1 – Back Up Your Entire Website</h2>
+
+        <p>This is the most critical step. Before you move a single file, you need a complete, verified backup of your site. There are several ways to do this depending on how your site is built.</p>
+
+        <h3>Option A: Full cPanel Backup (Recommended)</h3>
+        <p>Log into your current host's cPanel, navigate to <strong>Backup</strong> or <strong>Backup Wizard</strong>, and generate a full cPanel backup. This creates a single compressed <code>.tar.gz</code> file containing your files, databases, email accounts, and settings. Download it to your local computer once it's ready. This is the most complete backup method available.</p>
+
+        <h3>Option B: Files via cPanel File Manager or FTP</h3>
+        <p>In cPanel, open <strong>File Manager</strong>, navigate to <code>public_html</code>, select all files, compress them to a ZIP, and download. Alternatively, use an FTP client like FileZilla — connect using your host's FTP hostname, username, and password — then drag your entire <code>public_html</code> directory to your local drive.</p>
+
+        <h3>Option C: Export Your Database via phpMyAdmin</h3>
+        <p>In cPanel, open <strong>phpMyAdmin</strong>, select your website's database from the left panel, click the <strong>Export</strong> tab, choose "Quick" export and "SQL" format, then click Go. Save the <code>.sql</code> file somewhere you can easily find it — you'll need it in Step 4.</p>
+
+        <h3>Option D: UpdraftPlus for WordPress Sites</h3>
+        <p>If you're running WordPress, install the free <strong>UpdraftPlus</strong> plugin. Go to Settings &rarr; UpdraftPlus Backups &rarr; Backup Now. It will create separate archives for your files and database. You can store them locally or in a cloud service. This is arguably the easiest method for non-technical WordPress users.</p>
+
+        <div class="warning-box">
+            <p><strong>Warning:</strong> Never skip this step or proceed with just a partial backup. If something goes wrong during the migration, your backup is your safety net. A complete backup is your insurance policy.</p>
+        </div>
+
+        <!-- Section 3: Step 2 – Set Up New Host -->
+        <h2>Step 2 – Set Up Your New Hosting Account</h2>
+
+        <p>If you haven't already signed up with your new host, now is the time. With <a href="/hosting/">Hosterlo web hosting</a>, the sign-up process takes just a few minutes. After purchasing your plan, you'll receive a welcome email with your cPanel login credentials, server IP address, and nameserver details — save all of these.</p>
+
+        <p>Once inside cPanel on your new host, do the following before you upload anything:</p>
+
+        <ul>
+            <li><strong>Add your domain as an Addon Domain or Primary Domain:</strong> In cPanel, go to Domains → Addon Domains (or simply set it as the primary if it's a fresh account). This tells the server what domain the site will respond to.</li>
+            <li><strong>Create your email accounts:</strong> If you use email hosted with your web host (e.g., <code>hello@yourdomain.com</code>), recreate those accounts now in cPanel → Email Accounts. Set the same passwords so your mail client settings won't need to change after the switch.</li>
+            <li><strong>Note the server's IP address:</strong> You'll use this to test your site locally before DNS propagates and to set DNS A records if needed.</li>
+            <li><strong>Install SSL (if not auto-provisioned):</strong> Most modern hosts, including Hosterlo, auto-provision Let's Encrypt SSL. Check that it's active in cPanel → SSL/TLS.</li>
+        </ul>
+
+        <div class="tip-box">
+            <p><strong>Hosterlo Tip:</strong> Hosterlo's control panel includes a one-click SSL provisioner and free Cloudflare integration. You won't need to manually configure most of these items — the setup wizard walks you through everything in under 5 minutes.</p>
+        </div>
+
+        <!-- Section 4: Step 3 – Upload Files -->
+        <h2>Step 3 – Upload Your Files to the New Host</h2>
+
+        <p>With your new account set up, it's time to transfer your website files. You have two main methods:</p>
+
+        <h3>Method A: FileZilla via FTP/SFTP</h3>
+        <p>FileZilla is a free, cross-platform FTP client that makes file transfers easy. Here's how:</p>
+        <ol>
+            <li>Download and install <a href="https://filezilla-project.org/" rel="noopener noreferrer">FileZilla</a> if you don't already have it.</li>
+            <li>Open the Site Manager (File → Site Manager) and create a new connection using your new host's FTP hostname (usually <code>ftp.yourdomain.com</code> or the server IP), your cPanel username, and password. Use port 21 for FTP or 22 for SFTP (preferred for security).</li>
+            <li>Connect to the server. On the right panel, navigate to <code>public_html</code>. On the left panel, navigate to your backed-up website files on your local drive.</li>
+            <li>Select all local files and drag them to the remote <code>public_html</code> directory. FileZilla will queue and upload everything.</li>
+        </ol>
+
+        <h3>Method B: cPanel File Manager Upload</h3>
+        <p>If your site is relatively small (under ~500MB), you can upload directly through cPanel's File Manager. Compress your files into a single ZIP on your computer, upload it to <code>public_html</code> via File Manager, then right-click and extract it in place. Clean, simple, no software needed.</p>
+
+        <div class="tip-box">
+            <p><strong>Important:</strong> Make sure your files land directly in <code>public_html</code> — not in a subfolder like <code>public_html/my-site/</code>. The folder structure on the new host should mirror exactly what you had on the old host.</p>
+        </div>
+
+        <!-- Section 5: Step 4 – Import Database -->
+        <h2>Step 4 – Import Your Database</h2>
+
+        <p>Most dynamic websites — especially WordPress, Joomla, Drupal, and custom PHP apps — rely on a MySQL database to store content, users, and settings. Here's how to move yours:</p>
+
+        <h3>1. Create a New MySQL Database on the New Host</h3>
+        <p>In your new host's cPanel, go to <strong>MySQL Databases</strong>. Create a new database (e.g., <code>mynewdb</code>), create a database user with a strong password, and then add that user to the database with <strong>All Privileges</strong>. Write down the database name, username, and password — you'll need them shortly.</p>
+
+        <h3>2. Import via phpMyAdmin</h3>
+        <p>In cPanel on your new host, open <strong>phpMyAdmin</strong>. Select your newly created database from the left sidebar. Click the <strong>Import</strong> tab, click "Choose File," select the <code>.sql</code> file you exported in Step 1, and click <strong>Go</strong>. phpMyAdmin will import all your tables and data. For large databases (over 50MB), you may need to use a tool like <strong>BigDump</strong> or ask your host to import via command line.</p>
+
+        <h3>3. Update wp-config.php (WordPress Only)</h3>
+        <p>If you're migrating a WordPress site, open <code>public_html/wp-config.php</code> on your new host (via File Manager or FTP) and update the following lines to match your new database credentials:</p>
+        <pre><code>define('DB_NAME', 'mynewdb');
+define('DB_USER', 'mynewdbuser');
+define('DB_PASSWORD', 'yourpassword');
+define('DB_HOST', 'localhost');</code></pre>
+        <p>Save the file. The <code>DB_HOST</code> value is almost always <code>localhost</code> on shared hosting, but verify this with your new host if the site doesn't load during testing.</p>
+
+        <!-- Section 6: Step 5 – Test Before Going Live -->
+        <h2>Step 5 – Test Your Website Before Going Live</h2>
+
+        <p>Here's where the "no downtime" magic happens. You're going to preview your site on the new server without changing any DNS records — so your live site on the old host continues to function normally for visitors while you verify everything on the new one.</p>
+
+        <h3>Modify Your Local Hosts File</h3>
+        <p>Your operating system has a local <code>hosts</code> file that takes precedence over DNS. By adding an entry pointing your domain to the new server's IP, your computer will load the site from the new host while everyone else still sees the old one.</p>
+
+        <p>On <strong>Windows</strong>, open Notepad as Administrator and open <code>C:\Windows\System32\drivers\etc\hosts</code>. On <strong>Mac/Linux</strong>, open Terminal and run <code>sudo nano /etc/hosts</code>.</p>
+
+        <p>Add this line at the bottom (replace with your actual values):</p>
+        <pre><code>123.456.789.000   yourdomain.com www.yourdomain.com</code></pre>
+        <p>Replace <code>123.456.789.000</code> with your new server's IP address. Save the file and open your browser. Your domain will now load from the new host — privately, just on your machine.</p>
+
+        <h3>What to Check</h3>
+        <ul>
+            <li>All pages load correctly — homepage, about, contact, product/blog pages</li>
+            <li>Images and media are displaying properly</li>
+            <li>Forms work (submit a test entry)</li>
+            <li>User login/registration functions correctly</li>
+            <li>WooCommerce or eCommerce checkout flows work (if applicable)</li>
+            <li>SSL padlock appears in the browser bar</li>
+            <li>No broken links or 404 errors</li>
+            <li>Page load speed feels normal or better</li>
+        </ul>
+
+        <p>Only once you're satisfied that everything is working perfectly on the new host should you proceed to change your DNS. When done testing, remember to remove the hosts file entry — otherwise your browser will keep going to the new server regardless of DNS.</p>
+
+        <!-- Section 7: Step 6 – Lower TTL -->
+        <h2>Step 6 – Lower Your DNS TTL</h2>
+
+        <p>TTL stands for <strong>Time To Live</strong> — it's a value (measured in seconds) that tells DNS resolvers around the world how long to cache your domain's DNS records before checking for updates. A high TTL (like the default 3600 seconds / 1 hour, or 86400 seconds / 24 hours) means that when you change your nameservers or A record, it takes a long time for the whole internet to see the update.</p>
+
+        <p>The solution? <strong>Lower your TTL to 300 seconds (5 minutes) at least 48 hours before you plan to switch DNS.</strong></p>
+
+        <h3>How to Lower TTL</h3>
+        <p>Log into your domain registrar or DNS provider (wherever your DNS records are currently managed). Find the A record or SOA record for your domain and change the TTL value to <code>300</code>. Save the change and wait 24–48 hours for this low TTL to propagate globally.</p>
+
+        <p>Now when you update your DNS to point to the new host, the internet will pick up the change within just 5 minutes for most users instead of waiting 24+ hours. After migration is complete and stable (give it a few days), you can raise TTL back to 3600 or higher.</p>
+
+        <div class="tip-box">
+            <p><strong>Plan ahead:</strong> Lower your TTL 48 hours before your intended switch date. This step costs you nothing but saves you hours of propagation time on migration day.</p>
+        </div>
+
+        <!-- Section 8: Step 7 – Point DNS -->
+        <h2>Step 7 – Point Your Domain to the New Host</h2>
+
+        <p>This is the moment of the switch — and because you've already set up, tested, and confirmed everything on the new server, it should be anticlimactic in the best possible way.</p>
+
+        <p>There are two ways to redirect your domain to a new host:</p>
+
+        <h3>Option A: Update Nameservers (Most Common)</h3>
+        <p>If you want to manage DNS entirely through your new host, change your domain's nameservers at your registrar. Log into your <a href="/domains/">domain registration</a> provider, find the nameserver settings for your domain, and replace the existing nameservers with the ones provided by your new host (e.g., <code>ns1.hosterlo.com</code> and <code>ns2.hosterlo.com</code>). Save the change.</p>
+
+        <p>Nameserver changes can take up to 24–48 hours to fully propagate, though with a lowered TTL most users will see the new host within 1–2 hours.</p>
+
+        <h3>Option B: Update the A Record Only</h3>
+        <p>If you want to keep DNS management where it currently is (e.g., at Cloudflare or your registrar), simply update the <strong>A record</strong> for your domain (<code>@</code> and <code>www</code>) to point to your new server's IP address. This is faster than changing nameservers and typically propagates within minutes if your TTL is already set to 300.</p>
+
+        <div class="warning-box">
+            <p><strong>Don't cancel your old hosting yet!</strong> Keep your old hosting account active for at least 48–72 hours after switching DNS. This ensures that visitors using cached DNS can still reach your old server while propagation completes. Only cancel once you've confirmed 100% of traffic is hitting the new server.</p>
+        </div>
+
+        <!-- Section 9: Step 8 – Verify After DNS -->
+        <h2>Step 8 – Verify Everything After DNS Propagates</h2>
+
+        <p>Once DNS has updated and visitors are being routed to the new server, do a thorough final verification sweep. Don't assume everything is fine — confirm it.</p>
+
+        <ul>
+            <li><strong>Clear your browser cache</strong> (Ctrl+Shift+Delete) or use an incognito/private window to ensure you're seeing the live version, not a cached one.</li>
+            <li><strong>Check your SSL certificate</strong> — Visit your site and confirm the padlock icon appears. Click it to verify the certificate is valid and issued for your domain. If SSL isn't active, go to cPanel → SSL/TLS Status and force an issue.</li>
+            <li><strong>Test contact forms</strong> — Submit a test form and verify you receive the email notification. Email deliverability issues can surface after migration if SPF/DKIM records weren't copied over.</li>
+            <li><strong>Verify email accounts</strong> — Send a test email to and from your hosting-based email addresses. Check that your email client (Outlook, Apple Mail, etc.) can still send and receive using the same settings, or update the incoming/outgoing server settings to your new host's mail server.</li>
+            <li><strong>Check DNS records</strong> — Use a tool like <a href="https://dnschecker.org" rel="noopener noreferrer">DNSChecker.org</a> to confirm your domain is resolving to the new server's IP globally.</li>
+            <li><strong>Run a speed test</strong> — Use Google PageSpeed Insights or GTmetrix to confirm performance is meeting expectations on the new host.</li>
+            <li><strong>Check Google Search Console</strong> — Make sure there are no crawl errors or indexing issues following the migration. The site structure shouldn't change, so this is mostly a verification step.</li>
+        </ul>
+
+        <!-- Section 10: WordPress Specifically -->
+        <h2>Migrating WordPress Specifically</h2>
+
+        <p>WordPress is the world's most popular CMS, and it has a robust ecosystem of migration tools that can significantly simplify the process outlined above. Here are the three most popular approaches:</p>
+
+        <h3>All-in-One WP Migration Plugin</h3>
+        <p>This free plugin (available at WordPress.org) exports your entire WordPress installation — files, database, themes, plugins, and all settings — into a single <code>.wpress</code> file. Install it on your old site, click Export, download the archive. Then install WordPress on your new host, install the same plugin, and import the archive. It automatically handles all database URL replacements and configuration updates. This is the easiest method for non-technical users.</p>
+        <p><strong>Limitation:</strong> The free version limits imports to sites under ~512MB. Larger sites need the premium extension.</p>
+
+        <h3>Duplicator Plugin</h3>
+        <p>Duplicator is another popular free migration plugin. It packages your site into an installer archive and a PHP installer file. Upload both to your new host's <code>public_html</code>, run the installer by navigating to <code>yourdomain.com/installer.php</code>, and follow the wizard to configure the database connection and run the migration. Duplicator is excellent for larger sites and gives you more control over the database configuration step.</p>
+
+        <h3>Manual Method</h3>
+        <p>The manual method — backing up files via FTP and exporting the database via phpMyAdmin as described in the steps above — is the most reliable approach because it doesn't depend on third-party plugins. It's more involved but gives you complete control and understanding of what's happening at each stage. For complex or large WordPress sites, the manual method is often the preferred choice for developers.</p>
+
+        <div class="tip-box">
+            <p><strong>WordPress Database Search-Replace:</strong> After importing your database to the new host, if your site URL or file paths change at all, run a search-replace on the database. Use the <strong>Better Search Replace</strong> plugin or WP-CLI: <code>wp search-replace 'old-domain.com' 'new-domain.com' --all-tables</code>. This updates all serialized URLs stored in the database.</p>
+        </div>
+
+        <!-- Section 11: Common Mistakes -->
+        <h2>Common Migration Mistakes to Avoid</h2>
+
+        <p>Even experienced developers trip up during migrations. Here are the most common pitfalls — and how to sidestep them:</p>
+
+        <ul>
+            <li>
+                <strong>Switching DNS before testing on the new server.</strong> This is the single most common mistake. Always test your site using the hosts file method first. Switching DNS prematurely means any bugs or missing files are immediately live for all your visitors.
+            </li>
+            <li>
+                <strong>Forgetting to migrate email accounts and records.</strong> If your email is hosted with your web host, you need to recreate those accounts on the new server <em>and</em> copy over your MX records, SPF records, and DKIM keys. Failing to do so will cause email delivery failures after the switch.
+            </li>
+            <li>
+                <strong>Skipping the database search-replace for WordPress.</strong> If your database contains hardcoded references to your old hosting IP or old domain URL, links and images will break. Always run a full search-replace after importing the database.
+            </li>
+            <li>
+                <strong>Ignoring absolute image paths.</strong> Some CMS setups use absolute file paths to reference images (e.g., <code>/home/username/public_html/images/logo.png</code>). If your server username or directory structure differs on the new host, images can disappear. Review your <code>wp-config.php</code> or CMS config files for hardcoded paths.
+            </li>
+            <li>
+                <strong>Cancelling old hosting too soon.</strong> Keep your old account active for at least 72 hours post-switch. DNS propagation can be slow in some regions, and you want the old server to keep serving your site as a fallback.
+            </li>
+            <li>
+                <strong>Not checking SSL after migration.</strong> SSL certificates are server-specific. Your old certificate won't transfer — you need a new one issued on the new host. Most modern hosts auto-provision this, but verify it's active before going live.
+            </li>
+            <li>
+                <strong>Missing cron jobs and scheduled tasks.</strong> If your site uses WP-Cron, server-side cron jobs, or scheduled scripts, these need to be set up manually on the new host via cPanel → Cron Jobs.
+            </li>
+        </ul>
+
+        <!-- Section 12: Free Migration at Hosterlo -->
+        <h2>Does Hosterlo Offer Free Website Migration?</h2>
+
+        <p>Yes — and this is one of the genuine advantages of moving to Hosterlo. We know that migration anxiety is real, and we don't want technical complexity to stand between you and a faster, more reliable hosting experience.</p>
+
+        <p>When you sign up for a Hosterlo business hosting plan, our support team is available to assist you through the migration process. Whether you need guidance on where to find your database credentials, help with DNS record configuration, or someone to review your site after the switch — our experts are on hand.</p>
+
+        <p>Simply reach out via our <a href="/contact-us/">migration support page</a> and let us know you're moving your site. Provide your old host's cPanel access (or backup files) and we'll coordinate the technical steps with you. We treat every migration as a partnership, not a ticket number.</p>
+
+        <p>On top of that, every annual plan comes with our <a href="/free-offer/">free Website Growth Kit</a> — a bundle of SEO tools, performance audits, and website growth resources that you can put to work immediately after your site is live on Hosterlo's infrastructure. It's our way of making sure your migration isn't just a move — it's an upgrade.</p>
+
+        <div class="tip-box">
+            <p><strong>New to Hosterlo?</strong> Our <a href="/hosting/shared-hosting/">shared hosting plans</a> start at an accessible price point and include everything you need: free SSL, daily backups, cPanel access, a one-click WordPress installer, and priority 24/7 support. There's no reason to stay on a slow or unreliable host.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <h2 class="!mt-16">Frequently Asked Questions</h2>
+
+        <div class="mt-6 border-t border-slate-200">
+            <details class="faq-item">
+                <summary>How long does website migration take?</summary>
+                <p>A typical website migration takes anywhere from 1 to 6 hours for the actual transfer work, depending on your site's size. Small sites (under 1GB) can be moved in under an hour. However, DNS propagation — the time for the internet to recognize your new server — can take 24–48 hours to complete globally. With proper TTL preparation (setting it to 300 seconds 48 hours before switching), most visitors will see the new host within 1–2 hours of you making the DNS change.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Will my email stop working during migration?</summary>
+                <p>If your email is hosted with your web host, there can be a brief period where email delivery is delayed during DNS propagation. To minimize this, create all email accounts on the new host before switching DNS, and lower your TTL 48 hours in advance. MX records typically propagate quickly. As a best practice, keep your old hosting active for 72 hours post-switch so that incoming emails sent to the old server can still be retrieved, and verify your SPF, DKIM, and DMARC records are correctly configured on the new host before you cancel the old account.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need technical skills to migrate my site?</summary>
+                <p>Basic technical familiarity is helpful — things like accessing cPanel, using FileZilla for FTP uploads, and logging into your domain registrar. However, WordPress users can use migration plugins like All-in-One WP Migration or Duplicator that make the entire process visual and straightforward with minimal command-line interaction. For non-WordPress sites, the manual steps in this guide are comprehensive enough to follow without prior server admin experience. If you get stuck at any point, Hosterlo's support team is available to walk you through each step.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Does Hosterlo provide free website migration?</summary>
+                <p>Yes — Hosterlo offers migration assistance to new customers switching from another host. Our technical support team can guide the migration process end-to-end, and our business hosting plans include priority support access. Simply reach out via our contact page with your site details and we'll coordinate the move with you. We'll make sure your files, database, email accounts, and DNS records are all correctly configured before you cut over — so there are no surprises on launch day.</p>
+            </details>
+        </div>
+
+    </article>
+
+    <!-- Purple CTA Banner -->
+    <div class="mt-20 rounded-3xl overflow-hidden relative" style="background: linear-gradient(135deg, #2d1a6e 0%, #4f17ce 60%, #7c3aed 100%);">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 80% 20%, #a78bfa 0%, transparent 50%);"></div>
+        <div class="relative z-10 px-8 py-12 sm:px-12 sm:py-14 text-center">
+            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-5">
+                <span class="material-symbols-outlined text-sm text-purple-300">swap_horiz</span>
+                <span class="text-purple-200 text-xs font-bold uppercase tracking-widest">Zero Downtime Migration</span>
+            </div>
+            <h2 class="text-white text-2xl sm:text-3xl lg:text-4xl font-black mb-4 leading-tight" style="font-family: 'Outfit', sans-serif;">
+                Migrate to Hosterlo — We'll Help You Every Step of the Way
+            </h2>
+            <p class="text-purple-200 text-base sm:text-lg max-w-xl mx-auto mb-8 leading-relaxed">
+                Move your site to faster cloud infrastructure with zero drama. Our team is ready to assist with every step — from backup to go-live. Your visitors won't miss a beat.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-black rounded-full text-sm shadow-xl hover:bg-purple-50 transition-all duration-300 group">
+                    Start Your Migration Today
+                    <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                </a>
+                <a href="/contact-us/"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-bold rounded-full text-sm hover:bg-white/20 transition-all duration-300">
+                    Talk to Migration Support
+                </a>
+            </div>
+            <p class="text-purple-300/70 text-xs mt-6">No obligation · Free migration assistance · 99.99% uptime SLA</p>
+        </div>
+    </div>
+
+    <!-- Breadcrumb / Back to Blog -->
+    <div class="mt-12 pt-8 border-t border-slate-100 flex items-center justify-between">
+        <a href="/blog/" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:text-violet-700 transition-colors">
+            <span class="material-symbols-outlined text-base">arrow_back</span>
+            Back to Hosterlo Blog
+        </a>
+        <div class="flex items-center gap-2 text-xs text-slate-400 font-semibold">
+            <span class="material-symbols-outlined text-sm">label</span>
+            Hosting Migration
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+    <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none tracking-tighter z-0">hosterlo</div>
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+            <div class="lg:col-span-4 space-y-6">
+                <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async"></a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.</p>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                    <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
+                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">WordPress Pro</a></li>
+                    <li><a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support &amp; Policies</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
+                    <li><a href="/privacy-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Privacy &amp; Terms</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Insights &amp; Blog</a></li>
+                    <li><a href="/ai-article-writer/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">AI Content Tools</a></li>
+                    <li><a href="/free-offer/" class="text-primary font-bold text-sm transition-colors">Free Growth Kit</a></li>
+                    <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Client Portal Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. All rights reserved. | Built on Digioverse&trade; Global Infrastructure.</p>
+            <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                <a href="/privacy-policy/" class="hover:text-primary transition-colors">Legal</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+const o=document.getElementById('mobile-menu-open'),c=document.getElementById('mobile-menu-close'),v=document.getElementById('mobile-menu-overlay');
+if(o&&c&&v){
+    o.addEventListener('click',()=>{v.classList.remove('translate-x-full');document.body.style.overflow='hidden'});
+    c.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''});
+    v.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''}))
+}
+</script>
+
+</body>
+</html>
