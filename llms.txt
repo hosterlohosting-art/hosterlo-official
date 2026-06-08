@@ -1,3 +1,5 @@
+Last updated: 2026-06-05
+
 # Hosterlo
 
 > Hosterlo provides web hosting, WordPress hosting, domain registration, SSL support, business email tools, DNS/email security tools, and customer support for website owners.
