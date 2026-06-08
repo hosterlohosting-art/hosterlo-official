@@ -141,6 +141,7 @@
 <body class="bg-[#f9f9ff] text-[#111c2d] font-body-md">
 
 <!-- TopNavBar -->
+<!-- TopNavBar -->
 <header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
     <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
         <div class="flex-shrink-0">
@@ -149,142 +150,12 @@
             </a>
         </div>
         <nav class="hidden lg:flex items-center gap-8">
-            <a class="nav-link active" href="/">Home</a>
-            
-            <!-- Solutions Mega Menu -->
-            <div class="relative group">
-                <button class="nav-link flex items-center gap-1 py-8 cursor-default">
-                    <span>Solutions</span>
-                    <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
-                </button>
-                
-                <!-- Mega Menu Panel -->
-                <div class="absolute top-[calc(100%-10px)] left-1/2 -translate-x-1/2 w-[850px] bg-white rounded-[32px] shadow-2xl border border-slate-200/50 p-8 hidden group-hover:grid grid-cols-3 gap-8 z-[100] animate-in fade-in zoom-in duration-300">
-                    <!-- Column 1: Hosting -->
-                    <div class="space-y-6 text-left">
-                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary">Hosting Solutions</h4>
-                        <div class="space-y-1">
-                            <a href="/hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">cloud</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Web Hosting</div>
-                                    <div class="text-[11px] text-slate-500">Fast Cloud solutions.</div>
-                                </div>
-                            </a>
-                            <a href="/hosting/shared-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">grid_view</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Shared Hosting</div>
-                                    <div class="text-[11px] text-slate-500">Cost-effective speed.</div>
-                                </div>
-                            </a>
-                            <a href="/hosting/wordpress-hosting/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">auto_awesome</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">WordPress</div>
-                                    <div class="text-[11px] text-slate-500">Engineered for WP.</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Column 2: Infrastructure & Services -->
-                    <div class="space-y-6 text-left">
-                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-300">Infrastructure</h4>
-                        <div class="space-y-1">
-                            <a href="/free-offer/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center text-white group-hover/item:bg-primary transition-all">
-                                    <span class="material-symbols-outlined">redeem</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Free Growth Kit</div>
-                                    <div class="text-[11px] text-slate-500">Included with annual plans.</div>
-                                </div>
-                            </a>
-                            <a href="/infrastructure/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover/item:bg-emerald-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">hub</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Data Centers</div>
-                                    <div class="text-[11px] text-slate-500">Elite global network.</div>
-                                </div>
-                            </a>
-                            <a href="/about-hosterlo/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600 group-hover/item:bg-violet-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">public</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Global Reach</div>
-                                    <div class="text-[11px] text-slate-500">Connect worldwide.</div>
-                                </div>
-                            </a>
-                            <a href="/services/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 group-hover/item:bg-slate-900 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">code</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Web Dev & SEO</div>
-                                    <div class="text-[11px] text-slate-500">Professional design.</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Column 3: Domains & Company -->
-                    <div class="space-y-6 text-left">
-                        <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-slate-400">Domains & Support</h4>
-                        <div class="space-y-1">
-                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-primary group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">search</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Domain Search</div>
-                                    <div class="text-[11px] text-slate-500">Find your identity.</div>
-                                </div>
-                            </a>
-                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=transfer" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 group-hover/item:bg-indigo-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">move_up</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Transfer Domain</div>
-                                    <div class="text-[11px] text-slate-500">Bring it home.</div>
-                                </div>
-                            </a>
-                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover/item:bg-blue-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">app_registration</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Register Domain</div>
-                                    <div class="text-[11px] text-slate-500">New registration.</div>
-                                </div>
-                            </a>
-                            <a href="/contact-us/" class="flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all group/item">
-                                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-600 group-hover/item:bg-slate-600 group-hover/item:text-white transition-all">
-                                    <span class="material-symbols-outlined">contact_support</span>
-                                </div>
-                                <div>
-                                    <div class="font-bold text-slate-900">Support Hub</div>
-                                    <div class="text-[11px] text-slate-500">24/7 Expert help.</div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            <a class="nav-link" href="/hosting/">Hosting</a>
+            <a class="nav-link" href="/hosting/wordpress-hosting/">WordPress Hosting</a>
             <a class="nav-link" href="/domains/">Domains</a>
-            <a class="nav-link" href="/ai-article-writer/">Free Tools</a>
-            <a class="nav-link text-primary font-bold" href="/free-offer/">Free Offer</a>
+            <a class="nav-link" href="/free-tools/">Free Tools</a>
+            <a class="nav-link" href="/blog/">Blog</a>
+            <a class="nav-link" href="/contact-us/">Contact</a>
         </nav>
         <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
             <!-- Search Icon (SwitchU Style) -->
@@ -292,9 +163,9 @@
                 <span class="material-symbols-outlined text-[20px]">search</span>
             </button>
             <!-- Portal Button (SwitchU Style) -->
-            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] hover:text-primary-container font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Go to Portal</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] hover:text-primary-container font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Client Login</a>
             <!-- Get Started Button (SwitchU Style) -->
-            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine px-6 py-2.5 bg-primary text-on-primary font-bold rounded-full shadow-md hover:bg-primary-container transition-all text-sm hidden sm:block">Get Started</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine px-6 py-2.5 bg-primary text-on-primary font-bold rounded-full shadow-md hover:bg-primary-container transition-all text-sm hidden sm:block">Get the $59 Bundle</a>
             
             <!-- Mobile Menu Button -->
             <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background active:scale-90 transition-all">
@@ -314,81 +185,35 @@
 </button>
 </div>
 
-<nav class="space-y-8 mb-12">
-<div class="space-y-4">
-<p class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary/20">Solutions</p>
-<div class="grid grid-cols-1 gap-2">
-<a href="/hosting/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined">cloud</span>
-</div>
-<span class="font-bold text-slate-900">Web Hosting</span>
+<nav class="space-y-6 mb-12">
+<div class="grid grid-cols-1 gap-2 text-lg font-bold">
+<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">cloud</span> Hosting
 </a>
-<a href="/hosting/shared-hosting/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600">
-<span class="material-symbols-outlined">grid_view</span>
-</div>
-<span class="font-bold text-slate-900">Shared Hosting</span>
+<a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span> WordPress Hosting
 </a>
-<a href="/hosting/wordpress-hosting/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
-<span class="material-symbols-outlined">auto_awesome</span>
-</div>
-<span class="font-bold text-slate-900">WordPress Hosting</span>
+<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">language</span> Domains
 </a>
-<a href="/contact-us/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
-<span class="material-symbols-outlined">code</span>
-</div>
-<span class="font-bold text-slate-900">Web Development & SEO</span>
+<a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">build</span> Free Tools
 </a>
-<a href="/infrastructure/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
-<span class="material-symbols-outlined">hub</span>
-</div>
-<span class="font-bold text-slate-900">Other Services</span>
+<a href="/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">article</span> Blog
 </a>
-</div>
-</div>
-
-<div class="space-y-4">
-<p class="text-[10px] font-black text-slate-400 uppercase tracking-widest px-4 border-l-2 border-primary/20">Company</p>
-<div class="grid grid-cols-1 gap-2">
-<a href="/domains/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<span class="material-symbols-outlined text-primary">language</span>
-<span class="font-bold text-slate-900">Domains</span>
+<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">contact_support</span> Contact
 </a>
-<a href="/ai-article-writer/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<span class="material-symbols-outlined text-primary">build</span>
-<span class="font-bold text-slate-900">Free Tools</span>
-</a>
-<a href="/free-offer/" class="flex items-center gap-4 p-4 rounded-2xl bg-primary/5 border border-primary/20">
-<span class="material-symbols-outlined text-primary">redeem</span>
-<span class="font-bold text-primary">Free Offer</span>
-</a>
-<a href="/blog/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<span class="material-symbols-outlined text-primary">article</span>
-<span class="font-bold text-slate-900">Engineering Blog</span>
-</a>
-<a href="/contact-us/" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50">
-<span class="material-symbols-outlined text-primary">contact_support</span>
-<span class="font-bold text-slate-900">Support Hub</span>
-</a>
-</div>
 </div>
 </nav>
 
 <div class="mt-auto space-y-4">
-<a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Login to Client Area</a>
-<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Get Started Now</a>
+<a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Client Login</a>
+<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Get the $59 Bundle</a>
 </div>
 </div>
 </div>
-
-
-
-
-
 <main>
     <!-- Hero -->
     <section class="py-20 bg-gradient-to-br from-[#0f0a1e] via-[#1a1145] to-[#2d1b69] text-white relative overflow-hidden">
@@ -594,6 +419,7 @@
 </main>
 
 <!-- Footer: Standardized White Background, Black Text -->
+<!-- Footer: Standardized White Background, Black Text -->
 <footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
     <!-- Big watermark "hosterlo" background -->
     <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none font-h1 tracking-tighter z-0">hosterlo</div>
@@ -674,6 +500,7 @@
         </div>
     </div>
 </footer>
+
 
 
 <!-- Floating Elements -->
