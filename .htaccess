@@ -70,10 +70,12 @@ RewriteRule ^login/?$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,
 </IfModule>
 
 # Ensure XML sitemaps are not blocked
-<FilesMatch "\.(xml)$">
-    Header set Content-Type "application/xml; charset=utf-8"
-    Header set X-Robots-Tag "noindex"
-</FilesMatch>
+<IfModule mod_headers.c>
+    <FilesMatch "\.(xml)$">
+        Header set Content-Type "application/xml; charset=utf-8"
+        Header set X-Robots-Tag "noindex"
+    </FilesMatch>
+</IfModule>
 
 # Browser caching
 <IfModule mod_expires.c>
