@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -218,6 +218,72 @@
         .nav-link.active {
             color: #4f17ce;
             font-weight: 700;
+        }
+
+        /* ── FAQ Accordion ── */
+        .section-label {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #4f17ce;
+            background: rgba(79,23,206,0.08);
+            padding: 4px 14px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+        .faq-minimal-item {
+            border-bottom: 1px solid #e8ecf5;
+        }
+        .faq-minimal-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 20px 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: #111c2d;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            transition: color 0.2s;
+        }
+        .faq-minimal-question:hover {
+            color: #4f17ce;
+        }
+        .faq-minimal-icon {
+            flex-shrink: 0;
+            font-size: 20px;
+            color: #4f17ce;
+            transition: transform 0.3s ease;
+        }
+        .faq-minimal-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.7;
+            padding: 0;
+        }
+        .faq-minimal-item.active .faq-minimal-answer {
+            max-height: 500px;
+            padding-bottom: 20px;
+        }
+        .faq-minimal-item.active .faq-minimal-icon {
+            transform: rotate(45deg);
+        }
+
+        /* ── Mobile responsiveness ── */
+        @media (max-width: 767px) {
+            html, body { overflow-x: hidden; }
+            [data-aos] { transform: none !important; opacity: 1 !important; }
+            .font-h1, h1 { font-size: 28px !important; line-height: 1.2 !important; }
+            .font-h2, h2 { font-size: 22px !important; }
         }
     </style>
 </head>
@@ -498,7 +564,7 @@ Get everything you need to run, secure, and manage your online business. Superfa
                     Hosterlo helps businesses, bloggers, freelancers, and first-time website owners launch online with hosting, free eligible .com domain, SSL, business email, setup guidance, WhatsApp support, and Gemini Pro bonus in one yearly bundle.
                 </p>
                 <div class="flex gap-3">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-450 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-455 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">share</span></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-455 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">mail</span></a>
                 </div>
@@ -616,4 +682,5 @@ if(openBtn && closeBtn && overlay) {
     };
 </script>
 </body></html>
+
 
