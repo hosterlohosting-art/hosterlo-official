@@ -155,30 +155,7 @@
 
 <body class="bg-white text-slate-800 antialiased">
 
-  <!-- Mobile Menu Overlay -->
-  <div id="mobile-menu-overlay" class="fixed inset-0 z-[200] bg-white translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col p-6 overflow-y-auto">
-    <div class="flex justify-between items-center mb-8">
-      <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-10 w-auto" decoding="async" /></a>
-      <button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-100"><span class="material-symbols-outlined text-2xl">close</span></button>
-    </div>
-    <nav class="flex flex-col gap-2 text-slate-800">
-      <a href="/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">Home</a>
-      <a href="/hosting/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">Web Hosting</a>
-      <a href="/hosting/shared-hosting/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">Shared Hosting</a>
-      <a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">WordPress Hosting</a>
-      <a href="/domains/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">Domains</a>
-      <a href="/free-offer/" class="py-3 px-4 rounded-xl font-bold text-lg text-primary hover:bg-purple-50">Free Offer</a>
-      <a href="/blog/" class="py-3 px-4 rounded-xl font-bold text-lg hover:bg-slate-50">Blog</a>
-    </nav>
-    <div class="mt-auto pt-8 flex flex-col gap-3">
-      <a href="https://billing.hosterlo.com/index.php?rp=/login" class="w-full text-center py-3 rounded-full border-2 border-primary text-primary font-bold">Go to Portal</a>
-      <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="w-full text-center py-3 rounded-full bg-primary text-white font-bold">Get Started</a>
-    </div>
-  </div>
-
   <!-- TopNavBar -->
-  <!-- TopNavBar -->
-<!-- TopNavBar -->
 <header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
     <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
         <div class="flex-shrink-0">
@@ -252,46 +229,6 @@
 </div>
 </div>
 
-
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 lg:hidden overflow-y-auto w-full h-full" style="background-color: white !important; opacity: 1 !important;">
-<div class="p-6 h-full flex flex-col">
-<div class="flex items-center justify-between mb-12">
-<img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[150px] h-auto" src="/assets/logo.png" decoding="async">
-<button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background">
-<span class="material-symbols-outlined text-2xl">close</span>
-</button>
-</div>
-
-<nav class="space-y-6 mb-12">
-<div class="grid grid-cols-1 gap-2 text-lg font-bold">
-<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">cloud</span> Hosting
-</a>
-<a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">auto_awesome</span> WordPress Hosting
-</a>
-<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">language</span> Domains
-</a>
-<a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">build</span> Free Tools
-</a>
-<a href="/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">article</span> Blog
-</a>
-<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">contact_support</span> Contact
-</a>
-</div>
-</nav>
-
-<div class="mt-auto space-y-4">
-<a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Client Login</a>
-<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Get the $59 Bundle</a>
-</div>
-</div>
-</div>
 <section class="pt-16 pb-10 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-purple-50/30">
     <div class="max-w-4xl mx-auto text-center">
       <div class="inline-flex items-center gap-2 bg-primary/10 text-primary font-bold text-xs px-4 py-1.5 rounded-full mb-6 uppercase tracking-widest">
@@ -520,13 +457,13 @@
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span><strong>Unlimited business email</strong> accounts (yourname@yourdomain.com)</span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span>Free <strong>SSL certificate</strong> (auto-renewing, Let's Encrypt)</span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span><strong>LiteSpeed Cache</strong> for WordPress — out of the box, no plugin configuration needed</span></li>
-          <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span><strong>99.99% uptime SLA</strong> — not the 99.9% SLA common among budget hosts</span></li>
+          <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span><strong>99.9% uptime commitment SLA</strong> — not the 99.9% SLA common among budget hosts</span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span>Digioverse™ <strong>global infrastructure</strong> — multiple data centers across Europe, North America, and Asia-Pacific</span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span>Free website migration from any host</span></li>
           <li class="flex items-start gap-2"><span class="text-primary font-black mt-0.5">✓</span> <span>Access to the <a href="/free-offer/" class="text-primary font-bold hover:underline">free Website Growth Kit</a> — an SEO + marketing toolkit included with annual plans</span></li>
         </ul>
         <p class="text-slate-600 mb-5 leading-relaxed">
-          The <strong>99.99% uptime guarantee</strong> translates to less than 53 minutes of potential downtime per year — compared to 99.9%, which allows up to 8.7 hours annually. For a business-critical website, that difference is not trivial. Every minute of downtime is a visitor who bounced, a sale that didn't happen, and a crawl budget wasted on a server error page.
+          The <strong>99.9% uptime commitment guarantee</strong> translates to less than 53 minutes of potential downtime per year — compared to 99.9%, which allows up to 8.7 hours annually. For a business-critical website, that difference is not trivial. Every minute of downtime is a visitor who bounced, a sale that didn't happen, and a crawl budget wasted on a server error page.
         </p>
         <p class="text-slate-600 leading-relaxed">
           Hosterlo's infrastructure runs on the Digioverse™ global network — a purpose-built cloud backbone that routes traffic through the geographically closest data center to each visitor. This means faster load times regardless of where your audience is, without needing to purchase a separate CDN subscription. <a href="/hosting/" class="text-primary font-bold hover:underline">Explore Hosterlo web hosting</a> to see the full plan features.
@@ -788,7 +725,7 @@
             <div class="text-4xl mb-3">🥇</div>
             <p class="font-black text-lg mb-1">Best Overall Value</p>
             <p class="text-primary font-black text-xl">Hosterlo</p>
-            <p class="text-slate-300 text-sm mt-2">NVMe speed, LiteSpeed cache, $59/year flat, 99.99% uptime, everything included. The rational choice for any serious website owner.</p>
+            <p class="text-slate-300 text-sm mt-2">NVMe speed, LiteSpeed cache, $59/year flat, 99.9% uptime commitment, everything included. The rational choice for any serious website owner.</p>
           </div>
           <div class="text-center">
             <div class="text-4xl mb-3">🥈</div>
@@ -865,7 +802,7 @@
             Switch to Hosterlo Today —<br class="hidden sm:block" /> $59/year, everything included
           </h2>
           <p class="text-white/80 text-base sm:text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-            NVMe SSD • LiteSpeed Enterprise • Free .com Domain • Free SSL • Unlimited Business Email • 99.99% Uptime • Free Migration • No renewal shock — ever.
+            NVMe SSD • LiteSpeed Enterprise • Free .com Domain • Free SSL • Unlimited Business Email • 99.9% Uptime Commitment • Free Migration • No renewal shock — ever.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -905,7 +842,7 @@
                     <img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async">
                 </a>
                 <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
-                    Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.
+                    Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.9% uptime commitment guarantees, and human-first technical support.
                 </p>
                 <div class="flex gap-3">
                     <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-450 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
@@ -973,6 +910,7 @@
         </div>
     </div>
 </footer>
+
 
 
 

@@ -296,29 +296,6 @@
 </head>
 <body class="bg-white antialiased">
 
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 z-[200] bg-white translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
-    <div class="flex items-center justify-between px-6 py-5 border-b border-slate-100">
-        <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-9 w-auto"></a>
-        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 text-slate-600"><span class="material-symbols-outlined">close</span></button>
-    </div>
-    <nav class="px-6 py-8 space-y-1">
-        <a href="/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Home</a>
-        <a href="/hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Web Hosting</a>
-        <a href="/hosting/shared-hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Shared Hosting</a>
-        <a href="/hosting/wordpress-hosting/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">WordPress Hosting</a>
-        <a href="/domains/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Domains</a>
-        <a href="/free-offer/" class="block py-3 px-4 rounded-xl font-bold text-primary hover:bg-purple-50">Free Offer</a>
-        <a href="/contact-us/" class="block py-3 px-4 rounded-xl font-semibold text-slate-700 hover:bg-slate-50">Contact</a>
-        <div class="pt-4 space-y-3">
-            <a href="https://billing.hosterlo.com/index.php?rp=/login" class="block text-center py-3 px-4 rounded-xl font-bold bg-[#f2ebfa] text-primary">Go to Portal</a>
-            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block text-center py-3 px-4 rounded-xl font-bold bg-primary text-white">Get Started</a>
-        </div>
-    </nav>
-</div>
-
-<!-- TopNavBar -->
-<!-- TopNavBar -->
 <!-- TopNavBar -->
 <header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
     <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
@@ -393,46 +370,6 @@
 </div>
 </div>
 
-
-<!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 lg:hidden overflow-y-auto w-full h-full" style="background-color: white !important; opacity: 1 !important;">
-<div class="p-6 h-full flex flex-col">
-<div class="flex items-center justify-between mb-12">
-<img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[150px] h-auto" src="/assets/logo.png" decoding="async">
-<button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background">
-<span class="material-symbols-outlined text-2xl">close</span>
-</button>
-</div>
-
-<nav class="space-y-6 mb-12">
-<div class="grid grid-cols-1 gap-2 text-lg font-bold">
-<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">cloud</span> Hosting
-</a>
-<a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">auto_awesome</span> WordPress Hosting
-</a>
-<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">language</span> Domains
-</a>
-<a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">build</span> Free Tools
-</a>
-<a href="/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">article</span> Blog
-</a>
-<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary">contact_support</span> Contact
-</a>
-</div>
-</nav>
-
-<div class="mt-auto space-y-4">
-<a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Client Login</a>
-<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Get the $59 Bundle</a>
-</div>
-</div>
-</div>
 <section class="pt-16 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#f8f6fc] to-white">
     <div class="max-w-4xl mx-auto text-center">
         <div class="flex items-center justify-center gap-3 mb-6">
@@ -882,7 +819,7 @@ define('WP_SITEURL', 'https://yourdomain.com');</code></pre>
             If you're building a new site or migrating an existing one, this is one less thing to worry about. Our free <a href="/free-offer/">free Website Growth Kit</a> — included with every annual plan — also includes additional tools to help you grow your online presence beyond just hosting.
         </p>
         <p>
-            Combined with Hosterlo's 99.99% uptime guarantee, global LightSpeed infrastructure, and 24/7 human support, there's no reason to delay getting your site onto a fast, secure platform. Explore <a href="/hosting/shared-hosting/">shared hosting plans</a> starting at a price that makes sense for any stage of business.
+            Combined with Hosterlo's 99.9% uptime commitment guarantee, global LightSpeed infrastructure, and 24/7 human support, there's no reason to delay getting your site onto a fast, secure platform. Explore <a href="/hosting/shared-hosting/">shared hosting plans</a> starting at a price that makes sense for any stage of business.
         </p>
 
         <!-- FAQ Section -->
@@ -975,7 +912,7 @@ define('WP_SITEURL', 'https://yourdomain.com');</code></pre>
                     <img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async">
                 </a>
                 <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
-                    Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.99% uptime guarantees, and human-first technical support.
+                    Empowering the next generation of digital creators with elite-tier cloud infrastructure, 99.9% uptime commitment guarantees, and human-first technical support.
                 </p>
                 <div class="flex gap-3">
                     <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-450 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
@@ -1043,6 +980,7 @@ define('WP_SITEURL', 'https://yourdomain.com');</code></pre>
         </div>
     </div>
 </footer>
+
 
 
 <script>const o=document.getElementById('mobile-menu-open'),c=document.getElementById('mobile-menu-close'),v=document.getElementById('mobile-menu-overlay');if(o&&c&&v){o.addEventListener('click',()=>{v.classList.remove('translate-x-full');document.body.style.overflow='hidden'});c.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''});v.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''}))}</script>

@@ -1,28 +1,73 @@
 import os
 import re
 
+def find_tag_bounds(content, tag_name, start_search=0):
+    start_pos = content.find(f'<{tag_name}', start_search)
+    if start_pos == -1:
+        return -1, -1
+    
+    end_pos = content.find(f'</{tag_name}>', start_pos)
+    if end_pos == -1:
+        return -1, -1
+    end_pos += len(f'</{tag_name}>')
+    return start_pos, end_pos
+
+def find_div_bounds(content, identifier, start_search=0):
+    id_pos = content.find(identifier, start_search)
+    if id_pos == -1:
+        return -1, -1
+    
+    start_pos = content.rfind('<div', 0, id_pos)
+    if start_pos == -1:
+        return -1, -1
+        
+    depth = 0
+    pattern = re.compile(r'<div\b|</div>', re.IGNORECASE)
+    for match in pattern.finditer(content, start_pos):
+        tag = match.group(0).lower()
+        if tag.startswith('<div'):
+            depth += 1
+        elif tag == '</div>':
+            depth -= 1
+            if depth == 0:
+                return start_pos, match.end()
+                
+    return -1, -1
+
 def extract_premium_blocks():
     with open('index.html', 'r', encoding='utf-8') as f:
         content = f.read()
-    
-    # Extract header block
-    header_start = content.find('<!-- TopNavBar -->')
-    header_end = content.find('<!-- Hero Section -->')
-    if header_start == -1 or header_end == -1:
-        # Fallback to search using regular tags
-        header_start = content.find('<header')
-        header_end = content.find('</header>') + len('</header>')
-    
-    header_block = content[header_start:header_end].strip()
-    
-    # Extract footer block
-    footer_start = content.find('<!-- Footer: Standardized White Background, Black Text -->')
-    footer_end = content.find('</footer>') + len('</footer>')
-    if footer_start == -1 or footer_end == -1:
-        footer_start = content.find('<footer')
-        footer_end = content.find('</footer>') + len('</footer>')
         
-    footer_block = content[footer_start:footer_end].strip()
+    # Find the header bounds
+    h_start, h_end = find_tag_bounds(content, 'header')
+    if h_start == -1 or h_end == -1:
+        raise ValueError("Could not find <header> block in index.html")
+        
+    # Find the overlay bounds
+    o_start, o_end = find_div_bounds(content, 'id="mobile-menu-overlay"')
+    
+    # The header block to extract starts at min(h_start, o_start) and ends at max(h_end, o_end)
+    zone_start = min(h_start, o_start) if o_start != -1 else h_start
+    zone_end = max(h_end, o_end) if o_end != -1 else h_end
+    
+    # Backtrack zone_start to include comment "<!-- TopNavBar -->" if it is just before
+    comment_pos = content.rfind('<!-- TopNavBar -->', 0, zone_start)
+    if comment_pos != -1 and zone_start - comment_pos < 100:
+        zone_start = comment_pos
+        
+    header_block = content[zone_start:zone_end].strip()
+    
+    # Find the footer bounds
+    f_start, f_end = find_tag_bounds(content, 'footer')
+    if f_start == -1 or f_end == -1:
+        raise ValueError("Could not find <footer> block in index.html")
+        
+    # Backtrack f_start to include footer comment if present
+    comment_pos = content.rfind('<!-- Footer', 0, f_start)
+    if comment_pos != -1 and f_start - comment_pos < 150:
+        f_start = comment_pos
+        
+    footer_block = content[f_start:f_end].strip()
     
     return header_block, footer_block
 
@@ -30,48 +75,66 @@ def sync_subpage(file_path, header_block, footer_block):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
         
-    # Replace header
-    # Find existing header
-    sub_header_start = content.find('<header')
-    sub_header_end = content.find('</header>') + len('</header>')
+    # Find header bounds
+    h_start, h_end = find_tag_bounds(content, 'header')
     
-    # Also find if there is an overlay mobile menu overlay in the header segment
-    sub_overlay_end = content.find('<!-- Mobile Menu Overlay -->')
-    if sub_overlay_end != -1:
-        # Let's find the closing divs of the mobile menu overlay
-        search_start = sub_overlay_end
-        div_open_count = 0
-        div_close_count = 0
-        idx = search_start
-        # Search forward for matching closing divs for the overlay container
-        overlay_content = content[search_start:]
-        # Find three closing </div> tags after the overlay start
-        match_idx = 0
-        closes_found = 0
-        for m in re.finditer(r'</div>', overlay_content):
-            closes_found += 1
-            if closes_found == 3:
-                match_idx = m.end()
-                break
-        if match_idx > 0:
-            sub_header_end = search_start + match_idx
-
-    if sub_header_start != -1 and sub_header_end != -1:
-        content = content[:sub_header_start] + header_block + "\n" + content[sub_header_end:]
+    # Find all occurrences of mobile-menu-overlay
+    overlay_ranges = []
+    search_pos = 0
+    while True:
+        o_start, o_end = find_div_bounds(content, 'id="mobile-menu-overlay"', search_pos)
+        if o_start == -1:
+            break
+        overlay_ranges.append((o_start, o_end))
+        search_pos = o_end
+        
+    if not overlay_ranges:
+        comment_pos = content.find('<!-- Mobile Menu Overlay -->')
+        if comment_pos != -1:
+            o_start, o_end = find_div_bounds(content, 'id="mobile-menu-overlay"', comment_pos)
+            if o_start != -1:
+                overlay_ranges.append((o_start, o_end))
+                
+    starts = []
+    ends = []
+    if h_start != -1:
+        starts.append(h_start)
+        ends.append(h_end)
+    for o_s, o_e in overlay_ranges:
+        starts.append(o_s)
+        ends.append(o_e)
+        
+    if starts:
+        zone_start = min(starts)
+        zone_end = max(ends)
+        
+        # Include preceding comments if they exist
+        comment_pos = content.rfind('<!-- TopNavBar -->', 0, zone_start)
+        if comment_pos != -1 and zone_start - comment_pos < 100:
+            zone_start = comment_pos
+            
+        comment_pos = content.rfind('<!-- Mobile Menu Overlay -->', 0, zone_start)
+        if comment_pos != -1 and zone_start - comment_pos < 100:
+            zone_start = comment_pos
+            
+        # Replace the entire zone with the new header block
+        content = content[:zone_start] + header_block + "\n" + content[zone_end:]
         
     # Replace footer
-    sub_footer_start = content.find('<footer')
-    sub_footer_end = content.find('</footer>') + len('</footer>')
-    
-    if sub_footer_start != -1 and sub_footer_end != -1:
-        content = content[:sub_footer_start] + footer_block + "\n" + content[sub_footer_end:]
+    f_start, f_end = find_tag_bounds(content, 'footer')
+    if f_start != -1:
+        # Include preceding comment
+        comment_pos = content.rfind('<!-- Footer', 0, f_start)
+        if comment_pos != -1 and f_start - comment_pos < 155:
+            f_start = comment_pos
+            
+        content = content[:f_start] + footer_block + "\n" + content[f_end:]
         
     # Standardize maximum layout widths
     content = content.replace('max-w-[1280px]', 'max-w-[1440px]')
     content = content.replace('"container-max": "1280px"', '"container-max": "1440px"')
     
-    # Align head links & fonts
-    # Replace Lexend/Inter font with Outfit/Plus Jakarta Sans on all pages to match home page
+    # Align font links
     old_font_link = 'https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@400;500;600;700&amp;display=swap'
     old_font_link_clean = 'https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Inter:wght@400;500;600;700&display=swap'
     new_font_link = 'https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap'
@@ -79,11 +142,9 @@ def sync_subpage(file_path, header_block, footer_block):
     content = content.replace(old_font_link, new_font_link)
     content = content.replace(old_font_link_clean, new_font_link)
     
-    # Also look for any basic Inter font links
     old_inter_link = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
     content = content.replace(old_inter_link, new_font_link)
     
-    # If font family config exists in inline tailwind theme, update it to match Outfit / Plus Jakarta Sans
     if '"fontFamily": {' in content:
         content = re.sub(
             r'"fontFamily":\s*\{[^}]*\}', 
@@ -91,7 +152,6 @@ def sync_subpage(file_path, header_block, footer_block):
             content
         )
         
-    # Save aligned page
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(content)
     print(f"Synchronized branding on page: {file_path}")
@@ -106,8 +166,11 @@ def main():
             dirs.remove('.git')
             
         for file in files:
-            if file.endswith('.html') and file != 'index.html':
+            if file.endswith('.html'):
                 file_path = os.path.join(root, file)
+                norm_path = os.path.normpath(file_path)
+                if norm_path == 'index.html' or norm_path == '.\\index.html':
+                    continue
                 sync_subpage(file_path, header_block, footer_block)
                 count += 1
                 
