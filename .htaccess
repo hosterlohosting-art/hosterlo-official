@@ -62,10 +62,18 @@ RewriteRule ^login/?$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,
     Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# WebP image support
+# WebP image support + XML sitemap MIME type
 <IfModule mod_mime.c>
     AddType image/webp .webp
+    AddType application/xml .xml
+    AddType text/xml .xml
 </IfModule>
+
+# Ensure XML sitemaps are not blocked
+<FilesMatch "\.(xml)$">
+    Header set Content-Type "application/xml; charset=utf-8"
+    Header set X-Robots-Tag "noindex"
+</FilesMatch>
 
 # Browser caching
 <IfModule mod_expires.c>

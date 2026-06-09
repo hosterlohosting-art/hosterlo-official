@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://hosterlo.com/</loc>
-    <lastmod>2026-06-05</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <image:image><image:loc>https://hosterlo.com/assets/hero-section-image.webp</image:loc></image:image>
@@ -91,15 +91,23 @@
 
   <url>
     <loc>https://hosterlo.com/domains/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image><image:loc>https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp</image:loc></image:image>
   </url>
 
   <url>
+    <loc>https://hosterlo.com/faq/</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
     <loc>https://hosterlo.com/free-tools/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <image:image><image:loc>https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp</image:loc></image:image>
@@ -107,7 +115,7 @@
 
   <url>
     <loc>https://hosterlo.com/hosting/</loc>
-    <lastmod>2026-06-03</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <image:image><image:loc>https://hosterlo.com/assets/hosterlo-all-in-one-hosting.webp</image:loc></image:image>
