@@ -21,29 +21,37 @@ RewriteRule ^hosting\.html$ /hosting/ [R=301,L]
 RewriteRule ^contact\.html$ /contact-us/ [R=301,L]
 RewriteRule ^blog\.html$ /blog/ [R=301,L]
 RewriteRule ^legal\.html$ /legal/ [R=301,L]
-RewriteRule ^support\.html$ /support/ [R=301,L]
+RewriteRule ^support\.html$ /contact-us/ [R=301,L]
 RewriteRule ^free-tools\.html$ /free-tools/ [R=301,L]
-RewriteRule ^login\.html$ /login/ [R=301,L]
+RewriteRule ^login\.html$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,L]
 
 # 301 Redirects: old pages that do not exist on the live site
 RewriteRule ^seo-hosting\.html$ /hosting/ [R=301,L]
-RewriteRule ^infrastructure\.html$ /infrastructure/ [R=301,L]
-RewriteRule ^global-reach\.html$ /infrastructure/ [R=301,L]
-RewriteRule ^services\.html$ /services/ [R=301,L]
-RewriteRule ^enterprise-infrastructure\.html$ /infrastructure/ [R=301,L]
+RewriteRule ^infrastructure\.html$ /about-hosterlo/ [R=301,L]
+RewriteRule ^global-reach\.html$ /about-hosterlo/ [R=301,L]
+RewriteRule ^services\.html$ /hosting/ [R=301,L]
+RewriteRule ^enterprise-infrastructure\.html$ /about-hosterlo/ [R=301,L]
 RewriteRule ^domains\.html$ /domains/ [R=301,L]
 RewriteRule ^register-domain\.html$ /domains/ [R=301,L]
 RewriteRule ^domain-transfer\.html$ /domains/ [R=301,L]
 
-# 301 Redirects: old or hidden WordPress slugs
+# 301 Redirects: old or hidden slugs / directories
 RewriteRule ^website-builder/?$ /hosting/ [R=301,L]
 RewriteRule ^web-security/?$ /hosting/shared-hosting/ [R=301,L]
 RewriteRule ^email/?$ /hosting/ [R=301,L]
-RewriteRule ^buy-1-year-get-1-year-free-hosting-offer/?$ /free-offer/ [R=301,L]
+RewriteRule ^buy-1-year-get-1-year-free-hosting-offer/?$ /hosting/ [R=301,L]
 RewriteRule ^elementor-3888/?$ / [R=301,L]
 RewriteRule ^refund_policy/?$ /refund-policy/ [R=301,L]
 RewriteRule ^contact/?$ /contact-us/ [R=301,L]
-RewriteRule ^global-reach/?$ /infrastructure/ [R=301,L]
+RewriteRule ^global-reach/?$ /about-hosterlo/ [R=301,L]
+
+# New directory redirects
+RewriteRule ^free-offer/?$ /hosting/ [R=301,L]
+RewriteRule ^infrastructure/?$ /about-hosterlo/ [R=301,L]
+RewriteRule ^digioverse/?$ /about-hosterlo/ [R=301,L]
+RewriteRule ^support/?$ /contact-us/ [R=301,L]
+RewriteRule ^services/?$ /hosting/ [R=301,L]
+RewriteRule ^login/?$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,L]
 
 # Security headers
 <IfModule mod_headers.c>
