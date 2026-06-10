@@ -52,6 +52,14 @@ RewriteRule ^digioverse/?$ /about-hosterlo/ [R=301,L]
 RewriteRule ^support/?$ /contact-us/ [R=301,L]
 RewriteRule ^services/?$ /hosting/ [R=301,L]
 RewriteRule ^login/?$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,L]
+RewriteRule ^business-email-hosting/?$ /hosting/business-email/ [R=301,L]
+RewriteRule ^compare/?$ / [R=301,L]
+
+# Redirect index.html to trailing slash
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)/index\.html\ HTTP/
+RewriteRule ^(.+)/index\.html$ /%1/ [R=301,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ / [R=301,L]
 
 # Security headers
 <IfModule mod_headers.c>

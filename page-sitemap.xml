@@ -215,4 +215,44 @@
     <priority>0.50</priority>
     <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
   </url>
+
+  <url>
+    <loc>https://hosterlo.com/website-migration/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/compare/hosterlo-vs-bluehost/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/compare/hosterlo-vs-hostinger/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/compare/hosterlo-vs-siteground/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/compare/hosterlo-vs-godaddy/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
 </urlset>
