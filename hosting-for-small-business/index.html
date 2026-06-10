@@ -63,7 +63,9 @@
 <header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
     <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
         <div class="flex-shrink-0">
-            <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+            <a href="/">
+                <img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async">
+            </a>
         </div>
         <nav class="hidden lg:flex items-center gap-8">
             <a class="nav-link" href="/hosting/">Hosting</a>
@@ -75,34 +77,66 @@
             <a class="nav-link" href="/contact-us/">Contact</a>
         </nav>
         <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-[#4f17ce] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Client Login</a>
-            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine px-6 py-2.5 bg-[#4f17ce] text-white font-bold rounded-full shadow-md transition-all text-sm hidden sm:block">Get the $59 Bundle</a>
-            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-slate-800">
+            <!-- Search Icon (SwitchU Style) -->
+            <button onclick="window.location.href='#choose-plan'" class="w-10 h-10 rounded-full border border-slate-200/60 flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-all shrink-0">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+            </button>
+            <!-- Portal Button (SwitchU Style) -->
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] hover:text-primary-container font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Client Login</a>
+            <!-- Get Started Button (SwitchU Style) -->
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine px-6 py-2.5 bg-primary text-on-primary font-bold rounded-full shadow-md hover:bg-primary-container transition-all text-sm hidden sm:block">Get the $59 Bundle</a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background active:scale-90 transition-all">
                 <span class="material-symbols-outlined text-2xl">menu</span>
             </button>
         </div>
     </div>
 </header>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 lg:hidden overflow-y-auto w-full h-full" style="background-color: white !important;">
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 lg:hidden overflow-y-auto w-full h-full" style="background-color: white !important; opacity: 1 !important;">
 <div class="p-6 h-full flex flex-col">
 <div class="flex items-center justify-between mb-12">
-<img alt="Hosterlo Logo" class="w-[150px] h-auto" src="/assets/logo.png" decoding="async">
-<button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50"><span class="material-symbols-outlined text-2xl">close</span></button>
+<img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[150px] h-auto" src="/assets/logo.png" decoding="async">
+<button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
 </div>
-<nav class="space-y-6 mb-12"><div class="grid grid-cols-1 gap-2 text-lg font-bold">
-<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">cloud</span> Hosting</a>
-<a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">auto_awesome</span> WordPress Hosting</a>
-<a href="/pricing/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">payments</span> Pricing</a>
-<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">language</span> Domains</a>
-<a href="/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">article</span> Blog</a>
-<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-[#4f17ce]">contact_support</span> Contact</a>
-</div></nav>
+
+<nav class="space-y-6 mb-12">
+<div class="grid grid-cols-1 gap-2 text-lg font-bold">
+<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">cloud</span> Hosting
+</a>
+<a href="/hosting/wordpress-hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">auto_awesome</span> WordPress Hosting
+</a>
+<a href="/pricing/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">payments</span> Pricing
+</a>
+<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">language</span> Domains
+</a>
+<a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">build</span> Free Tools
+</a>
+<a href="/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">article</span> Blog
+</a>
+<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">contact_support</span> Contact
+</a>
+</div>
+</nav>
+
 <div class="mt-auto space-y-4">
 <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Client Login</a>
-<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-[#4f17ce] text-white font-bold rounded-2xl">Get the $59 Bundle</a>
-</div></div></div>
+<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Get the $59 Bundle</a>
+</div>
+</div>
+</div>
+
 
     <!-- Breadcrumb -->
     <nav class="max-w-[1440px] mx-auto px-6 pt-6 pb-2" aria-label="Breadcrumb">
@@ -302,53 +336,134 @@
         </div>
     </section>
 
-    <!-- Footer -->
-<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-16 pb-10 text-slate-900">
-    <div class="max-w-[1440px] mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
-            <div class="lg:col-span-4 space-y-4">
-                <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="h-12 w-auto" decoding="async"></a>
-                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Hosterlo helps businesses, bloggers, and website owners launch online with one simple $59/year bundle.</p>
-                <div class="flex items-center gap-2 text-slate-500 text-xs"><span class="material-symbols-outlined text-[#4f17ce] text-lg">location_on</span><span>16192 Coastal Highway, Lewes, DE 19958, United States</span></div>
+    <!-- Footer: Standardized White Background, Black Text -->
+<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+    <!-- Big watermark "hosterlo" background -->
+    <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none font-h1 tracking-tighter z-0">hosterlo</div>
+    
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+            <!-- Company Info -->
+            <div class="lg:col-span-4 space-y-6">
+                <a href="/">
+                    <img src="/assets/logo.png" alt="Hosterlo Logo" class="h-14 w-auto" decoding="async">
+                </a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+                    Hosterlo helps businesses, bloggers, freelancers, and first-time website owners launch online with hosting, free eligible .com domain, SSL, business email, setup guidance, WhatsApp support, and Gemini Pro bonus in one yearly bundle.
+                </p>
+                <div class="flex items-center gap-2 text-slate-500 text-xs">
+                    <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                    <span>16192 Coastal Highway, Lewes, DE 19958, United States</span>
+                </div>
+                <div class="flex gap-3">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-455 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">share</span></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-455 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">mail</span></a>
+                </div>
             </div>
+
+            <!-- Products -->
             <div class="lg:col-span-2">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-4">Solutions</h4>
-                <ul class="space-y-3">
-                    <li><a href="/hosting/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Cloud Hosting</a></li>
-                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">WordPress Hosting</a></li>
-                    <li><a href="/hosting-for-small-business/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Small Business Hosting</a></li>
-                    <li><a href="/domains/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Domain Names</a></li>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                    <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
+                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">WordPress Hosting</a></li>
+                    <li><a href="/domains/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
                 </ul>
             </div>
+            <!-- Support -->
             <div class="lg:col-span-3">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-4">Support & Policies</h4>
-                <ul class="space-y-3">
-                    <li><a href="/contact-us/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Help Center</a></li>
-                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Refund Policy</a></li>
-                    <li><a href="/terms-conditions/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Terms of Service</a></li>
-                    <li><a href="/privacy-policy/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">Privacy Policy</a></li>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support & Policies</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
+                    <li><a href="/terms-conditions/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Terms of Service</a></li>
+                    <li><a href="/legal/gemini-pro-terms/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Gemini Pro Terms</a></li>
                 </ul>
             </div>
+
+            <!-- Resources -->
             <div class="lg:col-span-3">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-4">Compare</h4>
-                <ul class="space-y-3">
-                    <li><a href="/compare/hosterlo-vs-bluehost/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">vs Bluehost</a></li>
-                    <li><a href="/compare/hosterlo-vs-hostinger/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">vs Hostinger</a></li>
-                    <li><a href="/compare/hosterlo-vs-siteground/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">vs SiteGround</a></li>
-                    <li><a href="/compare/hosterlo-vs-godaddy/" class="text-slate-500 hover:text-[#4f17ce] text-sm font-semibold">vs GoDaddy</a></li>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Hosterlo Blog</a></li>
+                    <li><a href="/free-tools/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Free Website Tools</a></li>
+                    <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Client Login</a></li>
                 </ul>
             </div>
         </div>
-        <div class="pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. All rights reserved.</p>
-            <div class="flex items-center gap-4 text-xs font-extrabold text-slate-400">
-                <a href="/privacy-policy/" class="hover:text-[#4f17ce] transition-colors">Privacy Policy</a>
-                <a href="/terms-conditions/" class="hover:text-[#4f17ce] transition-colors">Terms of Service</a>
-                <a href="/sitemap.xml" class="hover:text-[#4f17ce] transition-colors">Sitemap</a>
+
+        <!-- Bottom Bar -->
+        <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8 relative z-20">
+            <div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+                <p class="text-slate-400 text-xs font-semibold">
+                    &copy; 2026 Hosterlo. All rights reserved.
+                </p>
+            </div>
+            
+            <!-- Payment Icons -->
+            <div class="flex items-center gap-6 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" class="h-4 w-auto" alt="Visa" decoding="async">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" class="h-5 w-auto" alt="Mastercard" decoding="async">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" class="h-5 w-auto" alt="PayPal" decoding="async" loading="lazy">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png" class="h-4 w-auto" alt="Stripe" decoding="async">
+            </div>
+
+            <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                <a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="/terms-conditions/" class="hover:text-primary transition-colors">Terms of Service</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
             </div>
         </div>
+        
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-consent-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-2xl rounded-3xl p-5 z-[9999] translate-y-20 opacity-0 pointer-events-none transition-all duration-500 flex flex-col gap-4">
+            <div class="flex gap-3 items-start">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="text-xl">🍪</span>
+                </div>
+                <div>
+                    <h4 class="font-extrabold text-slate-900 text-sm mb-1">We respect your privacy</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="/privacy-policy/" class="text-primary hover:underline font-semibold">Privacy Policy</a> for details.</p>
+                </div>
+            </div>
+            <div class="flex gap-2.5 justify-end text-xs font-bold">
+                <button id="decline-cookies" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-all">Decline</button>
+                <button id="accept-cookies" class="px-4 py-2 bg-primary text-white hover:bg-primary-container rounded-xl transition-all shadow-md shadow-primary/15">Accept All</button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const banner = document.getElementById("cookie-consent-banner");
+                const acceptBtn = document.getElementById("accept-cookies");
+                const declineBtn = document.getElementById("decline-cookies");
+                
+                if (!localStorage.getItem("cookieConsent")) {
+                    setTimeout(() => {
+                        banner.classList.remove("translate-y-20", "opacity-0", "pointer-events-none");
+                    }, 1000);
+                }
+                
+                acceptBtn.addEventListener("click", function () {
+                    localStorage.setItem("cookieConsent", "accepted");
+                    hideBanner();
+                });
+                
+                declineBtn.addEventListener("click", function () {
+                    localStorage.setItem("cookieConsent", "declined");
+                    hideBanner();
+                });
+                
+                function hideBanner() {
+                    banner.classList.add("translate-y-20", "opacity-0", "pointer-events-none");
+                }
+            });
+        </script>
     </div>
 </footer>
+
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/923394437730" class="fixed bottom-8 right-8 z-[100] flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-all duration-300 group">
