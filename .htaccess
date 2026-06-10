@@ -54,6 +54,8 @@ RewriteRule ^services/?$ /hosting/ [R=301,L]
 RewriteRule ^login/?$ https://billing.hosterlo.com/index.php?rp=%2Flogin [R=301,L]
 RewriteRule ^business-email-hosting/?$ /hosting/business-email/ [R=301,L]
 RewriteRule ^compare/?$ / [R=301,L]
+RewriteRule ^about-us/?$ /about-hosterlo/ [R=301,L]
+RewriteRule ^about/?$ /about-hosterlo/ [R=301,L]
 
 # UK and PK Subdirectory Redirects
 RewriteRule ^uk/free-offer/?$ /uk/hosting/ [R=301,L]
@@ -70,6 +72,10 @@ RewriteRule ^uk/business-email-hosting/?$ /uk/hosting/business-email/ [R=301,L]
 RewriteRule ^pk/business-email-hosting/?$ /pk/hosting/business-email/ [R=301,L]
 RewriteRule ^uk/compare/?$ /uk/ [R=301,L]
 RewriteRule ^pk/compare/?$ /pk/ [R=301,L]
+RewriteRule ^uk/about-us/?$ /uk/about-hosterlo/ [R=301,L]
+RewriteRule ^pk/about-us/?$ /pk/about-hosterlo/ [R=301,L]
+RewriteRule ^uk/about/?$ /uk/about-hosterlo/ [R=301,L]
+RewriteRule ^pk/about/?$ /pk/about-hosterlo/ [R=301,L]
 
 # Redirect index.html to trailing slash
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)/index\.html\ HTTP/
