@@ -131,6 +131,7 @@
 
 
 
+
 <main>
     <section class="py-16 bg-gradient-to-br from-[#0f0a1e] to-[#1a1145] text-white">
         <div class="max-w-[800px] mx-auto px-6">
@@ -241,8 +242,54 @@
                 <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
             </div>
         </div>
+        
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-consent-banner" class="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-md bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-2xl rounded-3xl p-5 z-[9999] translate-y-20 opacity-0 pointer-events-none transition-all duration-500 flex flex-col gap-4">
+            <div class="flex gap-3 items-start">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-xl">cookie</span>
+                </div>
+                <div>
+                    <h4 class="font-extrabold text-slate-900 text-sm mb-1">We respect your privacy</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="/privacy-policy/" class="text-primary hover:underline font-semibold">Privacy Policy</a> for details.</p>
+                </div>
+            </div>
+            <div class="flex gap-2.5 justify-end text-xs font-bold">
+                <button id="decline-cookies" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-all">Decline</button>
+                <button id="accept-cookies" class="px-4 py-2 bg-primary text-white hover:bg-primary-container rounded-xl transition-all shadow-md shadow-primary/15">Accept All</button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const banner = document.getElementById("cookie-consent-banner");
+                const acceptBtn = document.getElementById("accept-cookies");
+                const declineBtn = document.getElementById("decline-cookies");
+                
+                if (!localStorage.getItem("cookieConsent")) {
+                    setTimeout(() => {
+                        banner.classList.remove("translate-y-20", "opacity-0", "pointer-events-none");
+                    }, 1000);
+                }
+                
+                acceptBtn.addEventListener("click", function () {
+                    localStorage.setItem("cookieConsent", "accepted");
+                    hideBanner();
+                });
+                
+                declineBtn.addEventListener("click", function () {
+                    localStorage.setItem("cookieConsent", "declined");
+                    hideBanner();
+                });
+                
+                function hideBanner() {
+                    banner.classList.add("translate-y-20", "opacity-0", "pointer-events-none");
+                }
+            });
+        </script>
     </div>
 </footer>
+
 
 
 
