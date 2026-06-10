@@ -295,4 +295,239 @@
     <priority>0.80</priority>
     <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
   </url>
+
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hero-section-image.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hero-section-image.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/about-hosterlo/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/about-hosterlo/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/contact-us/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/contact-us/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/domains/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/uk/hosterlo_cloud_offer_visual_1777997610856.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/domains/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/pk/hosterlo_cloud_offer_visual_1777997610856.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hosterlo-all-in-one-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hosterlo-all-in-one-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/hosting/shared-hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/premium-web-hosting-server.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/hosting/shared-hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/premium-web-hosting-server.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/hosting/wordpress-hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hosterlo-website-builder.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/hosting/wordpress-hosting/</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hosterlo-website-builder.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/website-migration/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/website-migration/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/compare/hosterlo-vs-bluehost/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/compare/hosterlo-vs-bluehost/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/compare/hosterlo-vs-hostinger/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/compare/hosterlo-vs-hostinger/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/compare/hosterlo-vs-siteground/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/compare/hosterlo-vs-siteground/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/compare/hosterlo-vs-godaddy/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/compare/hosterlo-vs-godaddy/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/uk/pricing/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/pk/pricing/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
 </urlset>

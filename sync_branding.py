@@ -34,14 +34,14 @@ def find_div_bounds(content, identifier, start_search=0):
                 
     return -1, -1
 
-def extract_premium_blocks():
-    with open('index.html', 'r', encoding='utf-8') as f:
+def extract_premium_blocks_from_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
         
     # Find the header bounds
     h_start, h_end = find_tag_bounds(content, 'header')
     if h_start == -1 or h_end == -1:
-        raise ValueError("Could not find <header> block in index.html")
+        raise ValueError(f"Could not find <header> block in {file_path}")
         
     # Find the overlay bounds
     o_start, o_end = find_div_bounds(content, 'id="mobile-menu-overlay"')
@@ -60,7 +60,7 @@ def extract_premium_blocks():
     # Find the footer bounds
     f_start, f_end = find_tag_bounds(content, 'footer')
     if f_start == -1 or f_end == -1:
-        raise ValueError("Could not find <footer> block in index.html")
+        raise ValueError(f"Could not find <footer> block in {file_path}")
         
     # Backtrack f_start to include footer comment if present
     comment_pos = content.rfind('<!-- Footer', 0, f_start)
@@ -70,6 +70,9 @@ def extract_premium_blocks():
     footer_block = content[f_start:f_end].strip()
     
     return header_block, footer_block
+
+def extract_premium_blocks():
+    return extract_premium_blocks_from_file('index.html')
 
 def sync_subpage(file_path, header_block, footer_block):
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -157,9 +160,25 @@ def sync_subpage(file_path, header_block, footer_block):
     print(f"Synchronized branding on page: {file_path}")
 
 def main():
-    header_block, footer_block = extract_premium_blocks()
-    print("Extracted premium header and footer blocks successfully!")
+    us_header, us_footer = extract_premium_blocks()
+    print("Extracted premium US header and footer blocks successfully!")
     
+    uk_header, uk_footer = None, None
+    if os.path.exists(os.path.join('uk', 'index.html')):
+        try:
+            uk_header, uk_footer = extract_premium_blocks_from_file(os.path.join('uk', 'index.html'))
+            print("Extracted UK premium header and footer blocks successfully!")
+        except Exception as e:
+            print(f"Warning: Could not extract UK blocks: {e}")
+            
+    pk_header, pk_footer = None, None
+    if os.path.exists(os.path.join('pk', 'index.html')):
+        try:
+            pk_header, pk_footer = extract_premium_blocks_from_file(os.path.join('pk', 'index.html'))
+            print("Extracted PK premium header and footer blocks successfully!")
+        except Exception as e:
+            print(f"Warning: Could not extract PK blocks: {e}")
+            
     count = 0
     for root, dirs, files in os.walk('.'):
         if '.git' in dirs:
@@ -169,9 +188,24 @@ def main():
             if file.endswith('.html'):
                 file_path = os.path.join(root, file)
                 norm_path = os.path.normpath(file_path)
-                if norm_path == 'index.html' or norm_path == '.\\index.html':
+                
+                # Skip the homepages of each market to avoid overwriting their template source
+                if norm_path in ['index.html', os.path.join('.', 'index.html'), os.path.join('uk', 'index.html'), os.path.join('pk', 'index.html')]:
                     continue
-                sync_subpage(file_path, header_block, footer_block)
+                    
+                # Determine which market blocks to use
+                norm_path_lower = norm_path.lower()
+                if os.sep + 'uk' + os.sep in norm_path_lower or norm_path_lower.startswith('uk' + os.sep):
+                    h_block = uk_header if uk_header else us_header
+                    f_block = uk_footer if uk_footer else us_footer
+                elif os.sep + 'pk' + os.sep in norm_path_lower or norm_path_lower.startswith('pk' + os.sep):
+                    h_block = pk_header if pk_header else us_header
+                    f_block = pk_footer if pk_footer else us_footer
+                else:
+                    h_block = us_header
+                    f_block = us_footer
+                    
+                sync_subpage(file_path, h_block, f_block)
                 count += 1
                 
     print(f"\nCompleted! Fully synchronized branding across {count} subpages.")
