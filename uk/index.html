@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en"><head>
+
+    <!-- Geo-IP Guard: If a PK visitor lands on /uk/, send them to /pk/ -->
+    <script>
+    (function () {
+        try {
+            if (sessionStorage.getItem('hosterlo_geo_redirected')) return;
+            fetch('https://ipapi.co/json/', { method: 'GET', cache: 'no-store' })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    sessionStorage.setItem('hosterlo_geo_redirected', '1');
+                    if (data.country_code === 'PK') {
+                        window.location.replace('/pk/');
+                    }
+                    // GB visitors stay on /uk/ — correct page
+                    // All other countries stay on /uk/ too (they may have chosen it)
+                })
+                .catch(function () {
+                    sessionStorage.setItem('hosterlo_geo_redirected', '1');
+                });
+        } catch (e) { /* silent fail */ }
+    })();
+    </script>
+
     <link rel="alternate" hreflang="en-us" href="https://hosterlo.com/" />
     <link rel="alternate" hreflang="en-gb" href="https://hosterlo.com/uk/" />
     <link rel="alternate" hreflang="en-pk" href="https://hosterlo.com/pk/" />

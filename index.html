@@ -3,6 +3,39 @@
 <html class="light" lang="en"><head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Geo-IP Auto Redirect: Detect visitor country and send to correct regional site -->
+    <script>
+    (function () {
+        try {
+            // Only run once per browser session to avoid redirect loops
+            if (sessionStorage.getItem('hosterlo_geo_redirected')) return;
+
+            // Map of country codes to regional paths
+            var regionMap = { 'PK': '/pk/', 'GB': '/uk/' };
+
+            // Fetch IP geolocation (free tier: 30k req/month, no API key needed)
+            fetch('https://ipapi.co/json/', { method: 'GET', cache: 'no-store' })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    var target = regionMap[data.country_code];
+                    if (target) {
+                        // Mark as redirected so we don't loop
+                        sessionStorage.setItem('hosterlo_geo_redirected', '1');
+                        // Replace history entry so Back button works cleanly
+                        window.location.replace(target);
+                    } else {
+                        // US or any other country — stay on this page
+                        sessionStorage.setItem('hosterlo_geo_redirected', '1');
+                    }
+                })
+                .catch(function () {
+                    // API failed silently — user stays on current page
+                    sessionStorage.setItem('hosterlo_geo_redirected', '1');
+                });
+        } catch (e) { /* silent fail */ }
+    })();
+    </script>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
