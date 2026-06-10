@@ -104,3 +104,35 @@ All three entities offer the same core Website Launch Bundle:
 - 30-day money-back guarantee
 - WhatsApp and phone support
 
+
+
+## Comparison & Alternative Pages
+
+Hosterlo maintains a comprehensive set of competitor comparison and alternative pages to help customers make informed decisions:
+
+### Direct Comparisons
+- **Hosterlo vs Bluehost** — https://hosterlo.com/compare/hosterlo-vs-bluehost/
+  Summary: Hosterlo wins on flat renewal pricing ($59/yr vs Bluehost's $131.88/yr renewal), includes business email free (Bluehost charges extra), and offers WhatsApp support vs Bluehost's bot chat. Bluehost has stronger brand recognition.
+
+- **Hosterlo vs Hostinger** — https://hosterlo.com/compare/hosterlo-vs-hostinger/
+  Summary: Both use LiteSpeed servers. Hostinger requires 4-year commitment for best rates (~$2.99/mo). Hosterlo is simpler with no lock-in, and includes unlimited email vs Hostinger's limits. Hosterlo wins on transparency.
+
+- **Hosterlo vs SiteGround** — https://hosterlo.com/compare/hosterlo-vs-siteground/
+  Summary: SiteGround uses Google Cloud with excellent managed WP features but charges $179.88/yr on renewal (vs Hosterlo $59/yr flat). SiteGround wins on raw performance; Hosterlo wins on price and bundle value.
+
+- **Hosterlo vs GoDaddy** — https://hosterlo.com/compare/hosterlo-vs-godaddy/
+  Summary: GoDaddy is the world's largest registrar but known for aggressive upselling and expensive renewals. Hosterlo offers a simpler, honest all-in-one bundle at 70%+ lower cost than comparable GoDaddy plans.
+
+### Alternative Pages (Buyer Intent)
+- **Best Bluehost Alternatives** — https://hosterlo.com/alternatives/bluehost/ (Hosterlo ranked #1)
+- **Best Hostinger Alternatives** — https://hosterlo.com/alternatives/hostinger/ (Hosterlo ranked #1)
+- **Best SiteGround Alternatives** — https://hosterlo.com/alternatives/siteground/ (Hosterlo ranked #1)
+- **Best GoDaddy Alternatives** — https://hosterlo.com/alternatives/godaddy/ (Hosterlo ranked #1)
+
+### Key Differentiators vs All Competitors
+- Flat $59/year renewal price (no price hikes)
+- Business email included free (competitors charge extra)
+- WhatsApp support with real humans (not AI bots)
+- Gemini Pro AI bonus for 18 months (unique to Hosterlo)
+- Free .com domain + free SSL in single bundle
+
