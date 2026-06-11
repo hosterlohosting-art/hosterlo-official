@@ -15,56 +15,56 @@ new_urls = [
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.85",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/web-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/saas-development/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.85",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/saas-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/frontend-development/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/frontend-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/backend-development/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/backend-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/ui-ux-design/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/ui-ux-design.png"
     },
     {
         "loc": "https://hosterlo.com/services/mobile-app-development/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/mobile-app-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/api-development/",
         "lastmod": "2026-06-11",
         "changefreq": "weekly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/api-development.png"
     },
     {
         "loc": "https://hosterlo.com/services/website-maintenance/",
         "lastmod": "2026-06-11",
         "changefreq": "monthly",
         "priority": "0.80",
-        "image": "https://hosterlo.com/assets/secure-enterprise-hosting.webp"
+        "image": "https://hosterlo.com/assets/performance-monitoring-ui.webp"
     },
     {
         "loc": "https://hosterlo.com/portfolio/",
