@@ -541,4 +541,16 @@ textarea.form-input { resize: vertical; min-height: 120px; }
     background-position: center;
 }
 
+/* Prevent FOUT (Flash of Unstyled Icons) by limiting size to 1em and hiding overflow */
+.material-symbols-outlined {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+
 

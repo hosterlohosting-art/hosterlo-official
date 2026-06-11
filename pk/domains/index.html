@@ -350,6 +350,7 @@
 
 
 
+
 <main>
 <!-- Hero Section -->
 <section class="relative min-h-[75vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f0a1e] via-[#1a1145] to-[#2d1b69] text-white -mt-[96px] pt-32 pb-20">
@@ -551,12 +552,576 @@
     </div>
 </section>
 
+<!-- Interactive TLD Pricing Section -->
+<section id="tld-pricing" class="py-24 bg-white relative overflow-hidden border-t border-slate-100">
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/5 text-primary text-xs font-black uppercase rounded-full mb-4">TLD List</span>
+            <h2 class="text-3xl md:text-5xl font-black text-[#111c2d] mb-4 font-h2">Search & Compare Domain Prices</h2>
+            <p class="text-slate-500 text-base max-w-xl mx-auto">We support hundreds of extensions. Check our competitive pricing for registrations, renewals, and transfers.</p>
+        </div>
+
+        <!-- Controls: Category Tabs + Search Input -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 bg-slate-50 p-4 rounded-3xl border border-slate-100" data-aos="fade-up">
+            <!-- Tabs -->
+            <div class="flex flex-wrap gap-2" id="tld-tabs">
+                <button onclick="filterTLDs('all', this)" class="px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-primary text-white shadow-md shadow-primary/15">All Extensions</button>
+                <button onclick="filterTLDs('popular', this)" class="px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-800">Popular</button>
+                <button onclick="filterTLDs('business', this)" class="px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-800">Business</button>
+                <button onclick="filterTLDs('tech', this)" class="px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-800">Tech</button>
+            </div>
+            <!-- Search -->
+            <div class="relative max-w-md w-full">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input type="text" id="tld-search-input" onkeyup="searchTLDs()" placeholder="Search extension (e.g. .pk)..." class="w-full pl-11 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm font-semibold placeholder:text-slate-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+            </div>
+        </div>
+
+        <!-- Desktop TLD Table -->
+        <div class="hidden md:block overflow-hidden bg-white border border-slate-150 rounded-3xl shadow-sm" data-aos="fade-up">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-50 border-b border-slate-150 text-xs font-black uppercase tracking-wider text-slate-600">
+                        <th class="px-8 py-5">Domain Extension</th>
+                        <th class="px-6 py-5">Category</th>
+                        <th class="px-6 py-5">Registration</th>
+                        <th class="px-6 py-5">Renewal</th>
+                        <th class="px-6 py-5">Transfer</th>
+                        <th class="px-6 py-5">WHOIS Privacy</th>
+                        <th class="px-8 py-5 text-right">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-sm font-semibold text-slate-700" id="tld-table-body">
+                    <tr data-tld=".pk" data-category="popular" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.pk</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-slate-400 text-base">cancel</span> N/A</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.pk" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".com.pk" data-category="popular" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.com.pk</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-slate-400 text-base">cancel</span> N/A</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.com.pk" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".com" data-category="popular" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.com</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,299 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,899 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,299</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.com" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".net" data-category="popular" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.net</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,599 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 4,199 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,599</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.net" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".org" data-category="popular" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.org</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,899 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 4,499 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,899</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.org" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".co" data-category="business" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.co</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 2,799 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 8,299 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 8,299</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.co" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".net.pk" data-category="business" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.net.pk</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-slate-400 text-base">cancel</span> N/A</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.net.pk" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".org.pk" data-category="business" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.org.pk</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999 <span class="text-slate-400 text-xs font-normal">/2 yrs</span></td>
+                        <td class="px-6 py-5">Rs. 3,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-slate-400 text-base">cancel</span> N/A</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.org.pk" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".xyz" data-category="tech" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.xyz</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 899 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,599 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 3,599</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.xyz" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".tech" data-category="tech" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.tech</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 1,099 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 6,999 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 6,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.tech" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                    <tr data-tld=".io" data-category="tech" class="hover:bg-slate-50 transition-colors">
+                        <td class="px-8 py-5 text-[#111c2d] font-black text-lg">.io</td>
+                        <td class="px-6 py-5"><span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span></td>
+                        <td class="px-6 py-5 text-emerald-600 font-extrabold">Rs. 10,999 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 13,999 <span class="text-slate-400 text-xs font-normal">/yr</span></td>
+                        <td class="px-6 py-5">Rs. 10,999</td>
+                        <td class="px-6 py-5 flex items-center gap-1 text-slate-500"><span class="material-symbols-outlined text-emerald-500 text-base">verified</span> Free</td>
+                        <td class="px-8 py-5 text-right">
+                            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.io" class="inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-primary-container text-white text-xs font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Mobile TLD Cards Grid -->
+        <div class="grid md:hidden gap-4" id="tld-mobile-grid" data-aos="fade-up">
+            <div data-tld=".pk" data-category="popular" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.pk</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-slate-400 text-sm">cancel</span> No Privacy (N/A)</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.pk" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".com.pk" data-category="popular" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.com.pk</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-slate-400 text-sm">cancel</span> No Privacy (N/A)</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.com.pk" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".com" data-category="popular" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.com</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,299</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,899</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,299</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.com" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".net" data-category="popular" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.net</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,599</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 4,199</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,599</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.net" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".org" data-category="popular" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.org</span>
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full">Popular</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,899</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 4,499</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,899</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.org" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".co" data-category="business" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.co</span>
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 2,799</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 8,299</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 8,299</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.co" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".net.pk" data-category="business" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.net.pk</span>
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-slate-400 text-sm">cancel</span> No Privacy (N/A)</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.net.pk" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".org.pk" data-category="business" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.org.pk</span>
+                    <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Business</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-slate-400 text-sm">cancel</span> No Privacy (N/A)</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.org.pk" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".xyz" data-category="tech" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.xyz</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 899</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,599</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 3,599</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.xyz" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".tech" data-category="tech" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.tech</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 1,099</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 6,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 6,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.tech" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+            <div data-tld=".io" data-category="tech" class="bg-white p-6 rounded-3xl border border-slate-150 shadow-sm flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-black text-[#111c2d]">.io</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full">Tech</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Register</span>
+                        <span class="block font-black text-emerald-600 text-sm">Rs. 10,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Renew</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 13,999</span>
+                    </div>
+                    <div class="bg-slate-50 p-2.5 rounded-2xl">
+                        <span class="block text-slate-400 mb-0.5">Transfer</span>
+                        <span class="block font-black text-slate-700 text-sm">Rs. 10,999</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center text-xs mt-1">
+                    <span class="text-slate-500 flex items-center gap-1"><span class="material-symbols-outlined text-emerald-500 text-sm">verified</span> Free Privacy</span>
+                    <a href="https://billing.hosterlo.com/cart.php?a=add&domain=register&query=.io" class="px-4 py-2 bg-primary hover:bg-primary-container text-white font-extrabold rounded-xl transition-all shadow-md shadow-primary/10">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- No Results Message -->
+        <div id="tld-no-results" class="hidden text-center py-12 bg-slate-50 rounded-3xl border border-slate-100" data-aos="fade-up">
+            <span class="material-symbols-outlined text-4xl text-slate-400 mb-2">sentiment_dissatisfied</span>
+            <p class="text-slate-500 font-bold">No domain extensions match your search.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Domain Transfer Guide Section -->
+<section id="transfer-guide" class="py-24 bg-slate-50 border-t border-slate-100/80 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-15"></div>
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/5 text-primary text-xs font-black uppercase rounded-full mb-4">Migration</span>
+            <h2 class="text-3xl md:text-5xl font-black text-[#111c2d] mb-4 font-h2">How to Transfer Your Domain to Hosterlo</h2>
+            <p class="text-slate-500 text-base max-w-xl mx-auto">Moving your domain is simple. Follow our quick step-by-step process to consolidate your domains under Hosterlo.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8 relative mb-12" data-aos="fade-up">
+            <!-- Step 1 -->
+            <div class="p-8 bg-white rounded-3xl border border-slate-150 shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+                <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 opacity-20 group-hover:text-primary/10 transition-colors select-none font-sans">1</div>
+                <div class="w-12 h-12 bg-primary/10 text-primary border border-primary/25 rounded-2xl flex items-center justify-center text-lg font-black mb-6">1</div>
+                <h3 class="text-lg font-extrabold text-[#111c2d] mb-3">Unlock Domain</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">Log into your current domain registrar and disable the registrar/transfer lock on your domain name.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="p-8 bg-white rounded-3xl border border-slate-150 shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+                <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 opacity-20 group-hover:text-primary/10 transition-colors select-none font-sans">2</div>
+                <div class="w-12 h-12 bg-primary/10 text-primary border border-primary/25 rounded-2xl flex items-center justify-center text-lg font-black mb-6">2</div>
+                <h3 class="text-lg font-extrabold text-[#111c2d] mb-3">Get Auth Code</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">Request the authorization code (also known as EPP code or transfer key) from your current registrar's panel.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="p-8 bg-white rounded-3xl border border-slate-150 shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+                <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 opacity-20 group-hover:text-primary/10 transition-colors select-none font-sans">3</div>
+                <div class="w-12 h-12 bg-primary/10 text-primary border border-primary/25 rounded-2xl flex items-center justify-center text-lg font-black mb-6">3</div>
+                <h3 class="text-lg font-extrabold text-[#111c2d] mb-3">Submit Transfer</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">Enter your domain and the EPP authorization code in our WHMCS transfer portal to initiate the process.</p>
+            </div>
+            <!-- Step 4 -->
+            <div class="p-8 bg-white rounded-3xl border border-slate-150 shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
+                <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 opacity-20 group-hover:text-primary/10 transition-colors select-none font-sans">4</div>
+                <div class="w-12 h-12 bg-primary/10 text-primary border border-primary/25 rounded-2xl flex items-center justify-center text-lg font-black mb-6">4</div>
+                <h3 class="text-lg font-extrabold text-[#111c2d] mb-3">Approve Transfer</h3>
+                <p class="text-slate-500 text-xs leading-relaxed">Click the verification link sent to your registered email address to approve the transfer. Done!</p>
+            </div>
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+            <a href="https://billing.hosterlo.com/cart.php?a=add&domain=transfer" class="button-shine inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-extrabold rounded-full shadow-lg shadow-primary/25 hover:bg-primary-container transition-all text-sm">
+                <span class="material-symbols-outlined text-[18px]">swap_horiz</span> Transfer Your Domain Now
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- WHOIS Privacy & DNS Management Sections -->
+<section class="py-24 bg-white relative overflow-hidden border-t border-slate-100">
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <!-- WHOIS Privacy -->
+            <div data-aos="fade-right">
+                <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/5 text-primary text-xs font-black uppercase rounded-full mb-4">Security</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-[#111c2d] mb-6 leading-tight font-h2">WHOIS Privacy Protection</h2>
+                <p class="text-slate-500 text-sm mb-6 leading-relaxed">When you register a domain, your name, address, email, and phone number are publicly available in the WHOIS database. Spammers, telemarketers, and scammers scan this database to find target leads.</p>
+                <p class="text-slate-500 text-sm mb-8 leading-relaxed">Our WHOIS Privacy Protection hides your real identity and replaces it with proxy information. It keeps your personal mailbox spam-free and protects your domain from unauthorized hijacking or social engineering attacks.</p>
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-emerald-500 mt-0.5">shield</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">Stop Spam & Junk Mail</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Blocks marketing calls, spam emails, and physical junk mail from filling your inbox.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-emerald-500 mt-0.5">security</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">Prevent Identity Theft</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Keeps your personal home address and telephone number hidden from the public directories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DNS Records Control Panel -->
+            <div data-aos="fade-left" class="bg-slate-50 p-8 rounded-3xl border border-slate-200/50">
+                <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/5 text-primary text-xs font-black uppercase rounded-full mb-4">Advanced Control</span>
+                <h2 class="text-2xl font-extrabold text-[#111c2d] mb-4 font-h2">Advanced DNS Records Management</h2>
+                <p class="text-slate-500 text-xs mb-6 leading-relaxed">Gain total control over your web presence. Our beginner-friendly client portal allows you to manage critical domain zone records instantly without hosting experience.</p>
+                
+                <div class="space-y-4">
+                    <!-- Record Type: A -->
+                    <div class="flex gap-4 p-4 bg-white rounded-2xl border border-slate-150">
+                        <span class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0 font-black text-xs font-mono">A</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">A Records</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Points your domain name directly to the IPv4 address of your web hosting server.</p>
+                        </div>
+                    </div>
+                    <!-- Record Type: CNAME -->
+                    <div class="flex gap-4 p-4 bg-white rounded-2xl border border-slate-150">
+                        <span class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0 font-black text-xs font-mono">CN</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">CNAME Records (Aliases)</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Creates aliases that point subdomains (like blog.yourdomain.com) to other domain names.</p>
+                        </div>
+                    </div>
+                    <!-- Record Type: MX -->
+                    <div class="flex gap-4 p-4 bg-white rounded-2xl border border-slate-150">
+                        <span class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0 font-black text-xs font-mono">MX</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">MX Records (Email Routing)</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Directs your domain's emails to Google Workspace, Microsoft 365, or Hosterlo mail servers.</p>
+                        </div>
+                    </div>
+                    <!-- Record Type: TXT/SPF/DMARC -->
+                    <div class="flex gap-4 p-4 bg-white rounded-2xl border border-slate-150">
+                        <span class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center shrink-0 font-black text-xs font-mono">TX</span>
+                        <div>
+                            <h4 class="font-extrabold text-xs text-[#111c2d]">TXT / SPF / DMARC Records</h4>
+                            <p class="text-slate-500 text-xs mt-0.5 leading-relaxed">Sets text variables for search engine verifications and configures SPF/DMARC to verify email senders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- FAQ Section -->
 <section class="py-24 bg-white border-t border-slate-100 faq-minimal relative overflow-hidden">
     <div class="max-w-3xl mx-auto px-6 relative z-10">
         <div class="text-center mb-16" data-aos="fade-up">
             <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-primary/5 text-primary text-xs font-black uppercase rounded-full mb-4">FAQ</span>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 font-h2">Frequently Asked Questions</h2>
             <p class="text-slate-500 text-sm">Find answers to common questions about domain registration.</p>
         </div>
         
@@ -577,7 +1142,7 @@
                     <span class="material-symbols-outlined text-slate-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
                 </summary>
                 <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-4">
-                    Domain registration is provided through trusted registrar partners. DNS changes may take time to propagate depending on networks and ISPs.
+                    Domain registration is provided through trusted registrar partners. DNS changes may take time to propagate depending on networks and ISPs — typically between a few minutes and 48 hours.
                 </div>
             </details>
             
@@ -598,6 +1163,36 @@
                 </summary>
                 <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-4">
                     Yes! We support hundreds of top-level domains (.com, .net, .site, .pk, etc.). You can register multiple domains and point them directly to your <a href="/pk/hosting/wordpress-hosting/" class="text-primary font-bold hover:underline">WordPress hosting</a> or the primary <a href="/pk/" class="text-primary font-bold hover:underline">Hosterlo homepage</a> package.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-150 shadow-sm overflow-hidden transition-all duration-300 open:border-primary/30 open:shadow-md hover:border-slate-200">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-black text-[#111c2d] hover:text-primary transition-colors select-none">
+                    What is the authorization (EPP) code?
+                    <span class="material-symbols-outlined text-slate-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                    An EPP code (also called Auth Code or Transfer Key) is a unique password generated by your current domain registrar. It acts as security authorization to prevent unauthorized attempts to move your domain to another provider.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-150 shadow-sm overflow-hidden transition-all duration-300 open:border-primary/30 open:shadow-md hover:border-slate-200">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-black text-[#111c2d] hover:text-primary transition-colors select-none">
+                    What is a domain transfer lock?
+                    <span class="material-symbols-outlined text-slate-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                    A transfer lock is a security setting applied to your domain by default to protect it from being stolen or transferred without your consent. To transfer your domain, you must toggle this setting to "Unlocked" inside your current registrar's control panel.
+                </div>
+            </details>
+
+            <details class="group bg-white rounded-2xl border border-slate-150 shadow-sm overflow-hidden transition-all duration-300 open:border-primary/30 open:shadow-md hover:border-slate-200">
+                <summary class="flex items-center justify-between p-6 cursor-pointer font-black text-[#111c2d] hover:text-primary transition-colors select-none">
+                    How long does a domain transfer take to complete?
+                    <span class="material-symbols-outlined text-slate-400 group-open:text-primary group-open:rotate-180 transition-transform duration-300">expand_more</span>
+                </summary>
+                <div class="px-6 pb-6 text-slate-500 text-sm leading-relaxed border-t border-slate-50 pt-4">
+                    Most domain transfers take between 5 to 7 days to complete. Once you approve the transfer via email confirmation, the registry processes the request. Your website will remain online and uninterrupted during the transfer.
                 </div>
             </details>
         </div>
@@ -795,11 +1390,6 @@
         </a>
     </div>
 </footer>
-
-
-
-
-
 
 
 
