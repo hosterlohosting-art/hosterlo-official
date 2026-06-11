@@ -263,6 +263,18 @@
         .faq-item[open] summary::after { content: '−'; }
         .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; font-size: 0.97rem; }
     </style>
+    <style>
+        /* Prevent FOUT (Flash of Unstyled Icons) */
+        .material-symbols-outlined {
+            display: inline-block !important;
+            width: 1em !important;
+            height: 1em !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            word-wrap: normal !important;
+            direction: ltr !important;
+        }
+    </style>
 </head>
 <body class="bg-white">
 
@@ -382,6 +394,7 @@
 </div>
 </div>
 </div>
+
 
 
 
@@ -928,6 +941,7 @@ define('DB_HOST', 'localhost');</code></pre>
         </a>
     </div>
 </footer>
+
 
 
 

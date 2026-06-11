@@ -9,6 +9,18 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="/styles.css"/>
     <script>tailwind.config={theme:{extend:{colors:{"on-primary": "#ffffff", primary:"#4f17ce",secondary:"#4e45d5",background:"#f9f9ff","on-background":"#111c2d"}}}}</script>
+    <style>
+        /* Prevent FOUT (Flash of Unstyled Icons) */
+        .material-symbols-outlined {
+            display: inline-block !important;
+            width: 1em !important;
+            height: 1em !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            word-wrap: normal !important;
+            direction: ltr !important;
+        }
+    </style>
 </head>
 <body class="bg-[#f9f9ff] text-[#111c2d] ">
 <!-- TopNavBar -->
@@ -130,6 +142,7 @@
 </div>
 </div>
 </div>
+
 
 
 
@@ -407,6 +420,7 @@
         </a>
     </div>
 </footer>
+
 
 
 

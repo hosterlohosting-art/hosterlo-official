@@ -390,6 +390,18 @@
         }
         .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
     </style>
+    <style>
+        /* Prevent FOUT (Flash of Unstyled Icons) */
+        .material-symbols-outlined {
+            display: inline-block !important;
+            width: 1em !important;
+            height: 1em !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            word-wrap: normal !important;
+            direction: ltr !important;
+        }
+    </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-primary overflow-x-hidden">
 <div class="progress-bar" id="progress-bar"></div>
@@ -511,6 +523,7 @@
 </div>
 </div>
 </div>
+
 
 
 
@@ -1416,6 +1429,7 @@
         </a>
     </div>
 </footer>
+
 
 
 

@@ -159,6 +159,18 @@
     ]
   }
   </script>
+    <style>
+        /* Prevent FOUT (Flash of Unstyled Icons) */
+        .material-symbols-outlined {
+            display: inline-block !important;
+            width: 1em !important;
+            height: 1em !important;
+            overflow: hidden !important;
+            white-space: nowrap !important;
+            word-wrap: normal !important;
+            direction: ltr !important;
+        }
+    </style>
 </head>
 <body class="bg-white text-slate-800">
 
@@ -278,6 +290,7 @@
 </div>
 </div>
 </div>
+
 
 
 
@@ -1148,6 +1161,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]</code></pre>
         </a>
     </div>
 </footer>
+
 
 
 
