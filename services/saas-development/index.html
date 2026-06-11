@@ -915,7 +915,15 @@
           form.reset();
           showModal();
         } else {
-          alert('Oops! Something went wrong. Please try WhatsApp or email us directly at hosterlohosting@gmail.com');
+          // Show inline error
+var errBox = form.querySelector('.hl-form-error');
+if(!errBox){
+  errBox = document.createElement('p');
+  errBox.className = 'hl-form-error';
+  errBox.style.cssText = 'background:#fff1f2;border:1px solid #fecaca;color:#b91c1c;padding:10px 14px;border-radius:10px;font-size:12px;font-weight:700;margin-top:10px;';
+  errBox.innerHTML = '&#9888; Message failed to send. Please contact us via <a href="https://wa.me/923394437730" style="color:#4f17ce;text-decoration:underline">WhatsApp</a> or email hosterlohosting@gmail.com directly.';
+  form.appendChild(errBox);
+} else { errBox.style.display='block'; }
         }
       })
       .catch(function(err){
