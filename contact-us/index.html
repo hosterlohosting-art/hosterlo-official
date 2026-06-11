@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -534,41 +534,82 @@
                 </div>
             </div>
             
+            <!-- Thank You Modal -->
+            <div id="contact-thankyou-modal" class="hidden fixed inset-0 z-[99999] flex items-center justify-center p-4">
+                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="document.getElementById('contact-thankyou-modal').classList.add('hidden')"></div>
+                <div class="relative bg-white rounded-[32px] p-10 md:p-14 max-w-md w-full text-center shadow-2xl z-10 animate-bounce-in">
+                    <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="material-symbols-outlined text-5xl text-emerald-500">check_circle</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-3">Message Received! 🎉</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Thank you for reaching out! Our team will review your message and get back to you shortly. We typically respond within 2–4 hours.</p>
+                    <button onclick="document.getElementById('contact-thankyou-modal').classList.add('hidden')" class="px-8 py-3 bg-primary text-white font-bold rounded-full text-sm hover:bg-primary-container transition-all">Close</button>
+                </div>
+            </div>
+
             <div class="lg:w-1/2 w-full bg-white rounded-[32px] p-6 md:p-10 border border-slate-150 shadow-md">
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-                    <input type="hidden" name="access_key" value="42fe003a-3549-41fa-b387-deb2a3fc85f4">
-                    <input type="hidden" name="subject" value="New Contact Inquiry - Hosterlo">
-                    <input type="hidden" name="from_name" value="Hosterlo Website">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <form id="contact-main-form" action="https://formsubmit.co/hosterlohosting@gmail.com" method="POST" class="space-y-6">
+                    <!-- FormSubmit.co configuration -->
+                    <input type="hidden" name="_subject" value="📬 New Contact Inquiry — Hosterlo Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://hosterlo.com/contact-us/?sent=1">
+                    <!-- Honeypot spam protection -->
+                    <input type="text" name="_honey" style="display:none">
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="space-y-1">
                             <label class="text-xs font-bold text-slate-700 ml-1">Full Name</label>
-                            <input type="text" name="name" placeholder="John Doe" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                            <input type="text" name="Full Name" placeholder="John Doe" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
                         </div>
                         <div class="space-y-1">
-                            <label class="text-xs font-bold text-slate-700 ml-1">Business Email</label>
-                            <input type="email" name="email" placeholder="john@example.com" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                            <label class="text-xs font-bold text-slate-700 ml-1">Your Email</label>
+                            <input type="email" name="Email" placeholder="john@example.com" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
                         </div>
                     </div>
                     
                     <div class="space-y-1">
+                        <label class="text-xs font-bold text-slate-700 ml-1">Phone / WhatsApp (optional)</label>
+                        <input type="tel" name="Phone" placeholder="+1 (555) 000-0000" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                    </div>
+
+                    <div class="space-y-1">
                         <label class="text-xs font-bold text-slate-700 ml-1">Inquiry Department</label>
-                        <select name="department" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                        <select name="Inquiry Department" class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
                             <option>Sales Inquiry</option>
                             <option>Technical Support</option>
                             <option>Billing Question</option>
-                            <option>Partnership</option>
+                            <option>Partnership / Collaboration</option>
+                            <option>General Question</option>
                         </select>
                     </div>
                     
                     <div class="space-y-1">
                         <label class="text-xs font-bold text-slate-700 ml-1">Your Message</label>
-                        <textarea name="message" rows="4" placeholder="How can our hosting team help you?" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all resize-none"></textarea>
+                        <textarea name="Message" rows="4" placeholder="How can our team help you today?" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all resize-none"></textarea>
                     </div>
                     
-                    <button type="submit" class="button-shine block w-full py-4 bg-primary text-white font-extrabold rounded-xl shadow-lg shadow-primary/25 active:scale-95 transition-all text-sm">Submit Form</button>
+                    <button type="submit" id="contact-submit-btn" class="button-shine block w-full py-4 bg-primary text-white font-extrabold rounded-xl shadow-lg shadow-primary/25 active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">send</span>
+                        Send Message
+                    </button>
                 </form>
+                <script>
+                (function(){
+                    // Show thank-you modal if redirected back with ?sent=1
+                    if(window.location.search.includes('sent=1')){
+                        document.getElementById('contact-thankyou-modal').classList.remove('hidden');
+                        history.replaceState({}, document.title, window.location.pathname);
+                    }
+                    // Also intercept form submit to show modal (if JS is available)
+                    var form = document.getElementById('contact-main-form');
+                    if(form){
+                        form.addEventListener('submit', function(e){
+                            // Let the form submit naturally, modal will show on redirect back
+                        });
+                    }
+                })();
+                </script>
             </div>
         </div>
     </div>

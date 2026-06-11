@@ -528,7 +528,146 @@
                 </div>
             </div>
         </section>
-    </main>
+    
+    <!-- ======= Thank-You Modal (FormSubmit redirect) ======= -->
+    <div id="hl-thankyou-modal" class="hidden fixed inset-0 z-[99999] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="document.getElementById('hl-thankyou-modal').classList.add('hidden')"></div>
+        <div class="relative bg-white rounded-[32px] p-10 md:p-14 max-w-md w-full text-center shadow-2xl z-10">
+            <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="material-symbols-outlined text-5xl text-emerald-500">check_circle</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-3">We Got Your Message! 🎉</h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6">Thank you for reaching out to Hosterlo! Our team will review your request and contact you within 24 hours. We look forward to working with you.</p>
+            <button onclick="document.getElementById('hl-thankyou-modal').classList.add('hidden')" class="px-8 py-3 bg-[#4f17ce] text-white font-bold rounded-full text-sm hover:opacity-90 transition-all">Got it, Thanks!</button>
+        </div>
+    </div>
+    <script>
+    (function(){
+        if(window.location.search.includes('sent=1')){
+            var m = document.getElementById('hl-thankyou-modal');
+            if(m){ m.classList.remove('hidden'); }
+            history.replaceState({}, document.title, window.location.pathname);
+        }
+    })();
+    </script>
+
+    <!-- ======= Service CTA Contact Form ======= -->
+    <section class="py-24 bg-gradient-to-br from-[#0f0a1e] via-[#1a1145] to-[#2d1b69] relative overflow-hidden" id="get-quote">
+        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image:radial-gradient(circle at 20% 50%, #7c3aed 0%, transparent 50%), radial-gradient(circle at 80% 20%, #4f46e5 0%, transparent 50%);"></div>
+        <div class="max-w-[1100px] mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Left: Info -->
+                <div class="text-white pt-4" data-aos="fade-right">
+                    <span class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-white/10 text-indigo-300 text-xs font-black uppercase rounded-full mb-6 tracking-widest">FREE CONSULTATION</span>
+                    <h2 class="text-3xl md:text-4xl font-black leading-tight mb-6">Ready to Start Your Project?</h2>
+                    <p class="text-white/70 text-base leading-relaxed mb-8">Tell us about your idea and we'll provide a detailed project roadmap and flat-rate estimate within 24 hours — completely free.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-white/80 text-sm font-semibold">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base text-indigo-300">timer</span></span>
+                            Response within 24 hours
+                        </div>
+                        <div class="flex items-center gap-3 text-white/80 text-sm font-semibold">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base text-indigo-300">verified</span></span>
+                            Free project estimate &amp; roadmap
+                        </div>
+                        <div class="flex items-center gap-3 text-white/80 text-sm font-semibold">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base text-indigo-300">lock</span></span>
+                            100% confidential — no obligation
+                        </div>
+                        <div class="flex items-center gap-3 text-white/80 text-sm font-semibold">
+                            <span class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-base text-indigo-300">support_agent</span></span>
+                            Direct WhatsApp support available
+                        </div>
+                    </div>
+                    <div class="mt-10 pt-8 border-t border-white/10">
+                        <p class="text-white/50 text-xs mb-4">Prefer instant chat?</p>
+                        <a href="https://wa.me/923394437730" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-bold rounded-full text-sm hover:opacity-90 transition-all shadow-lg">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.237 3.483 8.42-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.648zm6.757-4.041c1.574.933 3.109 1.423 4.919 1.424 5.456 0 9.897-4.437 9.9-9.899 0-2.646-1.03-5.132-2.903-7.003-1.871-1.871-4.358-2.901-7.001-2.902-5.463 0-9.897 4.437-9.9 9.902-.001 1.933.535 3.551 1.558 5.178l-.999 3.644 3.742-.979zm11.287-5.125c-.3-.15-1.771-.874-2.046-.975-.276-.101-.476-.15-.676.15-.199.3-.776.975-.951 1.176-.175.199-.349.225-.649.075-.3-.15-1.266-.467-2.411-1.487-.893-.797-1.495-1.782-1.67-2.083-.175-.3-.019-.462.13-.611.135-.134.3-.349.449-.525.151-.176.199-.3.3-.499.1-.199.05-.375-.025-.525-.075-.15-.676-1.631-.926-2.231-.242-.583-.491-.504-.676-.513-.174-.009-.375-.011-.575-.011-.2 0-.525.075-.8.375-.276.3-1.051 1.026-1.051 2.502 0 1.475 1.074 2.901 1.224 3.102.15.199 2.115 3.227 5.123 4.525.714.308 1.272.492 1.707.631.717.227 1.369.195 1.884.118.574-.085 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.199-.575-.349z"/></svg>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <!-- Right: Form -->
+                <div class="bg-white rounded-[32px] p-8 md:p-10 shadow-2xl" data-aos="fade-left">
+                    <h3 class="text-xl font-black text-slate-900 mb-2">Tell Us About Your Project</h3>
+                    <p class="text-slate-500 text-sm mb-6">Fill out the form below and our team will reach out with a tailored proposal.</p>
+                    <form action="https://formsubmit.co/hosterlohosting@gmail.com" method="POST" class="space-y-4">
+                        <!-- FormSubmit.co config -->
+                        <input type="hidden" name="_subject" value="🚀 New Project Inquiry — UI/UX Design | Hosterlo">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://hosterlo.com/services/ui-ux-design/?sent=1">
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-700">Your Full Name *</label>
+                                <input type="text" name="Full Name" placeholder="e.g. John Smith" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-xs font-bold text-slate-700">Your Email *</label>
+                                <input type="email" name="Email" placeholder="john@example.com" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                            </div>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-700">Phone / WhatsApp</label>
+                            <input type="tel" name="Phone" placeholder="+1 (555) 000-0000" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-700">Service You Need *</label>
+                            <select name="Service Required" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                                <option value="">— Select a Service —</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="SaaS Product Development">SaaS Product Development</option>
+                                <option value="Frontend Engineering">Frontend Engineering</option>
+                                <option value="Backend Engineering">Backend Engineering</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="Mobile App Development">Mobile App Development</option>
+                                <option value="API Integration">API Integration</option>
+                                <option value="Website Maintenance">Website Maintenance</option>
+                                <option value="Web Hosting">Web Hosting</option>
+                                <option value="Domain Registration">Domain Registration</option>
+                                <option value="Other / Not Sure">Other / Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-700">Website Name / URL (if you have one)</label>
+                            <input type="text" name="Website URL" placeholder="e.g. myawesomebusiness.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-700">Estimated Budget *</label>
+                            <select name="Budget" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all">
+                                <option value="">— Select Your Budget —</option>
+                                <option value="Under $500">Under $500</option>
+                                <option value="$500 – $1,500">$500 – $1,500</option>
+                                <option value="$1,500 – $5,000">$1,500 – $5,000</option>
+                                <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+                                <option value="$15,000 – $50,000">$15,000 – $50,000</option>
+                                <option value="$50,000+">$50,000+</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs font-bold text-slate-700">Project Description *</label>
+                            <textarea name="Project Description" rows="4" placeholder="Briefly describe what you need. Include any key features, deadline, or special requirements..." required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-[#4f17ce] text-white font-extrabold rounded-xl shadow-lg shadow-[#4f17ce]/25 hover:bg-[#673de6] active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">send</span>
+                            Send My Project Details
+                        </button>
+                        <p class="text-center text-[10px] text-slate-400 font-semibold">We'll respond within 24 hours · No spam · 100% confidential</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
     
     <!-- Footer: Standardized White Background, Black Text -->
 <footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
