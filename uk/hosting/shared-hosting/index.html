@@ -154,9 +154,17 @@
             </a>
         </div>
         <nav class="hidden lg:flex items-center gap-8">
-            <a class="nav-link" href="/uk/hosting/">Hosting</a>
-            <a class="nav-link" href="/uk/hosting/wordpress-hosting/">WordPress Hosting</a>
-            <a class="nav-link" href="/uk/pricing/">Pricing</a>
+            <!-- Hosting Dropdown -->
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+                    Hosting <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/uk/hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Cloud Hosting</a>
+                    <a href="/uk/hosting/shared-hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Shared Hosting</a>
+                    <a href="/uk/hosting/wordpress-hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">WordPress Hosting</a>
+                </div>
+            </div>
             <a class="nav-link" href="/uk/domains/">Domains</a>
             <!-- Services Dropdown -->
             <div class="relative group">
@@ -176,9 +184,19 @@
                     <a href="/services/website-maintenance/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Website Maintenance</a>
                 </div>
             </div>
-            <a class="nav-link" href="/free-tools/">Free Tools</a>
-            <a class="nav-link" href="/blog/">Blog</a>
-            <a class="nav-link" href="/uk/contact-us/">Contact</a>
+            <a class="nav-link" href="/uk/pricing/">Pricing</a>
+            <!-- Resources Dropdown -->
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+                    Resources <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/blog/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Hosterlo Blog</a>
+                    <a href="/free-tools/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Free Website Tools</a>
+                    <a href="/uk/about-hosterlo/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">About Hosterlo</a>
+                    <a href="/uk/contact-us/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Contact Us</a>
+                </div>
+            </div>
         </nav>
         <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
             <!-- Search Icon (SwitchU Style) -->
@@ -243,6 +261,7 @@
 </div>
 </div>
 </div>
+
 
 
 
@@ -697,6 +716,7 @@
         </a>
     </div>
 </footer>
+
 
 
 
