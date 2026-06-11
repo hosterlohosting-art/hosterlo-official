@@ -72,7 +72,7 @@ Hosterlo operates through three locally registered entities:
    - Primary market: United States, Canada, North America
    - Currency: USD ($59/year)
    - Phone: +1 (618) 356-1311
-   - Address: 3338 S National Ave, Springfield, MO 65807, United States
+   - Address: 16192 Coastal Highway, Lewes, DE 19958, United States
    - URL: https://hosterlo.com/
 
 2. Hosterlo Ltd (United Kingdom)
