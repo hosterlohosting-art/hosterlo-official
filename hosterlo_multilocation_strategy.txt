@@ -100,7 +100,7 @@ DISPLAY:
 --------
 - Dedicated landing page: hosterlo.com/pk/
 - Pakistan footer: "Hosterlo Pakistan, [Pakistan Address], [City]"
-- Pakistan phone: +92 339 443 7730 (your existing number)
+- Pakistan phone: +92 3394437730 (your existing number)
 - Currency: PKR (Rs. 16,500/year or whatever)
 - Payment methods: JazzCash, EasyPaisa, bank transfer + cards
 - Legal entity: "Registered with FBR, NTN [number]"
@@ -251,7 +251,7 @@ Footer:
    FBR Registered | NTN: [Number]"
 
 Contact:
-  "Call/WhatsApp: +92 339 443 7730"
+  "Call/WhatsApp: +92 3394437730"
   "Email: hello@hosterlo.com"
 
 Trust badges:
@@ -287,7 +287,7 @@ UK NUMBER: OpenPhone or Twilio ($15-30/month)
 - Forward to your Pakistan phone
 - Display on: hosterlo.com/uk/ (UK site)
 
-PAKISTAN NUMBER: Your existing +92 339 443 7730
+PAKISTAN NUMBER: Your existing +92 3394437730
 -----------------
 - Keep as-is
 - Display on: hosterlo.com/pk/ (Pakistan site)
@@ -373,7 +373,7 @@ PAKISTAN SCHEMA (hosterlo.com/pk/):
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+92-339-443-7730",
+    "telephone": "+92 3394437730",
     "contactType": "customer support",
     "areaServed": {"@type": "Country", "name": "Pakistan"}
   }
@@ -408,7 +408,7 @@ FACTORS THAT CHANGE BY MARKET:
 |-------------------|------------------------|----------------------------|------------------------------|
 | Legal Entity      | Hosterlo LLC           | Hosterlo Ltd               | Hosterlo Pakistan (FBR)      |
 | Currency          | USD ($59/year)         | GBP (£47/year)             | PKR (Rs. 16,500/year)        |
-| Phone             | +1 (XXX) XXX-XXXX      | +44 XXXX XXXXXX            | +92 339 443 7730             |
+| Phone             | +1 (XXX) XXX-XXXX      | +44 XXXX XXXXXX            | +92 3394437730             |
 | Spelling          | American (customize)   | British (customise)        | English or Urdu              |
 | Trust Badges      | US LLC, BBB            | UK Ltd, GDPR               | FBR Registered               |
 | Payment           | Card, PayPal           | Card, PayPal               | JazzCash, EasyPaisa, Card    |
@@ -547,7 +547,7 @@ Hosterlo operates through three locally registered entities:
 3. Hosterlo Pakistan (FBR Registered)
    - Primary market: Pakistan, South Asia
    - Currency: PKR
-   - Phone: +92 339 443 7730
+   - Phone: +92 3394437730
    - Address: [Pakistan Address]
    - FBR NTN: [Number]
    - URL: https://hosterlo.com/pk/
@@ -673,7 +673,7 @@ Create three market sections:
 **PAKISTAN MARKET (hosterlo.com/pk/):**
 - Create /pk/ subdirectory with Pakistan-specific landing page
 - Footer: "Hosterlo Pakistan, [PK Address], [City], Pakistan | FBR Registered | NTN: [Number]"
-- Phone: +92 339 443 7730 (primary support)
+- Phone: +92 3394437730 (primary support)
 - Currency: PKR (Rs. 16,500/year)
 - Bilingual: English + Urdu headlines
 - Trust badges: "FBR Registered Business"

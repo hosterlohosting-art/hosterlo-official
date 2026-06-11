@@ -299,6 +299,7 @@
 
 
 
+
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-[50vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f0a1e] via-[#1a1145] to-[#2d1b69] text-white -mt-[96px] pt-32 pb-20">
@@ -312,55 +313,120 @@
             </div>
         </section>
 
-        <!-- Pricing Card Section -->
-        <section id="pricing-card" class="py-24 bg-white relative overflow-hidden">
+        <!-- Pricing Section -->
+        <section id="pricing-card" class="py-24 bg-slate-50 border-t border-slate-100 relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(103,61,230,0.05),transparent_50%)]"></div>
             <div class="max-w-[1440px] mx-auto px-6 relative z-10">
-                <div class="max-w-3xl mx-auto bg-gradient-to-br from-[#120f26] to-[#211a45] rounded-[40px] p-8 md:p-14 text-white shadow-2xl relative border border-white/10" data-aos="fade-up">
-                    <div class="absolute top-0 right-12 bg-primary px-4 py-1.5 rounded-b-2xl text-[10px] font-black uppercase tracking-wider">Recommended Bundle</div>
-                    
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 class="text-3xl font-black mb-4 font-h2">Website Launch Bundle</h2>
-                            <p class="text-white/70 text-xs leading-relaxed mb-8">Specifically engineered for entrepreneurs, local businesses, and creators looking for a complete, hassle-free web setup.</p>
-                            
-                            <div class="space-y-4 text-xs font-bold text-white/90">
-                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Fast LiteSpeed Cloud Hosting</div>
-                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Free Eligible Domain Name</div>
-                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Unlimited Custom Business Emails</div>
-                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> Free Auto-Renewing SSL Lock</div>
-                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-400 text-sm">check_circle</span> 18 Months Gemini Pro AI Gift</div>
+                
+                <!-- 4-Plan Pricing Cards Grid -->
+                <div class="grid lg:grid-cols-4 gap-6 animate-fade-in" data-aos="fade-up">
+        
+                    <!-- Plan 1: Starter -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-7 flex flex-col hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+                        <div class="mb-6">
+                            <span class="inline-block text-xs font-black uppercase tracking-widest text-slate-500 mb-3">Starter</span>
+                            <div class="flex items-end gap-1 mb-1">
+                                <span class="text-4xl font-black text-[#111c2d]">$29</span>
+                                <span class="text-slate-400 text-sm font-bold mb-1.5">/year</span>
                             </div>
+                            <p class="text-slate-500 text-xs leading-relaxed">For simple portfolios, landing pages, and basic starter websites.</p>
                         </div>
-                        
-                        <div class="text-center p-8 bg-white/5 rounded-3xl border border-white/10 flex flex-col items-center">
-                            <div class="text-[10px] font-black uppercase text-indigo-300 tracking-widest mb-2">Flat Rate Annual Term</div>
-                            <div class="flex items-baseline justify-center mb-1">
-                                <span class="text-5xl font-black font-h1">$59.00</span>
-                                <span class="text-white/60 text-xs font-bold">/ year</span>
-                            </div>
-                            <div class="text-[10px] font-bold text-emerald-400 mb-6 flex items-center gap-1"><span class="material-symbols-outlined text-xs">lock</span> Flat $59/yr Renewal Guarantee</div>
-                            
-                            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine block w-full py-4 bg-primary text-white rounded-xl font-bold hover:scale-105 transition-all text-center mb-4">Get the $59 Bundle</a>
-                            <a href="https://wa.me/923394437730" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 border border-white/20 text-white rounded-xl font-semibold hover:bg-white/5 transition-all text-center text-xs flex items-center justify-center gap-2">
-                                Pre-Sales Help (WhatsApp)
-                            </a>
-                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 mb-8 flex-1">
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Fast web hosting</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Free SSL included</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>WordPress-ready setup</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-slate-300 text-base">cancel</span><span class="text-slate-400">No free .com domain</span></li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-slate-300 text-base">cancel</span><span class="text-slate-400">No business email</span></li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-slate-300 text-base">cancel</span><span class="text-slate-400">No Gemini Pro bonus</span></li>
+                        </ul>
+                        <a href="https://billing.hosterlo.com/cart.php?a=add&pid=1" class="block w-full py-3 text-center border-2 border-slate-200 text-slate-700 font-bold rounded-xl text-sm hover:border-primary hover:text-primary transition-all">Get Starter Plan</a>
                     </div>
-
-                    <!-- 30-Day Money Back Guarantee Banner -->
-                    <div class="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center gap-4 justify-between bg-emerald-500/5 -mx-8 -mb-14 p-8 rounded-b-[40px]">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                                <span class="material-symbols-outlined text-2xl">verified_user</span>
-                            </div>
-                            <div>
-                                <h4 class="text-sm font-black text-white">30-Day Money-Back Guarantee</h4>
-                                <p class="text-white/60 text-[10px] mt-0.5">Test Hosterlo risk-free. If you're not satisfied, request a full hosting refund within 30 days.</p>
-                            </div>
+        
+                    <!-- Plan 2: Website Launch Bundle (FEATURED) -->
+                    <div class="bg-white rounded-3xl border-2 border-primary p-7 flex flex-col relative shadow-2xl shadow-primary/10 lg:scale-[1.03] animate-pulse-glow">
+                        <div class="absolute -top-4 left-0 right-0 flex justify-center">
+                            <span class="inline-block px-5 py-1.5 bg-primary text-white text-[10px] font-black uppercase rounded-full tracking-wider shadow-lg">⭐ Most Popular · Best Value</span>
                         </div>
-                        <span class="text-[10px] font-black text-emerald-400 border border-emerald-500/25 px-3.5 py-1.5 rounded-full uppercase shrink-0">100% Risk Free</span>
+                        <div class="mb-6 pt-2">
+                            <span class="inline-block text-xs font-black uppercase tracking-widest text-primary mb-3">Website Launch Bundle</span>
+                            <div class="flex items-end gap-1 mb-1">
+                                <span class="text-4xl font-black text-[#111c2d]">$59</span>
+                                <span class="text-slate-400 text-sm font-bold mb-1.5">/year</span>
+                            </div>
+                            <p class="text-slate-500 text-xs leading-relaxed">Everything you need to launch a professional website, in one bundle.</p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-700 mb-8 flex-1">
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Fast web hosting</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span><strong>Free eligible .com domain</strong> (1st year)</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Free SSL certificate</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Business email included</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>WordPress-ready setup</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Setup guidance</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>WhatsApp support</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span><strong>Gemini Pro bonus</strong> — 18 months</li>
+                        </ul>
+                        <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="button-shine block w-full py-3.5 text-center bg-primary text-white font-extrabold rounded-xl text-sm hover:bg-primary-container transition-all shadow-lg shadow-primary/20">Get the $59 Bundle</a>
+                    </div>
+        
+                    <!-- Plan 3: Business Pro -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-7 flex flex-col hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+                        <div class="mb-6">
+                            <span class="inline-block text-xs font-black uppercase tracking-widest text-slate-500 mb-3">Business Pro</span>
+                            <div class="flex items-end gap-1 mb-1">
+                                <span class="text-4xl font-black text-[#111c2d]">$99</span>
+                                <span class="text-slate-400 text-sm font-bold mb-1.5">/year</span>
+                            </div>
+                            <p class="text-slate-500 text-xs leading-relaxed">For growing business websites needing more resources and stronger performance.</p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 mb-8 flex-1">
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Everything in $59 Bundle</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>More hosting resources</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Higher email capacity</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Free eligible .com domain</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Gemini Pro bonus — 18 months</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Priority support access</li>
+                        </ul>
+                        <a href="https://billing.hosterlo.com/cart.php?a=add&pid=3" class="block w-full py-3 text-center border-2 border-slate-200 text-slate-700 font-bold rounded-xl text-sm hover:border-primary hover:text-primary transition-all">Get Business Pro</a>
+                    </div>
+        
+                    <!-- Plan 4: Enterprise -->
+                    <div class="bg-white rounded-3xl border border-slate-200 p-7 flex flex-col hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+                        <div class="mb-6">
+                            <span class="inline-block text-xs font-black uppercase tracking-widest text-slate-500 mb-3">Enterprise</span>
+                            <div class="flex items-end gap-1 mb-1">
+                                <span class="text-4xl font-black text-[#111c2d]">$189</span>
+                                <span class="text-slate-400 text-sm font-bold mb-1.5">/year</span>
+                            </div>
+                            <p class="text-slate-500 text-xs leading-relaxed">For high-traffic websites and agencies needing maximum performance and capacity.</p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 mb-8 flex-1">
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Everything in Business Pro</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Maximum hosting resources</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Highest email capacity</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Free eligible .com domain</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Gemini Pro bonus — 18 months</li>
+                            <li class="flex items-center gap-3"><span class="material-symbols-outlined text-emerald-500 text-base">check_circle</span>Priority support access</li>
+                        </ul>
+                        <a href="https://billing.hosterlo.com/cart.php?a=add&pid=4" class="block w-full py-3 text-center border-2 border-slate-200 text-slate-700 font-bold rounded-xl text-sm hover:border-primary hover:text-primary transition-all">Get Enterprise Plan</a>
+                    </div>
+        
+                </div>
+        
+                <!-- Money-Back Guarantee Badge -->
+                <div class="mt-10 max-w-lg mx-auto bg-emerald-50/60 border border-emerald-100/80 rounded-2xl p-4 flex gap-3.5 items-start text-left" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-xl">shield</span>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-900 text-sm mb-0.5">30-Day Money-Back Guarantee</h4>
+                        <p class="text-slate-500 text-xs leading-relaxed">Try Hosterlo completely risk-free. If you are not satisfied, request a full refund of your hosting fee within 30 days.</p>
                     </div>
                 </div>
+        
+                <!-- Legal Disclaimer -->
+                <p class="text-[11px] text-slate-400 mt-10 text-center max-w-2xl mx-auto leading-relaxed">
+                    All prices are billed yearly in USD. Domain offer applies to eligible .com registrations for the first year only. Gemini Pro bonus requires valid Gmail account details and is activated via WhatsApp support. Renewal terms may apply. Google and Gemini are trademarks of Google LLC. Hosterlo is not affiliated with Google.
+                </p>
             </div>
         </section>
 
@@ -494,7 +560,7 @@
                 </p>
                 <div class="flex items-center gap-2 text-slate-500 text-xs">
                     <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
-                    <span>16192 Coastal Highway, Lewes, DE 19958, United States</span>
+                    <span>3338 S National Ave, Springfield, MO 65807, United States</span>
                 </div>
                 <div class="flex gap-3">
                     <a href="#" class="w-10 h-10 rounded-full bg-white border border-slate-200/60 flex items-center justify-center text-slate-400 hover:bg-primary hover:text-white hover:border-primary transition-all"><span class="material-symbols-outlined text-base">public</span></a>
@@ -625,9 +691,9 @@
             <span class="material-symbols-outlined transition-transform group-hover:-translate-y-1">arrow_upward</span>
         </button>
 
-        <a href="tel:+13022039118" class="fixed bottom-28 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[90] group">
+        <a href="tel:+16183561311" class="fixed bottom-28 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[90] group">
             <span class="material-symbols-outlined text-2xl sm:text-3xl">call</span>
-            <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all translate-x-4 group-hover:translate-x-0">Call: +1 (302) 203-9118</span>
+            <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all translate-x-4 group-hover:translate-x-0">Call: +1 (618) 356-1311</span>
         </a>
 
         <a href="https://wa.me/923394437730" class="fixed bottom-6 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[90] group">
@@ -636,6 +702,7 @@
         </a>
     </div>
 </footer>
+
 
 
 

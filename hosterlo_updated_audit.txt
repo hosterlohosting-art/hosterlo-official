@@ -27,8 +27,8 @@ then tackle the remaining items.
 WHAT YOU GOT RIGHT (THE WINS)
 ================================================================================
 
-[FIXED] US phone number: +1 (302) 203-9118
-[FIXED] US virtual address in footer: 16192 Coastal Highway, Lewes, DE 19958
+[FIXED] US phone number: +1 (618) 356-1311
+[FIXED] US virtual address in footer: 3338 S National Ave, Springfield, MO 65807, United States
 [FIXED] Payment badges: Visa, Mastercard, PayPal, Stripe
 [FIXED] Cookie consent banner with Privacy Policy link
 [FIXED] About page (/about-hosterlo/) with mission, values, infrastructure

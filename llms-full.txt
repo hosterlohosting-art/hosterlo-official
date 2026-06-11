@@ -191,15 +191,15 @@ Hosterlo operates through three locally registered entities:
 1. Hosterlo LLC (United States)
    - Primary market: United States, Canada, North America
    - Currency: USD ($59/year)
-   - Phone: +1 (302) 203-9118
-   - Address: 16192 Coastal Highway, Lewes, DE 19958, United States
+   - Phone: +1 (618) 356-1311
+   - Address: 3338 S National Ave, Springfield, MO 65807, United States
    - URL: https://hosterlo.com/
 
 2. Hosterlo Ltd (United Kingdom)
    - Primary market: United Kingdom, European Union
    - Currency: GBP (£47/year equivalent)
-   - Phone: +44 20 7946 0958
-   - Address: 27 Old Gloucester Street, London, WC1N 3AX, United Kingdom
+   - Phone: +44 7575 803760
+   - Address: 1A North Rd, Woking GU21 5DS, United Kingdom
    - Company No: 14839201
    - URL: https://hosterlo.com/uk/
    - Compliance: GDPR-ready hosting infrastructure
@@ -207,8 +207,8 @@ Hosterlo operates through three locally registered entities:
 3. Hosterlo Pakistan (FBR Registered)
    - Primary market: Pakistan, South Asia
    - Currency: PKR (Rs. 16,500/year)
-   - Phone: +92 339 443 7730
-   - Address: Office 102, Business Center, Shahrah-e-Faisal, Karachi, Pakistan
+   - Phone: +92 3394437730
+   - Address: 4th Floor Venture Drive, Model Town Lahore, Pakistan
    - FBR NTN: 8932014-7
    - URL: https://hosterlo.com/pk/
    - Payments: JazzCash, EasyPaisa, bank transfer, cards
