@@ -63,6 +63,24 @@
             <a class="nav-link" href="/hosting/wordpress-hosting/">WordPress Hosting</a>
             <a class="nav-link" href="/pricing/">Pricing</a>
             <a class="nav-link" href="/domains/">Domains</a>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+                    Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/services/" class="block px-5 py-2.5 hover:bg-slate-50 hover:text-primary text-slate-800 text-sm font-extrabold transition-colors">All Services Hub</a>
+                    <div class="h-px bg-slate-100 my-1 mx-5"></div>
+                    <a href="/services/web-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Web Development</a>
+                    <a href="/services/saas-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">SaaS Development</a>
+                    <a href="/services/frontend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Frontend Development</a>
+                    <a href="/services/backend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Backend Development</a>
+                    <a href="/services/ui-ux-design/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">UI/UX Design</a>
+                    <a href="/services/mobile-app-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Mobile App Dev</a>
+                    <a href="/services/api-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">API Development</a>
+                    <a href="/services/website-maintenance/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Website Maintenance</a>
+                </div>
+            </div>
             <a class="nav-link" href="/free-tools/">Free Tools</a>
             <a class="nav-link" href="/blog/">Blog</a>
             <a class="nav-link" href="/contact-us/">Contact</a>
@@ -109,6 +127,9 @@
 <a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">language</span> Domains
 </a>
+<a href="/services/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">design_services</span> Services
+</a>
 <a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">build</span> Free Tools
 </a>
@@ -127,6 +148,20 @@
 </div>
 </div>
 </div>
+
+
+
+<nav class="breadcrumb-nav max-w-4xl mx-auto px-6 pt-8 pb-2 relative z-20" aria-label="Breadcrumb">
+    <ol class="flex items-center gap-2 text-xs text-slate-400 font-semibold">
+        <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li class="text-primary font-bold">Best Web Hosting 2026</li>
+    </ol>
+</nav>
+
+
 
 
 
@@ -178,7 +213,7 @@
     <div class="max-w-[1440px] mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
             <!-- Company Info -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-3 space-y-6">
                 <a href="/">
                     <img src="/assets/logo.png" alt="Hosterlo Logo" class="w-[185px] h-auto" decoding="async">
                 </a>
@@ -198,7 +233,7 @@
 
             <!-- Products -->
             <div class="lg:col-span-2">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Hosting Solutions</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
                     <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
@@ -206,8 +241,24 @@
                     <li><a href="/domains/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
                 </ul>
             </div>
-            <!-- Support -->
+
+            <!-- Development Services -->
             <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Development Services</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/services/web-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Web Development</a></li>
+                    <li><a href="/services/saas-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">SaaS Development</a></li>
+                    <li><a href="/services/frontend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Frontend Development</a></li>
+                    <li><a href="/services/backend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Backend Development</a></li>
+                    <li><a href="/services/ui-ux-design/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">UI/UX Design</a></li>
+                    <li><a href="/services/mobile-app-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Mobile App Dev</a></li>
+                    <li><a href="/services/api-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">API Development</a></li>
+                    <li><a href="/services/website-maintenance/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Website Maintenance</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support & Policies</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
@@ -218,7 +269,7 @@
             </div>
 
             <!-- Resources -->
-            <div class="lg:col-span-3">
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/about-hosterlo/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">About Hosterlo</a></li>
@@ -329,6 +380,10 @@
         </a>
     </div>
 </footer>
+
+
+
+
 
 
 

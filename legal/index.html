@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light" lang="en">
 <head>
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -42,7 +42,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hosterlo.com/#organization","name":"Hosterlo","url":"https://hosterlo.com/","logo":{"@type":"ImageObject","url":"https://hosterlo.com/assets/logo.png"},"description":"Hosterlo provides web hosting, WordPress hosting, domains, SSL, business email tools, and support for website owners.","foundingDate":"2026","slogan":"Fast. Secure. Reliable.","sameAs":["https://facebook.com/hosterlo","https://twitter.com/hosterlo","https://linkedin.com/company/hosterlo"],"contactPoint":{"@type":"ContactPoint","telephone":"+1 (618) 356-1311","contactType":"customer support","availableLanguage":["English"],"areaServed":"Worldwide"}},{"@type":"WebSite","@id":"https://hosterlo.com/#website","url":"https://hosterlo.com/","name":"Hosterlo","publisher":{"@id":"https://hosterlo.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://hosterlo.com/legal/#webpage","url":"https://hosterlo.com/legal/","name":"Legal Hub | Hosterlo Terms, Privacy and Refund Policies","headline":"Trust & Transparency","description":"Find Hosterlo legal information, terms of service, privacy policy, refund policy, and compliance details in one place.","isPartOf":{"@id":"https://hosterlo.com/#website"},"publisher":{"@id":"https://hosterlo.com/#organization"},"image":"https://hosterlo.com/assets/logo.png","inLanguage":"en","dateModified":"2026-06-03"},{"@type":"BreadcrumbList","@id":"https://hosterlo.com/legal/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hosterlo.com/"},{"@type":"ListItem","position":2,"name":"Legal","item":"https://hosterlo.com/legal/"}]}]}</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script id="tailwind-config">
       tailwind.config = {
@@ -214,6 +214,24 @@
             <a class="nav-link" href="/hosting/wordpress-hosting/">WordPress Hosting</a>
             <a class="nav-link" href="/pricing/">Pricing</a>
             <a class="nav-link" href="/domains/">Domains</a>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+                    Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/services/" class="block px-5 py-2.5 hover:bg-slate-50 hover:text-primary text-slate-800 text-sm font-extrabold transition-colors">All Services Hub</a>
+                    <div class="h-px bg-slate-100 my-1 mx-5"></div>
+                    <a href="/services/web-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Web Development</a>
+                    <a href="/services/saas-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">SaaS Development</a>
+                    <a href="/services/frontend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Frontend Development</a>
+                    <a href="/services/backend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Backend Development</a>
+                    <a href="/services/ui-ux-design/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">UI/UX Design</a>
+                    <a href="/services/mobile-app-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Mobile App Dev</a>
+                    <a href="/services/api-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">API Development</a>
+                    <a href="/services/website-maintenance/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Website Maintenance</a>
+                </div>
+            </div>
             <a class="nav-link" href="/free-tools/">Free Tools</a>
             <a class="nav-link" href="/blog/">Blog</a>
             <a class="nav-link" href="/contact-us/">Contact</a>
@@ -260,6 +278,9 @@
 <a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">language</span> Domains
 </a>
+<a href="/services/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">design_services</span> Services
+</a>
 <a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">build</span> Free Tools
 </a>
@@ -294,6 +315,10 @@
 
 
 
+
+
+
+
 <main>
 <!-- Hero -->
 <section class="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
@@ -302,34 +327,84 @@
 <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">Trust & <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Transparency</span></h1>
 <p class="text-xl text-slate-600 max-w-3xl mx-auto mb-12">Our legal hub contains all necessary information regarding our service standards, data handling, and mutual responsibilities. We believe in clear terms for a premium partnership.</p>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<a href="/privacy-policy/" class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
-<div class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl">policy</span>
-</div>
-<h3 class="text-2xl font-bold mb-4">Privacy Policy</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">Learn how we collect, use, and protect your personal information and data.</p>
-<span class="text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read policy <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
-</a>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Privacy Policy -->
+    <a href="/privacy-policy/" class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between">
+        <div>
+            <div class="w-14 h-14 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-3xl">policy</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Privacy Policy</h3>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Learn how we collect, use, and protect your personal information and data.</p>
+        </div>
+        <div>
+            <p class="text-[11px] text-slate-400 font-bold mb-4">Last Updated: June 9, 2026</p>
+            <span class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read policy <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </div>
+    </a>
 
-<a href="/terms-conditions/" class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
-<div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl">gavel</span>
-</div>
-<h3 class="text-2xl font-bold mb-4">Terms of Service</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">The agreement between you and Hosterlo regarding the use of our services.</p>
-<span class="text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read terms <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
-</a>
+    <!-- Terms of Service -->
+    <a href="/terms-conditions/" class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between">
+        <div>
+            <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-3xl">gavel</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Terms of Service</h3>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">The agreement between you and Hosterlo regarding the use of our services.</p>
+        </div>
+        <div>
+            <p class="text-[11px] text-slate-400 font-bold mb-4">Last Updated: June 9, 2026</p>
+            <span class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read terms <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </div>
+    </a>
 
-<a href="/refund-policy/" class="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group">
-<div class="w-16 h-16 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl">payments</span>
+    <!-- Refund Policy -->
+    <a href="/refund-policy/" class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between">
+        <div>
+            <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-3xl">payments</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Refund Policy</h3>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Our transparent 30-day money-back guarantee and refund conditions.</p>
+        </div>
+        <div>
+            <p class="text-[11px] text-slate-400 font-bold mb-4">Last Updated: June 9, 2026</p>
+            <span class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read policy <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </div>
+    </a>
+
+    <!-- Gemini Pro Terms -->
+    <a href="/legal/gemini-pro-terms/" class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between">
+        <div>
+            <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-3xl">psychology</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Gemini Pro Terms</h3>
+            <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Special program rules and limits for the 18 months Gemini Pro bonus.</p>
+        </div>
+        <div>
+            <p class="text-[11px] text-slate-400 font-bold mb-4">Last Updated: June 9, 2026</p>
+            <span class="text-primary text-sm font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read terms <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+        </div>
+    </a>
 </div>
-<h3 class="text-2xl font-bold mb-4">Refund Policy</h3>
-<p class="text-on-surface-variant mb-8 leading-relaxed">Our transparent 30-day money-back guarantee and refund conditions.</p>
-<span class="text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Read policy <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
-</a>
-</div>
+
+<!-- Legal Inquiries Contact -->
+<section class="py-12 border-t border-slate-200/60 mt-20 max-w-4xl mx-auto text-center" data-aos="fade-up">
+    <h3 class="text-xl font-bold text-slate-900 mb-4 font-h2">Legal Inquiries</h3>
+    <p class="text-slate-500 text-sm leading-relaxed mb-6 max-w-xl mx-auto">If you have any questions regarding our terms, privacy policies, refund procedures, or regional entity compliance, please get in touch with our legal team.</p>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-6 text-sm font-semibold text-slate-700">
+        <a href="mailto:legal@hosterlo.com" class="flex items-center gap-2 hover:text-primary transition-all">
+            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+            <span>legal@hosterlo.com</span>
+        </a>
+        <div class="hidden sm:block text-slate-300">|</div>
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <span>Hosterlo LLC, 3338 S National Ave, Springfield, MO 65807, USA</span>
+        </div>
+    </div>
+</section>
 </div>
 </section>
 </main>
@@ -343,7 +418,7 @@
     <div class="max-w-[1440px] mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
             <!-- Company Info -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-3 space-y-6">
                 <a href="/">
                     <img src="/assets/logo.png" alt="Hosterlo Logo" class="w-[185px] h-auto" decoding="async">
                 </a>
@@ -363,7 +438,7 @@
 
             <!-- Products -->
             <div class="lg:col-span-2">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Hosting Solutions</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
                     <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
@@ -371,8 +446,24 @@
                     <li><a href="/domains/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
                 </ul>
             </div>
-            <!-- Support -->
+
+            <!-- Development Services -->
             <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Development Services</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/services/web-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Web Development</a></li>
+                    <li><a href="/services/saas-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">SaaS Development</a></li>
+                    <li><a href="/services/frontend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Frontend Development</a></li>
+                    <li><a href="/services/backend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Backend Development</a></li>
+                    <li><a href="/services/ui-ux-design/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">UI/UX Design</a></li>
+                    <li><a href="/services/mobile-app-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Mobile App Dev</a></li>
+                    <li><a href="/services/api-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">API Development</a></li>
+                    <li><a href="/services/website-maintenance/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Website Maintenance</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support & Policies</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
@@ -383,7 +474,7 @@
             </div>
 
             <!-- Resources -->
-            <div class="lg:col-span-3">
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/about-hosterlo/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">About Hosterlo</a></li>
@@ -494,6 +585,10 @@
         </a>
     </div>
 </footer>
+
+
+
+
 
 
 

@@ -45,7 +45,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://hosterlo.com/#organization","name":"Hosterlo","url":"https://hosterlo.com/","logo":{"@type":"ImageObject","url":"https://hosterlo.com/assets/logo.png"},"description":"Hosterlo provides web hosting, WordPress hosting, domains, SSL, business email tools, and support for website owners.","foundingDate":"2026","slogan":"Fast. Secure. Reliable.","sameAs":["https://facebook.com/hosterlo","https://twitter.com/hosterlo","https://linkedin.com/company/hosterlo"],"contactPoint":{"@type":"ContactPoint","telephone":"+1 (618) 356-1311","contactType":"customer support","availableLanguage":["English"],"areaServed":"Worldwide"}},{"@type":"WebSite","@id":"https://hosterlo.com/#website","url":"https://hosterlo.com/","name":"Hosterlo","publisher":{"@id":"https://hosterlo.com/#organization"},"inLanguage":"en"},{"@type":"WebPage","@id":"https://hosterlo.com/hosting/wordpress-hosting/#webpage","url":"https://hosterlo.com/hosting/wordpress-hosting/","name":"WordPress Hosting with Free Domain, SSL & Setup Help — Hosterlo","headline":"WordPress Hosting That Helps You Launch Faster","description":"Optimized WordPress hosting with LiteSpeed cache support, SSL, business email, backups, setup guidance, and WhatsApp support.","isPartOf":{"@id":"https://hosterlo.com/#website"},"publisher":{"@id":"https://hosterlo.com/#organization"},"image":"https://hosterlo.com/assets/hosterlo-website-builder.webp","inLanguage":"en","dateModified":"2026-06-03"},{"@type":"BreadcrumbList","@id":"https://hosterlo.com/hosting/wordpress-hosting/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://hosterlo.com/"},{"@type":"ListItem","position":2,"name":"Hosting","item":"https://hosterlo.com/hosting/"},{"@type":"ListItem","position":3,"name":"WordPress Hosting","item":"https://hosterlo.com/hosting/wordpress-hosting/"}]},{"@type":"OfferCatalog","@id":"https://hosterlo.com/#hosting-offers","name":"Hosterlo Web Hosting Plans","itemListElement":[{"@type":"Offer","name":"Website Launch Bundle","price":"59.00","priceCurrency":"GBP","url":"https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting","availability":"https://schema.org/InStock"}]},{"@type":"Service","@id":"https://hosterlo.com/hosting/wordpress-hosting/#service","name":"WordPress Hosting | Fast, Secure and Managed for Growth","serviceType":"Web Hosting","provider":{"@id":"https://hosterlo.com/#organization"},"areaServed":"Worldwide","description":"Hosterlo WordPress hosting helps customers run WordPress with fast storage, SSL, backups, LiteSpeed-style performance, security, and support.","offers":{"@id":"https://hosterlo.com/#hosting-offers"}},{"@type":"FAQPage","@id":"https://hosterlo.com/hosting/wordpress-hosting/#faq","mainEntity":[{"@type":"Question","name":"Can I run WordPress on Hosterlo?","acceptedAnswer":{"@type":"Answer","text":"Yes! The Website Launch Bundle is pre-configured and optimized specifically for WordPress. We handle the initial installation so you can start designing your site immediately."}},{"@type":"Question","name":"Is WordPress hosting beginner-friendly?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. Our customised control panel makes it easy to manage your site, install plugins, and create custom emails without needing any code. Plus, our support team is available on WhatsApp to guide you through your initial setup tasks."}},{"@type":"Question","name":"Does Hosterlo migrate my existing WordPress site for free?","acceptedAnswer":{"@type":"Answer","text":"Yes! We provide 100% free migration assistance for WordPress. Once you sign up, simply request a transfer from our team, and our migration experts will move your files, database, and settings safely."}},{"@type":"Question","name":"How does Gemini Pro help me with my WordPress site?","acceptedAnswer":{"@type":"Answer","text":"Your Website Launch Bundle includes an 18 months Gemini Pro AI license. You can use it to write high-converting blog posts, optimize your metadata, perform keyword research, and create page outlines right from your content editor."}}]}]}</script>"}}]}]}</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="/uk/styles.css"/>
+    <link rel="stylesheet" href="/styles.css"/>
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -156,6 +156,24 @@
             <a class="nav-link" href="/uk/hosting/wordpress-hosting/">WordPress Hosting</a>
             <a class="nav-link" href="/uk/pricing/">Pricing</a>
             <a class="nav-link" href="/uk/domains/">Domains</a>
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">
+                    Services <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span>
+                </button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/services/" class="block px-5 py-2.5 hover:bg-slate-50 hover:text-primary text-slate-800 text-sm font-extrabold transition-colors">All Services Hub</a>
+                    <div class="h-px bg-slate-100 my-1 mx-5"></div>
+                    <a href="/services/web-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Web Development</a>
+                    <a href="/services/saas-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">SaaS Development</a>
+                    <a href="/services/frontend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Frontend Development</a>
+                    <a href="/services/backend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Backend Development</a>
+                    <a href="/services/ui-ux-design/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">UI/UX Design</a>
+                    <a href="/services/mobile-app-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Mobile App Dev</a>
+                    <a href="/services/api-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">API Development</a>
+                    <a href="/services/website-maintenance/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Website Maintenance</a>
+                </div>
+            </div>
             <a class="nav-link" href="/free-tools/">Free Tools</a>
             <a class="nav-link" href="/blog/">Blog</a>
             <a class="nav-link" href="/uk/contact-us/">Contact</a>
@@ -202,6 +220,9 @@
 <a href="/uk/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">language</span> Domains
 </a>
+<a href="/services/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">design_services</span> Services
+</a>
 <a href="/free-tools/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3">
 <span class="material-symbols-outlined text-primary">build</span> Free Tools
 </a>
@@ -220,6 +241,10 @@
 </div>
 </div>
 </div>
+
+
+
+
 
 
 
@@ -532,7 +557,7 @@
     <div class="max-w-[1440px] mx-auto px-6 relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
             <!-- Company Info -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-3 space-y-6">
                 <a href="/uk/">
                     <img src="/assets/logo.png" alt="Hosterlo Logo" class="w-[185px] h-auto" decoding="async">
                 </a>
@@ -552,7 +577,7 @@
 
             <!-- Products -->
             <div class="lg:col-span-2">
-                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Solutions</h4>
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Hosting Solutions</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/uk/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
                     <li><a href="/uk/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Shared Hosting</a></li>
@@ -560,8 +585,24 @@
                     <li><a href="/uk/domains/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Domain Names</a></li>
                 </ul>
             </div>
-            <!-- Support -->
+
+            <!-- Development Services -->
             <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Development Services</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/services/web-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Web Development</a></li>
+                    <li><a href="/services/saas-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">SaaS Development</a></li>
+                    <li><a href="/services/frontend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Frontend Development</a></li>
+                    <li><a href="/services/backend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Backend Development</a></li>
+                    <li><a href="/services/ui-ux-design/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">UI/UX Design</a></li>
+                    <li><a href="/services/mobile-app-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Mobile App Dev</a></li>
+                    <li><a href="/services/api-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">API Development</a></li>
+                    <li><a href="/services/website-maintenance/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Website Maintenance</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support & Policies</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/uk/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
@@ -572,7 +613,7 @@
             </div>
 
             <!-- Resources -->
-            <div class="lg:col-span-3">
+            <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Resources</h4>
                 <ul class="space-y-3.5">
                     <li><a href="/uk/about-hosterlo/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">About Hosterlo</a></li>
@@ -618,7 +659,7 @@
             <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
                 <a href="/privacy-policy/" class="hover:text-primary transition-colors">Privacy Policy</a>
                 <a href="/terms-conditions/" class="hover:text-primary transition-colors">Terms of Service</a>
-                <a href="/uk/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Sitemap</a>
             </div>
         </div>
         
@@ -682,6 +723,10 @@
         </a>
     </div>
 </footer>
+
+
+
+
 
 
 
