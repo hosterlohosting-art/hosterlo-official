@@ -579,4 +579,85 @@
     <priority>0.80</priority>
     <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
   </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/es/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/hero-section-image.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/hosting/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/hosting/shared-hosting/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/hosting/wordpress-hosting/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/hosting/business-email/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/domains/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/about-hosterlo/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/contact-us/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/pricing/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/faq/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
 </urlset>

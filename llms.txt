@@ -104,6 +104,16 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 
 ### Regional Market Sites
 
+- https://hosterlo.com/es/ - Hosting web barato en España y Latinoamérica por $59/año. Incluye almacenamiento NVMe rápido, dominio .com gratis, correo corporativo, SSL y Gemini Pro.
+- https://hosterlo.com/es/about-hosterlo/ - Conoce Hosterlo. Proveedor de hosting web enfocado en la transparencia, velocidad, infraestructura en la nube global y soporte humano.
+- https://hosterlo.com/es/contact-us/ - Ponte en contacto con Hosterlo. Soporte técnico de hosting, ayuda con migraciones y consultas comerciales por WhatsApp y ticket.
+- https://hosterlo.com/es/domains/ - Busca, registra y compra dominios al mejor precio. Protección WHOIS incluida, redirección de correo y configuración DNS fácil.
+- https://hosterlo.com/es/faq/ - Respuestas a las preguntas más frecuentes sobre hosting web, registro de dominios, migración gratuita, correo corporativo y Gemini Pro.
+- https://hosterlo.com/es/hosting/ - Elige el mejor plan de hosting web. Servidores ultra rápidos con tecnología LiteSpeed, SSL gratis, copias de seguridad diarias y soporte por WhatsApp.
+- https://hosterlo.com/es/hosting/business-email/ - Crea cuentas de correo corporativo profesional para tu negocio. Funcionalidades empresariales, antispam y soporte las 24 horas.
+- https://hosterlo.com/es/hosting/shared-hosting/ - Hosting compartido de alta velocidad con cPanel. Ideal para blogs y pequeños negocios. Soporte en español, SSL gratis y dominio .com incluido.
+- https://hosterlo.com/es/hosting/wordpress-hosting/ - Hosting WordPress de alto rendimiento con instalación en un clic, almacenamiento NVMe, caché LiteSpeed integrada, seguridad avanzada y soporte.
+- https://hosterlo.com/es/pricing/ - Precios transparentes de hosting web. Paquete de lanzamiento por $59/año con todo lo que necesitas para iniciar tu sitio web.
 - https://hosterlo.com/pk/ - Launch your website with Hosterlo for Rs. 16,500/yr. Get fast hosting, a free .com domain, business email, SSL, setup support, and Gemini Pro for 18 months.
 - https://hosterlo.com/pk/about-hosterlo/ - Hosterlo helps businesses, creators, bloggers, and startups launch websites with hosting, domain, email, SSL, support, and simple online tools.
 - https://hosterlo.com/pk/compare/hosterlo-vs-bluehost/ - Compare Hosterlo vs Bluehost in 2026. Honest breakdown of hosting speeds, support channels, renewal price hikes, and overall package value.

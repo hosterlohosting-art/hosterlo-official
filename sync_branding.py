@@ -179,6 +179,14 @@ def main():
         except Exception as e:
             print(f"Warning: Could not extract PK blocks: {e}")
             
+    es_header, es_footer = None, None
+    if os.path.exists(os.path.join('es', 'index.html')):
+        try:
+            es_header, es_footer = extract_premium_blocks_from_file(os.path.join('es', 'index.html'))
+            print("Extracted ES premium header and footer blocks successfully!")
+        except Exception as e:
+            print(f"Warning: Could not extract ES blocks: {e}")
+            
     count = 0
     for root, dirs, files in os.walk('.'):
         if '.git' in dirs:
@@ -190,17 +198,20 @@ def main():
                 norm_path = os.path.normpath(file_path)
                 
                 # Skip the homepages of each market to avoid overwriting their template source
-                if norm_path in ['index.html', os.path.join('.', 'index.html'), os.path.join('uk', 'index.html'), os.path.join('pk', 'index.html')]:
+                if norm_path in ['index.html', os.path.join('.', 'index.html'), os.path.join('uk', 'index.html'), os.path.join('pk', 'index.html'), os.path.join('es', 'index.html')]:
                     continue
                     
                 # Determine which market blocks to use
                 norm_path_lower = norm_path.lower()
-                if os.sep + 'uk' + os.sep in norm_path_lower or norm_path_lower.startswith('uk' + os.sep):
+                if os.sep + 'uk' + os.sep in norm_path_lower or norm_path_lower.startswith('uk' + os.sep + '') or norm_path_lower.startswith('uk' + os.sep):
                     h_block = uk_header if uk_header else us_header
                     f_block = uk_footer if uk_footer else us_footer
                 elif os.sep + 'pk' + os.sep in norm_path_lower or norm_path_lower.startswith('pk' + os.sep):
                     h_block = pk_header if pk_header else us_header
                     f_block = pk_footer if pk_footer else us_footer
+                elif os.sep + 'es' + os.sep in norm_path_lower or norm_path_lower.startswith('es' + os.sep):
+                    h_block = es_header if es_header else us_header
+                    f_block = es_footer if es_footer else us_footer
                 else:
                     h_block = us_header
                     f_block = us_footer
