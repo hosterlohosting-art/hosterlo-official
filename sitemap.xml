@@ -641,4 +641,53 @@
     <priority>0.85</priority>
     <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
   </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/2026/06/03/react-vs-vue-vs-angular-which-for-your-project/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/gemini-pro/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/hosting/business-email/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/hosting-for-small-business/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/pk/hosting/business-email/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/uk/hosting/business-email/</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
 </urlset>
