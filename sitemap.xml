@@ -1262,4 +1262,37 @@
     <priority>0.80</priority>
     <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
   </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/2026/04/30/best-web-hosting-for-websites-2026/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/premium-web-hosting-server.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/2026/06/03/how-to-migrate-website-to-new-host-without-downtime/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/hosterlo_cloud_offer_visual_1777997610856.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/2026/06/03/why-is-my-website-down-common-causes-and-fixes/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/2026/06/16/figma-to-html-css-clean-code-conversion-workflow/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
+  </url>
+
 </urlset>

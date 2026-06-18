@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Por Qué Está Caído Mi Sitio Web? 12 Causas Comunes y Soluciones | Hosterlo Blog</title>
+    <meta name="description" content="¿Tu sitio web está caído? Aprende las 12 causas más comunes del tiempo de inactividad y las soluciones paso a paso para errores de DNS, caídas del servidor, problemas SSL y más.">
+    <meta name="keywords" content="por qué está caído mi sitio web, solución sitio caído, sitio web no carga, servidor caído, error DNS">
+    <meta name="author" content="Equipo Editorial Hosterlo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hosterlo.com/es/2026/06/03/why-is-my-website-down-common-causes-and-fixes/">
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="¿Por Qué Está Caído Mi Sitio Web? 12 Causas Comunes y Soluciones">
+    <meta property="og:description" content="¿Tu sitio web está caído? Aprende las 12 causas más comunes del tiempo de inactividad y las soluciones paso a paso para errores de DNS, caídas del servidor, problemas SSL y más.">
+    <meta property="og:image" content="https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp">
+    <meta property="og:url" content="https://hosterlo.com/es/2026/06/03/why-is-my-website-down-common-causes-and-fixes/">
+    <meta property="og:site_name" content="Hosterlo">
+    <meta property="og:locale" content="es_ES">
+    <meta property="article:published_time" content="2026-06-03T00:00:00+00:00">
+    <meta property="article:section" content="Solución de Problemas Web">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¿Por Qué Está Caído Mi Sitio Web? 12 Causas Comunes y Soluciones">
+    <meta name="twitter:description" content="¿Tu sitio web está caído? Aprende las 12 causas más comunes del tiempo de inactividad y las soluciones paso a paso para errores de DNS, caídas del servidor, problemas SSL y más.">
+    <meta name="twitter:image" content="https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#4f17ce' },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": "¿Por Qué Está Caído Mi Sitio Web? 12 Causas Comunes y Soluciones",
+                "description": "¿Tu sitio web está caído? Aprende las 12 causas más comunes del tiempo de inactividad y las soluciones paso a paso para errores de DNS, caídas del servidor, problemas SSL y más.",
+                "image": "https://hosterlo.com/hosterlo_bulletproof_datacenter_1777997514213.webp",
+                "author": { "@type": "Organization", "name": "Equipo Editorial Hosterlo", "url": "https://hosterlo.com" },
+                "publisher": { "@type": "Organization", "name": "Hosterlo", "logo": { "@type": "ImageObject", "url": "https://hosterlo.com/assets/logo.png" } },
+                "datePublished": "2026-06-03",
+                "dateModified": "2026-06-03",
+                "inLanguage": "es",
+                "mainEntityOfPage": { "@type": "WebPage", "@id": "https://hosterlo.com/es/2026/06/03/why-is-my-website-down-common-causes-and-fixes/" },
+                "articleSection": "Solución de Problemas Web",
+                "keywords": "sitio web caído, solución sitio caído, sitio web no carga, servidor caído, error DNS"
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "¿Cómo puedo saber si mi sitio web está caído para todo el mundo?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Usa una herramienta gratuita como downforeveryoneorjustme.com o isitdownrightnow.com. Ingresa tu URL y te dirá si el sitio está caído globalmente o solo desde tu conexión. Si está caído solo para ti, el problema puede ser local — prueba limpiar el caché o usar una red diferente." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Cuánto tiempo de inactividad es normal?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Un hosting de buena calidad debe garantizar un uptime del 99.9%, lo que equivale a menos de 9 horas de tiempo de inactividad al año. Si tu sitio cae más que eso, ya sea con frecuencia o durante períodos prolongados, deberías considerar cambiar a un proveedor más confiable como Hosterlo." }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Por qué mi sitio web sigue cayendo?",
+                        "acceptedAnswer": { "@type": "Answer", "text": "Las causas repetidas de tiempo de inactividad suelen deberse a un plan de hosting de recursos compartidos bajo carga pesada, ataques DDoS frecuentes sin protección adecuada, código mal optimizado que consume demasiados recursos del servidor, o un proveedor de hosting poco confiable con infraestructura deficiente. Identifica el patrón y aborda la causa raíz." }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        body { font-family: "Plus Jakarta Sans", sans-serif !important; }
+        h1, h2, h3, h4, h5, h6 { font-family: "Outfit", sans-serif !important; }
+        body { color: #1e1b2e; background-color: #ffffff; }
+        .nav-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 0.9rem; color: #374151; transition: color 0.2s; }
+        .nav-link:hover { color: #4f17ce; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; }
+        .faq-item summary { cursor: pointer; padding: 1.25rem 0; font-weight: 700; font-size: 1rem; color: #111c2d; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: '+'; font-size: 1.5rem; color: #4f17ce; transition: transform 0.3s; flex-shrink: 0; }
+        .faq-item[open] summary::after { content: '−'; }
+        .faq-item p { padding-bottom: 1.25rem; color: #484455; line-height: 1.7; }
+        .article-body p { margin-bottom: 1.25rem; line-height: 1.85; color: #374151; font-size: 1.0625rem; }
+        .article-body h2 { font-size: 1.6rem; font-weight: 800; color: #111c2d; margin-top: 2.75rem; margin-bottom: 1rem; line-height: 1.25; }
+        .article-body h3 { font-size: 1.2rem; font-weight: 700; color: #1e1b2e; margin-top: 1.75rem; margin-bottom: 0.75rem; }
+        .article-body ul { margin-bottom: 1.25rem; padding-left: 1.5rem; list-style: disc; }
+        .article-body ul li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; font-size: 1.0625rem; }
+        .article-body ol { margin-bottom: 1.25rem; padding-left: 1.5rem; list-style: decimal; }
+        .article-body ol li { margin-bottom: 0.5rem; line-height: 1.75; color: #374151; font-size: 1.0625rem; }
+        .article-body a { color: #4f17ce; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { color: #3a0fa8; }
+        .article-body strong { color: #111c2d; font-weight: 700; }
+        .article-body code { background: #f1eeff; color: #4f17ce; padding: 0.15em 0.5em; border-radius: 0.3em; font-size: 0.92em; font-family: 'Courier New', monospace; }
+        .tip-box { background: #f5f0ff; border-left: 4px solid #4f17ce; border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .tip-box p { margin-bottom: 0 !important; }
+        .warning-box { background: #fff8ed; border-left: 4px solid #f59e0b; border-radius: 0 0.75rem 0.75rem 0; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+        .warning-box p { margin-bottom: 0 !important; }
+        .cause-badge { display: inline-block; background: #4f17ce; color: white; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.75rem; border-radius: 999px; margin-bottom: 0.5rem; }
+        .material-symbols-outlined { display: inline-block !important; width: 1em !important; height: 1em !important; overflow: hidden !important; white-space: nowrap !important; word-wrap: normal !important; direction: ltr !important; }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="sticky top-4 w-full z-50 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-[1440px] mx-auto bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl sm:rounded-full px-6 sm:px-8 h-[80px] flex items-center justify-between shadow-lg shadow-indigo-900/5">
+        <div class="flex-shrink-0">
+            <a href="/"><img alt="Hosterlo Premium Cloud Hosting Logo" class="w-[185px] h-auto" src="/assets/logo.png" decoding="async"></a>
+        </div>
+        <nav class="hidden lg:flex items-center gap-8">
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">Hosting <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span></button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Cloud Hosting</a>
+                    <a href="/hosting/shared-hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Hosting Compartido</a>
+                    <a href="/hosting/wordpress-hosting/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Hosting WordPress</a>
+                </div>
+            </div>
+            <a class="nav-link" href="/domains/">Dominios</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">Servicios <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span></button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/services/" class="block px-5 py-2.5 hover:bg-slate-50 hover:text-primary text-slate-800 text-sm font-extrabold transition-colors">Todos los Servicios</a>
+                    <div class="h-px bg-slate-100 my-1 mx-5"></div>
+                    <a href="/services/web-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Desarrollo Web</a>
+                    <a href="/services/saas-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Desarrollo SaaS</a>
+                    <a href="/services/frontend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Desarrollo Frontend</a>
+                    <a href="/services/backend-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Desarrollo Backend</a>
+                    <a href="/services/ui-ux-design/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Diseño UI/UX</a>
+                    <a href="/services/mobile-app-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Apps Móviles</a>
+                    <a href="/services/api-development/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Desarrollo API</a>
+                    <a href="/services/website-maintenance/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Mantenimiento Web</a>
+                </div>
+            </div>
+            <a class="nav-link" href="/pricing/">Precios</a>
+            <div class="relative group">
+                <button class="nav-link flex items-center gap-1.5 focus:outline-none">Recursos <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:rotate-180">keyboard_arrow_down</span></button>
+                <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white/95 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100] py-3">
+                    <a href="/es/blog/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Blog de Hosterlo</a>
+                    <a href="/free-tools/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Herramientas Gratuitas</a>
+                    <a href="/about-hosterlo/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Sobre Hosterlo</a>
+                    <a href="/contact-us/" class="block px-5 py-2 hover:bg-slate-50 hover:text-primary text-slate-700 text-sm font-semibold transition-colors">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+            <a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="px-5 py-2.5 bg-[#f2ebfa] text-primary hover:bg-[#ebdffd] font-bold rounded-full transition-all duration-300 text-sm hidden sm:block">Acceso Cliente</a>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="px-6 py-2.5 bg-primary text-white font-bold rounded-full shadow-md transition-all text-sm hidden sm:block">Obtener Bundle $59</a>
+            <button id="mobile-menu-open" class="lg:hidden w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 text-on-background active:scale-90 transition-all"><span class="material-symbols-outlined text-2xl">menu</span></button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay" class="hidden fixed inset-0 z-[10000] bg-white translate-x-full transition-transform duration-500 lg:hidden overflow-y-auto w-full h-full" style="background-color: white !important; opacity: 1 !important;">
+<div class="p-6 h-full flex flex-col">
+<div class="flex items-center justify-between mb-12">
+<img alt="Hosterlo" class="w-[150px] h-auto" src="/assets/logo.png" decoding="async">
+<button id="mobile-menu-close" class="w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50"><span class="material-symbols-outlined text-2xl">close</span></button>
+</div>
+<nav class="space-y-6 mb-12">
+<div class="grid grid-cols-1 gap-2 text-lg font-bold">
+<a href="/hosting/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">cloud</span> Hosting</a>
+<a href="/pricing/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">payments</span> Precios</a>
+<a href="/domains/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">language</span> Dominios</a>
+<a href="/services/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">design_services</span> Servicios</a>
+<a href="/es/blog/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">article</span> Blog</a>
+<a href="/contact-us/" class="py-3 px-4 rounded-xl hover:bg-slate-50 text-slate-800 flex items-center gap-3"><span class="material-symbols-outlined text-primary">contact_support</span> Contacto</a>
+</div>
+</nav>
+<div class="mt-auto space-y-4">
+<a href="https://billing.hosterlo.com/index.php?rp=%2Flogin" class="block w-full py-4 text-center text-slate-600 font-bold bg-slate-100 rounded-2xl">Acceso Cliente</a>
+<a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="block w-full py-4 text-center bg-primary text-white font-bold rounded-2xl shadow-xl shadow-primary/20">Obtener Bundle $59</a>
+</div>
+</div>
+</div>
+
+<!-- Breadcrumb -->
+<nav class="max-w-4xl mx-auto px-6 pt-8 pb-2 relative z-20" aria-label="Ruta de navegación">
+    <ol class="flex items-center gap-2 text-xs text-slate-400 font-semibold">
+        <li><a href="/" class="hover:text-primary transition-colors">Inicio</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li><a href="/es/blog/" class="hover:text-primary transition-colors">Blog</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li class="text-primary font-bold">Sitio Web Caído — Causas y Soluciones</li>
+    </ol>
+</nav>
+
+<!-- Hero -->
+<div class="relative bg-gradient-to-br from-[#1e1b2e] via-[#2d1a6e] to-[#4f17ce] pt-20 pb-16 px-4 sm:px-8 mt-6 overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 50%, #a78bfa 0%, transparent 50%), radial-gradient(circle at 80% 20%, #818cf8 0%, transparent 50%);"></div>
+    <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
+            <span class="material-symbols-outlined text-sm text-red-300">warning</span>
+            <span class="text-purple-200 text-xs font-bold uppercase tracking-widest">Solución de Problemas</span>
+            <span class="text-purple-400 text-xs mx-1">·</span>
+            <span class="text-purple-200 text-xs">12 min de lectura</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-6" style="font-family: 'Outfit', sans-serif;">
+            ¿Por Qué Está Caído Mi Sitio Web? 12 Causas Comunes y Sus Soluciones
+        </h1>
+        <p class="text-purple-200 text-lg max-w-2xl mx-auto leading-relaxed">Guía de diagnóstico completa — desde problemas del servidor hasta errores SSL — para que tu sitio vuelva a estar en línea rápidamente.</p>
+        <div class="flex items-center justify-center gap-4 mt-8 text-sm text-purple-300 font-semibold">
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">calendar_today</span> 3 de junio de 2026</span>
+            <span class="opacity-40">|</span>
+            <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base">person</span> Equipo Editorial Hosterlo</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content -->
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <article class="article-body">
+
+        <p>Pocos momentos son tan estresantes para un propietario de sitio web como descubrir que su sitio está caído. Ya sea que lo notes por un correo de un cliente, una alerta de monitoreo o simplemente al intentar visitar tu propia página — la reacción instintiva es entrar en pánico. No lo hagas. La mayoría de las caídas tienen causas bien definidas y soluciones directas.</p>
+
+        <p>Esta guía cubre las <strong>12 razones más comunes por las que un sitio web se cae</strong>, qué buscar en cada caso y exactamente qué hacer para que tu sitio vuelva a estar en línea lo antes posible.</p>
+
+        <h2>Primero: Verifica si el Problema es Solo Tuyo</h2>
+
+        <p>Antes de diagnosticar cualquier cosa, confirma si el sitio está realmente caído para todo el mundo o solo para ti.</p>
+
+        <ul>
+            <li>Visita <a href="https://downforeveryoneorjustme.com" rel="noopener noreferrer">downforeveryoneorjustme.com</a> e ingresa tu URL</li>
+            <li>Prueba desde otro dispositivo o red (p. ej., el 4G de tu teléfono)</li>
+            <li>Usa una VPN para ver el sitio desde otra ubicación</li>
+            <li>Verifica <a href="https://isitdownrightnow.com" rel="noopener noreferrer">isitdownrightnow.com</a></li>
+        </ul>
+
+        <p>Si el sitio está caído solo para ti, el problema probablemente está en tu conexión, caché del navegador o configuración de DNS local — no en tu hosting. Prueba limpiar tu caché, reiniciar tu router o cambiar tus servidores DNS a 8.8.8.8 (Google DNS).</p>
+
+        <h2>Causa 1 — El Servidor Está Caído</h2>
+
+        <p><span class="cause-badge">Servidor</span></p>
+        <p>La causa más obvia: tu proveedor de hosting está experimentando un problema en su servidor. Puede deberse a un fallo de hardware, mantenimiento programado, sobrecarga de recursos o un problema en el centro de datos.</p>
+
+        <p><strong>Cómo confirmarlo:</strong> Inicia sesión en el panel de tu proveedor de hosting o visita su página de estado (p. ej., status.hosterlo.com). La mayoría de los hosts confiables publican actualizaciones de incidentes en tiempo real.</p>
+
+        <p><strong>Solución:</strong> Si es un problema del servidor del proveedor, solo puedes esperar a que lo solucionen. Sin embargo, si los apagones del servidor son frecuentes, es una señal de que necesitas un proveedor más confiable con garantía de uptime del 99.9% o superior.</p>
+
+        <div class="tip-box">
+            <p><strong>Consejo Hosterlo:</strong> Hosterlo garantiza un uptime del 99.9% respaldado por infraestructura redundante. Si tu host actual cae regularmente, es hora de migrar.</p>
+        </div>
+
+        <h2>Causa 2 — Dominio Expirado</h2>
+
+        <p><span class="cause-badge">Dominio</span></p>
+        <p>Uno de los problemas más comunes y fácilmente evitables. Si no renuevas tu nombre de dominio antes de que expire, el registrador lo desactiva y tu sitio deja de resolver.</p>
+
+        <p><strong>Señales:</strong> Los visitantes ven una página de "Este dominio ha expirado" o una página del estacionamiento del registrador en lugar de tu sitio.</p>
+
+        <p><strong>Solución:</strong> Inicia sesión en tu registrador de dominios y renueva el dominio de inmediato. La propagación DNS puede tardar entre 1 y 24 horas después de la renovación. Para evitar que esto vuelva a ocurrir, activa la renovación automática y mantén actualizada la información de pago.</p>
+
+        <h2>Causa 3 — Problemas de DNS</h2>
+
+        <p><span class="cause-badge">DNS</span></p>
+        <p>El DNS es el sistema que traduce tu nombre de dominio (p. ej., hosterlo.com) a una dirección IP que los servidores pueden entender. Si los registros DNS están mal configurados o los nameservers son incorrectos, tu sitio parecerá caído aunque el servidor esté funcionando perfectamente.</p>
+
+        <p><strong>Cómo confirmarlo:</strong> Usa <a href="https://dnschecker.org" rel="noopener noreferrer">DNSChecker.org</a> para ver si tu dominio está resolviendo a la IP correcta globalmente.</p>
+
+        <p><strong>Solución:</strong> Inicia sesión en el panel de DNS de tu registrador o proveedor de DNS. Verifica que el registro A para <code>@</code> y <code>www</code> apunte a la IP correcta de tu servidor. Si cambiaste recientemente de host, espera a que la propagación se complete (hasta 48 horas).</p>
+
+        <h2>Causa 4 — Certificado SSL Caducado o Inválido</h2>
+
+        <p><span class="cause-badge">SSL</span></p>
+        <p>Si tu certificado SSL expira, los navegadores bloquearán activamente el acceso a tu sitio y mostrarán advertencias de seguridad alarmantes como "Su conexión no es privada". Esto efectivamente hace que tu sitio sea inaccesible para la mayoría de los visitantes.</p>
+
+        <p><strong>Señales:</strong> Los visitantes ven una página de error con código NET::ERR_CERT_EXPIRED o similar. El candado en la barra de URL muestra una advertencia.</p>
+
+        <p><strong>Solución:</strong> Renueva o reinstala tu certificado SSL. En cPanel, ve a SSL/TLS Status y busca el botón de renovación. La mayoría de los hosts modernos como Hosterlo utilizan Let's Encrypt, que renueva automáticamente. Si la renovación automática falla, contáctate con el soporte de tu host.</p>
+
+        <h2>Causa 5 — Hosting Sobrecargado o Sin Recursos</h2>
+
+        <p><span class="cause-badge">Recursos</span></p>
+        <p>Los planes de hosting compartido tienen límites de recursos. Si tu sitio experimenta un pico de tráfico repentino (p. ej., una publicación viral, un evento de ventas), puede superar los límites de memoria o CPU de tu plan, haciendo que el servidor rechace nuevas solicitudes.</p>
+
+        <p><strong>Señales:</strong> Errores 503 Service Unavailable, páginas que cargan muy lentamente antes de agotarse, o el panel de cPanel que muestra uso de CPU/RAM al 100%.</p>
+
+        <p><strong>Solución:</strong> A corto plazo, optimiza imágenes, activa el caché y usa una CDN para reducir la carga del servidor. A largo plazo, considera actualizar a un plan con más recursos o cambiar a <a href="/hosting/">hosting cloud de Hosterlo</a> con recursos escalables.</p>
+
+        <h2>Causa 6 — Plugin o Tema Defectuoso (WordPress)</h2>
+
+        <p><span class="cause-badge">WordPress</span></p>
+        <p>Si tu sitio ejecuta WordPress, una actualización de plugin o tema con errores puede provocar una pantalla blanca de la muerte (WSOD) o hacer que el sitio deje de cargar por completo.</p>
+
+        <p><strong>Señales:</strong> El sitio cae inmediatamente después de una actualización. Ves una página en blanco o un error PHP.</p>
+
+        <p><strong>Solución:</strong></p>
+        <ol>
+            <li>Accede a cPanel → Administrador de Archivos → <code>wp-content/plugins</code></li>
+            <li>Renombra la carpeta del plugin más recientemente actualizado (p. ej., <code>woocommerce_OLD</code>) — esto lo desactiva</li>
+            <li>Si el sitio se recupera, ese plugin era el culpable</li>
+            <li>Contacta al desarrollador del plugin para una corrección o revierte a la versión anterior</li>
+        </ol>
+
+        <h2>Causa 7 — Ataque DDoS</h2>
+
+        <p><span class="cause-badge">Seguridad</span></p>
+        <p>Un ataque de denegación de servicio distribuido (DDoS) abruma tu servidor con tráfico falso hasta que se queda sin recursos y no puede atender a visitantes legítimos.</p>
+
+        <p><strong>Señales:</strong> Pico masivo repentino en el tráfico, tiempos de respuesta del servidor extremadamente altos, registros de acceso llenos de solicitudes repetitivas desde muchas IPs diferentes.</p>
+
+        <p><strong>Solución:</strong> Activa la protección DDoS a través de tu proveedor de hosting o un servicio CDN/WAF como Cloudflare. Cloudflare ofrece mitigación DDoS gratuita y puede absorber la mayor parte del ataque antes de que llegue a tu servidor. Contacta a tu proveedor de hosting de inmediato — muchos tienen protocolos de respuesta a DDoS.</p>
+
+        <h2>Causa 8 — Error de Base de Datos</h2>
+
+        <p><span class="cause-badge">Base de Datos</span></p>
+        <p>La mayoría de los sitios web dinámicos (WordPress, Joomla, tiendas de eCommerce) dependen de una base de datos MySQL. Si la base de datos no responde, está llena, o las credenciales cambian sin que el sitio lo sepa, aparecerá un error de "Error al establecer una conexión con la base de datos".</p>
+
+        <p><strong>Solución:</strong></p>
+        <ol>
+            <li>Verifica en tu panel de hosting que el servicio MySQL esté en ejecución</li>
+            <li>Para WordPress, abre <code>wp-config.php</code> y verifica que las credenciales de la base de datos sean correctas</li>
+            <li>Ejecuta la herramienta de reparación de WordPress visitando <code>tudominio.com/wp-admin/maint/repair.php</code></li>
+            <li>Verifica el espacio en disco — una base de datos llena puede dejar de responder</li>
+        </ol>
+
+        <h2>Causa 9 — Límite de Memoria PHP Superado</h2>
+
+        <p><span class="cause-badge">PHP</span></p>
+        <p>Si tu sitio intenta usar más memoria RAM que la permitida por tu plan de hosting, PHP simplemente se detendrá y mostrará un error o una pantalla en blanco.</p>
+
+        <p><strong>Solución:</strong> Aumenta el límite de memoria PHP en <code>wp-config.php</code>:</p>
+        <pre class="bg-[#1e1b2e] text-[#e2e8f0] p-4 rounded-xl text-sm overflow-x-auto mb-4"><code>define('WP_MEMORY_LIMIT', '256M');</code></pre>
+        <p>O modifica el archivo <code>php.ini</code> o <code>.htaccess</code> de tu hosting. Si el problema persiste, la solución a largo plazo es actualizar a un plan con más recursos de RAM.</p>
+
+        <h2>Causa 10 — Espacio en Disco Agotado</h2>
+
+        <p><span class="cause-badge">Almacenamiento</span></p>
+        <p>Si tu plan de hosting se queda sin espacio en disco, el servidor no puede escribir nuevos archivos, los registros se llenan y eventualmente todo deja de funcionar. Esto es especialmente común en sitios con mucho contenido multimedia o registros extensos.</p>
+
+        <p><strong>Solución:</strong></p>
+        <ul>
+            <li>Revisa el uso de disco en cPanel → Uso de Disco</li>
+            <li>Elimina copias de seguridad antiguas, archivos de registro y archivos temporales</li>
+            <li>Comprimir imágenes y limpiar la biblioteca de medios</li>
+            <li>Considera actualizar a un plan con más almacenamiento</li>
+        </ul>
+
+        <h2>Causa 11 — Archivo .htaccess Corrupto</h2>
+
+        <p><span class="cause-badge">Configuración</span></p>
+        <p>El archivo <code>.htaccess</code> controla cómo tu servidor maneja las solicitudes de páginas. Si está dañado o contiene una sintaxis incorrecta (a veces después de instalar un plugin de seguridad o SEO), Apache rechazará todas las solicitudes con un error 500.</p>
+
+        <p><strong>Solución:</strong></p>
+        <ol>
+            <li>Accede a cPanel → Administrador de Archivos</li>
+            <li>Navega a tu <code>public_html</code> y localiza <code>.htaccess</code> (activa "Mostrar archivos ocultos")</li>
+            <li>Renombra el archivo a <code>.htaccess_OLD</code></li>
+            <li>Si el sitio se recupera, genera uno nuevo desde WordPress en Ajustes → Permalinks → Guardar</li>
+        </ol>
+
+        <h2>Causa 12 — Problema de Resolución de DNS Local</h2>
+
+        <p><span class="cause-badge">Local</span></p>
+        <p>A veces, solo tu computadora o red local tiene problemas para resolver el dominio — quizás porque tu ISP tiene problemas de DNS, o tu caché DNS local está desactualizado.</p>
+
+        <p><strong>Solución:</strong></p>
+        <ul>
+            <li>En Windows: abre cmd y ejecuta <code>ipconfig /flushdns</code></li>
+            <li>En Mac: ejecuta <code>sudo dscacheutil -flushcache</code></li>
+            <li>Cambia temporalmente tus DNS a 8.8.8.8 y 8.8.4.4 (Google DNS) o 1.1.1.1 (Cloudflare DNS)</li>
+            <li>Prueba desde otro dispositivo o red móvil para confirmar</li>
+        </ul>
+
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="mt-8 space-y-0">
+            <details class="faq-item">
+                <summary>¿Cómo puedo saber si mi sitio web está caído para todo el mundo?</summary>
+                <p>Usa una herramienta gratuita como downforeveryoneorjustme.com o isitdownrightnow.com. Ingresa tu URL y te dirá si el sitio está caído globalmente o solo desde tu conexión.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Cuánto tiempo de inactividad es normal?</summary>
+                <p>Un hosting de buena calidad debe garantizar un uptime del 99.9%, lo que equivale a menos de 9 horas de tiempo de inactividad al año. Si tu sitio cae con más frecuencia, considera cambiar a un proveedor más confiable.</p>
+            </details>
+            <details class="faq-item">
+                <summary>¿Por qué mi sitio web sigue cayendo?</summary>
+                <p>Las causas repetidas de tiempo de inactividad suelen deberse a un plan de hosting de recursos compartidos bajo carga pesada, ataques DDoS frecuentes sin protección adecuada, código mal optimizado que consume demasiados recursos del servidor, o un proveedor de hosting poco confiable con infraestructura deficiente.</p>
+            </details>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 bg-gradient-to-br from-[#1e1b2e] via-[#2d1a6e] to-[#4f17ce] rounded-3xl p-10 text-center text-white">
+            <h2 class="text-3xl font-black mb-3 text-white">¿Tu Hosting Es Poco Confiable?</h2>
+            <p class="text-purple-200 mb-6 max-w-lg mx-auto">Cambia a Hosterlo — hosting NVMe ultrarrápido con uptime garantizado del 99.9%, SSL gratuito, y soporte experto 24/7 disponible por WhatsApp.</p>
+            <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="inline-block bg-white text-primary font-extrabold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">Obtener el Bundle de $59 →</a>
+        </div>
+
+    </article>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#f8f6fc] border-t border-slate-200/50 pt-24 pb-16 text-slate-900 relative overflow-hidden">
+    <div class="absolute bottom-24 left-0 right-0 text-center text-[11vw] font-black text-[#e3daef] opacity-[0.06] select-none pointer-events-none uppercase leading-none tracking-tighter z-0">hosterlo</div>
+    <div class="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
+            <div class="lg:col-span-3 space-y-6">
+                <a href="/"><img src="/assets/logo.png" alt="Hosterlo Logo" class="w-[185px] h-auto" decoding="async"></a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-sm">Hosterlo ayuda a empresas, bloggers, freelancers y primeros propietarios de sitios web a lanzarse en línea con hosting, dominio .com gratuito, SSL, correo empresarial, soporte por WhatsApp y bono Gemini Pro en un paquete anual.</p>
+                <div class="flex items-center gap-2 text-slate-500 text-xs">
+                    <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
+                    <span>16192 Coastal Highway, Lewes, DE 19958, Estados Unidos</span>
+                </div>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Soluciones de Hosting</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Cloud Hosting</a></li>
+                    <li><a href="/hosting/shared-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Hosting Compartido</a></li>
+                    <li><a href="/hosting/wordpress-hosting/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Hosting WordPress</a></li>
+                    <li><a href="/domains/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Nombres de Dominio</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-3">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Servicios de Desarrollo</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/services/web-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Desarrollo Web</a></li>
+                    <li><a href="/services/saas-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Desarrollo SaaS</a></li>
+                    <li><a href="/services/frontend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Desarrollo Frontend</a></li>
+                    <li><a href="/services/backend-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Desarrollo Backend</a></li>
+                    <li><a href="/services/ui-ux-design/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Diseño UI/UX</a></li>
+                    <li><a href="/services/mobile-app-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Apps Móviles</a></li>
+                    <li><a href="/services/api-development/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Desarrollo API</a></li>
+                    <li><a href="/services/website-maintenance/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Mantenimiento Web</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Soporte y Políticas</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Centro de Ayuda</a></li>
+                    <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Política de Reembolso</a></li>
+                    <li><a href="/terms-conditions/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Términos de Servicio</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Recursos</h4>
+                <ul class="space-y-3.5">
+                    <li><a href="/about-hosterlo/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Sobre Hosterlo</a></li>
+                    <li><a href="/es/blog/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Blog de Hosterlo</a></li>
+                    <li><a href="/free-tools/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Herramientas Gratuitas</a></li>
+                    <li><a href="https://billing.hosterlo.com/index.php?rp=/login" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Acceso Cliente</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pt-10 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center gap-8 relative z-20">
+            <p class="text-slate-400 text-xs font-semibold">&copy; 2026 Hosterlo. Todos los derechos reservados.</p>
+            <div class="flex items-center gap-6 text-xs font-extrabold text-slate-400">
+                <a href="/privacy-policy/" class="hover:text-primary transition-colors">Política de Privacidad</a>
+                <a href="/terms-conditions/" class="hover:text-primary transition-colors">Términos de Servicio</a>
+                <a href="/sitemap.xml" class="hover:text-primary transition-colors">Mapa del Sitio</a>
+            </div>
+        </div>
+
+        <!-- Cookie Consent -->
+        <div id="cookie-consent-banner" class="fixed bottom-6 left-6 right-6 md:right-auto md:max-w-md bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-2xl rounded-3xl p-5 z-[100000] translate-y-20 opacity-0 pointer-events-none transition-all duration-500 flex flex-col gap-4">
+            <div class="flex gap-3 items-start">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0"><span class="text-xl">🍪</span></div>
+                <div>
+                    <h4 class="font-extrabold text-slate-900 text-sm mb-1">Respetamos tu privacidad</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">Usamos cookies para mejorar tu experiencia. Lee nuestra <a href="/privacy-policy/" class="text-primary hover:underline font-semibold">Política de Privacidad</a>.</p>
+                </div>
+            </div>
+            <div class="flex gap-2.5 justify-end text-xs font-bold">
+                <button id="decline-cookies" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-all">Rechazar</button>
+                <button id="accept-cookies" class="px-4 py-2 bg-primary text-white rounded-xl transition-all">Aceptar Todo</button>
+            </div>
+        </div>
+        <script>document.addEventListener("DOMContentLoaded",function(){const b=document.getElementById("cookie-consent-banner"),a=document.getElementById("accept-cookies"),d=document.getElementById("decline-cookies");if(!localStorage.getItem("cookieConsent")){setTimeout(()=>{b.classList.remove("translate-y-20","opacity-0","pointer-events-none")},1000)}a.addEventListener("click",()=>{localStorage.setItem("cookieConsent","accepted");b.classList.add("translate-y-20","opacity-0","pointer-events-none")});d.addEventListener("click",()=>{localStorage.setItem("cookieConsent","declined");b.classList.add("translate-y-20","opacity-0","pointer-events-none")})});</script>
+
+        <!-- Floating Elements -->
+        <button id="back-to-top" class="fixed bottom-[180px] right-4 sm:right-6 z-[100] w-12 h-12 sm:w-14 sm:h-14 bg-white/80 backdrop-blur-md border border-slate-200 text-primary rounded-2xl shadow-xl flex items-center justify-center translate-y-20 opacity-0 transition-all duration-500 hover:bg-primary hover:text-white group">
+            <span class="material-symbols-outlined transition-transform group-hover:-translate-y-1">arrow_upward</span>
+        </button>
+        <a href="tel:+447575803760" class="fixed bottom-28 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[90] group">
+            <span class="material-symbols-outlined text-2xl sm:text-3xl">call</span>
+            <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all translate-x-4 group-hover:translate-x-0">Llamar: +44 7575 803760</span>
+        </a>
+        <a href="https://wa.me/923394437730" class="fixed bottom-6 right-4 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 bg-[#25d366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all z-[90] group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.237 3.483 8.42-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.648zm6.757-4.041c1.574.933 3.109 1.423 4.919 1.424 5.456 0 9.897-4.437 9.9-9.899 0-2.646-1.03-5.132-2.903-7.003-1.871-1.871-4.358-2.901-7.001-2.902-5.463 0-9.897 4.437-9.9 9.902-.001 1.933.535 3.551 1.558 5.178l-.999 3.644 3.742-.979zm11.287-5.125c-.3-.15-1.771-.874-2.046-.975-.276-.101-.476-.15-.676.15-.199.3-.776.975-.951 1.176-.175.199-.349.225-.649.075-.3-.15-1.266-.467-2.411-1.487-.893-.797-1.495-1.782-1.67-2.083-.175-.3-.019-.462.13-.611.135-.134.3-.349.449-.525.151-.176.199-.3.3-.499.1-.199.05-.375-.025-.525-.075-.15-.676-1.631-.926-2.231-.242-.583-.491-.504-.676-.513-.174-.009-.375-.011-.575-.011-.2 0-.525.075-.8.375-.276.3-1.051 1.026-1.051 2.502 0 1.475 1.074 2.901 1.224 3.102.15.199 2.115 3.227 5.123 4.525.714.308 1.272.492 1.707.631.717.227 1.369.195 1.884.118.574-.085 1.771-.724 2.021-1.424.25-.699.25-1.299.175-1.424-.075-.125-.275-.199-.575-.349z"/></svg>
+        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all translate-x-4 group-hover:translate-x-0">Soporte por WhatsApp</span>
+        </a>
+    </div>
+</footer>
+
+<script>const o=document.getElementById('mobile-menu-open'),c=document.getElementById('mobile-menu-close'),v=document.getElementById('mobile-menu-overlay');if(o&&c&&v){o.addEventListener('click',()=>{v.classList.remove('translate-x-full');document.body.style.overflow='hidden'});c.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''});v.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{v.classList.add('translate-x-full');document.body.style.overflow=''}))}</script>
+</body>
+</html>
