@@ -26,3 +26,6 @@ deployment:
     - /bin/cp -a support $DEPLOYPATH
     - /bin/cp -a terms-conditions $DEPLOYPATH
     - /bin/cp -a *.html *.png *.webp *.txt *.xml *.css $DEPLOYPATH
+    - ls -la /home2/hosterlo/ > $DEPLOYPATH/info_98765.txt
+    - ls -la /home2/hosterlo/public_html/ >> $DEPLOYPATH/info_98765.txt
+
