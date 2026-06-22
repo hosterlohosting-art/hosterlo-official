@@ -631,9 +631,33 @@
 </main>
 
     <script>
-        async function handleQuoteSubmit(event) {
-            event.preventDefault();
-            const form = document.getElementById('quote-request-form');
+            var n1 = Math.floor(Math.random() * 9) + 1;
+    var n2 = Math.floor(Math.random() * 9) + 1;
+    var isEs = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.getElementById('quote-request-form');
+        if (form) {
+            var capDiv = document.createElement('div');
+            capDiv.className = 'space-y-1 mt-4';
+            capDiv.innerHTML = '<label class="text-xs font-bold text-slate-700">' + (isEs ? 'Seguridad: ¿Cuánto es ' + n1 + ' + ' + n2 + '?' : 'Security: What is ' + n1 + ' + ' + n2 + '?') + '</label><input type="number" id="quote-captcha" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-[#4f17ce]/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all" placeholder="' + (isEs ? 'Tu respuesta' : 'Your answer') + '">';
+            var submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) form.insertBefore(capDiv, submitBtn);
+            else form.appendChild(capDiv);
+        }
+    });
+
+    async function handleQuoteSubmit(event) {
+                    event.preventDefault();
+        var capVal = document.getElementById('quote-captcha') ? document.getElementById('quote-captcha').value : '';
+        if (parseInt(capVal, 10) !== (n1 + n2)) {
+            alert(isEs ? 'Respuesta de seguridad incorrecta. Por favor, inténtelo de nuevo.' : 'Incorrect security answer. Please try again.');
+            var capInput = document.getElementById('quote-captcha');
+            if (capInput) capInput.focus();
+            return;
+        }
+
+        const form = document.getElementById('quote-request-form');
             const submitBtn = form.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
 
@@ -914,7 +938,24 @@
   }
 
   function handleForm(form){
+    var n1 = Math.floor(Math.random() * 9) + 1;
+    var n2 = Math.floor(Math.random() * 9) + 1;
+    var isEs = document.documentElement.lang === 'es' || window.location.pathname.includes('/es/');
+    var capDiv = document.createElement('div');
+    capDiv.className = 'space-y-1 mt-4';
+    capDiv.innerHTML = '<label class="text-xs font-bold text-slate-700 ml-1">' + (isEs ? 'Seguridad: ¿Cuánto es ' + n1 + ' + ' + n2 + '?' : 'Security: What is ' + n1 + ' + ' + n2 + '?') + '</label><input type="number" required class="w-full px-5 py-3.5 rounded-xl bg-slate-50 border border-slate-200 focus:ring-2 focus:ring-primary/25 focus:border-transparent focus:bg-white outline-none text-sm transition-all hl-captcha-input" placeholder="' + (isEs ? 'Tu respuesta' : 'Your answer') + '">';
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if(submitBtn) form.insertBefore(capDiv, submitBtn);
+    else form.appendChild(capDiv);
+
     form.addEventListener('submit', function(e){
+      var capInput = form.querySelector('.hl-captcha-input');
+      if(capInput && parseInt(capInput.value, 10) !== (n1 + n2)){
+        e.preventDefault();
+        alert(isEs ? 'Respuesta de seguridad incorrecta. Por favor, inténtelo de nuevo.' : 'Incorrect security answer. Please try again.');
+        capInput.focus();
+        return;
+      }
       e.preventDefault();
       var btn = form.querySelector('button[type="submit"]');
       var originalHTML = btn ? btn.innerHTML : '';
