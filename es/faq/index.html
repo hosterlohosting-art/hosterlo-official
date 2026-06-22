@@ -568,7 +568,7 @@
             <p class="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed">Despliegue las preguntas a continuación para obtener respuestas inmediatas y orientación técnica.</p>
         </div>
         
-        <div class="grid md:grid-cols-4 gap-8 relative" data-aos="fade-up">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative" data-aos="fade-up">
             <!-- Step 1 -->
             <div class="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all group overflow-hidden relative">
                 <div class="absolute -right-4 -top-8 text-8xl font-black text-slate-100 opacity-20 group-hover:text-primary/10 transition-colors select-none font-sans">1</div>
@@ -1057,6 +1057,38 @@
                     banner.classList.add("translate-y-20", "opacity-0", "pointer-events-none");
                 }
             });
+        </script>
+
+        
+        <script>
+            // Mobile Menu Logic
+            const openBtn = document.getElementById('mobile-menu-open');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            if(openBtn && closeBtn && overlay) {
+                openBtn.addEventListener('click', () => { overlay.classList.remove('hidden'); requestAnimationFrame(() => overlay.classList.remove('translate-x-full')); document.body.style.overflow = 'hidden'; });
+                closeBtn.addEventListener('click', () => { overlay.classList.add('translate-x-full'); setTimeout(() => overlay.classList.add('hidden'), 500); document.body.style.overflow = ''; });
+                overlay.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { overlay.classList.add('translate-x-full'); setTimeout(() => overlay.classList.add('hidden'), 500); document.body.style.overflow = ''; }));
+            }
+
+            // Back-to-top handler
+            window.addEventListener('scroll', () => {
+                const backToTop = document.getElementById('back-to-top');
+                if (backToTop) {
+                    if (window.scrollY > 500) {
+                        backToTop.classList.remove('translate-y-20', 'opacity-0');
+                    } else {
+                        backToTop.classList.add('translate-y-20', 'opacity-0');
+                    }
+                }
+            });
+
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
         </script>
 
         <!-- Floating Elements -->
