@@ -1151,4 +1151,37 @@
     <priority>0.80</priority>
     <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
   </url>
+
+
+  <url>
+    <loc>https://hosterlo.com/support/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/es/support/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/uk/support/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
+
+  <url>
+    <loc>https://hosterlo.com/pk/support/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image><image:loc>https://hosterlo.com/assets/logo.png</image:loc></image:image>
+  </url>
 </urlset>

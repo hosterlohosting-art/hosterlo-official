@@ -486,6 +486,7 @@
 
 
 
+
     <main>
 <!-- Hero Section -->
 <section class="relative min-h-[75vh] flex items-center overflow-hidden bg-gradient-to-br from-[#0f0a1e] via-[#1a1145] to-[#2d1b69] text-white -mt-[96px] pt-32 pb-20">
@@ -947,7 +948,7 @@
             <div class="lg:col-span-2">
                 <h4 class="font-extrabold text-[10px] uppercase tracking-widest text-[#111c2d] mb-6">Support & Policies</h4>
                 <ul class="space-y-3.5">
-                    <li><a href="/contact-us/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
+                    <li><a href="/support/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Help Center</a></li>
                     <li><a href="/refund-policy/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Refund Policy</a></li>
                     <li><a href="/terms-conditions/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Terms of Service</a></li>
                     <li><a href="/legal/gemini-pro-terms/" class="text-slate-500 hover:text-primary text-sm font-semibold transition-colors">Gemini Pro Terms</a></li>
@@ -1050,38 +1051,6 @@
             });
         </script>
 
-        
-        <script>
-            // Mobile Menu Logic
-            const openBtn = document.getElementById('mobile-menu-open');
-            const closeBtn = document.getElementById('mobile-menu-close');
-            const overlay = document.getElementById('mobile-menu-overlay');
-            if(openBtn && closeBtn && overlay) {
-                openBtn.addEventListener('click', () => { overlay.classList.remove('hidden'); requestAnimationFrame(() => overlay.classList.remove('translate-x-full')); document.body.style.overflow = 'hidden'; });
-                closeBtn.addEventListener('click', () => { overlay.classList.add('translate-x-full'); setTimeout(() => overlay.classList.add('hidden'), 500); document.body.style.overflow = ''; });
-                overlay.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { overlay.classList.add('translate-x-full'); setTimeout(() => overlay.classList.add('hidden'), 500); document.body.style.overflow = ''; }));
-            }
-
-            // Back-to-top handler
-            window.addEventListener('scroll', () => {
-                const backToTop = document.getElementById('back-to-top');
-                if (backToTop) {
-                    if (window.scrollY > 500) {
-                        backToTop.classList.remove('translate-y-20', 'opacity-0');
-                    } else {
-                        backToTop.classList.add('translate-y-20', 'opacity-0');
-                    }
-                }
-            });
-
-            const backToTopBtn = document.getElementById('back-to-top');
-            if (backToTopBtn) {
-                backToTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-        </script>
-
         <!-- Floating Elements -->
         <button id="back-to-top" class="fixed bottom-[180px] right-4 sm:right-6 z-[100] w-12 h-12 sm:w-14 sm:h-14 bg-white/80 backdrop-blur-md border border-slate-200 text-primary rounded-2xl shadow-xl flex items-center justify-center translate-y-20 opacity-0 transition-all duration-500 hover:bg-primary hover:text-white group">
             <span class="material-symbols-outlined transition-transform group-hover:-translate-y-1">arrow_upward</span>
@@ -1098,6 +1067,7 @@
         </a>
     </div>
 </footer>
+
 
 
 
