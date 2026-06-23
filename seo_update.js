@@ -8,9 +8,9 @@ const TODAY = '2026-06-03';
 const SEO = {
   'index.html': {
     title: 'Hosterlo | Cloud Hosting, Free Domain, Email &amp; Gemini Pro',
-    desc: 'Launch your website with Hosterlo — premium cloud hosting with a free .com domain, free business email, free SSL, and Gemini Pro included for 18 months. Just $59/year.',
+    desc: 'Launch your website with Hosterlo — premium cloud hosting with a free .com domain, free business email, free SSL, and Gemini Pro included for 18 months. Just $4.08/mo.',
     ogTitle: 'Hosterlo | Cloud Hosting, Free Domain, Email &amp; Gemini Pro',
-    ogDesc: 'Premium hosting bundle — free .com domain, business email, SSL, and 18 months of Gemini Pro. Everything your business needs, starting at $59/year.',
+    ogDesc: 'Premium hosting bundle — free .com domain, business email, SSL, and 18 months of Gemini Pro. Everything your business needs, starting at $4.08/mo.',
     keywords: 'cloud hosting, web hosting, free domain, business email hosting, Gemini Pro hosting, cheap hosting, hosterlo, wordpress hosting',
   },
   'about-hosterlo/index.html': {
@@ -22,7 +22,7 @@ const SEO = {
   },
   'hosting/index.html': {
     title: 'Web Hosting Plans | Fast Cloud Hosting by Hosterlo',
-    desc: 'Explore Hosterlo\'s cloud hosting plans with LiteSpeed servers, NVMe SSD storage, free SSL, cPanel, and 99.9% uptime. Plans starting from just $59/year.',
+    desc: 'Explore Hosterlo\'s cloud hosting plans with LiteSpeed servers, NVMe SSD storage, free SSL, cPanel, and 99.9% uptime. Plans starting from just $4.08/mo.',
     ogTitle: 'Web Hosting Plans | Fast Cloud Hosting by Hosterlo',
     ogDesc: 'High-performance cloud hosting with LiteSpeed, NVMe SSD, free SSL, and cPanel. Start your website today with Hosterlo.',
     keywords: 'web hosting, cloud hosting, litespeed hosting, cpanel hosting, nvme ssd hosting, cheap hosting plans',

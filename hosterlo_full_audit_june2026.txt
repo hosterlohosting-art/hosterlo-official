@@ -287,12 +287,12 @@ REVENUE MODEL:
 
 THE NATURAL FUNNEL:
 -------------------
-  $59 hosting customer → needs custom website → web dev project ($500-5K)
+  $4.08 hosting customer → needs custom website → web dev project ($500-5K)
                        → grows → needs SaaS → SaaS development ($5K-50K)
                        → scales → needs mobile app → app dev ($10K-100K)
                        → ongoing → monthly retainer ($500-2K/mo)
 
-This is how you turn a $59/year hosting customer into a $10K+/year
+This is how you turn a $4.08/mo hosting customer into a $10K+/year
 full-service client.
 
 NAVIGATION UPDATE:
@@ -321,12 +321,12 @@ A. MAIN SERVICES HUB PAGE
 URL: /services/
 TITLE: "Web Development & Digital Services | Hosterlo"
 META: "Custom web development, SaaS products, frontend & backend
-      engineering, UI/UX design, and mobile apps. From $59 hosting
+      engineering, UI/UX design, and mobile apps. From $4.08 hosting
       to enterprise development."
 
 CONTENT STRUCTURE:
   Hero: "From Hosting to Full-Stack Development"
-  Sub: "Launch with our $59 hosting bundle. Scale with our expert
+  Sub: "Launch with our premium hosting bundle. Scale with our expert
         development team. One partner for your entire digital journey."
   CTA: "Get a Free Project Quote" + "View Our Services"
 
@@ -781,7 +781,7 @@ The comparison and alternative pages will start bringing organic traffic
 within 2-3 months.
 
 The digital services expansion is your next growth lever. Hosting
-brings in leads at $59/year. Development turns those leads into $5K-$50K
+brings in leads at $4.08/mo. Development turns those leads into $5K-$50K
 projects. It's the natural evolution.
 
 Fix the 4 bugs this week. Launch the /services/ hub and 2-3 service

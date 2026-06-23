@@ -6,7 +6,7 @@ const ROOT = process.cwd();
 // Trimmed descriptions — all under 160 chars
 const FIXES = {
   'index.html': {
-    desc: 'Launch your website with Hosterlo — cloud hosting with a free .com domain, business email, SSL, and 18 months of Gemini Pro. From $59/year.',
+    desc: 'Launch your website with Hosterlo — cloud hosting with a free .com domain, business email, SSL, and 18 months of Gemini Pro. From $4.08/mo.',
     title: null,
   },
   'about-hosterlo/index.html': {

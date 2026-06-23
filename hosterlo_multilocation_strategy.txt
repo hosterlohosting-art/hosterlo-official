@@ -36,7 +36,7 @@ US customer with UK legal details, or a UK customer with Pakistan info.
 LOCATION 1: UNITED STATES (LLC)
 =================================
 ROLE: Your PRIMARY sales market and front-facing identity
-WHY: Americans are your highest-value customers ($59/year is nothing
+WHY: Americans are your highest-value customers ($4.08/mo is nothing
 to them, but everything to Pakistanis). The US market is massive.
 
 DISPLAY:
@@ -213,7 +213,7 @@ Trust badges:
   - "Secure SSL Checkout"
   - [Stripe] [Visa] [Mastercard] [PayPal]
 
-CTA: "$59/year | Everything included"
+CTA: "$4.08/mo | Everything included"
 
 ---
 
@@ -238,7 +238,7 @@ Trust badges:
   - [Stripe] [Visa] [Mastercard]
 
 CTA: "£47/year | Everything included"
-(or "$59/yr (~£47)" if you keep USD pricing)
+(or "$4.08/mo (~£47)" if you keep USD pricing)
 
 ---
 
@@ -407,13 +407,13 @@ FACTORS THAT CHANGE BY MARKET:
 | Element           | US (hosterlo.com)      | UK (hosterlo.com/uk/)      | PK (hosterlo.com/pk/)        |
 |-------------------|------------------------|----------------------------|------------------------------|
 | Legal Entity      | Hosterlo LLC           | Hosterlo Ltd               | Hosterlo Pakistan (FBR)      |
-| Currency          | USD ($59/year)         | GBP (£47/year)             | PKR (Rs. 16,500/year)        |
+| Currency          | USD ($4.08/mo)         | GBP (£47/year)             | PKR (Rs. 16,500/year)        |
 | Phone             | +1 (XXX) XXX-XXXX      | +44 XXXX XXXXXX            | +92 3394437730             |
 | Spelling          | American (customize)   | British (customise)        | English or Urdu              |
 | Trust Badges      | US LLC, BBB            | UK Ltd, GDPR               | FBR Registered               |
 | Payment           | Card, PayPal           | Card, PayPal               | JazzCash, EasyPaisa, Card    |
 | Support Hours     | 9 AM - 6 PM EST        | 9 AM - 6 PM GMT            | 9 AM - 6 PM PKT              |
-| CTA Button        | "$59/year Bundle"      | "£47/year Bundle"          | "Rs. 16,500/year Bundle"     |
+| CTA Button        | "$4.08/mo Bundle"      | "£47/year Bundle"          | "Rs. 16,500/year Bundle"     |
 | Testimonials      | US customer names      | UK customer names          | Pakistani customer names     |
 | Keywords          | "small business usa"   | "small business uk"        | "pakistan website hosting"   |
 | Content Examples  | "US-based LLC"         | "UK-registered Ltd"        | "FBR registered business"    |
@@ -652,7 +652,7 @@ Create three market sections:
 **US MARKET (hosterlo.com — DEFAULT):**
 - Footer: "Hosterlo LLC, [US Address], [City], [State] [ZIP], US"
 - Phone: Display +1 (XXX) XXX-XXXX (US number) as primary
-- Currency: USD ($59/year)
+- Currency: USD ($4.08/mo)
 - Spelling: American English
 - Trust badges: "US Registered LLC", "30-Day Money-Back Guarantee"
 - Payments: Stripe, PayPal, cards
@@ -705,7 +705,7 @@ position it correctly:
   ✅ US LLC = "We're a real US business you can trust"
   ✅ UK Ltd = "We understand European compliance and privacy"
   ✅ Pakistan FBR = "We have cost-effective operations that let us
-                    offer you a $59 bundle instead of $200+"
+                    offer you a Premium Plan instead of $200+"
 
 BUT — and this is critical — each customer should only see the
 location RELEVANT to them. The US customer sees a US company. The UK

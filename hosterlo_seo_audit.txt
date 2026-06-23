@@ -50,7 +50,7 @@ THE GOOD NEWS:
 --------------
 - Your tech stack is surprisingly solid (schema, llms.txt, sitemaps, clean
   robots.txt, decent page structure)
-- The $59/year all-in bundle is a genuinely competitive offer
+- The $4.08/mo all-in bundle is a genuinely competitive offer
 - Your comparison blog post (Bluehost vs SiteGround vs Hosterlo) shows you
   understand buyer-intent content
 - The site loads reasonably fast and looks modern
@@ -76,7 +76,7 @@ Comparison pages. People searching "[Competitor] alternative" or
 
 WHAT HOSTERLO OFFERS:
 ---------------------
-- $59/year "Website Launch Bundle" (hosting + free .com domain + business
+- $4.08/mo "Website Launch Bundle" (hosting + free .com domain + business
   email + SSL + Premium AI Writer for 18 months + WhatsApp support)
 - WordPress hosting (pre-installed WP, LiteSpeed cache, auto-updates,
   daily backups)
@@ -107,14 +107,14 @@ optimize for it. Either:
 
 HOMEPAGE CLARITY (5-Second Test):
 ----------------------------------
-PASS. The homepage immediately communicates: "$59/year, hosting + domain +
+PASS. The homepage immediately communicates: "$4.08/mo, hosting + domain +
 email + SSL + Premium AI Writer." The value proposition is clear. BUT the page
 is overloaded with repetitive sections that say the same thing slightly
 differently, which bloats crawl budget without adding semantic value.
 
 CONVERSION GOALS:
 -----------------
-Primary: Click to billing.hosterlo.com to buy the $59 bundle
+Primary: Click to billing.hosterlo.com to buy the Premium Plan
 Secondary: WhatsApp chat for pre-sales questions
 Tertiary: Phone call
 
@@ -197,7 +197,7 @@ comprehensive @graph with:
   - WebSite schema
   - WebPage schema (with headline, description, image, dateModified)
   - BreadcrumbList
-  - Offer schema (the $59 bundle with price, currency, billing frequency,
+  - Offer schema (the Premium Plan with price, currency, billing frequency,
     availability, includesObject)
   - Service schema
   - FAQPage schema (6 questions)
@@ -210,7 +210,7 @@ Trustpilot testimonials, and HowTo schema for setup guides.
 HEADING HIERARCHY: MIXED
 ------------------------
 Homepage uses H1 properly ("Launch Your Website with Hosting, Domain,
-Email & Premium AI Writer — All for $59/year"). But the /hosting/ page uses
+Email & Premium AI Writer — All for $4.08/mo"). But the /hosting/ page uses
 "Web Hosting Made Simple for Your Website" as H1 — which is near-identical
 to the homepage H1 in intent, creating internal cannibalization.
 
@@ -291,12 +291,12 @@ checker on the full site.
 
 Title Tag:    "Hosterlo | Web Hosting with Free Domain, Email & Premium AI Writer"
               Length: 65 chars — GOOD
-Meta Desc:    "Launch your website with Hosterlo for just $59/year. Get
+Meta Desc:    "Launch your website with Hosterlo for just $4.08/mo. Get
               fast web hosting, a free .com domain, business email, SSL,
               setup support, and Premium AI Writer for 18 months."
               Length: 185 chars — SLIGHTLY LONG (may truncate in SERPs)
 H1:           "Launch Your Website with Hosting, Domain, Email & Gemini
-              Pro — All for $59/year" — GOOD, benefit-driven
+              Pro — All for $4.08/mo" — GOOD, benefit-driven
 
 VERDICT: The homepage is the best-optimized page. It has clear CTAs,
 good schema, and a strong value proposition. But it needs more depth
@@ -304,7 +304,7 @@ below the fold (detailed feature sections, comparison snippets, FAQ
 expansion) to rank for competitive terms.
 
 RECOMMENDED META DESC (shorter):
-"Launch your website for $59/year. Get fast hosting, a free .com domain,
+"Launch your website for $4.08/mo. Get fast hosting, a free .com domain,
 business email, SSL, and Premium AI Writer for 18 months. 30-day money-back."
 (158 characters)
 
@@ -354,7 +354,7 @@ FIX: Expand with:
   - WooCommerce compatibility statement
   - WordPress security features
   - "WordPress Hosting vs Regular Hosting" comparison
-  - Pricing clarity (is it the same $59 bundle?)
+  - Pricing clarity (is it the same Premium Plan?)
 
 --- DOMAIN PAGE (/domains/) ---
 
@@ -413,7 +413,7 @@ PRIORITY 1 — BOTTOM OF FUNNEL (Buy Now Intent)
 |--------------------------------------------|------------|--------------|
 | hosterlo review                            | Very Low   | Excellent    |
 | hosterlo hosting review                    | Very Low   | Excellent    |
-| $59 hosting bundle with domain             | Very Low   | Excellent    |
+| premium hosting bundle with domain             | Very Low   | Excellent    |
 | hosting with free domain and email         | Low        | Excellent    |
 | cheap hosting with free .com domain        | Medium     | Excellent    |
 | WordPress hosting with free domain         | Medium     | Excellent    |
@@ -462,7 +462,7 @@ KEYWORDS TO AVOID (Traffic, Not Customers):
 --------------------------------------------
 - "what is web hosting" (AI answers this, zero buyer intent)
 - "how to code a website" (developers won't buy shared hosting)
-- "free web hosting" (freebie seekers don't convert to $59 customers)
+- "free web hosting" (freebie seekers don't convert to $4.08 customers)
 - "html tutorial" (completely irrelevant audience)
 - "website design trends" (vanity traffic)
 
@@ -477,27 +477,27 @@ A. PAGES TO CREATE IMMEDIATELY (Week 1-4):
 --------------------------------------------
 
 1. /hosting/ — REWRITE COMPLETELY
-   Title: "Fast NVMe Web Hosting with Free Domain & Email | $59/yr — Hosterlo"
+   Title: "Fast NVMe Web Hosting with Free Domain & Email | $4.08/mo — Hosterlo"
    Meta:  "Get fast NVMe SSD web hosting with a free .com domain, business
-          email, SSL, and Premium AI Writer for $59/year. 30-day money-back."
+          email, SSL, and Premium AI Writer for $4.08/mo. 30-day money-back."
    Purpose: Capture "web hosting," "fast hosting," "NVMe hosting" searches
 
 2. /wordpress-hosting/ — EXPAND
    Title: "Managed WordPress Hosting with Free Domain & SSL | Hosterlo"
    Meta:  "Launch WordPress faster with pre-installed WP, LiteSpeed cache,
-          auto-updates, daily backups, free domain, and SSL. $59/year."
+          auto-updates, daily backups, free domain, and SSL. $4.08/mo."
    Purpose: Capture "WordPress hosting," "best WordPress hosting" searches
 
 3. /domain-registration/ — CREATE NEW
    Title: "Register a Domain Name with Free Hosting & Email | Hosterlo"
    Meta:  "Search and register .com, .net, .org domains with free hosting,
-          business email, and SSL included. $59/year all-in bundle."
+          business email, and SSL included. $4.08/mo all-in bundle."
    Purpose: Capture "domain registration," "buy domain name" searches
 
 4. /business-email-hosting/ — CREATE NEW
    Title: "Business Email Hosting with Your Domain | Hosterlo"
    Meta:  "Get professional email addresses (info@yourdomain.com) with
-          secure hosting, free domain, and SSL. All for $59/year."
+          secure hosting, free domain, and SSL. All for $4.08/mo."
    Purpose: Capture "business email hosting," "professional email" searches
 
 5. /website-migration/ — CREATE NEW
@@ -564,7 +564,7 @@ C. LOCAL/CATEGORY PAGES TO CREATE (Month 2-3):
     Target: "best hosting for bloggers," "blog hosting"
 
 18. /cheap-hosting-with-domain/
-    Title: "Cheap Hosting with Free Domain Name | $59/yr — Hosterlo"
+    Title: "Cheap Hosting with Free Domain Name | $4.08/mo — Hosterlo"
     Target: "cheap hosting with free domain," "hosting free domain"
 
 
@@ -713,7 +713,7 @@ PRIORITY CONTENT CALENDAR:
 MONTH 1 — Trust & Foundation:
 [ ] "About Hosterlo" (company story, mission, team)
 [ ] "Hosterlo vs Bluehost: 2026 Pricing & Performance Comparison"
-[ ] "Hosterlo vs Hostinger: Which $59 Bundle Wins?"
+[ ] "Hosterlo vs Hostinger: Which Premium Plan Wins?"
 [ ] "Hosterlo vs SiteGround: Is It Worth Switching?"
 [ ] "Our 30-Day Money-Back Guarantee" (dedicated trust page)
 [ ] "How We Protect Your Website" (security/SSL/backup explainer)
@@ -728,7 +728,7 @@ MONTH 2 — Comparison & Capture:
 [ ] "How to Transfer Your Domain to Hosterlo"
 
 MONTH 3 — Guides That Convert:
-[ ] "How to Start a Website for $59 (Complete Beginner Guide)"
+[ ] "How to Start a Website for $4.08 (Complete Beginner Guide)"
 [ ] "Small Business Website Hosting: What You Actually Need"
 [ ] "Best Web Hosting for Ecommerce (WooCommerce Guide)"
 [ ] "Website Hosting for Bloggers: Speed, Security & Simplicity"
@@ -739,7 +739,7 @@ MONTH 3 — Guides That Convert:
 EACH ARTICLE MUST INCLUDE:
 --------------------------
 - Internal link to /hosting/ or /wordpress-hosting/ in first 300 words
-- CTA box mid-article: "Start your website for $59/year"
+- CTA box mid-article: "Start your website for $4.08/mo"
 - Comparison table where Hosterlo is included
 - FAQ section with FAQ schema
 - "Related: [Another Hosterlo article]" links
@@ -758,12 +758,12 @@ ABOVE-THE-FOLD: GOOD
 
 PRICING VISIBILITY: CONFUSING
 ------------------------------
-The $59/year price is prominent, but it's unclear what's included vs.
-what costs extra. Is there any plan other than the $59 bundle? Can I
+The $4.08/mo price is prominent, but it's unclear what's included vs.
+what costs extra. Is there any plan other than the Premium Plan? Can I
 buy just hosting? Just a domain? This ambiguity causes decision friction.
 
 FIX: Add a simple pricing table:
-  Website Launch Bundle: $59/year (recommended)
+  Website Launch Bundle: $4.08/mo (recommended)
   Hosting Only: $XX/year
   Domain Only: $XX/year
   Email Only: $XX/year
@@ -773,7 +773,7 @@ in one simple price. No tiers. No surprises."
 
 CTA BUTTONS: GOOD BUT COULD BE BETTER
 --------------------------------------
-- "Get the $59 Bundle" is clear and action-oriented
+- "Get Premium Plan" is clear and action-oriented
 - WhatsApp chat button is a differentiator
 - But there's no email capture for visitors not ready to buy
 
@@ -1139,7 +1139,7 @@ Set these up in GA4 + GTM immediately:
 | Event Name              | Trigger                        | Priority |
 |-------------------------|--------------------------------|----------|
 | domain_search           | User clicks domain search box  | High     |
-| add_to_cart             | Clicks "Get the $59 Bundle"    | Critical |
+| add_to_cart             | Clicks "Get Premium Plan"    | Critical |
 | begin_checkout          | Lands on billing login page    | Critical |
 | purchase                | Completed payment              | Critical |
 | contact_whatsapp        | Clicks WhatsApp button         | High     |
@@ -1267,7 +1267,7 @@ Week 5-6:
   [ ] Publish "How to Migrate from Bluehost to Hosterlo" guide
 
 Week 7-8:
-  [ ] Publish "How to Start a Website for $59" guide
+  [ ] Publish "How to Start a Website for $4.08" guide
   [ ] Publish "Small Business Website Hosting" guide
   [ ] Publish "Best Cheap WordPress Hosting with Free Domain 2026"
   [ ] Create /web-hosting-pakistan/ page (if targeting local market)
@@ -1414,7 +1414,7 @@ WHAT TO STOP DOING:
 -------------------
 - Stop expecting to rank for "web hosting" — you won't
 - Stop writing generic blog posts that don't target buyer intent
-- Stop relying solely on the $59 bundle pitch — create dedicated pages
+- Stop relying solely on the Premium Plan pitch — create dedicated pages
   for each service component
 - Stop ignoring the 1-star Trustpilot review — it's killing you
 

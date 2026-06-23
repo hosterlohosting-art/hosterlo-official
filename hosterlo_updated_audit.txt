@@ -308,14 +308,14 @@ of each comparison page with links to all 4 comparison pages.
 ISSUE #8: HOMEPAGE META DESCRIPTION TOO LONG
 ---------------------------------------------
 STATUS: Not fixed
-CURRENT: "Launch your website with Hosterlo for just $59/year. Get
+CURRENT: "Launch your website with Hosterlo for just $4.08/mo. Get
 fast web hosting, a free .com domain, business email, SSL, setup
 support, and Premium AI Writer for 18 months."
 
 This is ~185 characters. Google typically truncates at 155-160.
 
 FIX: Shorten to:
-"Launch your website for $59/year. Get fast hosting, a free .com
+"Launch your website for $4.08/mo. Get fast hosting, a free .com
 domain, business email, SSL, and Premium AI Writer for 18 months."
 (~158 characters)
 

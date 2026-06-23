@@ -70,7 +70,7 @@ function walk(dir, callback) {
 // ─── FIX 1: Homepage title (too long) ────────────────────────────────────────
 let homepage = fs.readFileSync('index.html', 'utf-8');
 homepage = homepage.replace(
-    /<title>Hosterlo \$59 Premium Bundle \| Hosting, Free \.com, Email &amp; Gemini Pro Pro<\/title>/,
+    /<title>Hosterlo \Premium Website Bundle \| Hosting, Free \.com, Email &amp; Gemini Pro Pro<\/title>/,
     '<title>Hosterlo | Cloud Hosting, Free Domain, Email &amp; Gemini Pro</title>'
 );
 fs.writeFileSync('index.html', homepage, 'utf-8');
