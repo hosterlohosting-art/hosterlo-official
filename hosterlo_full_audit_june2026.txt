@@ -139,7 +139,7 @@ WHAT IT SHOULD HAVE:
     - Privacy Policy
     - Terms of Service  
     - Refund Policy
-    - Gemini Pro Terms
+    - AI Writer Terms
   Last updated dates for each
   Contact info for legal inquiries
 
@@ -202,7 +202,7 @@ GAP #2: FAQ SCHEMA ON /FAQ/ PAGE
 ---------------------------------
 The /faq/ page exists but needs FAQPage schema markup with 15-20
 questions covering: billing, domains, hosting, SSL, migration,
-Gemini Pro, refunds, support.
+Premium AI Writer, refunds, support.
 
 GAP #3: COMPARISON PAGE SCHEMA
 -------------------------------

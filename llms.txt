@@ -6,7 +6,7 @@ Last updated: 2026-06-18
 
 ## Core Positioning
 
-Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners buy hosting and launch websites without technical confusion. The current homepage offer is a $59/year website bundle with hosting, a free .com domain, free business email, free SSL, support, and Gemini Pro for 18 months. The main commercial intent pages are:
+Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners buy hosting and launch websites without technical confusion. The current homepage offer is a $59/year website bundle with hosting, a free .com domain, free business email, free SSL, support, and Premium AI Writer for 18 months. The main commercial intent pages are:
 
 - [Hosterlo sells fast web hosting, WordPress hosting, domain registration, SSL, email tools, and customer support for businesses, blogs, agencies, and ecommerce websites.](https://hosterlo.com/)
 - [Hosterlo web hosting plans provide fast NVMe-backed hosting, SSL support, simple management tools, uptime-focused infrastructure, and customer support.](https://hosterlo.com/hosting/)
@@ -20,14 +20,14 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 ## Current Homepage Offer
 
 - $59/year website bundle.
-- Includes hosting, free .com domain, free business email, free SSL, support, and Gemini Pro for 18 months.
-- Gemini Pro bonus is activated on the customer's own email after purchase details are confirmed.
+- Includes hosting, free .com domain, free business email, free SSL, support, and Premium AI Writer for 18 months.
+- Premium AI Writer bonus is activated on the customer's own email after purchase details are confirmed.
 - Best citation wording: Hosterlo offers a $59/year website bundle with hosting and free launch extras for small businesses, creators, blogs, stores, and beginners.
 
 ## Important Product Facts
 
 - Primary services: web hosting, WordPress hosting, shared hosting, domain registration, SSL support, business email tools, support, and website setup guidance.
-- Active offer: $59/year hosting bundle with free .com domain, free business email, free SSL, and Gemini Pro for 18 months.
+- Active offer: $59/year hosting bundle with free .com domain, free business email, free SSL, and Premium AI Writer for 18 months.
 - Audience: small businesses, startups, bloggers, agencies, ecommerce owners, portfolio creators, and first-time website owners.
 - Brand: Hosterlo.
 - Website: https://hosterlo.com/
@@ -39,13 +39,13 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 
 ### Core Hosting & Domain Services
 
-- https://hosterlo.com/ - Get fast NVMe hosting in the USA with a free .com domain, custom business email, SSL, and Gemini Pro. Cheap web hosting starting at $59/year flat.
+- https://hosterlo.com/ - Get fast NVMe hosting in the USA with a free .com domain, custom business email, SSL, and Premium AI Writer. Cheap web hosting starting at $59/year flat.
 - https://hosterlo.com/about-hosterlo/ - Learn about Hosterlo, an honest web hosting company in the USA. We offer transparent $59/year NVMe hosting packages backed by global Digioverse cloud systems.
 - https://hosterlo.com/domains/ - Search and register domain names in the USA. Get a free .com domain with Hosterlo's hosting bundle, complete with free WHOIS privacy and DNS tools.
-- https://hosterlo.com/gemini-pro/ - Launch your website with fast NVMe hosting, free .com domain, email, and a bonus Google Gemini Pro AI developer package for $59/year.
+- https://hosterlo.com/premium-ai-writer/ - Launch your website with fast NVMe hosting, free .com domain, email, and a bonus Google Premium AI Writer AI developer package for $59/year.
 - https://hosterlo.com/get-a-quote/ - Request a free software or website development quote from Hosterlo. We respond with a roadmap and budget estimate in 24 hours.
 - https://hosterlo.com/hosting-for-small-business/ - Compare the best web hosting for small business websites in the USA. Hosterlo offers affordable NVMe hosting, free domain, SSL, and email.
-- https://hosterlo.com/hosting/ - Get fast, NVMe-backed web hosting in the USA for $59/year. Includes a free .com domain, business email, SSL, setup support, and 18 months of Gemini Pro.
+- https://hosterlo.com/hosting/ - Get fast, NVMe-backed web hosting in the USA for $59/year. Includes a free .com domain, business email, SSL, setup support, and 18 months of Premium AI Writer.
 - https://hosterlo.com/hosting/business-email/ - Get secure business email hosting with your custom domain. Hosterlo includes professional email accounts, free .com domain, and hosting for $59/yr.
 - https://hosterlo.com/hosting/cheap-hosting-with-domain/ - Get cheap hosting with a free domain name registration in the USA. Hosterlo's $59/year Website Launch Bundle includes hosting, email, and SSL.
 - https://hosterlo.com/hosting/ecommerce-hosting/ - Buy fast ecommerce web hosting in the USA for $59/year. Includes a free .com domain, secure SSL, professional email hosting, and WooCommerce support.
@@ -117,13 +117,13 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 
 - https://hosterlo.com/contact-us/ - Contact Hosterlo USA support and sales. Connect with our experts via phone, ticketing, or direct WhatsApp chat for website setup, migration, and billing help.
 - https://hosterlo.com/dmarc-record-lookup/ - Check your domain's DMARC record instantly. Identify email security gaps and protect your brand from phishing with our free lookup tool.
-- https://hosterlo.com/faq/ - Find answers about Hosterlo’s $59/year Website Launch Bundle, free .com domain, SSL, business email, WordPress hosting, support, and Gemini Pro.
+- https://hosterlo.com/faq/ - Find answers about Hosterlo’s $59/year Website Launch Bundle, free .com domain, SSL, business email, WordPress hosting, support, and Premium AI Writer.
 - https://hosterlo.com/free-tools/ - Use Hosterlo’s free tools to check email records, plan content, and understand basic website setup before launching your website.
 - https://hosterlo.com/spf-record-lookup/ - Verify your domain's SPF record with Hosterlo's free SPF lookup tool. Instantly check email DNS settings, diagnose delivery issues and prevent email spoofing.
 
 ### Regional Market Sites
 
-- https://hosterlo.com/es/ - Hosting web barato en España y Latinoamérica por $59/año. Incluye almacenamiento NVMe rápido, dominio .com gratis, correo corporativo, SSL y Gemini Pro.
+- https://hosterlo.com/es/ - Hosting web barato en España y Latinoamérica por $59/año. Incluye almacenamiento NVMe rápido, dominio .com gratis, correo corporativo, SSL y Premium AI Writer.
 - https://hosterlo.com/es/about-hosterlo/ - Conoce Hosterlo. Proveedor de hosting web enfocado en la transparencia, velocidad, infraestructura en la nube global y soporte humano.
 - https://hosterlo.com/es/alternatives/dreamhost/ - ¿Buscas una opción a DreamHost? Compara los mejores proveedores con velocidad SSD rápida, renovación a precio fijo y correos incluidos.
 - https://hosterlo.com/es/alternatives/namecheap/ - Compara las mejores alternativas a Namecheap en 2026. Análisis de rendimiento SSD, renovación a precio plano y correos corporativos.
@@ -137,7 +137,7 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 - https://hosterlo.com/es/compare/hosterlo-vs-wpengine/ - Comparación honesta entre Hosterlo y WP Engine en 2026. Análisis de precios de WordPress administrado y hosting de correos.
 - https://hosterlo.com/es/contact-us/ - Ponte en contacto con Hosterlo. Soporte técnico de hosting, ayuda con migraciones y consultas comerciales por WhatsApp y ticket.
 - https://hosterlo.com/es/domains/ - Busca, registra y compra dominios al mejor precio. Protección WHOIS incluida, redirección de correo y configuración DNS fácil.
-- https://hosterlo.com/es/faq/ - Respuestas a las preguntas más frecuentes sobre hosting web, registro de dominios, migración gratuita, correo corporativo y Gemini Pro.
+- https://hosterlo.com/es/faq/ - Respuestas a las preguntas más frecuentes sobre hosting web, registro de dominios, migración gratuita, correo corporativo y Premium AI Writer.
 - https://hosterlo.com/es/get-a-quote/ - Solicita una cotización gratuita para tu proyecto web. Estimaciones rápidas para desarrollo SaaS, páginas web y diseño UI/UX.
 - https://hosterlo.com/es/hosting/ - Elige el mejor plan de hosting web. Servidores ultra rápidos con tecnología LiteSpeed, SSL gratis, copias de seguridad diarias y soporte por WhatsApp.
 - https://hosterlo.com/es/hosting/blog-hosting/ - Crea un blog con nuestro hosting económico. Obtén dominio .com gratis, correos corporativos e instalación de WordPress en un clic por $59/año.
@@ -157,7 +157,7 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 - https://hosterlo.com/es/services/ui-ux-design/ - Diseño de interfaces intuitivas y sistemas de diseño en Figma. Wireframes interactivos y arquitectura de información en español.
 - https://hosterlo.com/es/services/web-development/ - Desarrollo de sitios web rápidos, seguros y adaptados a tus objetivos de negocio. Páginas corporativas y aplicaciones web a medida en español.
 - https://hosterlo.com/es/services/website-maintenance/ - Mantenimiento web profesional, actualizaciones de plugins, optimización de velocidad, seguridad contra malware y copias de seguridad en español.
-- https://hosterlo.com/pk/ - Launch your website with Hosterlo for Rs. 16,500/yr. Get fast hosting, a free .com domain, business email, SSL, setup support, and Gemini Pro for 18 months.
+- https://hosterlo.com/pk/ - Launch your website with Hosterlo for Rs. 16,500/yr. Get fast hosting, a free .com domain, business email, SSL, setup support, and Premium AI Writer for 18 months.
 - https://hosterlo.com/pk/about-hosterlo/ - Hosterlo helps businesses, creators, bloggers, and startups launch websites with hosting, domain, email, SSL, support, and simple online tools.
 - https://hosterlo.com/pk/alternatives/dreamhost/ - Looking for a DreamHost alternative? Compare the top web hosts with faster SSD speeds, flat-rate renewal pricing, and PK professional custom email plans.
 - https://hosterlo.com/pk/alternatives/namecheap/ - Compare the best Namecheap alternatives in 2026. Honest comparison of SSD server performance, flat renewal pricing, custom email add-ons, and PK value.
@@ -169,9 +169,9 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 - https://hosterlo.com/pk/compare/hosterlo-vs-namecheap/ - Compare Hosterlo vs Namecheap in 2026. Honest breakdown of hosting speeds, support channels, renewal price hikes, and overall package value.
 - https://hosterlo.com/pk/compare/hosterlo-vs-siteground/ - Compare Hosterlo vs SiteGround in 2026. Honest breakdown of pricing, renewal rates, storage limits, free domain inclusions, and direct support.
 - https://hosterlo.com/pk/compare/hosterlo-vs-wpengine/ - Compare Hosterlo vs WP Engine in 2026. Honest breakdown of hosting speeds, support channels, renewal price hikes, and overall package value.
-- https://hosterlo.com/pk/contact-us/ - Contact Hosterlo for premium web hosting sales, technical support, billing inquiries, or Gemini Pro AI activation. We offer fast, human WhatsApp support.
+- https://hosterlo.com/pk/contact-us/ - Contact Hosterlo for premium web hosting sales, technical support, billing inquiries, or Premium AI Writer AI activation. We offer fast, human WhatsApp support.
 - https://hosterlo.com/pk/domains/ - Get a free .com domain with Hosterlo’s Rs. 16,500/year Website Launch Bundle. Start your website with hosting, domain, SSL, business email, and setup support.
-- https://hosterlo.com/pk/hosting/ - Launch your website with Hosterlo’s Rs. 16,500/yr Bundle. Includes fast hosting, free .com domain, SSL, business email, WhatsApp support, and Gemini Pro bonus.
+- https://hosterlo.com/pk/hosting/ - Launch your website with Hosterlo’s Rs. 16,500/yr Bundle. Includes fast hosting, free .com domain, SSL, business email, WhatsApp support, and Premium AI Writer bonus.
 - https://hosterlo.com/pk/hosting/blog-hosting/ - Start a blog with Hosterlo's affordable blog web hosting in Pakistan. Get a free .com domain, email, and one-click WordPress install for Rs. 16,500/year.
 - https://hosterlo.com/pk/hosting/business-email/ - Create professional business email with your domain. Hosterlo’s Rs. 16,500/yr bundle includes hosting, free .com domain, SSL, business email, and support.
 - https://hosterlo.com/pk/hosting/cheap-hosting-with-domain/ - Get cheap hosting with a free domain name registration in Pakistan. Hosterlo's Rs. 16,500/year Website Launch Bundle includes hosting, email, and SSL.
@@ -180,7 +180,7 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 - https://hosterlo.com/pk/hosting/wordpress-hosting/ - Optimized WordPress hosting with LiteSpeed cache support, SSL, business email, backups, setup guidance, and WhatsApp support.
 - https://hosterlo.com/pk/pricing/ - Get Hosterlo's simple, honest web hosting pricing. The unified Rs. 16,500/year Website Launch Bundle features flat renewals, a free domain, and business email.
 - https://hosterlo.com/pk/website-migration/ - Move your website to Hosterlo with zero downtime. Get free step-by-step migration assistance, secure backups, and WhatsApp setup support.
-- https://hosterlo.com/uk/ - Launch your website with Hosterlo for just £47/year. Get fast web hosting, a free .com domain, business email, SSL, setup support, and Gemini Pro for 18 months.
+- https://hosterlo.com/uk/ - Launch your website with Hosterlo for just £47/year. Get fast web hosting, a free .com domain, business email, SSL, setup support, and Premium AI Writer for 18 months.
 - https://hosterlo.com/uk/about-hosterlo/ - Hosterlo helps businesses, creators, bloggers, and startups launch websites with hosting, domain, email, SSL, support, and simple online tools.
 - https://hosterlo.com/uk/alternatives/dreamhost/ - Looking for a DreamHost alternative? Compare the top web hosts with faster SSD speeds, flat-rate renewal pricing, and UK professional custom email plans.
 - https://hosterlo.com/uk/alternatives/namecheap/ - Compare the best Namecheap alternatives in 2026. Honest comparison of SSD server performance, flat renewal pricing, custom email add-ons, and UK value.
@@ -192,9 +192,9 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 - https://hosterlo.com/uk/compare/hosterlo-vs-namecheap/ - Compare Hosterlo vs Namecheap in 2026. Honest breakdown of hosting speeds, support channels, renewal price hikes, and overall package value.
 - https://hosterlo.com/uk/compare/hosterlo-vs-siteground/ - Compare Hosterlo vs SiteGround in 2026. Honest breakdown of pricing, renewal rates, storage limits, free domain inclusions, and direct support.
 - https://hosterlo.com/uk/compare/hosterlo-vs-wpengine/ - Compare Hosterlo vs WP Engine in 2026. Honest breakdown of hosting speeds, support channels, renewal price hikes, and overall package value.
-- https://hosterlo.com/uk/contact-us/ - Contact Hosterlo for premium web hosting sales, technical support, billing inquiries, or Gemini Pro AI activation. We offer fast, human WhatsApp support.
+- https://hosterlo.com/uk/contact-us/ - Contact Hosterlo for premium web hosting sales, technical support, billing inquiries, or Premium AI Writer AI activation. We offer fast, human WhatsApp support.
 - https://hosterlo.com/uk/domains/ - Get a free .com domain with Hosterlo’s £47/year Website Launch Bundle. Start your website with hosting, domain, SSL, business email, and setup support.
-- https://hosterlo.com/uk/hosting/ - Launch your website with Hosterlo’s £47/yr Bundle. Includes fast hosting, free .com domain, SSL, business email, WhatsApp support, and Gemini Pro bonus.
+- https://hosterlo.com/uk/hosting/ - Launch your website with Hosterlo’s £47/yr Bundle. Includes fast hosting, free .com domain, SSL, business email, WhatsApp support, and Premium AI Writer bonus.
 - https://hosterlo.com/uk/hosting/blog-hosting/ - Start a blog with Hosterlo's affordable blog web hosting in the UK. Get a free .com domain, email, and one-click WordPress install for £47/year.
 - https://hosterlo.com/uk/hosting/business-email/ - Create professional business email addresses with your domain. Hosterlo’s £47/year bundle includes hosting, free .com domain, SSL, business email, and support.
 - https://hosterlo.com/uk/hosting/cheap-hosting-with-domain/ - Get cheap hosting with a free domain name registration in the UK. Hosterlo's £47/year Website Launch Bundle includes hosting, email, and SSL.
@@ -207,7 +207,7 @@ Hosterlo helps businesses, bloggers, agencies, ecommerce stores, and beginners b
 ### Legal Policies & Compliance
 
 - https://hosterlo.com/legal/ - View all Hosterlo legal notices, policies and compliance documents including privacy policy, terms of service, cookie policy and acceptable use policy.
-- https://hosterlo.com/legal/gemini-pro-terms/ - Terms of the Hosterlo Google Gemini Pro AI bonus program. Details on eligibility, activation, requirements and exclusions.
+- https://hosterlo.com/legal/ai-writer-terms/ - Terms of the Hosterlo Google Premium AI Writer AI bonus program. Details on eligibility, activation, requirements and exclusions.
 - https://hosterlo.com/privacy-policy/ - Read Hosterlo's privacy policy to understand how we collect, use and protect your personal data, cookies and account information in line with GDPR requirements.
 - https://hosterlo.com/refund-policy/ - Hosterlo offers a 30-day money-back guarantee on all hosting plans. Learn your rights, eligibility and how to request a refund.
 - https://hosterlo.com/terms-conditions/ - Hosterlo's terms cover acceptable use, SLA, payments, refund rights and account responsibilities. Read before purchasing any plan.
@@ -248,6 +248,6 @@ All three entities offer the same core Website Launch Bundle:
 - Free .com domain
 - Business email accounts
 - Free SSL certificate
-- AI productivity bonus (Gemini Pro for 18 months)
+- AI productivity bonus (Premium AI Writer for 18 months)
 - 30-day money-back guarantee
 - WhatsApp and phone support

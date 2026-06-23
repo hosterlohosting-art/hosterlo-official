@@ -109,7 +109,7 @@ DISPLAY:
 MESSAGE:
 --------
 "Pakistan's most affordable website launch bundle. Hosting + .com
-domain + email + SSL + Gemini Pro — all in one simple package."
+domain + email + SSL + Premium AI Writer — all in one simple package."
 
 Pakistan page should include:
 - Urdu language option (at least key sections)
@@ -560,7 +560,7 @@ All three entities offer the same core Website Launch Bundle:
 - Free .com domain
 - Business email accounts
 - Free SSL certificate
-- AI productivity bonus (Gemini Pro for 18 months)
+- AI productivity bonus (Premium AI Writer for 18 months)
 - 30-day money-back guarantee
 - WhatsApp and phone support
 

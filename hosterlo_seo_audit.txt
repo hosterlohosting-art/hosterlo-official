@@ -77,7 +77,7 @@ Comparison pages. People searching "[Competitor] alternative" or
 WHAT HOSTERLO OFFERS:
 ---------------------
 - $59/year "Website Launch Bundle" (hosting + free .com domain + business
-  email + SSL + Gemini Pro for 18 months + WhatsApp support)
+  email + SSL + Premium AI Writer for 18 months + WhatsApp support)
 - WordPress hosting (pre-installed WP, LiteSpeed cache, auto-updates,
   daily backups)
 - Domain registration (via reseller/partner, not direct registrar)
@@ -108,7 +108,7 @@ optimize for it. Either:
 HOMEPAGE CLARITY (5-Second Test):
 ----------------------------------
 PASS. The homepage immediately communicates: "$59/year, hosting + domain +
-email + SSL + Gemini Pro." The value proposition is clear. BUT the page
+email + SSL + Premium AI Writer." The value proposition is clear. BUT the page
 is overloaded with repetitive sections that say the same thing slightly
 differently, which bloats crawl budget without adding semantic value.
 
@@ -210,7 +210,7 @@ Trustpilot testimonials, and HowTo schema for setup guides.
 HEADING HIERARCHY: MIXED
 ------------------------
 Homepage uses H1 properly ("Launch Your Website with Hosting, Domain,
-Email & Gemini Pro — All for $59/year"). But the /hosting/ page uses
+Email & Premium AI Writer — All for $59/year"). But the /hosting/ page uses
 "Web Hosting Made Simple for Your Website" as H1 — which is near-identical
 to the homepage H1 in intent, creating internal cannibalization.
 
@@ -289,11 +289,11 @@ checker on the full site.
 
 --- HOMEPAGE (/) ---
 
-Title Tag:    "Hosterlo | Web Hosting with Free Domain, Email & Gemini Pro"
+Title Tag:    "Hosterlo | Web Hosting with Free Domain, Email & Premium AI Writer"
               Length: 65 chars — GOOD
 Meta Desc:    "Launch your website with Hosterlo for just $59/year. Get
               fast web hosting, a free .com domain, business email, SSL,
-              setup support, and Gemini Pro for 18 months."
+              setup support, and Premium AI Writer for 18 months."
               Length: 185 chars — SLIGHTLY LONG (may truncate in SERPs)
 H1:           "Launch Your Website with Hosting, Domain, Email & Gemini
               Pro — All for $59/year" — GOOD, benefit-driven
@@ -305,7 +305,7 @@ expansion) to rank for competitive terms.
 
 RECOMMENDED META DESC (shorter):
 "Launch your website for $59/year. Get fast hosting, a free .com domain,
-business email, SSL, and Gemini Pro for 18 months. 30-day money-back."
+business email, SSL, and Premium AI Writer for 18 months. 30-day money-back."
 (158 characters)
 
 --- WEB HOSTING PAGE (/hosting/) ---
@@ -479,7 +479,7 @@ A. PAGES TO CREATE IMMEDIATELY (Week 1-4):
 1. /hosting/ — REWRITE COMPLETELY
    Title: "Fast NVMe Web Hosting with Free Domain & Email | $59/yr — Hosterlo"
    Meta:  "Get fast NVMe SSD web hosting with a free .com domain, business
-          email, SSL, and Gemini Pro for $59/year. 30-day money-back."
+          email, SSL, and Premium AI Writer for $59/year. 30-day money-back."
    Purpose: Capture "web hosting," "fast hosting," "NVMe hosting" searches
 
 2. /wordpress-hosting/ — EXPAND
@@ -688,7 +688,7 @@ for long-tail queries where their content is thin or outdated:
 3. Country-specific: "best web hosting in Pakistan" — You have local
    presence advantage if you claim it.
 
-4. "Cheap hosting with Gemini Pro" — Niche but zero competition.
+4. "Cheap hosting with Premium AI Writer" — Niche but zero competition.
 
 5. Comparison pages: "Bluehost vs SiteGround vs Hosterlo" — Already
    created. Expand to 10+ more comparisons.
@@ -784,7 +784,7 @@ PLAN COMPARISON: MISSING
 -------------------------
 There's no comparison table on the site. Add a simple table comparing
 Hosterlo vs Bluehost vs Hostinger on key factors (price, domain, email,
-SSL, support, Gemini Pro).
+SSL, support, Premium AI Writer).
 
 CHECKOUT FRICTION: CANNOT FULLY AUDIT
 --------------------------------------
@@ -974,7 +974,7 @@ Current 6 FAQs are good. Expand to 15-20 FAQs covering:
 - "What happens after I buy?"
 - "Can I cancel anytime?"
 - "Do you offer phone support?"
-- "What is Gemini Pro and how do I get it?"
+- "What is Premium AI Writer and how do I get it?"
 
 HOWTO SCHEMA: ADD
 ------------------

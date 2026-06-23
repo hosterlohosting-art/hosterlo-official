@@ -233,7 +233,7 @@
     <image:image><image:loc>https://hosterlo.com/assets/secure-enterprise-hosting.webp</image:loc></image:image>
   </url>
   <url>
-    <loc>https://hosterlo.com/legal/gemini-pro-terms/</loc>
+    <loc>https://hosterlo.com/legal/ai-writer-terms/</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
@@ -652,7 +652,7 @@
   </url>
 
   <url>
-    <loc>https://hosterlo.com/gemini-pro/</loc>
+    <loc>https://hosterlo.com/premium-ai-writer/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>

@@ -238,7 +238,7 @@ FIX: Add FAQPage schema to /faq/ with 15-20 questions covering:
   - Hosting technical questions
   - SSL & security
   - Migration process
-  - Gemini Pro activation
+  - Premium AI Writer activation
   - Refund policy details
   - Support hours & channels
 
@@ -310,13 +310,13 @@ ISSUE #8: HOMEPAGE META DESCRIPTION TOO LONG
 STATUS: Not fixed
 CURRENT: "Launch your website with Hosterlo for just $59/year. Get
 fast web hosting, a free .com domain, business email, SSL, setup
-support, and Gemini Pro for 18 months."
+support, and Premium AI Writer for 18 months."
 
 This is ~185 characters. Google typically truncates at 155-160.
 
 FIX: Shorten to:
 "Launch your website for $59/year. Get fast hosting, a free .com
-domain, business email, SSL, and Gemini Pro for 18 months."
+domain, business email, SSL, and Premium AI Writer for 18 months."
 (~158 characters)
 
 
