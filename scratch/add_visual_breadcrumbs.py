@@ -1,93 +1,136 @@
 import os
 import re
 
-def find_div_bounds(content, identifier, start_search=0):
-    id_pos = content.find(identifier, start_search)
-    if id_pos == -1:
-        return -1, -1
+def clean_h1_text(h1_html):
+    # Remove HTML tags
+    cleaned = re.sub(r'<[^>]+>', '', h1_html)
+    # Normalize whitespace
+    cleaned = ' '.join(cleaned.split())
+    return cleaned
+
+def get_breadcrumbs_html(market, rel_path, h1_text):
+    # Determine theme based on path
+    dark_theme_paths = [
+        'compare/', 'alternatives/', 'support/', 'about-hosterlo', 
+        'contact-us', 'pricing', 'faq', 'dmarc-record-lookup', 
+        'spf-record-lookup', 'legal/', 'blog/'
+    ]
+    is_dark_text = any(p in rel_path for p in dark_theme_paths)
     
-    start_pos = content.rfind('<div', 0, id_pos)
-    if start_pos == -1:
-        return -1, -1
+    # Label translations
+    home_label = 'Inicio' if market == 'es' else 'Home'
+    
+    # Class styles
+    if is_dark_text:
+        nav_class = "flex flex-wrap mb-4 text-xs font-semibold text-slate-500 gap-1.5 items-center relative z-20"
+        link_class = "hover:text-primary transition-colors text-slate-500"
+        separator_class = "material-symbols-outlined text-[10px] text-slate-400 select-none pointer-events-none"
+        current_class = "text-slate-400 font-normal line-clamp-1 max-w-[200px] sm:max-w-none"
+    else:
+        nav_class = "flex flex-wrap mb-4 text-xs font-semibold text-indigo-300/80 gap-1.5 items-center relative z-20"
+        link_class = "hover:text-white transition-colors text-indigo-300/80"
+        separator_class = "material-symbols-outlined text-[10px] text-indigo-400/60 select-none pointer-events-none"
+        current_class = "text-indigo-200/50 font-normal line-clamp-1 max-w-[200px] sm:max-w-none"
         
-    depth = 0
-    pattern = re.compile(r'<div\b|</div>', re.IGNORECASE)
-    for match in pattern.finditer(content, start_pos):
-        tag = match.group(0).lower()
-        if tag.startswith('<div'):
-            depth += 1
-        elif tag == '</div>':
-            depth -= 1
-            if depth == 0:
-                return start_pos, match.end()
-                
-    return -1, -1
-
-def add_breadcrumbs():
-    root_dir = r"d:\Hosterlo Official Site"
+    home_url = f"/{market}/" if market != 'us' else '/'
     
-    # Mapping of relative paths (using forward slashes) to short titles
-    blog_posts = {
-        "2026/06/03/bluehost-vs-siteground-vs-hosterlo-2026/index.html": "Bluehost vs SiteGround vs Hosterlo 2026",
-        "2026/06/03/why-is-my-website-down-common-causes-and-fixes/index.html": "Why Is My Website Down?",
-        "2026/06/03/how-to-migrate-website-to-new-host-without-downtime/index.html": "Website Migration Guide",
-        "2026/06/03/cpanel-tutorial-for-beginners-complete-guide/index.html": "cPanel Guide for Beginners",
-        "2026/06/03/ssl-certificate-guide-website-security-2026/index.html": "SSL & Security Guide",
-        "2026/05/05/where-to-purchase-a-domain-name/index.html": "Where to Purchase a Domain",
-        "2026/05/04/web-hosting-trends-2026-ai/index.html": "Web Hosting Trends 2026",
-        "2026/05/01/checks-before-godaddy-or-hostinger-hosting/index.html": "GoDaddy or Hostinger Checks",
-        "2026/04/30/best-web-hosting-for-websites-2026/index.html": "Best Web Hosting 2026",
-        "2026/04/29/how-to-start-a-website-domain-hosting/index.html": "How to Start a Website",
-        "2025/10/29/go-green-go-fast-why-eco-friendly-wordpress-hosting-isnt-just-a-trend-its-your-business-advantage/index.html": "Eco-Friendly WordPress Hosting"
-    }
+    parts = []
+    # Home link
+    parts.append(f'<a href="{home_url}" class="{link_class}">{home_label}</a>')
+    
+    # Parse intermediate parts
+    # e.g., hosting/shared-hosting/index.html -> ['hosting', 'shared-hosting']
+    path_parts = [p for p in rel_path.split('/') if p and p != 'index.html']
+    
+    # Check if this is a blog post (path starts with year digits)
+    is_blog_post = len(path_parts) > 0 and path_parts[0].isdigit()
+    
+    if is_blog_post:
+        # For blog posts, intermediate path is just Blog
+        blog_url = f"/{market}/blog/" if market != 'us' else '/blog/'
+        parts.append(f'<span class="{separator_class}">chevron_right</span>')
+        parts.append(f'<a href="{blog_url}" class="{link_class}">Blog</a>')
+    else:
+        # Build standard folders path
+        current_accum = ""
+        for i, folder in enumerate(path_parts[:-1]):
+            # Clean folder name to display label
+            display_label = folder.replace('-', ' ').title()
+            if folder == 'uk':
+                display_label = 'UK'
+            elif folder == 'pk':
+                display_label = 'Pakistan'
+            elif folder == 'es':
+                display_label = 'Español'
+            
+            # Map clean URLs
+            current_accum += f"{folder}/"
+            url = f"/{market}/{current_accum}" if market != 'us' else f"/{current_accum}"
+            
+            parts.append(f'<span class="{separator_class}">chevron_right</span>')
+            parts.append(f'<a href="{url}" class="{link_class}">{display_label}</a>')
+            
+    # Add current page label
+    parts.append(f'<span class="{separator_class}">chevron_right</span>')
+    parts.append(f'<span class="{current_class}">{h1_text}</span>')
+    
+    return f'<nav class="{nav_class}" aria-label="Breadcrumb">{"".join(parts)}</nav>'
 
-    count = 0
-    for rel_path, title in blog_posts.items():
-        file_path = os.path.join(root_dir, rel_path.replace('/', os.sep))
-        if not os.path.exists(file_path):
-            print(f"Warning: File not found: {file_path}")
+def main():
+    root_dir = r"d:\Hosterlo Official Site"
+    print("Injecting visual breadcrumbs above H1 on inner subpages...")
+    
+    html_files = []
+    for root, dirs, files in os.walk(root_dir):
+        if '.git' in dirs:
+            dirs.remove('.git')
+        if 'scratch' in dirs:
+            dirs.remove('scratch')
+            
+        for file in files:
+            if file.endswith('.html'):
+                html_files.append(os.path.join(root, file))
+                
+    updated_count = 0
+    for fp in html_files:
+        norm_path = os.path.relpath(fp, root_dir).replace('\\', '/')
+        parts = norm_path.split('/')
+        if parts[0] in ['uk', 'pk', 'es']:
+            market = parts[0]
+            rel_path = '/'.join(parts[1:])
+        else:
+            market = 'us'
+            rel_path = norm_path
+            
+        # Skip homepages (clean relative path is empty or index.html)
+        if rel_path in ['index.html', '']:
             continue
             
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                
-            # Check if breadcrumbs are already present
-            if 'class="breadcrumb-nav"' in content or 'aria-label="Breadcrumb"' in content:
-                print(f"Breadcrumbs already present in: {rel_path}. Skipping or updating...")
-                # We can remove existing breadcrumb block if it exists to refresh it, but let's see.
-                # Let's remove any existing breadcrumb-nav block to be clean
-                content = re.sub(r'<nav class="breadcrumb-nav".*?</nav>', '', content, flags=re.DOTALL)
-                
-            # Find the end of mobile menu overlay
-            o_start, o_end = find_div_bounds(content, 'id="mobile-menu-overlay"')
-            if o_end == -1:
-                print(f"Error: Could not find mobile-menu-overlay bounds in: {rel_path}")
-                continue
-                
-            breadcrumb_html = f"""
-<nav class="breadcrumb-nav max-w-4xl mx-auto px-6 pt-8 pb-2 relative z-20" aria-label="Breadcrumb">
-    <ol class="flex items-center gap-2 text-xs text-slate-400 font-semibold">
-        <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
-        <li><span class="mx-1">›</span></li>
-        <li><a href="/blog/" class="hover:text-primary transition-colors">Blog</a></li>
-        <li><span class="mx-1">›</span></li>
-        <li class="text-primary font-bold">{title}</li>
-    </ol>
-</nav>
-"""
-            # Insert breadcrumb_html right after o_end
-            new_content = content[:o_end] + "\n" + breadcrumb_html.strip() + "\n" + content[o_end:]
+        with open(fp, 'r', encoding='utf-8', errors='replace') as f:
+            content = f.read()
             
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            print(f"Added visual breadcrumbs to: {rel_path}")
-            count += 1
+        # Do not inject if breadcrumb navigation already exists
+        if 'aria-label="Breadcrumb"' in content:
+            continue
             
-        except Exception as e:
-            print(f"Error processing {rel_path}: {e}")
+        # Find H1
+        h1_match = re.search(r'<h1\b[^>]*>(.*?)</h1>', content, re.IGNORECASE | re.DOTALL)
+        if h1_match:
+            h1_full_tag = h1_match.group(0)
+            h1_inner_text = clean_h1_text(h1_match.group(1))
             
-    print(f"Completed! Total files modified: {count}")
+            breadcrumbs = get_breadcrumbs_html(market, rel_path, h1_inner_text)
+            
+            # Inject breadcrumbs directly above the H1 tag block
+            new_content = content.replace(h1_full_tag, f"{breadcrumbs}\n{h1_full_tag}")
+            
+            if new_content != content:
+                with open(fp, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                print(f"Injected breadcrumbs in: {os.path.relpath(fp, root_dir)}")
+                updated_count += 1
+                
+    print(f"\nDone! Injected breadcrumbs into {updated_count} files.")
 
-if __name__ == "__main__":
-    add_breadcrumbs()
+if __name__ == '__main__':
+    main()
