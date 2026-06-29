@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="alternate" hreflang="en-us" href="https://hosterlo.com/404.html" />
@@ -280,17 +280,113 @@
 </div>
 
 
-<main class="min-h-[60vh] flex items-center justify-center py-24">
-    <div class="text-center px-6">
-        <div class="text-[120px] md:text-[180px] font-black bg-gradient-to-r from-primary to-violet-400 bg-clip-text text-transparent leading-none mb-4">404</div>
-        <nav class="flex flex-wrap mb-4 text-xs font-semibold text-indigo-300/80 gap-1.5 items-center relative z-20" aria-label="Breadcrumb"><a href="/" class="hover:text-white transition-colors text-indigo-300/80">Home</a><span class="material-symbols-outlined text-[10px] text-indigo-400/60 select-none pointer-events-none">chevron_right</span><span class="text-indigo-200/50 font-normal line-clamp-1 max-w-[200px] sm:max-w-none">Page Not Found</span></nav>
-<h1 class="text-3xl md:text-4xl font-bold mb-4">Page Not Found</h1>
-        <p class="text-slate-500 text-lg max-w-md mx-auto mb-10">Sorry, the page you're looking for doesn't exist or has been moved.</p>
-        <div class="flex flex-wrap gap-4 justify-center">
-            <a href="/" class="btn btn-primary">Back to Home</a>
-            <a href="/hosting/" class="btn btn-outline">View Hosting Plans</a>
-            <a href="/contact-us/" class="btn btn-outline">Contact Support</a>
+<main class="min-h-[85vh] flex items-center justify-center py-24 bg-gradient-to-b from-[#f9f9ff] to-[#f0f3ff] relative overflow-hidden">
+    <!-- Abstract decorative background shapes -->
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-5xl mx-auto px-6 w-full relative z-10 flex flex-col lg:flex-row items-center gap-16">
+        
+        <!-- Left Side: 404 Visual & Quick Navigation -->
+        <div class="text-left lg:w-1/2">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-primary text-xs font-black uppercase tracking-wider mb-6">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Error 404
+            </div>
+            
+            <nav class="flex flex-wrap mb-4 text-xs font-semibold text-slate-500 gap-1.5 items-center relative z-20" aria-label="Breadcrumb">
+                <a href="/" class="hover:text-primary transition-colors text-slate-500">Home</a>
+                <span class="material-symbols-outlined text-[10px] text-slate-400 select-none pointer-events-none">chevron_right</span>
+                <span class="text-slate-400 font-normal">Page Not Found</span>
+            </nav>
+            
+            <h1 class="text-4xl md:text-5xl font-black text-[#111c2d] mb-4 leading-tight font-h1">
+                Lost in space? Let's get you back on track.
+            </h1>
+            <p class="text-slate-500 text-base mb-8 max-w-md">
+                The page you are looking for does not exist or has been moved. Use these quick links to navigate Hosterlo, or check out our exclusive launch deal on the right.
+            </p>
+            
+            <!-- Quick Links Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <a href="/" class="flex items-center gap-3 p-4 bg-white border border-slate-200/80 rounded-2xl hover:border-primary/30 hover:shadow-md transition-all group">
+                    <span class="material-symbols-outlined text-primary text-xl">home</span>
+                    <span class="font-extrabold text-sm text-[#111c2d] group-hover:text-primary transition-colors">Homepage</span>
+                </a>
+                <a href="/hosting/shared-hosting/" class="flex items-center gap-3 p-4 bg-white border border-slate-200/80 rounded-2xl hover:border-primary/30 hover:shadow-md transition-all group">
+                    <span class="material-symbols-outlined text-primary text-xl">dns</span>
+                    <span class="font-extrabold text-sm text-[#111c2d] group-hover:text-primary transition-colors">Shared Hosting</span>
+                </a>
+                <a href="/hosting/wordpress-hosting/" class="flex items-center gap-3 p-4 bg-white border border-slate-200/80 rounded-2xl hover:border-primary/30 hover:shadow-md transition-all group">
+                    <span class="material-symbols-outlined text-primary text-xl">auto_awesome</span>
+                    <span class="font-extrabold text-sm text-[#111c2d] group-hover:text-primary transition-colors">WordPress Hosting</span>
+                </a>
+                <a href="/support/" class="flex items-center gap-3 p-4 bg-white border border-slate-200/80 rounded-2xl hover:border-primary/30 hover:shadow-md transition-all group">
+                    <span class="material-symbols-outlined text-primary text-xl">contact_support</span>
+                    <span class="font-extrabold text-sm text-[#111c2d] group-hover:text-primary transition-colors">Help Center</span>
+                </a>
+            </div>
+            
+            <a href="/blog/" class="inline-flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                Read our latest engineering articles
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
         </div>
+        
+        <!-- Right Side: Conversion Offer Card -->
+        <div class="lg:w-1/2 w-full">
+            <div class="bg-white border border-slate-200/60 rounded-[36px] p-8 md:p-10 shadow-2xl relative overflow-hidden">
+                <!-- Promo banner badge -->
+                <div class="absolute top-0 right-0 bg-[#E0D4FF] text-primary text-[10px] font-black uppercase tracking-widest px-6 py-2 rounded-bl-3xl">
+                    Best Value Deal
+                </div>
+                
+                <span class="text-xs font-black text-primary uppercase tracking-widest block mb-2">Exclusive Offer</span>
+                <h2 class="text-2xl md:text-3xl font-black text-[#111c2d] mb-4">Website Launch Bundle</h2>
+                
+                <p class="text-slate-500 text-sm mb-6">
+                    Instead of buying hosting, domain names, SSL, and business email separately, get everything bundled into one flat-rate plan.
+                </p>
+                
+                <!-- Pricing tag -->
+                <div class="flex items-baseline gap-2 mb-6">
+                    <span class="text-4xl sm:text-5xl font-black text-[#111c2d]">$4.08</span>
+                    <span class="text-slate-400 font-bold text-sm">/ month</span>
+                    <span class="text-xs font-black bg-emerald-500/10 text-emerald-600 px-3 py-1 rounded-full ml-2">Flat Rate Renewal</span>
+                </div>
+                
+                <!-- Checklist features -->
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-slate-700 font-semibold text-sm">
+                        <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                        Free .com Domain Name (1st Year)
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-700 font-semibold text-sm">
+                        <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                        Unlimited Free Custom Business Emails
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-700 font-semibold text-sm">
+                        <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                        LiteSpeed Server with NVMe SSD Storage
+                    </li>
+                    <li class="flex items-center gap-3 text-slate-700 font-semibold text-sm">
+                        <span class="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
+                        24/7 Setup Assistance & WhatsApp Support
+                    </li>
+                </ul>
+                
+                <!-- CTA buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <a href="https://billing.hosterlo.com/index.php?rp=/store/lightspeed-hosting/business-hosting" class="w-full sm:w-auto text-center px-8 py-4 bg-primary text-white hover:bg-primary-container font-black rounded-2xl shadow-xl shadow-primary/20 transition-all">
+                        Get Started Now
+                    </a>
+                    <a href="/pricing/" class="w-full sm:w-auto text-center px-6 py-4 border border-slate-200 text-slate-600 font-bold rounded-2xl hover:bg-slate-50 transition-all">
+                        Compare Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+        
     </div>
 </main>
 
