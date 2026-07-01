@@ -29,6 +29,10 @@ def localize_schema(schema_str, market, rel_path):
     elif market == 'es':
         # ES keeps USD but updates page path
         schema_str = schema_str.replace('https://hosterlo.com/', 'https://hosterlo.com/es/')
+    elif market == 'ph':
+        schema_str = schema_str.replace('4.08', '239')
+        schema_str = schema_str.replace('USD', 'PHP')
+        schema_str = schema_str.replace('$4.08', '₱239')
         
     return schema_str
 
@@ -59,7 +63,7 @@ def main():
                         continue
                         
                     # Sync to other markets
-                    for market in ['uk', 'pk', 'es']:
+                    for market in ['uk', 'pk', 'es', 'ph']:
                         market_fp = os.path.join(root_dir, market, rel_path)
                         if os.path.exists(market_fp):
                             with open(market_fp, 'r', encoding='utf-8', errors='replace') as f:

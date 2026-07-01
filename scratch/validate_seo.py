@@ -46,7 +46,7 @@ def main():
                 errors += 1
                 
         # 3. Check visual breadcrumbs on non-homepages
-        is_homepage = rel_path == 'index.html' or rel_path.endswith(r'\index.html') and len(rel_path.split('\\')) == 2 and rel_path.split('\\')[0] in ['uk', 'pk', 'es']
+        is_homepage = rel_path == 'index.html' or rel_path.endswith(r'\index.html') and len(rel_path.split('\\')) == 2 and rel_path.split('\\')[0] in ['uk', 'pk', 'es', 'ph']
         if not is_homepage and 'aria-label="Breadcrumb"' not in content:
             print(f"Warning in {rel_path}: Missing visual breadcrumbs!")
             # We treat this as a warning, not a hard error since some tools pages may not need them

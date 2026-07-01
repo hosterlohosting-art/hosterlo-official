@@ -24,6 +24,14 @@ def update_organization(org, market):
             "availableLanguage": ["English"],
             "areaServed": {"@type": "Country", "name": "Pakistan"}
         }
+    elif market == 'ph':
+        org["contactPoint"] = {
+            "@type": "ContactPoint",
+            "telephone": "+1 (618) 356-1311",
+            "contactType": "customer support",
+            "availableLanguage": ["English"],
+            "areaServed": {"@type": "Country", "name": "Philippines"}
+        }
     else: # us, es, etc.
         org["contactPoint"] = {
             "@type": "ContactPoint",
@@ -78,6 +86,7 @@ def update_generic_area_served(item, market):
         'us': {"@type": "Country", "name": "United States"},
         'uk': {"@type": "Country", "name": "United Kingdom"},
         'pk': {"@type": "Country", "name": "Pakistan"},
+        'ph': {"@type": "Country", "name": "Philippines"},
         'es': {"@type": "Country", "name": "Worldwide"}
     }
     target_country = country_map.get(market, {"@type": "Country", "name": "United States"})
@@ -104,7 +113,7 @@ def main():
     for fp in html_files:
         norm_path = os.path.relpath(fp, root_dir).replace('\\', '/')
         parts = norm_path.split('/')
-        if parts[0] in ['uk', 'pk', 'es']:
+        if parts[0] in ['uk', 'pk', 'es', 'ph']:
             market = parts[0]
         else:
             market = 'us'

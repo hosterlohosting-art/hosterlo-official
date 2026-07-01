@@ -2,6 +2,7 @@
 
 <html class="light" lang="en"><head>
     <link rel="alternate" hreflang="en-gb" href="https://hosterlo.com/uk/" />
+    <link rel="alternate" hreflang="en-ph" href="https://hosterlo.com/ph/" />
     <link rel="alternate" hreflang="en-pk" href="https://hosterlo.com/pk/" />
     <link rel="alternate" hreflang="en-us" href="https://hosterlo.com/" />
     <link rel="alternate" hreflang="es" href="https://hosterlo.com/es/" />
@@ -20,7 +21,7 @@
             if (sessionStorage.getItem('hosterlo_geo_redirected')) return;
 
             // Map of country codes to regional paths
-            var regionMap = { 'PK': '/pk/', 'GB': '/uk/' };
+            var regionMap = { 'PK': '/pk/', 'GB': '/uk/', 'PH': '/ph/' };
 
             // Fetch IP geolocation (free tier: 30k req/month, no API key needed)
             fetch('https://ipapi.co/json/', { method: 'GET', cache: 'no-store' })
@@ -589,7 +590,7 @@
             
             <!-- Center portrait of person -->
             <div class="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 w-[460px] h-auto pointer-events-none">
-                <img src="/assets/hosterlo-hero-section-image.png" alt="Hosterlo Hosting Solution" class="w-full h-auto drop-shadow-[0_25px_30px_rgba(0,0,0,0.15)] hover:scale-[1.01] transition-transform duration-500" style="mask-image: linear-gradient(to bottom, black 72%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);">
+                <img src="/assets/hosterlo-hero-section-image.webp" alt="Hosterlo Hosting Solution" class="w-full h-auto drop-shadow-[0_25px_30px_rgba(0,0,0,0.15)] hover:scale-[1.01] transition-transform duration-500" style="mask-image: linear-gradient(to bottom, black 72%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 100%);">
             </div>
             
             <!-- Floating Card 1: Cloud Hosting (Top Left) -->

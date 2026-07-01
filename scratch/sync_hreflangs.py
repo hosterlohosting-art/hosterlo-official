@@ -35,7 +35,7 @@ def main():
     for fp in html_files:
         norm_path = os.path.relpath(fp, root_dir).replace('\\', '/')
         parts = norm_path.split('/')
-        if parts[0] in ['uk', 'pk', 'es']:
+        if parts[0] in ['uk', 'pk', 'es', 'ph']:
             market = parts[0]
             rel_path = '/'.join(parts[1:])
         else:
@@ -73,6 +73,10 @@ def main():
         if 'es' in markets:
             es_url = get_clean_url('es', rel_path)
             hreflangs.append(('es', es_url))
+            
+        if 'ph' in markets:
+            ph_url = get_clean_url('ph', rel_path)
+            hreflangs.append(('en-ph', ph_url))
             
         # Format the block
         indent = "    "
